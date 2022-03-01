@@ -3,6 +3,9 @@
     "id": "a8ef23cf-577d-453f-9116-a90d85021364",
     "name": "Single Target",
     "jobId": 38,
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Quadruple Standard Finish",
@@ -551,52 +554,61 @@
     "id": "be1018c0-42ac-425c-85c2-f0800665a0ab",
     "name": "Multi Target",
     "jobId": 38,
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Starfall Dance",
-        "actionId": 25792
+        "actionId": 25792,
+        "id": "0660cd8b-2a7a-4c16-a5e6-c6e3a63b35cb",
+        "conditions": {}
       },
       {
         "name": "Bloodshower",
         "actionId": 15996,
+        "id": "03b3c97e-9907-49d2-8613-a5d335c24604",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 2
+            "value": 2,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Rising Windmill",
         "actionId": 15995,
+        "id": "d2df890f-aeca-49f0-8d89-8aa4436c91ff",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 2
+            "value": 2,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Bladeshower",
         "actionId": 15994,
+        "id": "3d2cfac9-cea9-4901-b40f-9db2d290b657",
         "conditions": {
           "combo": {
-            "operator": "\u003e",
-            "value": 0
+            "value": 0.0,
+            "operator": ">"
           },
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 2
+            "value": 2,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Windmill",
         "actionId": 15993,
+        "id": "3358a6e4-5fc6-4a24-a58f-a599a23f0e2b",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 2
+            "value": 2,
+            "operator": ">="
           }
         }
       }

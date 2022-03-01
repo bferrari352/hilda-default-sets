@@ -3,6 +3,9 @@
     "id": "93fb9b53-dce6-44b3-99a3-38876628c02c",
     "jobId": 21,
     "name": "Single Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Inner Release",
@@ -241,18 +244,22 @@
     "id": "853645b9-a5ee-47f8-8a5a-49e3763b95da",
     "jobId": 21,
     "name": "Multi Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Inner Release",
         "actionId": 7389,
+        "id": "cb89bd73-4b61-455a-bb41-52293722e222",
         "conditions": {
           "globalCooldown": {
-            "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "operator": ">"
           },
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -267,14 +274,15 @@
       {
         "name": "Berserk",
         "actionId": 38,
+        "id": "469d5a35-d916-48b2-9033-b2da5f2ec63d",
         "conditions": {
           "globalCooldown": {
-            "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "operator": ">"
           },
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -289,20 +297,21 @@
       {
         "name": "Infuriate",
         "actionId": 52,
+        "id": "63e52fe4-54c8-4cc4-8b2a-5f34499f9404",
         "conditions": {
           "globalCooldown": {
-            "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "operator": ">"
           },
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "beastGauge": {
                 "value": 50,
-                "operator": "\u003c"
+                "operator": "<"
               }
             }
           }
@@ -311,50 +320,54 @@
       {
         "name": "Upheaval",
         "actionId": 7387,
+        "id": "0d29d01f-37f6-4da7-a49c-62fe4ef63abe",
         "conditions": {
           "globalCooldown": {
-            "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "operator": ">"
           },
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Chaotic Cyclone",
         "actionId": 16463,
+        "id": "9e7fe33b-3876-453f-9602-d56468dcad2a",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Primal Rend",
         "actionId": 25753,
+        "id": "77b8e0ac-f7bb-442d-8bf4-ba83e37cebc3",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Decimate",
         "actionId": 3550,
+        "id": "f8e3b13b-ddf6-48eb-a8ff-102deac82186",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "beastGauge": {
                 "value": 50,
-                "operator": "\u003e\u003d"
+                "operator": ">="
               }
             }
           }
@@ -363,16 +376,17 @@
       {
         "name": "Steel Cyclone",
         "actionId": 51,
+        "id": "6a940a88-4bb7-4e97-abaa-63b9e02776a9",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "beastGauge": {
                 "value": 50,
-                "operator": "\u003e\u003d"
+                "operator": ">="
               }
             }
           }
@@ -381,24 +395,26 @@
       {
         "name": "Mythril Tempest",
         "actionId": 16462,
+        "id": "896cd61c-9e70-4f91-ba08-120ee12868f1",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "combo": {
-            "operator": "\u003e",
-            "value": 0
+            "value": 0.0,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Overpower",
         "actionId": 41,
+        "id": "1ae6be47-074a-4a3f-bd43-5c4d43bb3f9e",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       }

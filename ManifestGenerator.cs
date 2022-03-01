@@ -30,7 +30,13 @@ internal static class ManifestGenerator
             if (md5 != setManifest.Md5)
             {
                 Console.WriteLine($"Updating MD5 for {jobId}");
-                currentManifest.Sets[jobId] = new SetManifest {LastUpdated = currentDate, Md5 = md5};   
+                currentManifest.Sets[jobId] = new SetManifest
+                {
+                    LastUpdated = currentDate, 
+                    Md5 = md5, 
+                    Version = setManifest.Version, 
+                    AppVersion = setManifest.AppVersion
+                };   
             }
         }
         
@@ -164,10 +170,14 @@ public class SetManifest
 {
     public string Md5 { get; set; }
     public string LastUpdated { get; set; }
+    public string Version { get; set; }
+    public string AppVersion { get; set; }
 
     public SetManifest()
     {
         Md5 = "";
         LastUpdated = "";
+        Version = "";
+        AppVersion = "";
     }
 }

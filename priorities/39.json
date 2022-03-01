@@ -3,6 +3,9 @@
     "id": "e790cccc-adcc-4ce2-ba1c-148d26d0dd8d",
     "name": "Single Target",
     "jobId": 39,
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Lemure's Slice",

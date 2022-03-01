@@ -3,6 +3,9 @@
     "id": "bd5becba-7dcc-4727-b842-9e49e21a6448",
     "jobId": 24,
     "name": "Single Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Lucid Dreaming",
@@ -20,18 +23,20 @@
       {
         "name": "Afflatus Misery",
         "actionId": 16535,
+        "id": "08669397-5e00-47d3-9d7e-1d9148742dfc",
         "conditions": {}
       },
       {
         "name": "Dia",
         "actionId": 16532,
+        "id": "28d8d58e-037c-4bbf-91a6-aef93be52bba",
         "conditions": {
           "target": {
             "statuses": [
               {
                 "id": 1871,
                 "duration": {
-                  "value": 4,
+                  "value": 4.0,
                   "operator": "<="
                 }
               }
@@ -42,13 +47,14 @@
       {
         "name": "Aero II",
         "actionId": 132,
+        "id": "727e3fcf-aeab-4c2c-bd6c-c980b300e0ba",
         "conditions": {
           "target": {
             "statuses": [
               {
                 "id": 144,
                 "duration": {
-                  "value": 4,
+                  "value": 4.0,
                   "operator": "<="
                 }
               }
@@ -59,13 +65,14 @@
       {
         "name": "Aero",
         "actionId": 121,
+        "id": "ff5ce720-6df0-4976-a886-fc812decc6ee",
         "conditions": {
           "target": {
             "statuses": [
               {
                 "id": 143,
                 "duration": {
-                  "value": 4,
+                  "value": 4.0,
                   "operator": "<="
                 }
               }
@@ -76,31 +83,37 @@
       {
         "name": "Glare III",
         "actionId": 25859,
+        "id": "45873f98-5435-4391-975c-41fa09add886",
         "conditions": {}
       },
       {
         "name": "Glare",
         "actionId": 16533,
+        "id": "1ee25708-296d-4da3-a630-109c757ef6b3",
         "conditions": {}
       },
       {
         "name": "Stone IV",
         "actionId": 7431,
+        "id": "8aeb3dd9-07b3-4b5f-9350-2c4c1793fb6e",
         "conditions": {}
       },
       {
         "name": "Stone III",
         "actionId": 3568,
+        "id": "0dfda103-1f05-48aa-bdd6-20a0b033012a",
         "conditions": {}
       },
       {
         "name": "Stone II",
         "actionId": 127,
+        "id": "fbb448ca-9cce-4901-8667-92a9b9875971",
         "conditions": {}
       },
       {
         "name": "Stone",
         "actionId": 119,
+        "id": "753bb686-fb67-4304-a89e-f0e0c9f79748",
         "conditions": {}
       }
     ]
@@ -109,6 +122,9 @@
     "id": "ab87006c-0b32-4fd2-b435-1c66476d5049",
     "jobId": 24,
     "name": "Multi Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Lucid Dreaming",
@@ -126,40 +142,44 @@
       {
         "name": "Assize",
         "actionId": 3571,
+        "id": "942a3516-4bc8-4d95-897c-f388832ecdbd",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Afflatus Misery",
         "actionId": 16535,
+        "id": "2f941003-f2d4-43f0-a7b8-6d0043129092",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Holy III",
         "actionId": 25860,
+        "id": "8d840edf-5327-4c3f-b731-356232d00752",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Holy",
         "actionId": 139,
+        "id": "5991cf4d-c0f0-4593-80ff-d034dfd0ef21",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       }

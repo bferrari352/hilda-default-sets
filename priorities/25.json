@@ -3,6 +3,9 @@
     "id": "274d420d-815f-4ead-9703-5a3598b8c98a",
     "jobId": 25,
     "name": "Single Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Lucid Dreaming",
@@ -11,7 +14,7 @@
         "conditions": {
           "player": {
             "mp": {
-              "value": 1000,
+              "value": 200,
               "operator": "<"
             }
           }
@@ -20,15 +23,16 @@
       {
         "name": "Manafont",
         "actionId": 158,
+        "id": "74eed19b-f325-46d3-94aa-5bfd7ff5e800",
         "conditions": {
           "globalCooldown": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
           },
           "player": {
             "mp": {
               "value": 0,
-              "operator": "\u003d"
+              "operator": "="
             }
           }
         }
@@ -36,6 +40,7 @@
       {
         "name": "Thundercloud (Thunder III)",
         "actionId": 153,
+        "id": "6b4792c5-2da0-46d2-b6c2-b17981fc1e01",
         "conditions": {
           "player": {
             "statuses": [
@@ -54,6 +59,7 @@
       {
         "name": "Thundercloud (Thunder)",
         "actionId": 144,
+        "id": "e9cd1b21-6a63-4e07-bb77-ed1e279419a2",
         "conditions": {
           "player": {
             "statuses": [
@@ -72,10 +78,11 @@
       {
         "name": "Sharpcast",
         "actionId": 3574,
+        "id": "a71aae3a-e438-45fe-b128-53862e1b894a",
         "conditions": {
           "globalCooldown": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
           },
           "target": {
             "statuses": [
@@ -83,7 +90,7 @@
                 "id": 163,
                 "duration": {
                   "value": 3.0,
-                  "operator": "\u003c\u003d"
+                  "operator": "<="
                 }
               }
             ]
@@ -93,6 +100,7 @@
       {
         "name": "Thunder III",
         "actionId": 153,
+        "id": "796bbc56-239b-4226-b6e7-2a88c2f14c52",
         "conditions": {
           "target": {
             "statuses": [
@@ -100,11 +108,11 @@
                 "id": 163,
                 "duration": {
                   "value": 3.0,
-                  "operator": "\u003c\u003d"
+                  "operator": "<="
                 },
                 "stacks": {
                   "value": 0,
-                  "operator": "\u003d"
+                  "operator": "="
                 }
               }
             ]
@@ -114,6 +122,7 @@
       {
         "name": "Thunder",
         "actionId": 144,
+        "id": "b86b2525-7e63-470a-9364-93cf2f261cdb",
         "conditions": {
           "target": {
             "statuses": [
@@ -121,7 +130,7 @@
                 "id": 161,
                 "duration": {
                   "value": 3.0,
-                  "operator": "\u003c\u003d"
+                  "operator": "<="
                 }
               }
             ]
@@ -131,16 +140,18 @@
       {
         "name": "Triplecast",
         "actionId": 7421,
+        "id": "a2ff43e2-6333-4b28-8352-3239e6bf5553",
         "conditions": {
           "globalCooldown": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
           }
         }
       },
       {
         "name": "Despair (TODO)",
         "actionId": 16505,
+        "id": "bacda7aa-b454-4fe1-a1f5-d04d1cffa005",
         "conditions": {
           "player": {
             "statuses": [
@@ -148,7 +159,7 @@
                 "id": 1211,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
@@ -158,6 +169,7 @@
       {
         "name": "Fire IV (Triplecast)",
         "actionId": 3577,
+        "id": "1820361b-7602-4f96-9305-2648b092d3ca",
         "conditions": {
           "player": {
             "statuses": [
@@ -165,7 +177,7 @@
                 "id": 1211,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
@@ -175,16 +187,17 @@
       {
         "name": "Amplifier",
         "actionId": 25796,
+        "id": "2189b69b-b166-4f0f-bc47-6f82317ab90b",
         "conditions": {
           "globalCooldown": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
           },
           "job": {
             "gauge": {
               "polyglotStacks": {
                 "value": 0,
-                "operator": "\u003d"
+                "operator": "="
               }
             }
           }
@@ -193,11 +206,13 @@
       {
         "name": "Ley Lines",
         "actionId": 3573,
+        "id": "d4909918-4b15-4e29-b635-704534e9cc93",
         "conditions": {}
       },
       {
         "name": "Xenoglossy",
         "actionId": 16507,
+        "id": "f739e0e8-0c44-4857-b156-ae65e4230450",
         "conditions": {
           "job": {
             "gauge": {
@@ -209,6 +224,7 @@
       {
         "name": "Paradox",
         "actionId": 25797,
+        "id": "a2bfd733-4c6a-479d-963a-45188bf25232",
         "conditions": {
           "job": {
             "gauge": {
@@ -220,22 +236,23 @@
       {
         "name": "Firestarter",
         "actionId": 152,
+        "id": "9907515b-230b-47a2-ab54-249bebe529bb",
         "conditions": {
           "player": {
             "mp": {
               "value": 9000,
-              "operator": "\u003e\u003d"
+              "operator": ">="
             },
             "statuses": [
               {
                 "id": 165,
                 "duration": {
                   "value": 1.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 },
                 "stacks": {
                   "value": 1,
-                  "operator": "\u003e\u003d"
+                  "operator": ">="
                 }
               }
             ]
@@ -245,18 +262,19 @@
       {
         "name": "Fire III",
         "actionId": 152,
+        "id": "e955ce00-2250-438d-a170-7c3ccf68a854",
         "conditions": {
           "player": {
             "mp": {
               "value": 9000,
-              "operator": "\u003e\u003d"
+              "operator": ">="
             }
           },
           "job": {
             "gauge": {
               "astralFireStacks": {
                 "value": 0,
-                "operator": "\u003d\u003d"
+                "operator": "=="
               },
               "inAstralFire": false
             }
@@ -266,11 +284,13 @@
       {
         "name": "Fire IV",
         "actionId": 3577,
+        "id": "f74dbc15-cfa3-4ec3-adfc-d87a6e2f684f",
         "conditions": {}
       },
       {
         "name": "Fire",
         "actionId": 141,
+        "id": "7458abff-1e04-4c30-bcfa-622b362c3c6d",
         "conditions": {
           "job": {
             "gauge": {
@@ -280,8 +300,9 @@
         }
       },
       {
-        "name": "Astral Fire -\u003e Blizzard IIII",
+        "name": "Astral Fire -> Blizzard IIII",
         "actionId": 154,
+        "id": "ce9da13f-e174-46ed-b4ab-e44892d70f7a",
         "conditions": {
           "job": {
             "gauge": {
@@ -293,11 +314,12 @@
       {
         "name": "Blizzard IV",
         "actionId": 3576,
+        "id": "ec881332-87fb-48b7-8b84-5c0a7f76006d",
         "conditions": {
           "player": {
             "mp": {
               "value": 9000,
-              "operator": "\u003c\u003d"
+              "operator": "<="
             }
           },
           "job": {
@@ -311,11 +333,12 @@
       {
         "name": "Blizzard III",
         "actionId": 154,
+        "id": "ea40413f-f3db-46f5-8dae-19e8c31bc076",
         "conditions": {
           "player": {
             "mp": {
               "value": 9000,
-              "operator": "\u003c\u003d"
+              "operator": "<="
             }
           }
         }
@@ -326,6 +349,9 @@
     "id": "3b758951-840e-4f4e-a76d-add66569bd4a",
     "jobId": 25,
     "name": "Multi Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Lucid Dreaming",
@@ -334,7 +360,7 @@
         "conditions": {
           "player": {
             "mp": {
-              "value": 1000,
+              "value": 200,
               "operator": "<"
             }
           }
@@ -343,72 +369,76 @@
       {
         "name": "Manafont",
         "actionId": 158,
+        "id": "32ecaf0e-93d1-47dd-94c8-b04c84916c86",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "globalCooldown": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
           },
           "player": {
             "mp": {
               "value": 0,
-              "operator": "\u003d"
+              "operator": "="
             }
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Thunder IV (Thundercloud)",
         "actionId": 7420,
+        "id": "41865092-0589-4cfe-bf06-753b45a852a4",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 164,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Thunder II (Thundercloud)",
         "actionId": 7447,
+        "id": "7ce21855-93fa-4fc2-8ce8-3a95b0b5fab4",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 164,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Sharpcast (Thunder IV)",
         "actionId": 3574,
+        "id": "4fd85037-18d5-420c-9a8c-162c5a911692",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "target": {
             "statuses": [
@@ -416,7 +446,7 @@
                 "id": 1210,
                 "duration": {
                   "value": 3.0,
-                  "operator": "\u003c\u003d"
+                  "operator": "<="
                 }
               }
             ]
@@ -426,14 +456,15 @@
       {
         "name": "Sharpcast (Thunder II)",
         "actionId": 3574,
+        "id": "62b4911f-b1d2-4ad4-9348-cc19b30d2a35",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "globalCooldown": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "target": {
             "statuses": [
@@ -441,7 +472,7 @@
                 "id": 162,
                 "duration": {
                   "value": 3.0,
-                  "operator": "\u003c\u003d"
+                  "operator": "<="
                 }
               }
             ]
@@ -451,10 +482,11 @@
       {
         "name": "Thunder IV",
         "actionId": 7420,
+        "id": "fc078e5c-76f2-4845-a49e-d1b39b42c983",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "target": {
             "statuses": [
@@ -462,11 +494,11 @@
                 "id": 1210,
                 "duration": {
                   "value": 3.0,
-                  "operator": "\u003c\u003d"
+                  "operator": "<="
                 },
                 "stacks": {
                   "value": 0,
-                  "operator": "\u003d"
+                  "operator": "="
                 }
               }
             ]
@@ -476,10 +508,11 @@
       {
         "name": "Thunder II",
         "actionId": 7447,
+        "id": "df0deaca-9ecf-456a-a25f-ae96fcff50b9",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "target": {
             "statuses": [
@@ -487,7 +520,7 @@
                 "id": 162,
                 "duration": {
                   "value": 3.0,
-                  "operator": "\u003c\u003d"
+                  "operator": "<="
                 }
               }
             ]
@@ -497,76 +530,81 @@
       {
         "name": "Triplecast",
         "actionId": 7421,
+        "id": "22fa396f-806c-4e07-abbd-0cfddef2cb9a",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "globalCooldown": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "High Fire II",
         "actionId": 25794,
+        "id": "04d22227-e2e1-4bb1-8f48-5474f6eab21c",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 1211,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Fire II",
         "actionId": 147,
+        "id": "b966edfc-5300-4e4f-a1e4-73e66424e49e",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 1211,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Ley Lines",
         "actionId": 3573,
+        "id": "fb168649-160e-4763-8dbe-8e72e9b9af71",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Paradox",
         "actionId": 25797,
+        "id": "4b113cb2-c70d-4e6e-9a26-1d57e10b6548",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -578,41 +616,43 @@
       {
         "name": "Firestarter",
         "actionId": 152,
+        "id": "db232ad6-c8ca-4e94-b8bb-b5144c981c7e",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 165,
                 "duration": {
                   "value": 1.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 },
                 "stacks": {
                   "value": 1,
-                  "operator": "\u003e\u003d"
+                  "operator": ">="
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "High Fire II (Transition)",
         "actionId": 25794,
+        "id": "4fd3c7e8-25bb-4277-9529-185a239e4782",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "mp": {
               "value": 9000,
-              "operator": "\u003e\u003d"
+              "operator": ">="
             }
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -624,16 +664,17 @@
       {
         "name": "Fire II (Transition)",
         "actionId": 147,
+        "id": "e424b5d0-daac-41b9-95a1-fccb13fadbe1",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "mp": {
               "value": 9000,
-              "operator": "\u003e\u003d"
+              "operator": ">="
             }
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -645,10 +686,11 @@
       {
         "name": "High Fire II",
         "actionId": 25794,
+        "id": "5c9a1d76-ef93-44f2-a515-d46d9d5ff5b7",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -660,10 +702,11 @@
       {
         "name": "Fire II",
         "actionId": 147,
+        "id": "22c8d059-2c3b-4c57-8464-0eb20733a412",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -675,20 +718,22 @@
       {
         "name": "High Blizzard II",
         "actionId": 25795,
+        "id": "f5578c63-3431-479c-b95e-5ee58c226f0b",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Blizzard II",
         "actionId": 25793,
+        "id": "3e3c2d95-bda6-484e-a0b9-c109cc4b120c",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       }

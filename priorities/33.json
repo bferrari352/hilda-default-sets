@@ -3,6 +3,9 @@
     "id": "5e883334-dbe5-4ffa-8217-b13455a91082",
     "jobId": 33,
     "name": "Arcanum",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "the Spire",
@@ -67,6 +70,9 @@
     "id": "627483dc-d12d-49af-ab45-2100d02f9757",
     "jobId": 33,
     "name": "Single Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Lucid Dreaming",
@@ -171,6 +177,9 @@
     "id": "05c0fcdf-6c6e-46ed-a17b-26bb68c056ed",
     "jobId": 33,
     "name": "Multi Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Lucid Dreaming",

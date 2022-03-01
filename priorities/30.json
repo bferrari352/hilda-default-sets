@@ -3,6 +3,9 @@
     "id": "9ecf91ba-c313-43d9-b92a-c7e108e98854",
     "jobId": 30,
     "name": "Single Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Bhavacakra",
@@ -586,30 +589,35 @@
     "id": "543888e6-d584-454f-8bc3-bb16be87066d",
     "jobId": 30,
     "name": "Multi Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Hellfrog Medium",
         "actionId": 7401,
+        "id": "e945e456-2d75-4577-8dc6-4dbfb4d9235d",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Chi",
         "actionId": 2261,
+        "id": "db618703-1cf4-49fd-8d5a-d31725cf1890",
         "overrideIcon": 2270,
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "tenChiJin": {
               "value": 7,
-              "operator": "\u003d"
+              "operator": "="
             }
           }
         }
@@ -617,16 +625,17 @@
       {
         "name": "Ten",
         "actionId": 2259,
+        "id": "974e1cdf-22a9-4ad2-9d46-b3dc47728b0d",
         "overrideIcon": 2266,
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "tenChiJin": {
               "value": 3,
-              "operator": "\u003d"
+              "operator": "="
             }
           }
         }
@@ -634,27 +643,28 @@
       {
         "name": "Jin",
         "actionId": 2263,
+        "id": "4b557ffa-8e2e-4389-9933-a95774a0c4d7",
         "overrideIcon": 2265,
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 1186,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
           },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          },
           "job": {
             "tenChiJin": {
               "value": 0,
-              "operator": "\u003d"
+              "operator": "="
             }
           }
         }
@@ -662,16 +672,17 @@
       {
         "name": "Huraijin",
         "actionId": 25876,
+        "id": "54cb61f6-ad09-4786-b260-e397376889b5",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "hutonTimer": {
                 "value": 5,
-                "operator": "\u003c\u003d"
+                "operator": "<="
               }
             }
           }
@@ -680,270 +691,289 @@
       {
         "name": "Mug",
         "actionId": 2248,
+        "id": "d0052662-9bde-409e-8e6f-209ab3964d2d",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Bunshin",
         "actionId": 16493,
+        "id": "1f9894e2-a95d-49c0-9603-c9c63b4ec665",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Kassatsu",
         "actionId": 2264,
+        "id": "fdd8d0a3-4270-4833-99f2-ee8b46710589",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Dream Within a Dream",
         "actionId": 3566,
+        "id": "7d5db0f7-4620-405f-96df-1feab6ff3daa",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Assassinate",
         "actionId": 2246,
+        "id": "6e1c2e88-1251-42cb-b3d7-b85515cced75",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Goka (Kassatsu)",
         "actionId": 16491,
+        "id": "6843618c-1c8d-4271-9a57-ceb9085ce18e",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 497,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Katon (Kassatsu)",
         "actionId": 2266,
+        "id": "5ce31f81-622b-4f18-9be0-3a0827d57eb4",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 497,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Chi (Kassatsu)",
         "actionId": 2261,
+        "id": "d2326869-fdca-4cd2-9f00-1bfa247861a1",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 497,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Ten (Kassatsu)",
         "actionId": 2259,
+        "id": "ad8c7e70-9b48-4633-8917-13fc91fa6808",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 497,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Katon",
         "actionId": 2266,
+        "id": "c6ebb5e5-0104-4754-8e01-a37770ebb7a2",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Chi (Katon)",
         "actionId": 2261,
+        "id": "81f81f51-49ca-4fe0-93f5-e50980cadb19",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Ten (Katon)",
         "actionId": 2259,
+        "id": "36b0c804-dfe3-4f9d-82ef-06192d5a9b7a",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Meisui",
         "actionId": 16489,
+        "id": "e52cc60c-2107-493c-9594-7faa14602d16",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 507,
                 "duration": {
                   "value": 0.0,
-                  "operator": "\u003e"
+                  "operator": ">"
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Fleeting Raiju",
         "actionId": 25778,
+        "id": "3174622d-0aca-4742-bf27-37edcd0034d0",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 2691
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Forked Raiju",
         "actionId": 25777,
+        "id": "70dbcefd-734d-4cb9-9047-119d3543eeb2",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 2690
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Phantom Kamaitachi",
         "actionId": 25774,
+        "id": "b362fb1a-6323-4205-9138-ae34c36d9fa8",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 2723
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Ten Chi Jin",
         "actionId": 7403,
+        "id": "5b7aa93a-c675-4a4a-ba53-62a3f4707ce9",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Hakke Mujinsatsu",
         "actionId": 16488,
+        "id": "8c343c18-c6a2-4eeb-a035-89c90f53738b",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "combo": {
             "value": 0.0,
-            "operator": "\u003e"
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Death Blossom",
         "actionId": 2254,
+        "id": "0bd1652c-9ca1-437a-be15-1847bdacf989",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       }

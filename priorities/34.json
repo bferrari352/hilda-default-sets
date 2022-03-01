@@ -3,6 +3,9 @@
     "id": "fceae385-7f7f-429b-9c6e-d70bbaa237cf",
     "jobId": 34,
     "name": "Single Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Ikishoten",
@@ -449,21 +452,24 @@
     "id": "337e907c-c33b-4afa-a4db-b24456391442",
     "jobId": 34,
     "name": "Multi Target",
+    "version": "0.0.1",
+    "appVersion": "0.0.0.10",
+    "lastUpdated": "2022-02-28 20:30:18Z",
     "priorities": [
       {
         "name": "Ikishoten",
         "actionId": 16482,
+        "id": "dff1dc2c-3b41-488a-bd4e-dd2308d84db2",
         "conditions": {
-          "isGcdActive": true,
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "kenki": {
                 "value": 40,
-                "operator": "\u003c\u003d"
+                "operator": "<="
               }
             }
           }
@@ -472,28 +478,28 @@
       {
         "name": "Shoha II",
         "actionId": 25779,
+        "id": "dd0ce448-369c-4715-9601-b66180c238c7",
         "conditions": {
-          "isGcdActive": true,
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Hissatsu: Guren",
         "actionId": 7496,
+        "id": "77bcfc67-a9c8-456b-92b6-7d0c79e335ea",
         "conditions": {
-          "isGcdActive": true,
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "kenki": {
                 "value": 35,
-                "operator": "\u003e\u003d"
+                "operator": ">="
               }
             }
           }
@@ -502,17 +508,17 @@
       {
         "name": "Hissatsu: Kyuten",
         "actionId": 7491,
+        "id": "890ee75d-11a2-4aa3-8168-8b84e34d9b10",
         "conditions": {
-          "isGcdActive": true,
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "kenki": {
                 "value": 35,
-                "operator": "\u003e\u003d"
+                "operator": ">="
               }
             }
           }
@@ -521,33 +527,33 @@
       {
         "name": "Meikyo Shisui",
         "actionId": 7499,
+        "id": "21239bfb-7be7-456a-b2eb-6e792e2b6ab2",
         "conditions": {
-          "isGcdActive": true,
           "combo": {
             "value": 0.0,
             "operator": "="
-          },
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
           },
           "player": {
             "statuses": [
               {
                 "id": 1298,
                 "duration": {
-                  "value": 8,
-                  "operator": "\u003e\u003d"
+                  "value": 8.0,
+                  "operator": ">="
                 }
               },
               {
                 "id": 1299,
                 "duration": {
-                  "value": 8,
-                  "operator": "\u003e\u003d"
+                  "value": 8.0,
+                  "operator": ">="
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -559,23 +565,24 @@
         }
       },
       {
-        "name": "MS \u003e Mangetsu",
+        "name": "MS > Mangetsu",
         "actionId": 7484,
+        "id": "9769d405-257f-44ad-b305-58313d57c96c",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 1233,
                 "duration": {
-                  "value": 1,
-                  "operator": "\u003e\u003d"
+                  "value": 1.0,
+                  "operator": ">="
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -585,23 +592,24 @@
         }
       },
       {
-        "name": "MS \u003e Oka",
+        "name": "MS > Oka",
         "actionId": 7485,
+        "id": "5ab0fb29-fd2f-421e-a31a-e9f7c563c29d",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 1233,
                 "duration": {
-                  "value": 1,
-                  "operator": "\u003e\u003d"
+                  "value": 1.0,
+                  "operator": ">="
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -613,12 +621,12 @@
       {
         "name": "Kaeshi: Namikiri",
         "actionId": 25782,
+        "id": "7e587256-1eb1-4c44-9133-d08bb0c5d228",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
-          "isGcdActive": true,
           "job": {
             "gauge": {
               "namikiri": true
@@ -627,72 +635,75 @@
         }
       },
       {
-        "name": "Kaiten \u003e Namikiri",
+        "name": "Kaiten > Namikiri",
         "actionId": 7494,
+        "id": "f7dbcea4-4e21-47ee-bb99-7573a1384324",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 1229,
                 "duration": {
-                  "value": 1,
-                  "operator": "\u003c\u003d"
+                  "value": 1.0,
+                  "operator": "<="
                 }
               },
               {
                 "id": 2959,
                 "duration": {
-                  "value": 1,
-                  "operator": "\u003e\u003d"
+                  "value": 1.0,
+                  "operator": ">="
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Ogi Namikiri",
         "actionId": 25781,
+        "id": "a0796785-72d9-441f-9b0b-03220a8e0ade",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 2959,
                 "duration": {
-                  "value": 1,
-                  "operator": "\u003e\u003d"
+                  "value": 1.0,
+                  "operator": ">="
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Hissatsu: Kaiten",
         "actionId": 7494,
+        "id": "8f8b09fa-59e6-46c5-aed6-f51ef8ccbd51",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "player": {
             "statuses": [
               {
                 "id": 1229,
                 "duration": {
-                  "value": 0,
-                  "operator": "\u003c\u003d"
+                  "value": 0.0,
+                  "operator": "<="
                 }
               }
             ]
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -705,11 +716,11 @@
       {
         "name": "Kaeshi: Goken",
         "actionId": 16485,
+        "id": "526589f9-ae31-465f-a52d-4a0bbfa38e14",
         "conditions": {
-          "isGcdActive": true,
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -721,16 +732,17 @@
       {
         "name": "Tenka Goken",
         "actionId": 7488,
+        "id": "1bf0006f-b2a4-4df5-99b0-8d20a1335149",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
               "senCount": {
                 "value": 2,
-                "operator": "\u003d"
+                "operator": "="
               }
             }
           }
@@ -739,14 +751,15 @@
       {
         "name": "Mangetsu",
         "actionId": 7484,
+        "id": "9f87c61e-46a4-4c07-8bf1-fba956346f87",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "combo": {
-            "operator": ">",
-            "value": 0
+            "value": 0.0,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -758,14 +771,15 @@
       {
         "name": "Oka",
         "actionId": 7485,
+        "id": "d305658a-bfcd-4128-bb2a-d8bb3f5600db",
         "conditions": {
-          "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
-          },
           "combo": {
-            "operator": ">",
-            "value": 0
+            "value": 0.0,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
           },
           "job": {
             "gauge": {
@@ -777,20 +791,22 @@
       {
         "name": "Fuko",
         "actionId": 25780,
+        "id": "50305eeb-80c4-498d-8d0b-68179426e92e",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       },
       {
         "name": "Fuga",
         "actionId": 7483,
+        "id": "d10d9fdd-1d54-46ed-8bac-9c3a973f4638",
         "conditions": {
           "enemyCount": {
-            "operator": "\u003e\u003d",
-            "value": 3
+            "value": 3,
+            "operator": ">="
           }
         }
       }
