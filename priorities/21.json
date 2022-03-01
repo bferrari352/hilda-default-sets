@@ -1,0 +1,407 @@
+﻿[
+  {
+    "id": "93fb9b53-dce6-44b3-99a3-38876628c02c",
+    "jobId": 21,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Inner Release",
+        "actionId": 7389,
+        "id": "fd93acab-21b3-43da-bb72-4bf87329ec68",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Berserk",
+        "actionId": 38,
+        "id": "2a09371b-1dc9-4143-b916-84684595208f",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Berserk (for children)",
+        "actionId": 38,
+        "id": "ed70b618-f63b-4272-8823-6050a4b4a0b6",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "player": {
+            "level": {
+              "value": 35,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Infuriate",
+        "actionId": 52,
+        "id": "60cae88d-8c64-4feb-ab1e-9abb2efa3005",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": "<"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Upheaval",
+        "actionId": 7387,
+        "id": "efcb7842-3f4e-4581-9b1a-48df0eb69e3d",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Inner Chaos",
+        "actionId": 16465,
+        "id": "47279588-de18-412c-a377-29e1ac522464",
+        "conditions": {}
+      },
+      {
+        "name": "Primal Rend",
+        "actionId": 25753,
+        "id": "e74f8252-c686-448c-9557-4aa95c3f13e7",
+        "conditions": {}
+      },
+      {
+        "name": "Fell Cleave (Berserk)",
+        "actionId": 3549,
+        "id": "c2288286-0b0a-48a6-9570-4fd9e5d59e31",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 86,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Fell Cleave (will cap)",
+        "actionId": 3549,
+        "id": "365d249f-97d0-4132-b259-6eb1229b2128",
+        "description": "We do not want to overcap the Beast Gauge, we're at 80 and Storm's Path gives 20. Go ahead and unleash the beast.",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 80,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Inner Beast (Berserk)",
+        "actionId": 49,
+        "id": "4bbe1c21-7866-4201-b96d-44665e275cf0",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 86,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Inner Beast (will cap)",
+        "actionId": 49,
+        "id": "39dbd7e8-cc3a-43f7-bd9e-b00406187a7c",
+        "description": "We do not want to overcap the Beast Gauge, we're at 80 and Storm's Path gives 20. Go ahead and unleash the beast.",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 80,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Storm's Eye",
+        "actionId": 45,
+        "id": "717def85-bc30-46bb-99c4-5142578cc33e",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 2677,
+                "duration": {
+                  "value": 6.0,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Storm's Path",
+        "actionId": 42,
+        "id": "8f07daf1-380c-401a-a220-c53f821512d3",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Maim",
+        "actionId": 37,
+        "id": "3d686bbc-46b7-4c94-ae50-bbceda28e231",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Heavy Swing",
+        "actionId": 31,
+        "id": "6d012a3a-91c4-4b60-81b8-9b4fc76659c7",
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "853645b9-a5ee-47f8-8a5a-49e3763b95da",
+    "jobId": 21,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Inner Release",
+        "actionId": 7389,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Berserk",
+        "actionId": 38,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Infuriate",
+        "actionId": 52,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": "\u003c"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Upheaval",
+        "actionId": 7387,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Chaotic Cyclone",
+        "actionId": 16463,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Primal Rend",
+        "actionId": 25753,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Decimate",
+        "actionId": 3550,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Steel Cyclone",
+        "actionId": 51,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "beastGauge": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Mythril Tempest",
+        "actionId": 16462,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Overpower",
+        "actionId": 41,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

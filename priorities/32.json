@@ -1,0 +1,381 @@
+﻿[
+  {
+    "id": "ed1b140c-f8f9-4872-89e5-3dd15f6c75da",
+    "jobId": 32,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Blood Weapon",
+        "actionId": 3625,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "player": {
+            "mp": {
+              "value": 3000,
+              "operator": "\u003c"
+            }
+          }
+        }
+      },
+      {
+        "name": "Edge of Shadow",
+        "actionId": 16470,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "player": {
+            "mp": {
+              "value": 3000,
+              "operator": "\u003e\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Edge of Darkness",
+        "actionId": 16467,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "player": {
+            "mp": {
+              "value": 3000,
+              "operator": "\u003e\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Flood of Darkness",
+        "actionId": 16466,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "player": {
+            "mp": {
+              "value": 3000,
+              "operator": "\u003e\u003d"
+            },
+            "level": {
+              "value": 40,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Delerium",
+        "actionId": 7390,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Living Shadow",
+        "actionId": 16472,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "blood": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Salted Earth",
+        "actionId": 3639,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Shadowbringer",
+        "actionId": 25757,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "darksideTimeRemaining": {
+                "value": 1,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Salt And Darkness",
+        "actionId": 25755,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Carve and Spit",
+        "actionId": 3643,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Bloodspiller",
+        "actionId": 7392,
+        "conditions": {
+          "job": {
+            "gauge": {
+              "blood": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Souleater",
+        "actionId": 3632,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Syphon Strike",
+        "actionId": 3623,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Hard Slash",
+        "actionId": 3617,
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "8cdf0b78-0d36-4404-a28a-c43f79c9fb6a",
+    "jobId": 32,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Flood of Shadow",
+        "actionId": 16469,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "mp": {
+              "value": 3000,
+              "operator": "\u003e\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Flood of Darkness",
+        "actionId": 16466,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "mp": {
+              "value": 3000,
+              "operator": "\u003e\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Delerium",
+        "actionId": 7390,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Living Shadow",
+        "actionId": 16472,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "blood": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Salted Earth",
+        "actionId": 3639,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Shadowbringer",
+        "actionId": 25757,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "darksideTimeRemaining": {
+                "value": 1,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Salt And Darkness",
+        "actionId": 25755,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Carve and Spit",
+        "actionId": 3643,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Quietus",
+        "actionId": 7391,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "blood": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Stalwart Soul",
+        "actionId": 16468,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Unleash",
+        "actionId": 3621,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

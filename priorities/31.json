@@ -1,0 +1,659 @@
+﻿[
+  {
+    "id": "98c23981-5d8c-4826-817e-0b8b91396def",
+    "jobId": 31,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Hypercharge (Wildfire)",
+        "actionId": 17209,
+        "conditions": {
+          "job": {
+            "gauge": {
+              "heat": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1946,
+                "duration": {
+                  "value": 0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Automaton Queen (Max)",
+        "actionId": 16501,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "battery": {
+                "value": 100,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Rook Autoturret (Max)",
+        "actionId": 2864,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "battery": {
+                "value": 100,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Hypercharge (Max)",
+        "actionId": 17209,
+        "conditions": {
+          "job": {
+            "gauge": {
+              "heat": {
+                "value": 100,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Reassemble (Chainsaw)",
+        "actionId": 2876,
+        "conditions": {
+          "actionDependentRecast": {
+            "actionId": 25788,
+            "operator": "=",
+            "value": 0
+          },
+          "charges": {
+            "value": 1,
+            "operator": ">="
+          },
+          "job": {
+            "gauge": {
+              "overheated": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Reassemble (Air Anchor)",
+        "actionId": 2876,
+        "conditions": {
+          "actionDependentRecast": {
+            "actionId": 16500,
+            "operator": "=",
+            "value": 0
+          },
+          "charges": {
+            "value": 1,
+            "operator": ">="
+          },
+          "job": {
+            "gauge": {
+              "overheated": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Reassemble (Drill)",
+        "actionId": 2876,
+        "conditions": {
+          "player": {
+            "level": {
+              "operator": "<",
+              "value": 90
+            }
+          },
+          "actionDependentRecast": {
+            "actionId": 16498,
+            "operator": "=",
+            "value": 0
+          },
+          "charges": {
+            "value": 1,
+            "operator": ">="
+          },
+          "job": {
+            "gauge": {
+              "overheated": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Gauss Round (3)",
+        "actionId": 2874,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "charges": {
+            "value": 3,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Ricochet (3)",
+        "actionId": 2890,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "charges": {
+            "value": 3,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Gauss Round (2)",
+        "actionId": 2874,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "charges": {
+            "value": 2,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Ricochet (2)",
+        "actionId": 2890,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "charges": {
+            "value": 2,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Gauss Round (1)",
+        "actionId": 2874,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "charges": {
+            "value": 1,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Ricochet (1)",
+        "actionId": 2890,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "charges": {
+            "value": 1,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Heat Blast",
+        "actionId": 7410
+      },
+      {
+        "name": "Air Anchor (Reassembled)",
+        "actionId": 16500,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 851,
+                "duration": {
+                  "value": 0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Chain Saw (Reassembled)",
+        "actionId": 25788,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 851,
+                "duration": {
+                  "value": 0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Drill (Reassembled)",
+        "actionId": 16498,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 851,
+                "duration": {
+                  "value": 0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Air Anchor",
+        "actionId": 16500,
+        "conditions": {}
+      },
+      {
+        "name": "Hot Shot",
+        "actionId": 2872,
+        "conditions": {}
+      },
+      {
+        "name": "Drill",
+        "actionId": 16498,
+        "conditions": {}
+      },
+      {
+        "name": "Chain Saw",
+        "actionId": 25788,
+        "conditions": {}
+      },
+      {
+        "name": "Barrel Stabilizer",
+        "actionId": 7414,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "heat": {
+                "value": 50,
+                "operator": "<="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Wildfire (Hypercharge Ready)",
+        "actionId": 2878,
+        "conditions": {
+          "job": {
+            "gauge": {
+              "heat": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Hypercharge",
+        "actionId": 17209,
+        "conditions": {
+          "job": {
+            "gauge": {
+              "heat": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Automaton Queen",
+        "actionId": 16501,
+        "conditions": {}
+      },
+      {
+        "name": "Rook Autoturret",
+        "actionId": 2864,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Heated Clean Shot",
+        "actionId": 7413,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Clean Shot",
+        "actionId": 2873,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Heated Slug Shot",
+        "actionId": 7412,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Slug Shot",
+        "actionId": 2868,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Heated Split Shot",
+        "actionId": 7411,
+        "conditions": {}
+      },
+      {
+        "name": "Split Shot",
+        "actionId": 2866,
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "98c23981-5d8c-4826-847e-0b8b91396def",
+    "jobId": 31,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Reassemble (Chain Saw)",
+        "actionId": 2876,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "actionDependentRecast": {
+            "actionId": 25788,
+            "operator": "=",
+            "value": 0
+          },
+          "charges": {
+            "value": 1,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Chain Saw",
+        "actionId": 25788,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Reassemble (Bioblaster)",
+        "actionId": 2876,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "actionDependentRecast": {
+            "actionId": 16499,
+            "operator": "=",
+            "value": 0
+          },
+          "charges": {
+            "value": 1,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Bioblaster",
+        "actionId": 16499,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Ricochet (3)",
+        "actionId": 2890,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "charges": {
+            "value": 3,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Gauss Round (3)",
+        "actionId": 2874,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "charges": {
+            "value": 3,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Ricochet (2)",
+        "actionId": 2890,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "charges": {
+            "value": 2,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Ricochet (1)",
+        "actionId": 2890,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "charges": {
+            "value": 1,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Gauss Round (2)",
+        "actionId": 2874,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "charges": {
+            "value": 2,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Gauss Round (1)",
+        "actionId": 2874,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "charges": {
+            "value": 1,
+            "operator": "\u003d"
+          }
+        }
+      },
+      {
+        "name": "Flamethrower",
+        "actionId": 7418,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Hypercharge",
+        "actionId": 17209,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "heat": {
+                "value": 50,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Auto Crossbow",
+        "actionId": 16497,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Scattergun",
+        "actionId": 25786,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Spread Shot",
+        "actionId": 2870,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

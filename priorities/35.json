@@ -1,0 +1,634 @@
+[
+  {
+    "id": "18a92958-ae06-4181-9e55-46071bac1612",
+    "name": "Single Target",
+    "jobId": 35,
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Manafication",
+        "actionId": 7521,
+        "id": "9d9cd5d0-0f8c-47ea-87fe-eacad5637dea",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": "="
+          },
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "blackMana": {
+                "value": 35,
+                "operator": "<="
+              },
+              "whiteMana": {
+                "value": 35,
+                "operator": "<="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Resolution",
+        "actionId": 25858,
+        "id": "cc1bea4a-b176-40d5-bf48-f3565b9075e6",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Scorch",
+        "actionId": 16530,
+        "id": "716e669d-6c74-48ca-ba5a-250bbda598a7",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Verholy",
+        "actionId": 7526,
+        "id": "26e08eea-cfbc-46d1-af17-5d138fc24f3d",
+        "conditions": {
+          "job": {
+            "balance": {
+              "parameterA": "BlackMana",
+              "parameterB": "WhiteMana",
+              "operator": ">="
+            },
+            "gauge": {
+              "manaStacks": {
+                "value": 3,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Verflare",
+        "actionId": 7525,
+        "id": "22bbc23a-ae0e-469d-858d-bb10884e1f8e",
+        "conditions": {
+          "job": {
+            "balance": {
+              "parameterA": "BlackMana",
+              "parameterB": "WhiteMana",
+              "operator": "<="
+            },
+            "gauge": {
+              "manaStacks": {
+                "value": 3,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Enchanted Redoublement",
+        "actionId": 7529,
+        "id": "d41accda-1898-4bec-bdb2-18a266011b60",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Enchanted Zwerchhao",
+        "actionId": 7528,
+        "id": "02b21a01-b397-4f34-8b39-8d5a074ca941",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Enchanted Riposte",
+        "actionId": 7527,
+        "id": "34a1bd29-4aa4-46cf-88f8-afc4b36f9df8",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "blackMana": {
+                "value": 50,
+                "operator": ">="
+              },
+              "whiteMana": {
+                "value": 50,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Contre Sixte",
+        "actionId": 7519,
+        "id": "58f68b08-8a66-457a-b25b-f0f35f6bdd27",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Fleche",
+        "actionId": 7517,
+        "id": "e16c1630-2b85-41e6-9dd5-43f9ace4c52f",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Corps-a-corps",
+        "actionId": 7506,
+        "id": "4614e68d-b421-4701-8f4a-434348fb0b6f",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "charges": {
+            "value": 2,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Engagement",
+        "actionId": 16527,
+        "id": "ffdcdae7-4152-49d1-a851-7d433d7642dd",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "charges": {
+            "value": 2,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Corps-a-corps",
+        "actionId": 7506,
+        "id": "02add5ff-67cf-44d8-b0b0-d099150510d8",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "charges": {
+            "value": 1,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Engagement",
+        "actionId": 16527,
+        "id": "a03a6f2c-c487-4160-9a9b-afb57286a674",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "charges": {
+            "value": 1,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Verstone",
+        "actionId": 7511,
+        "id": "7518fa07-93f6-4a67-b36e-1377a683258c",
+        "conditions": {}
+      },
+      {
+        "name": "Verfire",
+        "actionId": 7510,
+        "id": "4118f799-e0fe-4435-99d7-424b5eb8b78d",
+        "conditions": {}
+      },
+      {
+        "name": "Veraero III",
+        "actionId": 25856,
+        "id": "402c9e29-4444-4ab9-9f80-ea90d63c6caf",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1249,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "balance": {
+              "parameterA": "WhiteMana",
+              "parameterB": "BlackMana",
+              "operator": "<="
+            }
+          }
+        }
+      },
+      {
+        "name": "Verthunder III",
+        "actionId": 25855,
+        "id": "9d6fe505-5388-45ec-a7a2-d5acd6428411",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1249,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "balance": {
+              "parameterA": "BlackMana",
+              "parameterB": "WhiteMana",
+              "operator": "<="
+            }
+          }
+        }
+      },
+      {
+        "name": "Veraero",
+        "actionId": 7507,
+        "id": "8958e041-c164-4001-b5a5-b948c22cfc30",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1249,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "balance": {
+              "parameterA": "WhiteMana",
+              "parameterB": "BlackMana",
+              "operator": "<="
+            }
+          }
+        }
+      },
+      {
+        "name": "Verthunder",
+        "actionId": 7505,
+        "id": "c86cb78f-2457-4df4-b9ce-55243368f8cb",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1249,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "balance": {
+              "parameterA": "BlackMana",
+              "parameterB": "WhiteMana",
+              "operator": "<="
+            }
+          }
+        }
+      },
+      {
+        "name": "Jolt II",
+        "actionId": 7524,
+        "id": "75844443-ae7c-45d6-b5d1-ba9fc565679d",
+        "conditions": {}
+      },
+      {
+        "name": "Jolt",
+        "actionId": 7503,
+        "id": "2b38a56a-80bd-44a0-b178-401cd22a0d5c",
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "c50af5f3-2995-4d04-ba59-10307b122f8c",
+    "name": "Multi Target",
+    "jobId": 35,
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Manafication",
+        "actionId": 7521,
+        "conditions": {
+          "combo": {
+            "operator": "\u003d",
+            "value": 0
+          },
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "whiteMana": {
+                "operator": "\u003c\u003d",
+                "value": 35
+              },
+              "blackMana": {
+                "operator": "\u003c\u003d",
+                "value": 35
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Resolution",
+        "actionId": 25858,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Scorch",
+        "actionId": 16530,
+        "conditions": {
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Fleche",
+        "actionId": 7517,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Contre Sixte",
+        "actionId": 7519,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Verflare",
+        "actionId": 7525,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "balance": {
+              "parameterA": "BlackMana",
+              "parameterB": "WhiteMana",
+              "operator": "\u003c\u003d"
+            },
+            "gauge": {
+              "manaStacks": {
+                "operator": "\u003e\u003d",
+                "value": 3
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Verholy",
+        "actionId": 7526,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "balance": {
+              "parameterA": "BlackMana",
+              "parameterB": "WhiteMana",
+              "operator": "\u003e\u003d"
+            },
+            "gauge": {
+              "manaStacks": {
+                "operator": "\u003e\u003d",
+                "value": 3
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Enchanted Moulinet - Follow Up",
+        "actionId": 7530,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "whiteMana": {
+                "operator": "\u003e\u003d",
+                "value": 20
+              },
+              "blackMana": {
+                "operator": "\u003e\u003d",
+                "value": 20
+              },
+              "manaStacks": {
+                "operator": "\u003e\u003d",
+                "value": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Enchanted Moulinet",
+        "actionId": 7530,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "whiteMana": {
+                "operator": "\u003e\u003d",
+                "value": 60
+              },
+              "blackMana": {
+                "operator": "\u003e\u003d",
+                "value": 60
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Impact",
+        "actionId": 16526,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1249,
+                "duration": {
+                  "operator": "\u003e",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Scatter",
+        "actionId": 7509,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1249,
+                "duration": {
+                  "operator": "\u003e",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Veraero II",
+        "actionId": 16525,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "balance": {
+              "parameterA": "WhiteMana",
+              "parameterB": "BlackMana",
+              "operator": "\u003c\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Verthunder II",
+        "actionId": 16524,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "balance": {
+              "parameterA": "WhiteMana",
+              "parameterB": "BlackMana",
+              "operator": "\u003e\u003d"
+            }
+          }
+        }
+      }
+    ]
+  }
+]

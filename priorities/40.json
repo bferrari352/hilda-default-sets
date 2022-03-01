@@ -1,0 +1,206 @@
+﻿[
+  {
+    "id": "07bf03a9-352f-4449-9bb9-1d72591d3a62",
+    "jobId": 40,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Eukrasia",
+        "actionId": 24290,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 2614,
+                "duration": {
+                  "value": 5,
+                  "operator": "<="
+                }
+              },
+              {
+                "id": 2615,
+                "duration": {
+                  "value": 5,
+                  "operator": "<="
+                }
+              },
+              {
+                "id": 2616,
+                "duration": {
+                  "value": 5,
+                  "operator": "<="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "eukrasia": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Eukrasian Dosis III",
+        "actionId": 24314,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 2616,
+                "duration": {
+                  "value": 5,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Eukrasian Dosis II",
+        "actionId": 24308,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 2615,
+                "duration": {
+                  "value": 5,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Eukrasian Dosis",
+        "actionId": 24293,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 2614,
+                "duration": {
+                  "value": 5,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Phlegma III",
+        "actionId": 24313
+      },
+      {
+        "name": "Phlegma II",
+        "actionId": 24307
+      },
+      {
+        "name": "Phlegma",
+        "actionId": 24289
+      },
+      {
+        "name": "Dosis III",
+        "actionId": 24312,
+        "conditions": {}
+      },
+      {
+        "name": "Dosis II",
+        "actionId": 24306,
+        "conditions": {}
+      },
+      {
+        "name": "Dosis",
+        "actionId": 24283,
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "670392b4-3d4e-4b59-b91e-3cc2fdc6d7e6",
+    "jobId": 40,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Phlegma III",
+        "actionId": 24313,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Phlegma II",
+        "actionId": 24307,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Phlegma",
+        "actionId": 24289,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Dyskrasia II",
+        "actionId": 24315,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Dyskrasia",
+        "actionId": 24297,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

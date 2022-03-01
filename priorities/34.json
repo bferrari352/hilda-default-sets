@@ -1,0 +1,799 @@
+﻿[
+  {
+    "id": "fceae385-7f7f-429b-9c6e-d70bbaa237cf",
+    "jobId": 34,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Ikishoten",
+        "actionId": 16482,
+        "id": "4647b543-128b-4bad-acde-b4f9c0cc9991",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "kenki": {
+                "value": 40,
+                "operator": "<="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Shoha",
+        "actionId": 16487,
+        "id": "9cd1d5eb-99a3-43cc-abf1-831b1d3a2cb5",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Hissatsu: Senei",
+        "actionId": 16481,
+        "id": "ee04cc14-7099-4c5a-a08e-f26e611970e9",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "kenki": {
+                "value": 45,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Hissatsu: Shinten",
+        "actionId": 7490,
+        "id": "b537af19-f7e4-4a5b-96e6-56982dcba41e",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "kenki": {
+                "value": 45,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Meikyo Shisui",
+        "actionId": 7499,
+        "id": "ab339602-e8fa-4ceb-a8ea-7ac7029ad93e",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": "="
+          },
+          "job": {
+            "gauge": {
+              "setsu": false,
+              "getsu": false,
+              "ka": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Kasha (Meikyo Shisui)",
+        "actionId": 7482,
+        "id": "9723fc3b-fc56-44b5-bb0a-272179a789c2",
+        "disabled": false,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1233,
+                "duration": {
+                  "value": 1.0,
+                  "operator": ">="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "ka": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Gekko (Meikyo Shisui)",
+        "actionId": 7481,
+        "id": "b9ba8bc1-9ef8-4aac-b4e9-03cc167adcaa",
+        "disabled": false,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1233,
+                "duration": {
+                  "value": 1.0,
+                  "operator": ">="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "getsu": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Yukikaze (Meikyo Shisui)",
+        "actionId": 7480,
+        "id": "a4d2bb4f-cd7b-4499-9585-c33e5a6d4421",
+        "disabled": false,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1233,
+                "duration": {
+                  "value": 1.0,
+                  "operator": ">="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "setsu": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Kaeshi: Namikiri",
+        "actionId": 25782,
+        "id": "6aac53a5-4c9f-41a9-9529-2bbb71dadb8d",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "namikiri": true
+            }
+          }
+        }
+      },
+      {
+        "name": "Kaiten (Namikiri ready)",
+        "actionId": 7494,
+        "id": "754c922d-22b5-413f-bf8d-956b16d0a6cd",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1229,
+                "duration": {
+                  "value": 1.0,
+                  "operator": "<="
+                }
+              },
+              {
+                "id": 2959,
+                "duration": {
+                  "value": 1.0,
+                  "operator": ">="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ogi Namikiri",
+        "actionId": 25781,
+        "id": "f9bcf3a8-fba8-4247-8c50-a3153f66d8c2",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 2959,
+                "duration": {
+                  "value": 1.0,
+                  "operator": ">="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Kaiten (Higanbana refresh)",
+        "actionId": 7494,
+        "id": "e16afe8c-ee1a-4c29-8392-5f5ddc44edbe",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1229,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "<="
+                }
+              }
+            ]
+          },
+          "target": {
+            "statuses": [
+              {
+                "id": 1228,
+                "duration": {
+                  "value": 5.0,
+                  "operator": "<="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "senCount": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Higanbana",
+        "actionId": 7489,
+        "id": "a4cb4563-6114-4b28-9a0c-b68cf9625c83",
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 1228,
+                "duration": {
+                  "value": 5.0,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Kaeshi: Setsugekka",
+        "actionId": 16486,
+        "id": "14a856fa-7a91-42b4-b787-3d224cd4dc49",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "setsugekka": true
+            }
+          }
+        }
+      },
+      {
+        "name": "Kaiten (Midare Setsugekka ready)",
+        "actionId": 7494,
+        "id": "c243e8bc-b028-49d9-b527-362766b2469b",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1229,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "<="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "senCount": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Midare Setsugekka",
+        "actionId": 7487,
+        "id": "269aca42-3937-4346-a817-108c0c137ba3",
+        "conditions": {}
+      },
+      {
+        "name": "Tenka Goken (for children)",
+        "actionId": 7488,
+        "id": "3ff0f654-ba94-4023-b1d2-57bd96060759",
+        "description": "Spend Sen before ability to use Midare Setsugekka is unlocked.",
+        "conditions": {
+          "player": {
+            "level": {
+              "value": 50,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Gekko",
+        "actionId": 7481,
+        "id": "faf0b4e2-b0bb-411e-bf79-4965231e4dd8",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "getsu": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Kasha",
+        "actionId": 7482,
+        "id": "cec466ce-6233-4a6e-bb52-c232b8dc529d",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "ka": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Shifu (for children)",
+        "actionId": 7479,
+        "id": "59745bd0-0207-45e2-b2e4-f2d9daebd9f5",
+        "description": "For keeping up the Shifu buff, before multiple Sen is unlocked to use as the main decider of combos.",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "player": {
+            "level": {
+              "value": 40,
+              "operator": "<"
+            },
+            "statuses": [
+              {
+                "id": 1299,
+                "duration": {
+                  "value": 6.0,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Jinpu",
+        "actionId": 7478,
+        "id": "144fc017-6e7c-4ad6-a5bb-e92a2087c3a3",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "getsu": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Shifu",
+        "actionId": 7479,
+        "id": "6969ed2c-d446-47cc-9456-5e9cf06dddd9",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "ka": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Yukikaze",
+        "actionId": 7480,
+        "id": "7e25bf9c-d6cc-491d-b6ed-4787b5b5051d",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "setsu": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Hakaze",
+        "actionId": 7477,
+        "id": "930a4bba-5f5f-47a4-9f84-078cc620b173",
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "337e907c-c33b-4afa-a4db-b24456391442",
+    "jobId": 34,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Ikishoten",
+        "actionId": 16482,
+        "conditions": {
+          "isGcdActive": true,
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "kenki": {
+                "value": 40,
+                "operator": "\u003c\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Shoha II",
+        "actionId": 25779,
+        "conditions": {
+          "isGcdActive": true,
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Hissatsu: Guren",
+        "actionId": 7496,
+        "conditions": {
+          "isGcdActive": true,
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "kenki": {
+                "value": 35,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Hissatsu: Kyuten",
+        "actionId": 7491,
+        "conditions": {
+          "isGcdActive": true,
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "kenki": {
+                "value": 35,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Meikyo Shisui",
+        "actionId": 7499,
+        "conditions": {
+          "isGcdActive": true,
+          "combo": {
+            "value": 0.0,
+            "operator": "="
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1298,
+                "duration": {
+                  "value": 8,
+                  "operator": "\u003e\u003d"
+                }
+              },
+              {
+                "id": 1299,
+                "duration": {
+                  "value": 8,
+                  "operator": "\u003e\u003d"
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "setsu": false,
+              "getsu": false,
+              "ka": false
+            }
+          }
+        }
+      },
+      {
+        "name": "MS \u003e Mangetsu",
+        "actionId": 7484,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1233,
+                "duration": {
+                  "value": 1,
+                  "operator": "\u003e\u003d"
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "getsu": false
+            }
+          }
+        }
+      },
+      {
+        "name": "MS \u003e Oka",
+        "actionId": 7485,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1233,
+                "duration": {
+                  "value": 1,
+                  "operator": "\u003e\u003d"
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "ka": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Kaeshi: Namikiri",
+        "actionId": 25782,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "isGcdActive": true,
+          "job": {
+            "gauge": {
+              "namikiri": true
+            }
+          }
+        }
+      },
+      {
+        "name": "Kaiten \u003e Namikiri",
+        "actionId": 7494,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1229,
+                "duration": {
+                  "value": 1,
+                  "operator": "\u003c\u003d"
+                }
+              },
+              {
+                "id": 2959,
+                "duration": {
+                  "value": 1,
+                  "operator": "\u003e\u003d"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ogi Namikiri",
+        "actionId": 25781,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 2959,
+                "duration": {
+                  "value": 1,
+                  "operator": "\u003e\u003d"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Hissatsu: Kaiten",
+        "actionId": 7494,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1229,
+                "duration": {
+                  "value": 0,
+                  "operator": "\u003c\u003d"
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "getsu": true,
+              "ka": true
+            }
+          }
+        }
+      },
+      {
+        "name": "Kaeshi: Goken",
+        "actionId": 16485,
+        "conditions": {
+          "isGcdActive": true,
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "goken": true
+            }
+          }
+        }
+      },
+      {
+        "name": "Tenka Goken",
+        "actionId": 7488,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "senCount": {
+                "value": 2,
+                "operator": "\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Mangetsu",
+        "actionId": 7484,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "combo": {
+            "operator": ">",
+            "value": 0
+          },
+          "job": {
+            "gauge": {
+              "getsu": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Oka",
+        "actionId": 7485,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "combo": {
+            "operator": ">",
+            "value": 0
+          },
+          "job": {
+            "gauge": {
+              "ka": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Fuko",
+        "actionId": 25780,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Fuga",
+        "actionId": 7483,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

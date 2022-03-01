@@ -1,0 +1,446 @@
+﻿[
+  {
+    "id": "442f969b-e132-454a-bfef-4fc6779ece30",
+    "jobId": 37,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "No Mercy",
+        "actionId": 16138,
+        "id": "769acc96-3f40-4853-ba0c-66174f5243d8",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Hypervelocity",
+        "actionId": 25759,
+        "id": "4677fa9d-d08e-4a01-9ab3-62898f97b641",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Eye Gouge",
+        "actionId": 16158,
+        "id": "2aea87ff-0a44-4f57-bea2-753f2d2aef54",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Abdomen Tear",
+        "actionId": 16157,
+        "id": "271243a6-90f7-4229-932a-1c2e42131ec7",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Jugular Rip",
+        "actionId": 16156,
+        "id": "6fbc213d-ce96-4535-9b46-f57dca6b8a21",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Bloodfest",
+        "actionId": 16164,
+        "id": "4a808b05-afae-484e-bc34-e9a274e8b417",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 1,
+                "operator": "<="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Blasting Zone",
+        "actionId": 16165,
+        "id": "9ba728fa-e8ca-4670-847f-38b77be43e9d",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Danger Zone",
+        "actionId": 16144,
+        "id": "4d0221b2-6e8f-44c9-ba52-4bbb321db6ee",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Bow Shock",
+        "actionId": 16159,
+        "id": "b73acd72-b468-4ad5-9db8-8a8aab2c75b5",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Double Down",
+        "actionId": 25760,
+        "id": "f73e6e38-c715-46c4-b13d-6a4474b162d1",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 2,
+                "operator": ">="
+              },
+              "ammoComboStep": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Sonic Break",
+        "actionId": 16153,
+        "id": "d2489135-f1a8-46ac-8770-00d2f58e99e3",
+        "conditions": {}
+      },
+      {
+        "name": "Wicked Talon",
+        "actionId": 16150,
+        "id": "a622e297-b1a3-47dc-9b6e-32b9d517a459",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "ammoComboStep": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Savage Claw",
+        "actionId": 16147,
+        "id": "cf1b4fb9-a1b4-4abc-8315-21c4de1e5551",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "ammoComboStep": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Gnashing Fang",
+        "actionId": 16146,
+        "id": "6b80adcc-f724-40d1-a733-fdab04320c4e",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Burst Strike",
+        "actionId": 16162,
+        "id": "73f4ecfe-1931-411f-9e45-bf5b6f423ceb",
+        "conditions": {
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Solid Barrel",
+        "actionId": 16145,
+        "id": "e05f6c2a-ca23-48b8-8859-57ee601cbdb1",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Brutal Shell",
+        "actionId": 16139,
+        "id": "a0925966-c9ee-4399-b488-5fabc91e9bbc",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Keen Edge",
+        "actionId": 16137,
+        "id": "f42f3b61-6d2e-4bd4-b4fb-4f660b73d13b",
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "d7dd1178-ebbd-42b6-be8f-eb2652c8d3b5",
+    "jobId": 37,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "No Mercy",
+        "actionId": 16138,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Bloodfest",
+        "actionId": 16164,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 1,
+                "operator": "<="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Bow Shock",
+        "actionId": 16159,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Blasting Zone",
+        "actionId": 16165,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Danger Zone",
+        "actionId": 16144,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Double Down",
+        "actionId": 25760,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 2,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Fated Circle",
+        "actionId": 16163,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 1,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Wicked Talon",
+        "actionId": 16150,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "ammoComboStep": {
+                "value": 2,
+                "operator": "\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Savage Claw",
+        "actionId": 16147,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "ammoComboStep": {
+                "value": 1,
+                "operator": "\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Gnashing Fang",
+        "actionId": 16146,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 1,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Burst Strike",
+        "actionId": 16162,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "cartridge": {
+                "value": 1,
+                "operator": "\u003e\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Demon Slaughter",
+        "actionId": 16149,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "combo": {
+            "operator": "\u003e",
+            "value": 0
+          }
+        }
+      },
+      {
+        "name": "Demon Slice",
+        "actionId": 16141,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

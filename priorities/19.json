@@ -1,0 +1,460 @@
+﻿[
+  {
+    "id": "5b633bad-8888-4bb3-a393-143fead17c5f",
+    "jobId": 19,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Fight or Flight",
+        "actionId": 20,
+        "id": "383f2122-44b1-4b85-9d64-113bbe4dd0f9",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Circle of Scorn",
+        "actionId": 23,
+        "id": "d5d1d8f3-b53a-44ae-903f-da1a1096eefd",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Expiacion",
+        "actionId": 25747,
+        "id": "726ecc1a-c46f-44f4-885f-d96a913090cb",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Spirits Within",
+        "actionId": 29,
+        "id": "28e3119b-ebae-4a6c-be23-ee1c00ac3410",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Requiescat",
+        "actionId": 7383,
+        "id": "e0bfe90a-3532-4f49-b8ae-7e9abac07982",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "player": {
+            "mp": {
+              "value": 5000,
+              "operator": ">="
+            }
+          }
+        }
+      },
+      {
+        "name": "Blade of Valor",
+        "actionId": 25750,
+        "id": "a1ea47e6-b8eb-4501-add8-f252197a09a9",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Blade of Truth",
+        "actionId": 25749,
+        "id": "bebf99fb-cff4-463a-b15a-cf605e8d0ff9",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Blade of Faith",
+        "actionId": 25748,
+        "id": "e48f31dd-5d23-4555-8d62-9cf6daefaa0b",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Confiteor",
+        "actionId": 16459,
+        "id": "aeb0a250-4f72-4acb-9dd0-6f54b19b3ada",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": ">="
+            },
+            "statuses": [
+              {
+                "id": 1368,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "requiescat": {
+              "operator": "=",
+              "value": 1
+            }
+          }
+        }
+      },
+      {
+        "name": "Atonement",
+        "actionId": 16460,
+        "id": "f5f15c4a-1f47-4ff5-997d-293411e18f86",
+        "conditions": {}
+      },
+      {
+        "name": "Holy Spirit",
+        "actionId": 7384,
+        "id": "b6e37b1b-2860-40ae-8f17-b4115bb5884a",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 2000,
+              "operator": ">="
+            },
+            "level": {
+              "value": 68,
+              "operator": ">="
+            },
+            "statuses": [
+              {
+                "id": 1368,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "requiescat": {
+              "operator": ">",
+              "value": 1
+            }
+          }
+        }
+      },
+      {
+        "name": "Goring Blade",
+        "actionId": 3538,
+        "id": "0813a14e-8ca4-4bb3-8e45-af209d39ebb4",
+        "disabled": false,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "target": {
+            "statuses": [
+              {
+                "id": 725,
+                "duration": {
+                  "value": 3.0,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Royal Authority",
+        "actionId": 3539,
+        "id": "b9f5e980-aa96-410f-ac85-90cf1ac2b822",
+        "disabled": false,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Rage of Halone",
+        "actionId": 21,
+        "id": "b0d5fc97-070b-4c9b-bd71-19597c1a36e2",
+        "disabled": false,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Riot Blade",
+        "actionId": 15,
+        "id": "c09aa927-ad29-4ae0-80fa-d036b7a5ef86",
+        "disabled": false,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Fast Blade",
+        "actionId": 9,
+        "id": "2b22f6ce-6328-450e-b6d7-648e3a856609",
+        "disabled": false,
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "d9653478-7d01-4feb-a66f-90166bc4eb09",
+    "jobId": 19,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Fight or Flight",
+        "actionId": 20,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Circle of Scorn",
+        "actionId": 23,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Expiacion",
+        "actionId": 25747,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Spirits Within",
+        "actionId": 29,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Requiescat",
+        "actionId": 7383,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "player": {
+            "level": {
+              "value": 72,
+              "operator": ">="
+            },
+            "mp": {
+              "value": 5000,
+              "operator": ">="
+            }
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Blade of Valor",
+        "actionId": 25750,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Blade of Truth",
+        "actionId": 25749,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Blade of Faith",
+        "actionId": 25748,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Confiteor",
+        "actionId": 16459,
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": ">="
+            },
+            "statuses": [
+              {
+                "id": 1368,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "requiescat": {
+              "operator": "=",
+              "value": 1
+            }
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Atonement",
+        "actionId": 16460,
+        "conditions": {
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Holy Circle",
+        "actionId": 16458,
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 2000,
+              "operator": ">="
+            },
+            "statuses": [
+              {
+                "id": 1368,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "requiescat": {
+              "operator": ">",
+              "value": 1
+            }
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Riot Blade",
+        "actionId": 16457,
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "name": "Total Eclipse",
+        "actionId": 7381,
+        "conditions": {
+          "enemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      }
+    ]
+  }
+]

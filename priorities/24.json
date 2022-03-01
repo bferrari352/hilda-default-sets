@@ -1,0 +1,168 @@
+﻿[
+  {
+    "id": "bd5becba-7dcc-4727-b842-9e49e21a6448",
+    "jobId": 24,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Afflatus Misery",
+        "actionId": 16535,
+        "conditions": {}
+      },
+      {
+        "name": "Dia",
+        "actionId": 16532,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 1871,
+                "duration": {
+                  "value": 4,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Aero II",
+        "actionId": 132,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 144,
+                "duration": {
+                  "value": 4,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Aero",
+        "actionId": 121,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 143,
+                "duration": {
+                  "value": 4,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Glare III",
+        "actionId": 25859,
+        "conditions": {}
+      },
+      {
+        "name": "Glare",
+        "actionId": 16533,
+        "conditions": {}
+      },
+      {
+        "name": "Stone IV",
+        "actionId": 7431,
+        "conditions": {}
+      },
+      {
+        "name": "Stone III",
+        "actionId": 3568,
+        "conditions": {}
+      },
+      {
+        "name": "Stone II",
+        "actionId": 127,
+        "conditions": {}
+      },
+      {
+        "name": "Stone",
+        "actionId": 119,
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "ab87006c-0b32-4fd2-b435-1c66476d5049",
+    "jobId": 24,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Assize",
+        "actionId": 3571,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Afflatus Misery",
+        "actionId": 16535,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Holy III",
+        "actionId": 25860,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Holy",
+        "actionId": 139,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

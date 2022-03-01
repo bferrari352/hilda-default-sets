@@ -1,0 +1,449 @@
+﻿[
+  {
+    "id": "06f58aa0-60f2-4c7f-bc66-a4818c1b077c",
+    "jobId": 23,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Stormbite",
+        "actionId": 7407,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 1201,
+                "duration": {
+                  "value": 1,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Windbite",
+        "actionId": 113,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 129,
+                "duration": {
+                  "value": 3,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Caustic Bite",
+        "actionId": 7406,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 1200,
+                "duration": {
+                  "value": 1,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Venomous Bite",
+        "actionId": 100,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 124,
+                "duration": {
+                  "value": 3,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Iron Jaws",
+        "actionId": 3560,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 1201,
+                "duration": {
+                  "value": 6,
+                  "operator": "<="
+                }
+              },
+              {
+                "id": 1200,
+                "duration": {
+                  "value": 6,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Raging Strikes",
+        "actionId": 101,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Pitch Perfect",
+        "actionId": 7404,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "repertoire": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "the Wanderer's Minuet",
+        "actionId": 3559,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Mage's Ballad",
+        "actionId": 114,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "minuet": false,
+              "paeon": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Army's Paeon",
+        "actionId": 116,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "job": {
+            "gauge": {
+              "minuet": false,
+              "ballad": false
+            }
+          }
+        }
+      },
+      {
+        "name": "Empyreal Arrow",
+        "actionId": 3558,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Bloodletter",
+        "actionId": 110,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Barrage",
+        "actionId": 107,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Sidewinder",
+        "actionId": 3562,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          }
+        }
+      },
+      {
+        "name": "Apex Arrow",
+        "actionId": 16496,
+        "conditions": {
+          "job": {
+            "gauge": {
+              "soulVoice": {
+                "value": 100,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Blast Arrow",
+        "actionId": 25784,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 2692
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Refulgent Arrow",
+        "actionId": 7409,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 122
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Straight Shot",
+        "actionId": 98,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 122,
+                "duration": {
+                  "operator": ">=",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Burst Shot",
+        "actionId": 16495,
+        "conditions": {}
+      },
+      {
+        "name": "Heavy Shot",
+        "actionId": 97,
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "cc444d97-5fc9-41e2-b208-790fc9ca3f87",
+    "jobId": 23,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Raging Strikes",
+        "actionId": 101,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Pitch Perfect",
+        "actionId": 7404,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "repertoire": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Empyreal Arrow",
+        "actionId": 3558,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Rain of Death",
+        "actionId": 117,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Barrage",
+        "actionId": 107,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Sidewinder",
+        "actionId": 3562,
+        "conditions": {
+          "globalCooldown": {
+            "operator": ">",
+            "value": 0.5
+          },
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Apex Arrow",
+        "actionId": 16496,
+        "conditions": {
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "soulVoice": {
+                "value": 100,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Blast Arrow",
+        "actionId": 25784,
+        "conditions": {
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 2692
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Shadowbite",
+        "actionId": 16494,
+        "conditions": {
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 3002
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ladonsbite",
+        "actionId": 25783,
+        "conditions": {
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Quick Knock",
+        "actionId": 106,
+        "conditions": {
+          "enemyCount": {
+            "operator": ">=",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

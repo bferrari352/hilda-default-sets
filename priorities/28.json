@@ -1,0 +1,186 @@
+﻿[
+  {
+    "id": "16ed4ecc-d14a-4e54-9d73-3cf87d22c9d4",
+    "jobId": 28,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Energy Drain",
+        "actionId": 167,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.0,
+            "operator": "\u003e"
+          }
+        }
+      },
+      {
+        "name": "Aetherflow",
+        "actionId": 166,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.0,
+            "operator": "\u003e"
+          }
+        }
+      },
+      {
+        "name": "Biolysis",
+        "actionId": 16540,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 1895,
+                "duration": {
+                  "value": 5.0,
+                  "operator": "\u003c\u003d"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Bio II",
+        "actionId": 17865,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 189,
+                "duration": {
+                  "value": 5.0,
+                  "operator": "\u003c\u003d"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Bio",
+        "actionId": 17864,
+        "conditions": {
+          "target": {
+            "statuses": [
+              {
+                "id": 179,
+                "duration": {
+                  "value": 5.0,
+                  "operator": "\u003c\u003d"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Broil IV",
+        "actionId": 25865,
+        "conditions": {}
+      },
+      {
+        "name": "Broil III",
+        "actionId": 16541,
+        "conditions": {}
+      },
+      {
+        "name": "Broil II",
+        "actionId": 7435,
+        "conditions": {}
+      },
+      {
+        "name": "Broil",
+        "actionId": 3584,
+        "conditions": {}
+      },
+      {
+        "name": "Ruin",
+        "actionId": 17869,
+        "conditions": {}
+      }
+    ]
+  },
+  {
+    "id": "8d717211-4467-4bdc-8390-f9ee6f107a4f",
+    "jobId": 28,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Lucid Dreaming",
+        "actionId": 7562,
+        "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+        "conditions": {
+          "player": {
+            "mp": {
+              "value": 1000,
+              "operator": "<"
+            }
+          }
+        }
+      },
+      {
+        "name": "Energy Drain",
+        "actionId": 167,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.0,
+            "operator": "\u003e"
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Aetherflow",
+        "actionId": 166,
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.0,
+            "operator": "\u003e"
+          },
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Art of War II",
+        "actionId": 25866,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Art of War",
+        "actionId": 16539,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]

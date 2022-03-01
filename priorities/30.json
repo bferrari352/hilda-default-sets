@@ -1,0 +1,952 @@
+﻿[
+  {
+    "id": "9ecf91ba-c313-43d9-b92a-c7e108e98854",
+    "jobId": 30,
+    "name": "Single Target",
+    "priorities": [
+      {
+        "name": "Bhavacakra",
+        "actionId": 7402,
+        "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "JinSuiton (TenChiJin)",
+        "actionId": 2263,
+        "id": "7b644443-1d87-469f-b1bf-fed54c02cf10",
+        "overrideIcon": 2271,
+        "conditions": {
+          "job": {
+            "tenChiJin": {
+              "value": 9,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
+        "name": "ChiRaiton (TenChiJin)",
+        "actionId": 2261,
+        "id": "2b1e5c20-f82e-4d68-bd0f-bc3eeaa5dc26",
+        "overrideIcon": 2267,
+        "conditions": {
+          "job": {
+            "tenChiJin": {
+              "value": 1,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
+        "name": "TenShuriken (TenChiJin)",
+        "actionId": 2259,
+        "id": "dc185680-d747-47b5-80e0-de1e9abcc522",
+        "overrideIcon": 2265,
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 1186,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "job": {
+            "tenChiJin": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
+        "name": "Huraijin",
+        "actionId": 25876,
+        "id": "09082dcd-5554-4275-bb3f-0a3ea96ad82d",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "hutonTimer": {
+                "value": 5,
+                "operator": "<="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Mug",
+        "actionId": 2248,
+        "id": "f2ebaca8-6f1d-4413-b7bb-aab44880b7c1",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Bunshin",
+        "actionId": 16493,
+        "id": "f4f031f7-08f6-44b2-9262-d435bd2e2984",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Trick Attack",
+        "actionId": 2258,
+        "id": "eaf8f59c-6d3d-4d3d-910b-587b85f177ef",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 507,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              },
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Suiton (Trick Attack)",
+        "actionId": 2271,
+        "id": "b491d8f3-7112-43f0-9754-0781e98ff7e8",
+        "conditions": {
+          "actionDependentRecast": {
+            "actionId": 2258,
+            "value": 0.0,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Ten (Trick Attack)",
+        "actionId": 2259,
+        "id": "9f2fd9b5-315d-4765-b8ec-026c8255ff7b",
+        "conditions": {
+          "actionDependentRecast": {
+            "actionId": 2258,
+            "value": 0.0,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Chi (Trick Attack)",
+        "actionId": 2261,
+        "id": "b3a0916a-5246-4953-9054-ad4e55db9dfc",
+        "conditions": {
+          "actionDependentRecast": {
+            "actionId": 2258,
+            "value": 0.0,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Jin (Trick Attack)",
+        "actionId": 2263,
+        "id": "d2d96cdb-825f-45f7-8c7e-b723da23c392",
+        "conditions": {
+          "actionDependentRecast": {
+            "actionId": 2258,
+            "value": 0.0,
+            "operator": "="
+          }
+        }
+      },
+      {
+        "name": "Kassatsu",
+        "actionId": 2264,
+        "id": "faa0555d-eb02-443b-bdad-b8b764f3d56f",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Dream Within a Dream",
+        "actionId": 3566,
+        "id": "79c9d531-4dc7-444d-b4a6-f5faa4514174",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Assassinate",
+        "actionId": 2246,
+        "id": "8561e3c8-5be3-4682-97a4-f7246ffcbccc",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ranryu (Kassatsu)",
+        "actionId": 16492,
+        "id": "fc586ee7-d6bb-41a0-be42-fec1f607fb9b",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Hyoton (Kassatsu)",
+        "actionId": 2268,
+        "id": "bb5256d1-7252-4911-89be-9fcf12a7a41d",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Chi (Kassatsu)",
+        "actionId": 2261,
+        "id": "b2082013-0a3e-48af-a03d-0d36fc27c888",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Jin (Kassatsu)",
+        "actionId": 2263,
+        "id": "983a8392-7eab-44c9-8b93-241ae98a9253",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Raiton",
+        "actionId": 2267,
+        "id": "ad062f37-a9ce-43e0-9146-b0683577f2fc",
+        "conditions": {}
+      },
+      {
+        "name": "Ten (Raiton)",
+        "actionId": 2259,
+        "id": "acdf0d95-7fd6-454c-ac89-e4d45955c62b",
+        "conditions": {}
+      },
+      {
+        "name": "Chi (Raiton)",
+        "actionId": 2261,
+        "id": "a86161d0-6689-4d0a-872c-a927d97765c8",
+        "conditions": {}
+      },
+      {
+        "name": "Meisui",
+        "actionId": 16489,
+        "id": "198a7151-70be-416e-bf2e-44f6c7b6b3c6",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 507,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              },
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Fleeting Raiju",
+        "actionId": 25778,
+        "id": "9a14884d-d054-48a9-b209-377d0a6f649a",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 2691,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              },
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Forked Raiju",
+        "actionId": 25777,
+        "id": "f61210ba-b674-4d31-be32-56b5e07f73af",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 2690,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              },
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Phantom Kamaitachi",
+        "actionId": 25774,
+        "id": "87b6ad7c-2bb4-4794-a623-47f5cd09c075",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 2723,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              },
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ten Chi Jin",
+        "actionId": 7403,
+        "id": "c0be6180-3655-4581-8235-b44ce596a03e",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Aeolian Edge",
+        "actionId": 2255,
+        "id": "10dd3a03-284e-4fc9-8336-ba1448234c8d",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Armor Crush",
+        "actionId": 3563,
+        "id": "a4af7448-a02e-426a-88ba-7c8b509ae5e5",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          },
+          "job": {
+            "gauge": {
+              "hutonTimer": {
+                "value": 6,
+                "operator": "<="
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Gust Slash",
+        "actionId": 2242,
+        "id": "472dae9d-bc4f-490d-a186-afa2b91ac8f8",
+        "conditions": {
+          "combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Spinning Edge",
+        "actionId": 2240,
+        "id": "e224540a-2314-47bf-880d-ad3369c8d4fd",
+        "conditions": {
+          "player": {
+            "statuses": [
+              {
+                "id": 496,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "543888e6-d584-454f-8bc3-bb16be87066d",
+    "jobId": 30,
+    "name": "Multi Target",
+    "priorities": [
+      {
+        "name": "Hellfrog Medium",
+        "actionId": 7401,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Chi",
+        "actionId": 2261,
+        "overrideIcon": 2270,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "tenChiJin": {
+              "value": 7,
+              "operator": "\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Ten",
+        "actionId": 2259,
+        "overrideIcon": 2266,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "tenChiJin": {
+              "value": 3,
+              "operator": "\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Jin",
+        "actionId": 2263,
+        "overrideIcon": 2265,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 1186,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          },
+          "job": {
+            "tenChiJin": {
+              "value": 0,
+              "operator": "\u003d"
+            }
+          }
+        }
+      },
+      {
+        "name": "Huraijin",
+        "actionId": 25876,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "job": {
+            "gauge": {
+              "hutonTimer": {
+                "value": 5,
+                "operator": "\u003c\u003d"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Mug",
+        "actionId": 2248,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Bunshin",
+        "actionId": 16493,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Kassatsu",
+        "actionId": 2264,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Dream Within a Dream",
+        "actionId": 3566,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Assassinate",
+        "actionId": 2246,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Goka (Kassatsu)",
+        "actionId": 16491,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Katon (Kassatsu)",
+        "actionId": 2266,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Chi (Kassatsu)",
+        "actionId": 2261,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ten (Kassatsu)",
+        "actionId": 2259,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 497,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Katon",
+        "actionId": 2266,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Chi (Katon)",
+        "actionId": 2261,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Ten (Katon)",
+        "actionId": 2259,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Meisui",
+        "actionId": 16489,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 507,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "\u003e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Fleeting Raiju",
+        "actionId": 25778,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 2691
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Forked Raiju",
+        "actionId": 25777,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 2690
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Phantom Kamaitachi",
+        "actionId": 25774,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "player": {
+            "statuses": [
+              {
+                "id": 2723
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ten Chi Jin",
+        "actionId": 7403,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      },
+      {
+        "name": "Hakke Mujinsatsu",
+        "actionId": 16488,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          },
+          "combo": {
+            "value": 0.0,
+            "operator": "\u003e"
+          }
+        }
+      },
+      {
+        "name": "Death Blossom",
+        "actionId": 2254,
+        "conditions": {
+          "enemyCount": {
+            "operator": "\u003e\u003d",
+            "value": 3
+          }
+        }
+      }
+    ]
+  }
+]
