@@ -29,6 +29,7 @@ internal static class ManifestGenerator
             var currentDate = DateTime.Now.ToString("u");
             if (md5 != setManifest.Md5)
             {
+                Console.WriteLine($"Updating MD5 for {jobId}");
                 currentManifest.Sets[jobId] = new SetManifest {LastUpdated = currentDate, Md5 = md5};   
             }
         }
