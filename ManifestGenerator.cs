@@ -104,7 +104,7 @@ internal static class ManifestGenerator
         {
             var assemblyLocation = Assembly.GetExecutingAssembly().Location;
             var filePath = Path.Combine(Path.GetDirectoryName(assemblyLocation)!,
-                @"priorities\\manifest.json");
+                @"priorities/manifest.json");
 
             if (File.Exists(filePath))
             {
