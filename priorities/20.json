@@ -41,9 +41,20 @@
         }
       },
       {
-        "name": "The Forbidden Chakra",
+        "name": "the Forbidden Chakra",
         "actionId": 3547,
         "id": "c7c8b7b5-e37c-40a4-adbf-2c3297062a69",
+        "conditions": {
+          "globalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "name": "Steel Peak",
+        "actionId": 25761,
+        "id": "061a9e90-0661-4218-a906-03555aed7002",
         "conditions": {
           "globalCooldown": {
             "value": 0.5,
@@ -159,6 +170,99 @@
         }
       },
       {
+        "name": "Perfect Balance (pre-60)",
+        "actionId": 69,
+        "id": "5c2d6478-c97b-4874-924d-1f5f156b889e",
+        "conditions": {
+          "player": {
+            "level": {
+              "value": 60,
+              "operator": "<"
+            },
+            "statuses": [
+              {
+                "id": 110,
+                "duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              },
+              {
+                "id": 3001,
+                "duration": {
+                  "value": 8.0,
+                  "operator": ">="
+                }
+              },
+              {
+                "id": 107,
+                "duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Dragon Kick (Perfect Balance{3} pre-60)",
+        "actionId": 74,
+        "id": "ae4142ef-802e-43ce-bd53-72435d12d9eb",
+        "conditions": {
+          "player": {
+            "level": {
+              "value": 60,
+              "operator": "<"
+            }
+          },
+          "job": {
+            "perfectBalanceStacks": {
+              "value": 3,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
+        "name": "Snap Punch (Perfect Balance{2} pre-60)",
+        "actionId": 56,
+        "id": "1a3d0728-fac4-4277-ac3b-f4fd2aa84e5b",
+        "conditions": {
+          "player": {
+            "level": {
+              "value": 60,
+              "operator": "<"
+            }
+          },
+          "job": {
+            "perfectBalanceStacks": {
+              "value": 2,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
+        "name": "Bootshine (Perfect Balance{1} pre-60)",
+        "actionId": 53,
+        "id": "7165ed28-58e2-4808-b662-3a71d8ad4f97",
+        "conditions": {
+          "player": {
+            "level": {
+              "value": 60,
+              "operator": "<"
+            }
+          },
+          "job": {
+            "perfectBalanceStacks": {
+              "value": 1,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
         "name": "Bootshine (Post Phantom Rush)",
         "actionId": 53,
         "id": "7b9dbd5f-0e9c-4eb6-a7e5-7f86572ff364",
@@ -187,17 +291,17 @@
         "actionId": 69,
         "id": "4c6c3f77-3c78-4b6f-bc11-ee70717cd68a",
         "conditions": {
-          "globalCooldown": {
-            "value": 0.5,
-            "operator": ">"
-          },
           "player": {
+            "level": {
+              "value": 60,
+              "operator": ">="
+            },
             "statuses": [
               {
                 "id": 110,
                 "duration": {
                   "value": 0.0,
-                  "operator": "<="
+                  "operator": "="
                 }
               },
               {
@@ -296,17 +400,17 @@
         "actionId": 69,
         "id": "fd573228-77fd-484b-8d09-6b5a825e55e9",
         "conditions": {
-          "globalCooldown": {
-            "value": 0.5,
-            "operator": ">"
-          },
           "player": {
+            "level": {
+              "value": 60,
+              "operator": ">="
+            },
             "statuses": [
               {
                 "id": 110,
                 "duration": {
                   "value": 0.0,
-                  "operator": "<="
+                  "operator": "="
                 }
               },
               {
@@ -402,17 +506,17 @@
         "actionId": 69,
         "id": "c8ab3349-32ba-450a-840e-e5366e9357fa",
         "conditions": {
-          "globalCooldown": {
-            "value": 0.5,
-            "operator": ">"
-          },
           "player": {
+            "level": {
+              "value": 60,
+              "operator": ">="
+            },
             "statuses": [
               {
                 "id": 110,
                 "duration": {
                   "value": 0.0,
-                  "operator": "<="
+                  "operator": "="
                 }
               },
               {
