@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace HildaDefaultSetsApp;
 
@@ -26,7 +27,9 @@ internal static class ManifestGenerator
                 throw new Exception();
             }
             var md5 = GenerateMd5(fileString);
+            var (version, appVersion) = GetSetVersions(fileString);
             var currentDate = DateTime.Now.ToString("u");
+            
             if (md5 != setManifest.Md5)
             {
                 Console.WriteLine($"Updating MD5 for {jobId}");
@@ -34,8 +37,8 @@ internal static class ManifestGenerator
                 {
                     LastUpdated = currentDate, 
                     Md5 = md5, 
-                    Version = setManifest.Version, 
-                    AppVersion = setManifest.AppVersion
+                    Version = version ?? setManifest.Version, 
+                    AppVersion = appVersion ?? setManifest.AppVersion
                 };   
             }
         }
@@ -81,7 +84,14 @@ internal static class ManifestGenerator
         }
         return sb.ToString();
     }
-    
+
+    private static (string?, string?) GetSetVersions(string fileString)
+    {
+        var jArray = JArray.Parse(fileString);
+        var deserialized = jArray[0];
+        return (deserialized["version"]?.ToString(), deserialized["appVersion"]?.ToString());
+    }
+
     private static string? GetPrioritySet(int jobId)
     {
         try

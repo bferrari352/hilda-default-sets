@@ -1,5 +1,5 @@
 {
-  "Version": "0.0.5",
+  "Version": "0.0.6",
   "Sets": {
     "19": {
       "Md5": "953D87F4EF1ED25DB1FD474DA1E25BC9",
@@ -8,9 +8,9 @@
       "AppVersion": "0.0.0.10"
     },
     "20": {
-      "Md5": "77A085C0126069E4CC5404E5A1D7D6AD",
-      "LastUpdated": "2022-03-02 20:30:21Z",
-      "Version": "0.0.1",
+      "Md5": "9B9619C0708B737D3C845F7F35F09415",
+      "LastUpdated": "2022-03-02 20:49:32Z",
+      "Version": "0.0.3",
       "AppVersion": "0.0.0.10"
     },
     "21": {
