@@ -1,0 +1,257 @@
+﻿{
+  "id": "98c23981-5d8c-4826-847e-0b8b91396def",
+  "jobId": 31,
+  "name": "Multi Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Reassemble (Chain Saw)",
+      "actionId": 2876,
+      "id": "fb215e88-0cf3-4e96-9f87-5b0d274caaf1",
+      "conditions": {
+        "charges": {
+          "value": 1,
+          "operator": ">="
+        },
+        "actionDependentRecast": {
+          "actionId": 25788,
+          "value": 0.0,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Chain Saw",
+      "actionId": 25788,
+      "id": "c43d2b40-3674-4f42-bc5d-a23fad125ce9",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Reassemble (Bioblaster)",
+      "actionId": 2876,
+      "id": "a6d95831-ee7b-424e-b13c-e833f5a2ccd9",
+      "conditions": {
+        "charges": {
+          "value": 1,
+          "operator": ">="
+        },
+        "actionDependentRecast": {
+          "actionId": 16499,
+          "value": 0.0,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Bioblaster",
+      "actionId": 16499,
+      "id": "23cc0af9-2b0a-4c2a-b451-dfbf0b51e6da",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Ricochet (3)",
+      "actionId": 2890,
+      "id": "42c3f4be-6ea0-4461-bc9f-ac373d783abb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 3,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Gauss Round (3)",
+      "actionId": 2874,
+      "id": "c900c917-919e-4035-b02b-506173ceb707",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 3,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Ricochet (2)",
+      "actionId": 2890,
+      "id": "7f178d7e-e0c9-46fe-b7d8-688a8c931187",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 2,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Ricochet (1)",
+      "actionId": 2890,
+      "id": "9b5c4e24-aaff-497a-b479-eda5ab7ebdeb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 1,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Gauss Round (2)",
+      "actionId": 2874,
+      "id": "103d6ea5-35aa-4d03-a329-6b734f90c13d",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 2,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Gauss Round (1)",
+      "actionId": 2874,
+      "id": "b3872678-4b83-4867-b431-a6f57c592f39",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 1,
+          "operator": "="
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Flamethrower",
+      "actionId": 7418,
+      "id": "c2883070-2454-4680-8545-8b57e9291965",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Hypercharge",
+      "actionId": 17209,
+      "id": "bd79103a-6636-4492-bb42-85522d5a5d04",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "heat": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Auto Crossbow",
+      "actionId": 16497,
+      "id": "0aada806-7527-48b9-a533-1ea9f541aa09",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Scattergun",
+      "actionId": 25786,
+      "id": "4c5d045f-2b2d-4a62-b805-f5d9a4fde754",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Spread Shot",
+      "actionId": 2870,
+      "id": "66ec64e4-1a63-45ac-b6fc-100fd956bfc0",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    }
+  ]
+}

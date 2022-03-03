@@ -1,0 +1,551 @@
+﻿{
+  "id": "a8ef23cf-577d-453f-9116-a90d85021364",
+  "name": "Single Target",
+  "jobId": 38,
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Quadruple Standard Finish",
+      "actionId": 16004,
+      "id": "4a3ee58b-248d-432b-abc9-107824da0f3d",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1819,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "completedSteps": {
+              "value": 4,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Double Standard Finish",
+      "actionId": 16003,
+      "id": "f3e8efe8-f94a-4e90-97b4-5be31be24fb8",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1818,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "completedSteps": {
+              "value": 2,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Step Placeholder",
+      "actionId": 15999,
+      "id": "497b62a2-27c0-4119-8d23-1c3a967d2944",
+      "description": "This is a placeholder priority for predictions on use of Standard Step seeing we can't actually predict which steps will be triggered.",
+      "overrideIcon": 21325,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1818,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "nextStep": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Emboite",
+      "actionId": 15999,
+      "id": "78c15468-82d9-4b52-bc86-46f4a9fda65d",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "nextStep": {
+              "value": 15999,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Entrechat",
+      "actionId": 16000,
+      "id": "3fe2b099-3336-44b4-b0a5-2ecd476a7b97",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "nextStep": {
+              "value": 16000,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Jete",
+      "actionId": 16001,
+      "id": "4407d448-874f-4f4d-bb90-027666600a1f",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "nextStep": {
+              "value": 16001,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Pirouette",
+      "actionId": 16002,
+      "id": "3b089bf3-2dcf-46a9-af6a-adfbbe52eebe",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "nextStep": {
+              "value": 16002,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Fan Dance IV Falling Off",
+      "actionId": 25791,
+      "id": "7da33faa-d259-45ec-b227-7b411e71d634",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2699,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fan Dance III",
+      "actionId": 16009,
+      "id": "09a4fb8e-b958-4baa-b7fe-5272dcb260eb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Too Many Feathers Before Flourish",
+      "actionId": 16007,
+      "id": "ba368119-be67-4248-989c-a3090dce4beb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "actionDependentRecast": {
+          "actionId": 16013,
+          "value": 2.5,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2693,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2694,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "feathers": {
+              "value": 3,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Flourish",
+      "actionId": 16013,
+      "id": "98db3ec1-1636-4ce0-8bf4-2da1a691bdbb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2693,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2694,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Technical Finish Fan Dance IV",
+      "actionId": 25791,
+      "id": "70b5610b-24d5-486b-94a7-9c666bf0cbe5",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 1822,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Technical Finish Fan Dance",
+      "actionId": 16007,
+      "id": "e1807ea2-9617-49ac-93b7-e96939fbe49e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 1822,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Devilment Fan Dance IV",
+      "actionId": 25791,
+      "id": "cd6725fa-11c8-44e6-9348-6c62b2d3e04e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 1825,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Devilment Fan Dance",
+      "actionId": 16007,
+      "id": "fc535861-e7d9-48c7-8cd9-6f6b297b01e9",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 1825,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Max Fan Dance",
+      "actionId": 16007,
+      "id": "dd8296b4-2fa3-40be-be2e-0fa3c99f123e",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "feathers": {
+              "value": 4,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Fan Dance IV",
+      "actionId": 25791,
+      "id": "c4ece1fa-4b84-49a8-ac46-bfb2c0adad2d",
+      "conditions": {}
+    },
+    {
+      "name": "Starfall Dance Falling Off",
+      "actionId": 25792,
+      "id": "37d839a5-9642-4ddc-8781-0211fc728710",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2700,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fountainfall Falling Off",
+      "actionId": 15992,
+      "id": "d9b98e80-de66-4037-a585-fc83804e10f9",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2694,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Reverse Cascade Falling Off",
+      "actionId": 15991,
+      "id": "d450e4d7-f077-4e2e-a5bb-1656fd60d828",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2693,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Max Saber Dance",
+      "actionId": 16005,
+      "id": "71ccf5b7-a97a-4c8f-993f-f57974d01480",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "esprit": {
+              "value": 85,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Tillana",
+      "actionId": 25790,
+      "id": "c8d4d7b5-d32d-4a82-b7c0-f2f491999fda",
+      "conditions": {}
+    },
+    {
+      "name": "Standard Step Falling Off",
+      "actionId": 15997,
+      "id": "bf057cc4-d05c-464a-abc8-86fc7ba405fb",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2113,
+              "duration": {
+                "value": 6.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Technical Finish Saber Dance",
+      "actionId": 16005,
+      "id": "f4d1ce70-d793-4838-8724-693cfffefda5",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1822,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Devilment Saber Dance",
+      "actionId": 16005,
+      "id": "0d27f02a-b0be-4af8-9f0b-f9c74d831c86",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1825,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Standard Step",
+      "actionId": 15997,
+      "id": "d0150024-bc17-414d-86b9-2d5371ffd55e",
+      "conditions": {}
+    },
+    {
+      "name": "Fountainfall",
+      "actionId": 15992,
+      "id": "3dca2af6-ea91-4486-b96e-5b8e44864e7c",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2694,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Reverse Cascade",
+      "actionId": 15991,
+      "id": "7d68a36f-2c2c-4b81-9ab7-359edf7423af",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2693,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fountain",
+      "actionId": 15990,
+      "id": "ea4fe461-1f8a-479b-9df2-976b3c4a80bb",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Cascade",
+      "actionId": 15989,
+      "id": "7f77bcc5-a716-48d4-acc5-3bf7cd77dbdd",
+      "conditions": {}
+    }
+  ]
+}

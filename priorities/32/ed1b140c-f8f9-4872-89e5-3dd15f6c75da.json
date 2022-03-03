@@ -1,0 +1,207 @@
+﻿{
+  "id": "ed1b140c-f8f9-4872-89e5-3dd15f6c75da",
+  "jobId": 32,
+  "name": "Single Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Blood Weapon",
+      "actionId": 3625,
+      "id": "cc22b89f-9f52-4b63-ba78-f26bfb34131f",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 3000,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Edge of Shadow",
+      "actionId": 16470,
+      "id": "559c247e-5b3a-4d59-8d89-61819f418c30",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 3000,
+            "operator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Edge of Darkness",
+      "actionId": 16467,
+      "id": "a8a33503-57d3-4ca5-a1be-560e97f78ad8",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 3000,
+            "operator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Flood of Darkness",
+      "actionId": 16466,
+      "id": "5e9283bd-c23c-40a1-ab82-d70145a16958",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 3000,
+            "operator": ">="
+          },
+          "level": {
+            "value": 40,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Delerium",
+      "actionId": 7390,
+      "id": "6d3b9794-288d-47da-be3f-c011544b7811",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Living Shadow",
+      "actionId": 16472,
+      "id": "9a62a31f-67c3-4943-bda5-b0b53610c35e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "blood": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Salted Earth",
+      "actionId": 3639,
+      "id": "4a5a6a64-4516-41f6-88e4-932148cab2cb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Shadowbringer",
+      "actionId": 25757,
+      "id": "71d09961-919f-4ab6-9548-3455047ef7c8",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "darksideTimeRemaining": {
+              "value": 1,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Salt And Darkness",
+      "actionId": 25755,
+      "id": "aa422256-b041-4554-a7c5-49f908716f6c",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Carve and Spit",
+      "actionId": 3643,
+      "id": "22c30cf5-c474-4dbf-a079-6de995b3e2e0",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Bloodspiller",
+      "actionId": 7392,
+      "id": "3082926f-4ede-4c36-b609-054720556d8f",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "blood": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Souleater",
+      "actionId": 3632,
+      "id": "4c39cba2-d251-4845-a5e7-22ab99924919",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Syphon Strike",
+      "actionId": 3623,
+      "id": "7ab6e0e3-a4ef-4bd6-aa25-c8b407271c2d",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Hard Slash",
+      "actionId": 3617,
+      "id": "c26861e3-18b3-4fe8-a012-49d0d52fef02",
+      "conditions": {}
+    }
+  ]
+}

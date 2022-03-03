@@ -1,0 +1,78 @@
+﻿{
+  "id": "670392b4-3d4e-4b59-b91e-3cc2fdc6d7e6",
+  "jobId": 40,
+  "name": "Multi Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lucid Dreaming",
+      "actionId": 7562,
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 1000,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Phlegma III",
+      "actionId": 24313,
+      "id": "99e9a002-91c2-4c7c-ba3f-dc0ea4eee28d",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Phlegma II",
+      "actionId": 24307,
+      "id": "0192b01a-32de-4da7-9d96-bbc3c6f4dafd",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Phlegma",
+      "actionId": 24289,
+      "id": "d256be38-239f-4d36-b76b-6f5d732e24f0",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Dyskrasia II",
+      "actionId": 24315,
+      "id": "0a8988c3-ec3a-47f4-a83a-a7a9bf3c3109",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Dyskrasia",
+      "actionId": 24297,
+      "id": "005a1a46-2140-40a5-8f38-fd7f93a57284",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    }
+  ]
+}

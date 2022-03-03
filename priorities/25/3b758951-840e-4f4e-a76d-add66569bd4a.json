@@ -1,0 +1,394 @@
+﻿{
+  "id": "3b758951-840e-4f4e-a76d-add66569bd4a",
+  "jobId": 25,
+  "name": "Multi Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lucid Dreaming",
+      "actionId": 7562,
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 200,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Manafont",
+      "actionId": 158,
+      "id": "32ecaf0e-93d1-47dd-94c8-b04c84916c86",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 0,
+            "operator": "="
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Thunder IV (Thundercloud)",
+      "actionId": 7420,
+      "id": "41865092-0589-4cfe-bf06-753b45a852a4",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 164,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Thunder II (Thundercloud)",
+      "actionId": 7447,
+      "id": "7ce21855-93fa-4fc2-8ce8-3a95b0b5fab4",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 164,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Sharpcast (Thunder IV)",
+      "actionId": 3574,
+      "id": "4fd85037-18d5-420c-9a8c-162c5a911692",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 1210,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Sharpcast (Thunder II)",
+      "actionId": 3574,
+      "id": "62b4911f-b1d2-4ad4-9348-cc19b30d2a35",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 162,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Thunder IV",
+      "actionId": 7420,
+      "id": "fc078e5c-76f2-4845-a49e-d1b39b42c983",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 1210,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              },
+              "stacks": {
+                "value": 0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Thunder II",
+      "actionId": 7447,
+      "id": "df0deaca-9ecf-456a-a25f-ae96fcff50b9",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 162,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Triplecast",
+      "actionId": 7421,
+      "id": "22fa396f-806c-4e07-abbd-0cfddef2cb9a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "High Fire II",
+      "actionId": 25794,
+      "id": "04d22227-e2e1-4bb1-8f48-5474f6eab21c",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1211,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Fire II",
+      "actionId": 147,
+      "id": "b966edfc-5300-4e4f-a1e4-73e66424e49e",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1211,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Ley Lines",
+      "actionId": 3573,
+      "id": "fb168649-160e-4763-8dbe-8e72e9b9af71",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Paradox",
+      "actionId": 25797,
+      "id": "4b113cb2-c70d-4e6e-9a26-1d57e10b6548",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inUmbralIce": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Firestarter",
+      "actionId": 152,
+      "id": "db232ad6-c8ca-4e94-b8bb-b5144c981c7e",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 165,
+              "duration": {
+                "value": 1.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "High Fire II (Transition)",
+      "actionId": 25794,
+      "id": "4fd3c7e8-25bb-4277-9529-185a239e4782",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 9000,
+            "operator": ">="
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inAstralFire": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Fire II (Transition)",
+      "actionId": 147,
+      "id": "e424b5d0-daac-41b9-95a1-fccb13fadbe1",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 9000,
+            "operator": ">="
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inAstralFire": false
+          }
+        }
+      }
+    },
+    {
+      "name": "High Fire II",
+      "actionId": 25794,
+      "id": "5c9a1d76-ef93-44f2-a515-d46d9d5ff5b7",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inAstralFire": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Fire II",
+      "actionId": 147,
+      "id": "22c8d059-2c3b-4c57-8464-0eb20733a412",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inAstralFire": true
+          }
+        }
+      }
+    },
+    {
+      "name": "High Blizzard II",
+      "actionId": 25795,
+      "id": "f5578c63-3431-479c-b95e-5ee58c226f0b",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Blizzard II",
+      "actionId": 25793,
+      "id": "3e3c2d95-bda6-484e-a0b9-c109cc4b120c",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    }
+  ]
+}

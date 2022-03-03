@@ -1,0 +1,67 @@
+﻿{
+  "id": "ab87006c-0b32-4fd2-b435-1c66476d5049",
+  "jobId": 24,
+  "name": "Multi Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lucid Dreaming",
+      "actionId": 7562,
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 1000,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Assize",
+      "actionId": 3571,
+      "id": "942a3516-4bc8-4d95-897c-f388832ecdbd",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Afflatus Misery",
+      "actionId": 16535,
+      "id": "2f941003-f2d4-43f0-a7b8-6d0043129092",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Holy III",
+      "actionId": 25860,
+      "id": "8d840edf-5327-4c3f-b731-356232d00752",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Holy",
+      "actionId": 139,
+      "id": "5991cf4d-c0f0-4593-80ff-d034dfd0ef21",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    }
+  ]
+}

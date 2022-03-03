@@ -1,0 +1,299 @@
+﻿{
+  "id": "06f58aa0-60f2-4c7f-bc66-a4818c1b077c",
+  "jobId": 23,
+  "name": "Single Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Stormbite",
+      "actionId": 7407,
+      "id": "8062a32b-f271-46ce-9276-09f1c89c3275",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 1201,
+              "duration": {
+                "value": 1.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Windbite",
+      "actionId": 113,
+      "id": "4fd7f485-c460-4bb5-83f1-adf039b1a0cf",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 129,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Caustic Bite",
+      "actionId": 7406,
+      "id": "f99e9156-f711-421d-a1d2-69518795afb2",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 1200,
+              "duration": {
+                "value": 1.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Venomous Bite",
+      "actionId": 100,
+      "id": "9ced6018-b8dc-4fc5-b379-0d485617809f",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 124,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iron Jaws",
+      "actionId": 3560,
+      "id": "f1d27c00-dd4a-4e23-8a89-392bb9358851",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 1201,
+              "duration": {
+                "value": 6.0,
+                "operator": "<="
+              }
+            },
+            {
+              "id": 1200,
+              "duration": {
+                "value": 6.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Raging Strikes",
+      "actionId": 101,
+      "id": "98aa1ead-7cfe-4aad-822e-b6102275c464",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Pitch Perfect",
+      "actionId": 7404,
+      "id": "b05ce3fa-8c34-454f-97c6-6e23af84e4c2",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "repertoire": {
+              "value": 3,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "the Wanderer's Minuet",
+      "actionId": 3559,
+      "id": "a8335692-21c6-4ecb-b2b9-362f4e473c7a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Mage's Ballad",
+      "actionId": 114,
+      "id": "5f791dac-57a4-4872-9eed-ca098be441e9",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "minuet": false,
+            "paeon": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Army's Paeon",
+      "actionId": 116,
+      "id": "f9e29372-3b3d-42dd-8763-55eb64c7d02e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "minuet": false,
+            "ballad": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Empyreal Arrow",
+      "actionId": 3558,
+      "id": "5c3bf80e-a76a-413f-9442-3caa9a157be9",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Bloodletter",
+      "actionId": 110,
+      "id": "ccea1270-b977-4c65-b5da-c94256995ecb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Barrage",
+      "actionId": 107,
+      "id": "68762fec-8550-4493-9ce6-e39bf32a1750",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Sidewinder",
+      "actionId": 3562,
+      "id": "b11d0733-aa11-491f-aa3b-0756b9342749",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Apex Arrow",
+      "actionId": 16496,
+      "id": "38d1091a-359b-44e1-bab4-55704cb1f913",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "soulVoice": {
+              "value": 100,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Blast Arrow",
+      "actionId": 25784,
+      "id": "765b8336-c960-485d-b2a2-d6f43889ecdd",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2692
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Refulgent Arrow",
+      "actionId": 7409,
+      "id": "a17a29de-7b67-45bb-836a-785b8b9d8e52",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 122
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Straight Shot",
+      "actionId": 98,
+      "id": "808db026-f799-49ba-ba4f-a7dc13fdfa64",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 122,
+              "duration": {
+                "value": 0.0,
+                "operator": ">="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Burst Shot",
+      "actionId": 16495,
+      "id": "2c1024a2-8fa7-4315-8925-d9217b48fe7e",
+      "conditions": {}
+    },
+    {
+      "name": "Heavy Shot",
+      "actionId": 97,
+      "id": "3d332b5e-4d60-4d25-a0ef-f8abcf5739d1",
+      "conditions": {}
+    }
+  ]
+}

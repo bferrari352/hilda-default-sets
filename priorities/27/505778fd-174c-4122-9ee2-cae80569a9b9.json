@@ -1,0 +1,471 @@
+﻿{
+  "id": "505778fd-174c-4122-9ee2-cae80569a9b9",
+  "name": "Single Target",
+  "jobId": 27,
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lucid Dreaming",
+      "actionId": 7562,
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 1000,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Mountain Buster",
+      "actionId": 25836,
+      "id": "a5cec7bf-9f50-4150-80c0-82a202cf42a8",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Fester",
+      "actionId": 181,
+      "id": "613d0c48-2b27-4c78-b877-e3a7845ea284",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Energy Drain",
+      "actionId": 16508,
+      "id": "122e7f6c-c1fd-452f-84a2-d4b0fbba4d1e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "aetherflowStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Ruin IV (Expiring)",
+      "actionId": 7426,
+      "id": "afa2e185-e6c7-4f2f-b18b-84bb4f694335",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2701,
+              "duration": {
+                "value": 8.0,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ruin IV (Expiring)",
+      "actionId": 7426,
+      "id": "4c0ec567-5e78-4aa7-acb0-5a1c55c4a348",
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 7427,
+          "value": 0.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2701,
+              "duration": {
+                "value": 18.0,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Enkindle Phoenix",
+      "actionId": 16516,
+      "id": "412233de-259f-4669-9561-08deae77779b",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Enkindle Bahamut",
+      "actionId": 7429,
+      "id": "b2a58d92-105d-4bdc-99e7-4f7ce6c0aa56",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Deathflare",
+      "actionId": 3582,
+      "id": "2b36de64-a2bf-4fd2-b340-df5bfd4c6c13",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Summon Carbuncle",
+      "actionId": 25798,
+      "id": "73252899-6efe-405a-915c-4800a7311933",
+      "conditions": {
+        "job": {
+          "isCarbuncleSummoned": false
+        }
+      }
+    },
+    {
+      "name": "Summon Phoenix",
+      "actionId": 25831,
+      "id": "559bb102-175c-4c5d-9949-74f78c70b363",
+      "conditions": {}
+    },
+    {
+      "name": "Summon Bahamut",
+      "actionId": 7427,
+      "id": "9dee048b-606c-46d4-8e03-9fc96250dab3",
+      "conditions": {}
+    },
+    {
+      "name": "Dreadwyrm Trance",
+      "actionId": 3581,
+      "id": "30d56a43-99a8-481e-99a5-a5e7a55a1a1f",
+      "conditions": {}
+    },
+    {
+      "name": "Aethercharge",
+      "actionId": 25800,
+      "id": "080f0f14-364f-4d34-8854-59f8fe15eda0",
+      "conditions": {}
+    },
+    {
+      "name": "Fountain of Fire",
+      "actionId": 16514,
+      "id": "0b75a981-559c-442d-ae8f-555a8e7f8be0",
+      "conditions": {}
+    },
+    {
+      "name": "Astral Impulse",
+      "actionId": 25820,
+      "id": "22a26238-8bc5-4d8b-87f1-d976f919776e",
+      "conditions": {}
+    },
+    {
+      "name": "Ruin II (Trance)",
+      "actionId": 172,
+      "id": "0e7bf6f6-6380-47af-8581-f48b66663f39",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "inTrance": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Ruin (Trance)",
+      "actionId": 163,
+      "id": "67d95559-020d-4993-9a1f-f068771bae05",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "inTrance": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Titan II",
+      "actionId": 25839,
+      "id": "0c3c598e-12de-4902-8004-4f7df296e1d9",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Titan",
+      "actionId": 25806,
+      "id": "0e704006-1b8f-4695-9635-0a4f6fb7b6f9",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Topaz",
+      "actionId": 25803,
+      "id": "d1822fc2-8ae8-4bda-883c-27928dd492b3",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Topaz Rite",
+      "actionId": 25824,
+      "id": "975ced44-3cdc-4769-8394-ee834bd9b9a9",
+      "conditions": {}
+    },
+    {
+      "name": "Topaz Ruin III",
+      "actionId": 25818,
+      "id": "7fa26b55-9fc6-4068-9b6b-2c0152e23e15",
+      "iconOverlayColor": 4,
+      "conditions": {}
+    },
+    {
+      "name": "Topaz Ruin II",
+      "actionId": 25812,
+      "id": "ed8e204f-4c59-46a3-8ea6-7f1cae66f327",
+      "iconOverlayColor": 4,
+      "conditions": {}
+    },
+    {
+      "name": "Topaz Ruin I",
+      "actionId": 25809,
+      "id": "a691c107-866b-4ab4-92d8-aa17f52109bd",
+      "iconOverlayColor": 4,
+      "conditions": {}
+    },
+    {
+      "name": "Summon Ifrit II",
+      "actionId": 25838,
+      "id": "45ac55fc-b225-4df4-a7ce-2b5e31bf421f",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Ifrit",
+      "actionId": 25805,
+      "id": "106e7b3b-7574-4b72-a960-ab319b4b06c7",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Ruby",
+      "actionId": 25802,
+      "id": "b6a5cd41-548f-4f8f-84c7-afdf0fef40d5",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Ruby Rite",
+      "actionId": 25823,
+      "id": "69cff358-2317-4d40-a453-c5d61d7a1764",
+      "conditions": {}
+    },
+    {
+      "name": "Crimson Strike",
+      "actionId": 25885,
+      "id": "cb209ce4-e8d6-4963-a2ba-e03be298d245",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Crimson Cyclone",
+      "actionId": 25835,
+      "id": "a5c1161b-ce7d-4930-a9dd-c44782c32491",
+      "conditions": {}
+    },
+    {
+      "name": "Ruby Ruin III",
+      "actionId": 25817,
+      "id": "5720a0b1-a288-4042-875e-38d6e902bdf5",
+      "iconOverlayColor": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Ruby Ruin II",
+      "actionId": 25811,
+      "id": "ec5ed397-fbda-46fc-9023-5609d73d960b",
+      "iconOverlayColor": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Ruby Ruin I",
+      "actionId": 25808,
+      "id": "8349577c-ce8a-4e72-89e4-046776483ec0",
+      "iconOverlayColor": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Summon Garuda II",
+      "actionId": 25840,
+      "id": "92b575c5-aafa-4da1-9b58-78694bff7a58",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Garuda",
+      "actionId": 25807,
+      "id": "5764de56-1cef-404c-9ec2-78df7739db4d",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Emerald",
+      "actionId": 25804,
+      "id": "529e6cc8-fbf7-4f01-aa73-dd4122d2f546",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Slipstream",
+      "actionId": 25837,
+      "id": "6d8afff0-a287-4838-b4e0-580e80a241d0",
+      "conditions": {}
+    },
+    {
+      "name": "Emerald Rite",
+      "actionId": 25825,
+      "id": "9f6dd5c1-b1e4-4927-9d2b-69df705663d0",
+      "conditions": {}
+    },
+    {
+      "name": "Emerald Ruin III",
+      "actionId": 25819,
+      "id": "9ff40561-d363-4550-af84-56e637664653",
+      "iconOverlayColor": 1,
+      "conditions": {}
+    },
+    {
+      "name": "Emerald Ruin II",
+      "actionId": 25813,
+      "id": "0192d11d-de18-49ee-ab19-c46c28ad01ea",
+      "iconOverlayColor": 1,
+      "conditions": {}
+    },
+    {
+      "name": "Emerald Ruin I",
+      "actionId": 25810,
+      "id": "71f8de1b-5bec-44e6-8692-ce5d09135518",
+      "iconOverlayColor": 1,
+      "conditions": {}
+    },
+    {
+      "name": "Ruin IV",
+      "actionId": 7426,
+      "id": "8a087fed-7b9b-489c-8ffb-2bfa925993ff",
+      "conditions": {}
+    },
+    {
+      "name": "Ruin III",
+      "actionId": 3579,
+      "id": "2cb31de0-138c-49bc-88a8-3b190642c3bf",
+      "conditions": {}
+    },
+    {
+      "name": "Ruin II",
+      "actionId": 172,
+      "id": "5cdfee95-0335-4063-8d02-4d003474c041",
+      "conditions": {}
+    },
+    {
+      "name": "Ruin",
+      "actionId": 163,
+      "id": "5d65e1d0-e329-41fe-a598-18cb4bf430da",
+      "conditions": {}
+    }
+  ]
+}

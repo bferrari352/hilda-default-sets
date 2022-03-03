@@ -1,0 +1,234 @@
+﻿{
+  "id": "96465264-f165-4ae0-9cab-04f761e384b3",
+  "jobId": 22,
+  "name": "Multi Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lance Charge",
+      "actionId": 85,
+      "id": "ebc7f850-b5fd-481c-baff-80c8f647d3f7",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Dragon Sight",
+      "actionId": 7398,
+      "id": "2ac41fb0-c944-4c7f-8aa1-a4c44d4b8e73",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Geirskogul",
+      "actionId": 3555,
+      "id": "46ccf96d-df3f-4041-9b75-57960d2631e4",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "High Jump",
+      "actionId": 16478,
+      "id": "bba46006-7dc6-4eef-956b-cf23cef32d23",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Jump",
+      "actionId": 92,
+      "id": "8cf7ea48-c6e4-45ae-9225-217e7c765f14",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Dragonfire Dive",
+      "actionId": 96,
+      "id": "06638241-954b-4bc6-9605-e6f3352aecef",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Mirage Dive",
+      "actionId": 7399,
+      "id": "8b488e2f-862a-4fc5-9898-5275a33c3c39",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Spineshatter Dive",
+      "actionId": 95,
+      "id": "b5ce18fb-2f19-45ec-9ba6-38f7f54baf8a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Stardiver",
+      "actionId": 16480,
+      "id": "3f424a9a-9763-4816-b8f8-b50fc8422929",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "lifeOfTheDragon": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Nastrond",
+      "actionId": 7400,
+      "id": "382572b7-cec5-46bf-9a92-0e9342094b6a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "lifeOfTheDragon": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Wyrmwind Thrust",
+      "actionId": 25773,
+      "id": "4f828b41-62ac-4c93-a6fe-2b81fe50e69e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "firstmindsFocus": {
+              "value": 2,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Coerthan Torment",
+      "actionId": 16477,
+      "id": "48cb339d-30ee-4f5b-a922-7ba751853de8",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Sonic Thrust",
+      "actionId": 7397,
+      "id": "b87f1caf-cc86-46d5-8990-918cba44d6bd",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Doom Spike",
+      "actionId": 86,
+      "id": "496c5b98-8a54-41d5-8f41-0768441c8223",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    }
+  ]
+}

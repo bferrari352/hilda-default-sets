@@ -1,0 +1,317 @@
+﻿{
+  "id": "67833175-12bb-46de-8c0d-59f23e6bb276",
+  "jobId": 22,
+  "name": "Single Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lance Charge",
+      "actionId": 85,
+      "id": "2607a032-4bda-42d4-a4d8-628a27fa3b64",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Dragon Sight",
+      "actionId": 7398,
+      "id": "6962beab-2d14-422b-89ef-bdb71a2446bc",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Geirskogul",
+      "actionId": 3555,
+      "id": "cd58b932-0f51-4af5-961d-12da39cc5a7a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "High Jump",
+      "actionId": 16478,
+      "id": "b5442c66-b945-4c60-bacb-0f34c40ea011",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Jump",
+      "actionId": 92,
+      "id": "c11b65c7-073e-4058-a18a-1d3538b18049",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Dragonfire Dive",
+      "actionId": 96,
+      "id": "9cce3557-4d61-43a8-9dfe-d6e04b875ec7",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Mirage Dive",
+      "actionId": 7399,
+      "id": "ffc7647e-5f67-462a-8ea3-356b82faaf7a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Spineshatter Dive",
+      "actionId": 95,
+      "id": "1a087982-3ad7-484c-8879-e3e32e678af0",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Stardiver",
+      "actionId": 16480,
+      "id": "2108414c-3fcf-47d6-876d-3161be710d75",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "lifeOfTheDragon": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Nastrond",
+      "actionId": 7400,
+      "id": "09bb935f-96e2-498f-94e4-bc75d8e5853f",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "lifeOfTheDragon": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Wyrmwind Thrust",
+      "actionId": 25773,
+      "id": "5f6a2ba2-ddf7-4bc3-8800-343e3ff7e004",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "firstmindsFocus": {
+              "value": 2,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Raiden Thrust",
+      "actionId": 16479,
+      "id": "cfd59560-752b-4023-9401-f7c1dad63df1",
+      "conditions": {}
+    },
+    {
+      "name": "Life Surge (Fang and Claw)",
+      "actionId": 83,
+      "id": "bc2b3b0a-ea23-4790-a1e7-44d4770ca6c6",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 802,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fang and Claw (Full / Heaven's Thrust)",
+      "actionId": 3554,
+      "id": "a68955e2-f3e8-494c-af78-8ace6f076e44",
+      "conditions": {}
+    },
+    {
+      "name": "Wheeling Thrust (Chaos Thrust / Spring)",
+      "actionId": 3556,
+      "id": "ca10b6d8-2a92-432a-9a8a-891d1ac84e59",
+      "conditions": {}
+    },
+    {
+      "name": "Heavens' Thrust",
+      "actionId": 25771,
+      "id": "80e908d7-2d1b-4fca-82b7-3a12c69526d5",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Life Surge (Full Thrust) (Pre-56)",
+      "actionId": 83,
+      "id": "21aa1356-cd10-4083-9709-971d1fe0f106",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "level": {
+            "value": 56,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Full Thrust",
+      "actionId": 84,
+      "id": "2149a2ba-8802-44fc-a4be-96b6142457ff",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Vorpal Thrust",
+      "actionId": 78,
+      "id": "b9fa75e1-27a5-437c-a89f-ba8bd3e5b8c8",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2720,
+              "duration": {
+                "value": 6.0,
+                "operator": ">="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Vorpal Thrust (Pre-18)",
+      "actionId": 78,
+      "id": "2162b05e-ea84-40a8-80b0-3bae4480c2a8",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "level": {
+            "value": 18,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Chaotic Spring",
+      "actionId": 25772,
+      "id": "870fc12b-26a3-4e8d-927a-e965e7381415",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Chaos Thrust",
+      "actionId": 88,
+      "id": "067d08ad-d7e1-4592-b6e8-6da3527a8bed",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Disembowel",
+      "actionId": 87,
+      "id": "72ba7362-19a8-48fb-82a4-a5f78cb7c33d",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2720,
+              "duration": {
+                "value": 6.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "True Thrust",
+      "actionId": 75,
+      "id": "3b947b2e-b3b9-43cd-92e2-41ae665dd541",
+      "conditions": {}
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+﻿{
+  "id": "627483dc-d12d-49af-ab45-2100d02f9757",
+  "jobId": 33,
+  "name": "Single Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lucid Dreaming",
+      "actionId": 7562,
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 1000,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Combust III",
+      "actionId": 16554,
+      "id": "19cd99dc-318d-4b44-a0ad-c603b47abd83",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 1881,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Combust II",
+      "actionId": 3608,
+      "id": "904a2ee8-2363-464c-bef5-1a3078bcf20c",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 843,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Combust",
+      "actionId": 3599,
+      "id": "a77f7673-968c-4e3b-8675-582616cb62e1",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 838,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fall Malefic",
+      "actionId": 25871,
+      "id": "b527f7f6-2e8c-47d4-840e-d963b4d41476",
+      "conditions": {}
+    },
+    {
+      "name": "Malefic IV",
+      "actionId": 16555,
+      "id": "71a4974e-103d-49ce-97ec-006ed08787a7",
+      "conditions": {}
+    },
+    {
+      "name": "Malefic III",
+      "actionId": 7442,
+      "id": "87aba232-c948-4892-a713-c03ff55d91f8",
+      "conditions": {}
+    },
+    {
+      "name": "Malefic II",
+      "actionId": 3598,
+      "id": "9b7106ff-77e3-4049-a595-e52ccafc28d2",
+      "conditions": {}
+    },
+    {
+      "name": "Malefic",
+      "actionId": 3596,
+      "id": "badbce0a-3dd2-4f7a-aba8-763d4a5d5377",
+      "conditions": {}
+    }
+  ]
+}

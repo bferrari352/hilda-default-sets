@@ -17,29 +17,34 @@ internal static class ManifestGenerator
             throw new Exception();
         }
 
-        var sets = new Dictionary<int, SetManifest>(currentManifest.Sets);
-        foreach (var (jobId, setManifest) in sets)
+        var sets = new Dictionary<int, List<SetManifest>>(currentManifest.Sets);
+        foreach (var (jobId, setManifests) in sets)
         {
-            var fileString = GetPrioritySet(jobId);
-            if (fileString == null)
+            for (var index = 0; index < setManifests.Count; index++)
             {
-                Console.WriteLine($"Priority set couldn't be found for {jobId}");
-                throw new Exception();
-            }
-            var md5 = GenerateMd5(fileString);
-            var (version, appVersion) = GetSetVersions(fileString);
-            var currentDate = DateTime.Now.ToString("u");
-            
-            if (md5 != setManifest.Md5)
-            {
-                Console.WriteLine($"Updating MD5 for {jobId}");
-                currentManifest.Sets[jobId] = new SetManifest
+                var setManifest = setManifests[index];
+                var fileString = GetPrioritySet(jobId, setManifest.Id);
+                if (fileString == null)
                 {
-                    LastUpdated = currentDate, 
-                    Md5 = md5, 
-                    Version = version ?? setManifest.Version, 
-                    AppVersion = appVersion ?? setManifest.AppVersion
-                };   
+                    Console.WriteLine($"SetID: '{setManifest.Id}' could not be found for JobID: {jobId}");
+                    throw new Exception();
+                }
+
+                var md5 = GenerateMd5(fileString);
+                var (version, appVersion, lastUpdated) = GetSetData(fileString);
+
+                if (md5 != setManifest.Md5)
+                {
+                    Console.WriteLine($"Updating MD5 for JobID: {jobId} -> SetID: {setManifest.Id}");
+                    currentManifest.Sets[jobId][index] = new SetManifest
+                    {
+                        Id = setManifest.Id,
+                        LastUpdated = lastUpdated,
+                        Md5 = md5,
+                        Version = version,
+                        AppVersion = appVersion,
+                    };
+                }
             }
         }
         
@@ -67,6 +72,7 @@ internal static class ManifestGenerator
             currentManifest.Version = string.Join(".", versionString);
         }
 
+        currentManifest.LastUpdated = DateTime.Now.ToString("u");
         WriteManifest(currentManifest);
         Console.Write("Generated new manifest.json");
     }
@@ -85,20 +91,23 @@ internal static class ManifestGenerator
         return sb.ToString();
     }
 
-    private static (string?, string?) GetSetVersions(string fileString)
+    private static (string, string, string) GetSetData(string fileString)
     {
-        var jArray = JArray.Parse(fileString);
-        var deserialized = jArray[0];
-        return (deserialized["version"]?.ToString(), deserialized["appVersion"]?.ToString());
+        var deserialized = JsonConvert.DeserializeObject<JObject>(fileString);
+        if (deserialized == null)
+        {
+            throw new Exception("Error acquiring set data");
+        }
+        return (deserialized["version"].ToString(), deserialized["appVersion"].ToString(), deserialized["lastUpdated"].ToString());
     }
 
-    private static string? GetPrioritySet(int jobId)
+    private static string? GetPrioritySet(int jobId, string setId)
     {
         try
         {
             var assemblyLocation = Assembly.GetExecutingAssembly().Location;
-            var dir = Path.Combine(Path.GetDirectoryName(assemblyLocation)!, @"priorities");
-            var filePath = Path.Combine(dir, @$"{jobId}.json");
+            var dir = Path.Combine(Path.GetDirectoryName(assemblyLocation)!, "priorities", jobId.ToString());
+            var filePath = Path.Combine(dir, @$"{setId}.json");
 
             if (File.Exists(filePath))
             {
@@ -167,17 +176,20 @@ internal static class ManifestGenerator
 public class DefaultManifest
 {
     public string Version { get; set; }
-    public Dictionary<int, SetManifest> Sets { get; set; }
+    public string LastUpdated { get; set; }
+    public Dictionary<int, List<SetManifest>> Sets { get; set; }
 
     public DefaultManifest()
     {
         Version = "";
-        Sets = new Dictionary<int, SetManifest>();
+        LastUpdated = "";
+        Sets = new Dictionary<int, List<SetManifest>>();
     }
 }
 
 public class SetManifest
 {
+    public string Id { get; set; }
     public string Md5 { get; set; }
     public string LastUpdated { get; set; }
     public string Version { get; set; }
@@ -185,6 +197,7 @@ public class SetManifest
 
     public SetManifest()
     {
+        Id = "";
         Md5 = "";
         LastUpdated = "";
         Version = "";

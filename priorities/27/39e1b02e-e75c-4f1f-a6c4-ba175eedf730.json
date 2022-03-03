@@ -1,0 +1,588 @@
+﻿{
+  "id": "39e1b02e-e75c-4f1f-a6c4-ba175eedf730",
+  "name": "Multi Target",
+  "jobId": 27,
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lucid Dreaming",
+      "actionId": 7562,
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 1000,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Mountain Buster",
+      "actionId": 25836,
+      "id": "aefefb3b-5801-424f-b846-4ee3f4c33885",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Painflare",
+      "actionId": 3578,
+      "id": "0a6ccaa1-083d-44f6-9cf4-b88fd7b4b30c",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Energy Siphon",
+      "actionId": 16510,
+      "id": "a64d107f-38ff-4cb4-86be-6c56b4bd5605",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Enkindle Phoenix",
+      "actionId": 16516,
+      "id": "f1245234-54e8-4d81-ac1a-edec4208600b",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Enkindle Bahamut",
+      "actionId": 7429,
+      "id": "f320a9d5-3a55-4c37-8ed2-7b54b39e0a2b",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Deathflare",
+      "actionId": 3582,
+      "id": "93be7f0c-0c66-4b31-9240-5adb58351f13",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Ruin IV (Expiring)",
+      "actionId": 7426,
+      "id": "a120b07d-89b9-4cee-8ca7-26216eb72053",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2701,
+              "duration": {
+                "value": 8.0,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ruin IV",
+      "actionId": 7426,
+      "id": "1fb39d13-ee31-41f1-a5a1-60169d953a19",
+      "conditions": {
+        "enemyCount": {
+          "value": 2,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inTrance": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Carbuncle",
+      "actionId": 25798,
+      "id": "875162e7-a919-4405-b776-f3d25932ffa8",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "isCarbuncleSummoned": false
+        }
+      }
+    },
+    {
+      "name": "Summon Phoenix",
+      "actionId": 25831,
+      "id": "bbb8fcf2-a1cd-4ddd-8967-f57f7559ef50",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Summon Bahamut",
+      "actionId": 7427,
+      "id": "2406ca6f-8dba-4d9e-935f-9e850bbf8237",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Dreadwyrm Trance",
+      "actionId": 3581,
+      "id": "22f2522f-5c1a-4bff-9187-3d14205717a7",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Aethercharge",
+      "actionId": 25800,
+      "id": "e4b588b1-61be-448b-aac2-3a627d075f21",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Brand of Purgatory",
+      "actionId": 16515,
+      "id": "458f5c1a-f041-417e-879d-e26183b5f1ea",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Astral Flare",
+      "actionId": 25821,
+      "id": "55c8b742-711e-4fe0-8341-dc1649913ae8",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Outburst (Trance)",
+      "actionId": 16511,
+      "id": "9576999d-e762-4f3d-a136-6c25f42f29c7",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inTrance": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Titan II",
+      "actionId": 25839,
+      "id": "0a345730-cb8e-43e8-ba86-6b5d74c7981b",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Titan",
+      "actionId": 25806,
+      "id": "9903aa4d-a587-42be-936e-5358ccf8541b",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Topaz",
+      "actionId": 25803,
+      "id": "a48d3fd9-9bf1-4260-8ba5-984021260f12",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Topaz Catastrophe",
+      "actionId": 25833,
+      "id": "5412fa85-f01c-4ace-beac-7f361f486323",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Topaz Disaster",
+      "actionId": 25828,
+      "id": "dd02d2a9-c786-4e5b-88ec-c339cec06dc6",
+      "iconOverlayColor": 4,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Topaz Outburst",
+      "actionId": 25815,
+      "id": "4506a7bb-5b0a-403f-b6ac-575c472d5329",
+      "iconOverlayColor": 4,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Summon Ifrit II",
+      "actionId": 25838,
+      "id": "759171e9-8bfe-4c9c-b575-009a409223e1",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Ifrit",
+      "actionId": 25805,
+      "id": "6b7b0c3e-6ddc-4f47-86bf-1fac50d714a9",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Ruby",
+      "actionId": 25802,
+      "id": "81a2dab6-8e79-46d9-86df-a594e6378c08",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Ruby Catastrophe",
+      "actionId": 25832,
+      "id": "ff5216ef-4f92-4312-80c1-d8f2e93722c1",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Crimson Strike",
+      "actionId": 25885,
+      "id": "ee38ce39-8317-43c7-9d31-46fa6155f920",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Crimson Cyclone",
+      "actionId": 25835,
+      "id": "539a6729-a270-48cf-9d4b-40e65bf4138a",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Ruby Disaster",
+      "actionId": 25827,
+      "id": "f4302721-e954-47bd-87d5-7fcce07509d1",
+      "iconOverlayColor": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Ruby Outburst",
+      "actionId": 25814,
+      "id": "50edc055-34fd-4247-8c6d-f323418f6a2c",
+      "iconOverlayColor": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Summon Garuda II",
+      "actionId": 25840,
+      "id": "8a6e183b-8521-44dc-9318-b6a36cfc46be",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Garuda",
+      "actionId": 25807,
+      "id": "dfc1b2cf-4d7b-4934-97d2-f841a98086a8",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Emerald",
+      "actionId": 25804,
+      "id": "7cb0b040-ecef-45f8-bf6c-ee69fe644ad9",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Slipstream",
+      "actionId": 25837,
+      "id": "54ab863a-72a3-48be-a77a-128e08375973",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Emerald Catastrophe",
+      "actionId": 25834,
+      "id": "cec8daef-bee1-4f5b-8ddb-306b7bc2dfce",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Emerald Disaster",
+      "actionId": 25829,
+      "id": "2bb5e288-9793-44b1-95b7-bcc9e630711a",
+      "iconOverlayColor": 1,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Emerald Outburst",
+      "actionId": 25816,
+      "id": "894e2ed7-7c74-4973-8489-0a84b1a682c9",
+      "iconOverlayColor": 1,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Tri-Disaster",
+      "actionId": 25826,
+      "id": "7fb72a31-dd38-47fd-bbfd-7ae0427ff125",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "hasRubyArcanum": false,
+            "hasTopazArcanum": false,
+            "hasEmeraldArcanum": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Outburst",
+      "actionId": 16511,
+      "id": "1e3fdbb6-87aa-4fe2-a4f2-746673d2da02",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "hasRubyArcanum": false,
+            "hasTopazArcanum": false,
+            "hasEmeraldArcanum": false
+          }
+        }
+      }
+    }
+  ]
+}

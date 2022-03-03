@@ -13,9 +13,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="priorities\*.json">
+        <Content Include="priorities\manifest.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-            <Visible>false</Visible>
+            <Visible>true</Visible>
+        </Content>
+        <Content Include="priorities\*\*.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Visible>true</Visible>
         </Content>
     </ItemGroup>
     

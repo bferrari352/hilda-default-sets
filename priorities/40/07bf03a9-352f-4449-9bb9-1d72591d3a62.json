@@ -1,0 +1,150 @@
+﻿{
+  "id": "07bf03a9-352f-4449-9bb9-1d72591d3a62",
+  "jobId": 40,
+  "name": "Single Target",
+  "version": "0.0.1",
+  "appVersion": "0.0.0.10",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "priorities": [
+    {
+      "name": "Lucid Dreaming",
+      "actionId": 7562,
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 1000,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Eukrasia",
+      "actionId": 24290,
+      "id": "63394d9d-1cee-45f6-a8d1-819ad9854b45",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 2614,
+              "duration": {
+                "value": 5.0,
+                "operator": "<="
+              }
+            },
+            {
+              "id": 2615,
+              "duration": {
+                "value": 5.0,
+                "operator": "<="
+              }
+            },
+            {
+              "id": 2616,
+              "duration": {
+                "value": 5.0,
+                "operator": "<="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "eukrasia": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Eukrasian Dosis III",
+      "actionId": 24314,
+      "id": "96e6e4f4-855d-44cb-9ad2-0c0ffd3d2ec3",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 2616,
+              "duration": {
+                "value": 5.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Eukrasian Dosis II",
+      "actionId": 24308,
+      "id": "5d9b24a5-986b-48eb-84ee-0931eb6a7804",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 2615,
+              "duration": {
+                "value": 5.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Eukrasian Dosis",
+      "actionId": 24293,
+      "id": "8cfb64de-d555-4acb-a965-2a3aee2b8a46",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 2614,
+              "duration": {
+                "value": 5.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Phlegma III",
+      "actionId": 24313,
+      "id": "18cb52ab-ffd8-45a9-acad-4d4f2ff09d37",
+      "conditions": {}
+    },
+    {
+      "name": "Phlegma II",
+      "actionId": 24307,
+      "id": "b5293058-9374-45be-a87b-5050e63a3e9a",
+      "conditions": {}
+    },
+    {
+      "name": "Phlegma",
+      "actionId": 24289,
+      "id": "2d768ff0-f594-4d2d-a4cd-0654c9c81d1b",
+      "conditions": {}
+    },
+    {
+      "name": "Dosis III",
+      "actionId": 24312,
+      "id": "a3b2a318-9c14-460a-9ab2-b4dd9db9389c",
+      "conditions": {}
+    },
+    {
+      "name": "Dosis II",
+      "actionId": 24306,
+      "id": "8258e004-5928-4c10-9401-5701c1d9f467",
+      "conditions": {}
+    },
+    {
+      "name": "Dosis",
+      "actionId": 24283,
+      "id": "8f083cca-ac88-417f-8387-c4c0e4821cf1",
+      "conditions": {}
+    }
+  ]
+}
