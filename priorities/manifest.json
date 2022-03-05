@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.10",
-  "LastUpdated": "2022-03-05 14:45:39Z",
+  "Version": "0.0.11",
+  "LastUpdated": "2022-03-05 14:55:09Z",
   "Sets": {
     "19": [
       {
@@ -156,9 +156,9 @@
       },
       {
         "Id": "9ecf91ba-c313-43d9-b92a-c7e108e98854",
-        "Md5": "9D56DA6B8D6DA858D928D09F766E5A0B",
+        "Md5": "226943139B3170FEA72C7487AC55DA97",
         "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.1",
+        "Version": "0.0.2",
         "AppVersion": "0.0.0.10"
       }
     ],
