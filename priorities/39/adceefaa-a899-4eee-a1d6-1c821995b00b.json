@@ -1,0 +1,131 @@
+﻿{
+  "id": "adceefaa-a899-4eee-a1d6-1c821995b00b",
+  "jobId": 39,
+  "name": "Multi Target",
+  "appVersion": "0.0.0.10",
+  "version": "0.0.1",
+  "author": "Hilda",
+  "lastUpdated": "2022-03-05 17:10:26Z",
+  "priorities": [
+    {
+      "name": "Gluttony",
+      "actionId": 24393,
+      "id": "0a9570c7-ae13-419e-8265-902764e5bc3b",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "soul": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Grim Swathe",
+      "actionId": 24392,
+      "id": "387ee437-ecab-4a01-a247-1f6c172798b0",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "soul": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Whorl of Death",
+      "actionId": 24379,
+      "id": "54433cdd-a4e7-4581-b3a0-c0bb841f4de1",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 2586,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Guillotine",
+      "actionId": 24384,
+      "id": "449d4707-95ff-4500-a009-057bbbdfb42c",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Soul Scythe",
+      "actionId": 24381,
+      "id": "9ee307f8-5f7d-4764-b754-13c68ec4b29f",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "soul": {
+              "value": 50,
+              "operator": "<"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Nightmare Scythe",
+      "actionId": 24377,
+      "id": "17c2060b-9e6f-4df3-98d5-f82ac22275e2",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Spinning Scythe",
+      "actionId": 24376,
+      "id": "32c999fa-3a5b-4dfb-9685-a324f2d911e9",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    }
+  ]
+}

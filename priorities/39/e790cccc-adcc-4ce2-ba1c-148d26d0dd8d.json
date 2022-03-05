@@ -1,10 +1,11 @@
 ﻿{
   "id": "e790cccc-adcc-4ce2-ba1c-148d26d0dd8d",
   "name": "Single Target",
+  "author": "Hilda",
   "jobId": 39,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "lastUpdated": "2022-03-05 17:21:53Z",
   "priorities": [
     {
       "name": "Lemure's Slice",
@@ -21,25 +22,45 @@
       "name": "Unveiled Gallows",
       "actionId": 24391,
       "id": "18972f3b-9ae9-40fe-b7fa-8ec2920008d1",
-      "conditions": {}
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
     },
     {
       "name": "Unveiled Gibbet",
       "actionId": 24390,
       "id": "6f1c1994-25a5-4441-b30a-11a7ff93f095",
-      "conditions": {}
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
     },
     {
       "name": "Enshroud",
       "actionId": 24394,
       "id": "354e5963-1677-4df9-a4b8-6d46a86b5f28",
-      "conditions": {}
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
     },
     {
       "name": "Blood Stalk",
       "actionId": 24389,
       "id": "73e2523e-9477-45bb-b37c-c087a8a535ba",
-      "conditions": {}
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
     },
     {
       "name": "Communio",
@@ -51,19 +72,7 @@
       "name": "Gibbet",
       "actionId": 24382,
       "id": "d962ca07-c32c-4095-b172-9b23d775144a",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2588,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
+      "conditions": {}
     },
     {
       "name": "Gallows",
@@ -93,7 +102,16 @@
       "name": "Soul Slice",
       "actionId": 24380,
       "id": "c8085798-978f-495d-8b4d-e4b0a336851c",
-      "conditions": {}
+      "conditions": {
+        "job": {
+          "gauge": {
+            "soul": {
+              "value": 50,
+              "operator": "<"
+            }
+          }
+        }
+      }
     },
     {
       "name": "Plentiful Harvest",
