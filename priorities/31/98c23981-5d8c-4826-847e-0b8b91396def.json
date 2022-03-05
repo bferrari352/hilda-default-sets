@@ -7,6 +7,36 @@
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
     {
+      "name": "Hypercharge (Wildfire)",
+      "actionId": 17209,
+      "id": "00f141df-dce7-4355-8972-670c1ca83ee6",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 1946,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "heat": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
       "name": "Reassemble (Chain Saw)",
       "actionId": 2876,
       "id": "fb215e88-0cf3-4e96-9f87-5b0d274caaf1",
@@ -202,6 +232,10 @@
       "actionId": 2878,
       "id": "50c0e829-0696-4aa3-aa00-3bd794319004",
       "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
         "job": {
           "gauge": {
             "heat": {
