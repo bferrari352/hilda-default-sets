@@ -2,7 +2,7 @@
   "id": "98c23981-5d8c-4826-817e-0b8b91396def",
   "jobId": 31,
   "name": "Single Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -144,6 +144,33 @@
         "player": {
           "level": {
             "value": 90,
+            "operator": "<"
+          }
+        },
+        "job": {
+          "gauge": {
+            "overheated": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Reassemble (Hot Shot pre-Drill)",
+      "actionId": 2876,
+      "id": "5e33b03d-843a-4d31-a334-7bd8c1488a6c",
+      "conditions": {
+        "charges": {
+          "value": 1,
+          "operator": ">="
+        },
+        "actionDependentRecast": {
+          "actionId": 2872,
+          "value": 0.0,
+          "operator": "="
+        },
+        "player": {
+          "level": {
+            "value": 58,
             "operator": "<"
           }
         },
@@ -352,6 +379,9 @@
       "actionId": 2878,
       "id": "43a269f9-e4cf-4517-a3ab-9639c487b170",
       "conditions": {
+        "target": {
+          "isBoss": true
+        },
         "job": {
           "gauge": {
             "heat": {
