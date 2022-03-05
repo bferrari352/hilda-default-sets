@@ -2,14 +2,87 @@
   "id": "cc444d97-5fc9-41e2-b208-790fc9ca3f87",
   "jobId": 23,
   "name": "Multi Target",
-  "version": "0.0.1",
+  "author": "Hilda",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "lastUpdated": "2022-03-05 14:42:11Z",
   "priorities": [
     {
       "name": "Raging Strikes",
       "actionId": 101,
       "id": "0a10de84-db4e-4526-b5f4-ccfc8178f7b5",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "the Wanderer's Minuet",
+      "actionId": 3559,
+      "id": "c4e49544-dea0-4458-becd-747d6c4200ea",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Mage's Ballad",
+      "actionId": 114,
+      "id": "77e049ac-5ea6-4bcf-83bc-e8b96d3923b7",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "minuet": false,
+            "paeon": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Army's Paeon",
+      "actionId": 116,
+      "id": "cb6f3939-ed76-4f19-be54-41825ba1ab6e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "minuet": false,
+            "ballad": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Rain of Death",
+      "actionId": 117,
+      "id": "e8f2d508-2216-4c7c-942e-cb1cb1724187",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -45,54 +118,24 @@
       }
     },
     {
-      "name": "Empyreal Arrow",
-      "actionId": 3558,
-      "id": "6001e78d-33f2-43a7-9a07-25cb0236000e",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Rain of Death",
-      "actionId": 117,
-      "id": "e8f2d508-2216-4c7c-942e-cb1cb1724187",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Barrage",
-      "actionId": 107,
-      "id": "dc4654cb-6183-4a7b-811c-5a496fafdae1",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
       "name": "Sidewinder",
       "actionId": 3562,
       "id": "c859a391-b4e1-433d-981b-d8e095d5186c",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Empyreal Arrow",
+      "actionId": 3558,
+      "id": "6001e78d-33f2-43a7-9a07-25cb0236000e",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -171,7 +214,7 @@
       }
     },
     {
-      "name": "Quick Knock",
+      "name": "Quick Nock",
       "actionId": 106,
       "id": "8a0ae3b8-ad08-4e5d-9daf-c569c1cf497e",
       "conditions": {
