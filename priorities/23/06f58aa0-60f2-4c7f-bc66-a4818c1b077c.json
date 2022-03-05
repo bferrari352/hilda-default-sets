@@ -2,22 +2,64 @@
   "id": "06f58aa0-60f2-4c7f-bc66-a4818c1b077c",
   "jobId": 23,
   "name": "Single Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "lastUpdated": "2022-03-05 11:35:34Z",
   "priorities": [
+    {
+      "name": "Raging Strikes",
+      "actionId": 101,
+      "id": "98aa1ead-7cfe-4aad-822e-b6102275c464",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Iron Jaws",
+      "actionId": 3560,
+      "id": "f1d27c00-dd4a-4e23-8a89-392bb9358851",
+      "conditions": {
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 1200,
+              "duration": {
+                "value": 0.1,
+                "value2": 5.0,
+                "operator": "><"
+              }
+            },
+            {
+              "id": 1201,
+              "duration": {
+                "value": 0.1,
+                "value2": 5.0,
+                "operator": "><"
+              }
+            }
+          ]
+        }
+      }
+    },
     {
       "name": "Stormbite",
       "actionId": 7407,
       "id": "8062a32b-f271-46ce-9276-09f1c89c3275",
+      "disabled": false,
       "conditions": {
+        "player": {},
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 1201,
               "duration": {
-                "value": 1.0,
-                "operator": "<="
+                "value": 0.0,
+                "operator": "="
               }
             }
           ]
@@ -28,8 +70,42 @@
       "name": "Windbite",
       "actionId": 113,
       "id": "4fd7f485-c460-4bb5-83f1-adf039b1a0cf",
+      "disabled": false,
       "conditions": {
+        "player": {
+          "level": {
+            "value": 64,
+            "operator": "<"
+          }
+        },
         "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 129,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Windbite (Pre-Iron Jaws)",
+      "actionId": 113,
+      "id": "0872134e-6653-473e-865f-88f628a372a1",
+      "disabled": false,
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 56,
+            "operator": "<"
+          }
+        },
+        "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 129,
@@ -46,14 +122,16 @@
       "name": "Caustic Bite",
       "actionId": 7406,
       "id": "f99e9156-f711-421d-a1d2-69518795afb2",
+      "disabled": false,
       "conditions": {
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 1200,
               "duration": {
-                "value": 1.0,
-                "operator": "<="
+                "value": 0.0,
+                "operator": "="
               }
             }
           ]
@@ -64,8 +142,42 @@
       "name": "Venomous Bite",
       "actionId": 100,
       "id": "9ced6018-b8dc-4fc5-b379-0d485617809f",
+      "disabled": false,
       "conditions": {
+        "player": {
+          "level": {
+            "value": 64,
+            "operator": "<"
+          }
+        },
         "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 124,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Venomous Bite (Pre Iron-Jaws)",
+      "actionId": 100,
+      "id": "c1250ee5-19bd-4ab0-bfcf-36fe953ee7b5",
+      "disabled": false,
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 56,
+            "operator": "<"
+          }
+        },
+        "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 124,
@@ -75,42 +187,6 @@
               }
             }
           ]
-        }
-      }
-    },
-    {
-      "name": "Iron Jaws",
-      "actionId": 3560,
-      "id": "f1d27c00-dd4a-4e23-8a89-392bb9358851",
-      "conditions": {
-        "target": {
-          "statuses": [
-            {
-              "id": 1201,
-              "duration": {
-                "value": 6.0,
-                "operator": "<="
-              }
-            },
-            {
-              "id": 1200,
-              "duration": {
-                "value": 6.0,
-                "operator": "<="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Raging Strikes",
-      "actionId": 101,
-      "id": "98aa1ead-7cfe-4aad-822e-b6102275c464",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
         }
       }
     },
