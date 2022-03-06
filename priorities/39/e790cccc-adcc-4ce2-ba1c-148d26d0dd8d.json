@@ -3,9 +3,9 @@
   "name": "Single Target",
   "author": "Hilda",
   "jobId": 39,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.0.10",
-  "lastUpdated": "2022-03-05 17:21:53Z",
+  "lastUpdated": "2022-03-06 09:17:10Z",
   "priorities": [
     {
       "name": "Lemure's Slice",
@@ -72,7 +72,37 @@
       "name": "Gibbet",
       "actionId": 24382,
       "id": "d962ca07-c32c-4095-b172-9b23d775144a",
-      "conditions": {}
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2588,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Gallows (Enhanced)",
+      "actionId": 24383,
+      "id": "aeb38368-f3b4-4158-93a1-2cde84ad8669",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2589,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "name": "Gallows",
@@ -84,6 +114,7 @@
       "name": "Shadow of Death",
       "actionId": 24378,
       "id": "c17c8a45-bdae-48cd-8af5-9486555a401f",
+      "disabled": false,
       "conditions": {
         "target": {
           "statuses": [
