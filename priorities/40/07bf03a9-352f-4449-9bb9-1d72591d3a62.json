@@ -2,7 +2,7 @@
   "id": "07bf03a9-352f-4449-9bb9-1d72591d3a62",
   "jobId": 40,
   "name": "Single Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -47,7 +47,8 @@
                 "operator": "<="
               }
             }
-          ]
+          ],
+          "isBoss": true
         },
         "job": {
           "gauge": {
@@ -70,7 +71,8 @@
                 "operator": "<="
               }
             }
-          ]
+          ],
+          "isBoss": true
         }
       }
     },
@@ -88,7 +90,8 @@
                 "operator": "<="
               }
             }
-          ]
+          ],
+          "isBoss": true
         }
       }
     },
@@ -106,7 +109,8 @@
                 "operator": "<="
               }
             }
-          ]
+          ],
+          "isBoss": true
         }
       }
     },

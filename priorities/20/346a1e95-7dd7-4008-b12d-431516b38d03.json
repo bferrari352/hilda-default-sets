@@ -2,7 +2,7 @@
   "id": "346a1e95-7dd7-4008-b12d-431516b38d03",
   "jobId": 20,
   "name": "Single Target",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-03-02 20:30:18Z",
   "priorities": [
@@ -612,7 +612,8 @@
                 "operator": "<="
               }
             }
-          ]
+          ],
+          "isBoss": true
         }
       }
     },
