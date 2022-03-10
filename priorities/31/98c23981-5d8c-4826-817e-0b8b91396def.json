@@ -2,7 +2,7 @@
   "id": "98c23981-5d8c-4826-817e-0b8b91396def",
   "jobId": 31,
   "name": "Single Target",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -101,7 +101,10 @@
         },
         "job": {
           "gauge": {
-            "overheated": false
+            "overheatTimeRemaining": {
+              "operator": "=",
+              "value": 0
+            }
           }
         }
       }
@@ -122,7 +125,10 @@
         },
         "job": {
           "gauge": {
-            "overheated": false
+            "overheatTimeRemaining": {
+              "operator": "=",
+              "value": 0
+            }
           }
         }
       }
@@ -149,7 +155,10 @@
         },
         "job": {
           "gauge": {
-            "overheated": false
+            "overheatTimeRemaining": {
+              "operator": "=",
+              "value": 0
+            }
           }
         }
       }
@@ -176,7 +185,10 @@
         },
         "job": {
           "gauge": {
-            "overheated": false
+            "overheatTimeRemaining": {
+              "operator": "=",
+              "value": 0
+            }
           }
         }
       }

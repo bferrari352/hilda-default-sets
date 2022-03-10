@@ -2,7 +2,7 @@
   "id": "67833175-12bb-46de-8c0d-59f23e6bb276",
   "jobId": 22,
   "name": "Single Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -105,7 +105,10 @@
         },
         "job": {
           "gauge": {
-            "lifeOfTheDragon": true
+            "lifeOfTheDragonTimer": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -121,7 +124,10 @@
         },
         "job": {
           "gauge": {
-            "lifeOfTheDragon": true
+            "lifeOfTheDragonTimer": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }

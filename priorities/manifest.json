@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.18",
-  "LastUpdated": "2022-03-10 08:46:59Z",
+  "Version": "0.0.19",
+  "LastUpdated": "2022-03-10 09:39:29Z",
   "Sets": {
     "19": [
       {
@@ -53,16 +53,16 @@
     "22": [
       {
         "Id": "67833175-12bb-46de-8c0d-59f23e6bb276",
-        "Md5": "808E1C7666FC1FC7DF3E37D2A49354AF",
+        "Md5": "295161A3F3203FBE6FFF78AE125EC28E",
         "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.1",
+        "Version": "0.0.2",
         "AppVersion": "0.0.0.10"
       },
       {
         "Id": "96465264-f165-4ae0-9cab-04f761e384b3",
-        "Md5": "F4E344F9D171B73EB0FB578B544D2980",
+        "Md5": "EE76C696FF9356D1D8EE2B3D4C76D9A9",
         "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.1",
+        "Version": "0.0.2",
         "AppVersion": "0.0.0.10"
       }
     ],
@@ -165,9 +165,9 @@
     "31": [
       {
         "Id": "98c23981-5d8c-4826-817e-0b8b91396def",
-        "Md5": "8128C4E212BB7BAE02B1519F5355E4AB",
+        "Md5": "B15D68D5855A1D7877F2C0947AA26DA4",
         "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.2",
+        "Version": "0.0.3",
         "AppVersion": "0.0.0.10"
       },
       {
