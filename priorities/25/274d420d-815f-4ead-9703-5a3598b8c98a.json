@@ -2,9 +2,9 @@
   "id": "274d420d-815f-4ead-9703-5a3598b8c98a",
   "jobId": 25,
   "name": "Single Target",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.0.10",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "lastUpdated": "2022-03-10 08:17:14Z",
   "priorities": [
     {
       "name": "Manafont (emergency)",
@@ -23,8 +23,14 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": false,
-            "inAstralFire": false
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": "="
+            },
+            "astralFireStacks": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
@@ -42,8 +48,14 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": false,
-            "inAstralFire": false
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": "="
+            },
+            "astralFireStacks": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
@@ -64,8 +76,8 @@
               "duration": {
                 "value": 3.0,
                 "operator": "<="
-          }
-        }
+              }
+            }
           ]
         }
       }
@@ -93,7 +105,7 @@
         "job": {
           "gauge": {
             "elementTimeRemaining": {
-              "value": 6000,
+              "value": 6,
               "operator": "<="
             }
           }
@@ -108,14 +120,13 @@
         "job": {
           "gauge": {
             "elementTimeRemaining": {
-              "value": 6000,
+              "value": 6,
               "operator": "<="
             },
             "astralFireStacks": {
               "value": 3,
               "operator": ">="
-            },
-            "inAstralFire": true
+            }
           }
         }
       }
@@ -283,7 +294,10 @@
       "conditions": {
         "job": {
           "gauge": {
-            "inUmbralIce": true
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -295,7 +309,10 @@
       "conditions": {
         "job": {
           "gauge": {
-            "inUmbralIce": true
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -364,9 +381,8 @@
           "gauge": {
             "astralFireStacks": {
               "value": 0,
-              "operator": "=="
-            },
-            "inAstralFire": false
+              "operator": "="
+            }
           }
         }
       }
@@ -384,19 +400,25 @@
       "conditions": {
         "job": {
           "gauge": {
-            "inAstralFire": true
+            "astralFireStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
     },
     {
-      "name": "Astral Fire -> Blizzard IIII",
+      "name": "Astral Fire -> Blizzard III",
       "actionId": 154,
       "id": "ce9da13f-e174-46ed-b4ab-e44892d70f7a",
       "conditions": {
         "job": {
           "gauge": {
-            "inAstralFire": true
+            "astralFireStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -414,8 +436,14 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": true,
-            "isEnochianActive": true
+            "enochianTimer": {
+              "value": 0,
+              "operator": ">"
+            },
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -446,8 +474,14 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": false,
-            "inAstralFire": false
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": "="
+            },
+            "astralFireStacks": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
@@ -465,7 +499,10 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": true
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }

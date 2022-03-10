@@ -2,9 +2,9 @@
   "id": "3b758951-840e-4f4e-a76d-add66569bd4a",
   "jobId": 25,
   "name": "Multi Target",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.0.10",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "lastUpdated": "2022-03-10 07:51:33Z",
   "priorities": [
     {
       "name": "Manafont (emergency)",
@@ -27,8 +27,14 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": false,
-            "inAstralFire": false
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": "="
+            },
+            "astralFireStacks": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
@@ -50,8 +56,14 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": false,
-            "inAstralFire": false
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": "="
+            },
+            "astralFireStacks": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
@@ -298,7 +310,10 @@
         },
         "job": {
           "gauge": {
-            "inUmbralIce": true
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -320,7 +335,10 @@
         },
         "job": {
           "gauge": {
-            "inAstralFire": false
+            "astralFireStacks": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
@@ -342,7 +360,10 @@
         },
         "job": {
           "gauge": {
-            "inAstralFire": false
+            "astralFireStacks": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
@@ -358,7 +379,10 @@
         },
         "job": {
           "gauge": {
-            "inAstralFire": true
+            "astralFireStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -380,7 +404,10 @@
         },
         "job": {
           "gauge": {
-            "inAstralFire": true
+            "astralFireStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
@@ -402,7 +429,10 @@
         },
         "job": {
           "gauge": {
-            "inAstralFire": true
+            "astralFireStacks": {
+              "value": 0,
+              "operator": ">"
+            }
           }
         }
       }
