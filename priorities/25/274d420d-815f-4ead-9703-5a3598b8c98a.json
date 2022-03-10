@@ -2,36 +2,120 @@
   "id": "274d420d-815f-4ead-9703-5a3598b8c98a",
   "jobId": 25,
   "name": "Single Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
     {
-      "name": "Lucid Dreaming",
-      "actionId": 7562,
-      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "name": "Manafont (emergency)",
+      "actionId": 158,
+      "id": "74eed19b-f325-46d3-94aa-5bfd7ff5e800",
       "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
         "player": {
           "mp": {
-            "value": 200,
+            "value": 800,
             "operator": "<"
+          }
+        },
+        "job": {
+          "gauge": {
+            "inUmbralIce": false,
+            "inAstralFire": false
           }
         }
       }
     },
     {
-      "name": "Manafont",
-      "actionId": 158,
-      "id": "74eed19b-f325-46d3-94aa-5bfd7ff5e800",
+      "name": "Lucid Dreaming (can't cast Blizzard III)",
+      "actionId": 7562,
+      "id": "611271d7-7bf9-489a-b706-c2089079efb1",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 800,
+            "operator": "<"
+          }
+        },
+        "job": {
+          "gauge": {
+            "inUmbralIce": false,
+            "inAstralFire": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Sharpcast",
+      "actionId": 3574,
+      "id": "a71aae3a-e438-45fe-b128-53862e1b894a",
       "conditions": {
         "globalCooldown": {
           "value": 0.0,
           "operator": ">"
         },
+        "target": {
+          "statuses": [
+            {
+              "id": 163,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+          }
+        }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Firestarter (Astral falling off)",
+      "actionId": 152,
+      "id": "6e6454f3-39ab-4e96-bcae-7aa806bb0ce8",
+      "conditions": {
         "player": {
-          "mp": {
-            "value": 0,
-            "operator": "="
+          "statuses": [
+            {
+              "id": 165,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "elementTimeRemaining": {
+              "value": 6000,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Fire (Astral Fire falling off)",
+      "actionId": 141,
+      "id": "c75bd41a-0803-4486-9863-b37472140d4c",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "elementTimeRemaining": {
+              "value": 6000,
+              "operator": "<="
+            },
+            "astralFireStacks": {
+              "value": 3,
+              "operator": ">="
+            },
+            "inAstralFire": true
           }
         }
       }
@@ -49,6 +133,29 @@
                 "value": 0.0,
                 "value2": 3.0,
                 "operator": "><"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Thunder III",
+      "actionId": 153,
+      "id": "796bbc56-239b-4226-b6e7-2a88c2f14c52",
+      "conditions": {
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 163,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              },
+              "stacks": {
+                "value": 0,
+                "operator": "="
               }
             }
           ]
@@ -75,60 +182,17 @@
       }
     },
     {
-      "name": "Sharpcast",
-      "actionId": 3574,
-      "id": "a71aae3a-e438-45fe-b128-53862e1b894a",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.0,
-          "operator": ">"
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 163,
-              "duration": {
-                "value": 3.0,
-                "operator": "<="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Thunder III",
-      "actionId": 153,
-      "id": "796bbc56-239b-4226-b6e7-2a88c2f14c52",
-      "conditions": {
-        "target": {
-          "statuses": [
-            {
-              "id": 163,
-              "duration": {
-                "value": 3.0,
-                "operator": "<="
-              },
-              "stacks": {
-                "value": 0,
-                "operator": "="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "Thunder",
       "actionId": 144,
       "id": "b86b2525-7e63-470a-9364-93cf2f261cdb",
       "conditions": {
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 161,
               "duration": {
-                "value": 3.0,
+                "value": 6.0,
                 "operator": "<="
               }
             }
@@ -206,7 +270,11 @@
       "name": "Ley Lines",
       "actionId": 3573,
       "id": "d4909918-4b15-4e29-b635-704534e9cc93",
-      "conditions": {}
+      "conditions": {
+        "target": {
+          "isBoss": true
+        }
+      }
     },
     {
       "name": "Xenoglossy",
@@ -246,8 +314,31 @@
             {
               "id": 165,
               "duration": {
-                "value": 1.0,
+                "value": 0.0,
                 "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Firestarter (buff falling off)",
+      "actionId": 152,
+      "id": "9c2de902-f9e5-47f6-8d82-016dab20959a",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 165,
+              "duration": {
+                "value": 0.0,
+                "value2": 6.0,
+                "operator": "><"
               },
               "stacks": {
                 "value": 1,
@@ -265,7 +356,7 @@
       "conditions": {
         "player": {
           "mp": {
-            "value": 9000,
+            "value": 6500,
             "operator": ">="
           }
         },
@@ -341,6 +432,55 @@
           }
         }
       }
+    },
+    {
+      "name": "Blizzard (transition to Blizzard Phase)",
+      "actionId": 142,
+      "id": "06169ff8-0360-4d5b-8f2d-09e71fb6e7ff",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 7000,
+            "operator": "<"
+          }
+        },
+        "job": {
+          "gauge": {
+            "inUmbralIce": false,
+            "inAstralFire": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Blizzard Phase",
+      "actionId": 142,
+      "id": "c6293925-dbd0-4de6-a236-ef3d3a4e677d",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 6500,
+            "operator": "<"
+          }
+        },
+        "job": {
+          "gauge": {
+            "inUmbralIce": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Fire",
+      "actionId": 141,
+      "id": "23e0034f-5154-4171-9f8e-112e08262995",
+      "conditions": {}
+    },
+    {
+      "name": "Blizzard",
+      "actionId": 142,
+      "id": "52044ab3-b988-47d7-999b-8642d8cfaa68",
+      "conditions": {}
     }
   ]
 }

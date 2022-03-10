@@ -2,19 +2,56 @@
   "id": "3b758951-840e-4f4e-a76d-add66569bd4a",
   "jobId": 25,
   "name": "Multi Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
     {
-      "name": "Lucid Dreaming",
+      "name": "Manafont (emergency)",
+      "actionId": 158,
+      "id": "c5e95671-181f-4f11-889a-b4e97f4693a4",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 800,
+            "operator": "<"
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inUmbralIce": false,
+            "inAstralFire": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Lucid Dreaming (can't cast Blizzard II)",
       "actionId": 7562,
-      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
+      "id": "59c7dfa1-8fb2-488b-88c4-b0f93b66198a",
       "conditions": {
         "player": {
           "mp": {
-            "value": 200,
+            "value": 800,
             "operator": "<"
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inUmbralIce": false,
+            "inAstralFire": false
           }
         }
       }
@@ -267,32 +304,6 @@
       }
     },
     {
-      "name": "Firestarter",
-      "actionId": 152,
-      "id": "db232ad6-c8ca-4e94-b8bb-b5144c981c7e",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 165,
-              "duration": {
-                "value": 1.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 1,
-                "operator": ">="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
       "name": "High Fire II (Transition)",
       "actionId": 25794,
       "id": "4fd3c7e8-25bb-4277-9529-185a239e4782",
@@ -321,7 +332,7 @@
       "conditions": {
         "player": {
           "mp": {
-            "value": 9000,
+            "value": 6500,
             "operator": ">="
           }
         },
@@ -357,6 +368,12 @@
       "actionId": 147,
       "id": "22c8d059-2c3b-4c57-8464-0eb20733a412",
       "conditions": {
+        "player": {
+          "mp": {
+            "value": 3800,
+            "operator": ">="
+          }
+        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
@@ -369,9 +386,53 @@
       }
     },
     {
+      "name": "Fire II (leveling)",
+      "actionId": 147,
+      "id": "e42d5735-0aed-4d71-8849-e1a6f6b41ac3",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 56,
+            "operator": "<"
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "inAstralFire": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Flare",
+      "actionId": 162,
+      "id": "1e76fbae-4cf6-4b82-a08e-3b5d73b02fea",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
       "name": "High Blizzard II",
       "actionId": 25795,
       "id": "f5578c63-3431-479c-b95e-5ee58c226f0b",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Freeze",
+      "actionId": 159,
+      "id": "3b9e2d31-6722-4e7c-ba16-a4e9d8780239",
       "conditions": {
         "enemyCount": {
           "value": 3,
