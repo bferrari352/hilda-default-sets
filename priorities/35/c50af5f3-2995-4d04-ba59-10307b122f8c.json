@@ -2,15 +2,19 @@
   "id": "c50af5f3-2995-4d04-ba59-10307b122f8c",
   "name": "Multi Target",
   "jobId": 35,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "lastUpdated": "2022-03-07 11:28:35Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",
       "actionId": 7562,
       "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
       "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
         "player": {
           "mp": {
             "value": 1000,
@@ -284,6 +288,36 @@
             "parameterA": "WhiteMana",
             "parameterB": "BlackMana",
             "operator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Verthunder II (Pre-Veraero II)",
+      "actionId": 16524,
+      "id": "ec2ea6ee-99cc-4e21-9e7c-6a0dbd600dbe",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 22,
+            "operator": "<"
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Scatter",
+      "actionId": 7509,
+      "id": "e15fd48a-a6b4-4efd-bab2-4ddfade6f7e1",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 18,
+            "operator": "<"
           }
         }
       }
