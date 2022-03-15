@@ -50,3 +50,40 @@ Do NOT push directly to the `gh-pages` branch!
 - Very rarely should a single target action be in a multi target set
 - ALL actions in a multi target set should have an "Enemy Count" requirement of at least 2+ enemies
   - If an action doesn't have this, then the action & set window will display at all times essentially making for a bad user experience
+
+## Notes + Tips
+
+- Weave Window > Active has a 0.5s buffer on it for to not show a weave when you can queue your next ability
+- Almost all NIN priorities should check if Mudra is active, to not recommend using it in the middle of a Ninjutsu combo
+- BLM
+  - Ice phase may have additional recommendations flash based on mana tick timing
+  - Weave Window > 0 is used, instead of Weave Window Active, due to the many actions that provide short weave windows between casts
+
+## Rotations Tested
+
+- Tanks
+  - WAR (1-60)
+  - DRK (1-60)
+  - PLD (1-60)
+  - GNB (1-60)
+
+- Healers
+  - All (1-90) (was hard)
+
+- Magic DPS
+  - SMN (1-60, 90)
+  - BLM (1-60)
+    - very non optimal
+  - RDM (1-60, 80-90)
+
+- Ranged DPS
+  - DNC (1-60, 80)
+  - BRD (1-60)
+  - MCH (1-60)
+
+- Melee DPS
+  - SAM (1-60)
+  - DRG (1-75)
+  - NIN (1-60)
+  - RPR (1-70)
+  - MNK (1-60)
