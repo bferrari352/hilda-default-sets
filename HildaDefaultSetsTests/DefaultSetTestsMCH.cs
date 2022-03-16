@@ -1,7 +1,6 @@
 ﻿using System.Linq;
-using Dalamud.Game.ClientState.JobGauge.Types;
 using FluentAssertions;
-using Hilda;
+using Hilda.Conductors.JobDefinitions.RangedDps;
 using Hilda.Constants;
 using HildaDefaultSetsTests.Utils;
 using Xunit;
@@ -14,8 +13,9 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     public DefaultSetTestsMCH(TestBaseFixture testBaseFixture, ITestOutputHelper testOutputHelper) :
         base(testBaseFixture, testOutputHelper)
     {
-        JobDefinition = JobData.Machinist.Definition;
-        MockService = MockLibrary.MockService<MCHGaugeWrapper, MCHGauge>();
+        JobGauge = new JobGaugeMCH();
+        JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH) JobGauge));
+        
         QueueSize = 12;
 
         var sets = GetDefaultSets(JobData.Machinist)?.ToList();
@@ -51,12 +51,16 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     {
         OutputHelper.WriteLine($"");
         QueueSize = 7;
-        MockService!.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.Hypercharge)).Returns(10);
-        MockService!.Setup(a => a.JobGauges.Get<MCHGaugeWrapper, MCHGauge>())
-            .Returns(new MCHGaugeWrapper {OverheatTimeRemaining = 8});
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.Hypercharge)).Returns(10);
+
+        JobGauge = new JobGaugeMCH
+        {
+            OverheatTimeRemaining = 8
+        };
+        JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH) JobGauge));
 
         SetupSetConductor(SingleTarget!);
-        MockService!.SetupInitial(level);
+        MockService.SetupInitial(level);
 
         var priorities = SetConductor!.DeterminePriorities();
         var priorityIds = priorities!.GetActionIds();

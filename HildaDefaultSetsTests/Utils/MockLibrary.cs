@@ -1,5 +1,4 @@
-﻿using Dalamud.Game.ClientState.JobGauge.Types;
-using Hilda;
+﻿using Hilda;
 using Hilda.Caches;
 using Hilda.Helpers;
 using Hilda.Models;
@@ -45,13 +44,6 @@ public static class MockLibrary
         return mock;
     }
     
-    public static Mock<IService> MockService<T, TU>() where T: IGauge<TU>, new() where TU: JobGaugeBase
-    {
-        var mock = MockService();
-        mock.Setup(a => a.JobGauges).Returns(MockJobGauges<T, TU>().Object);
-        
-        return mock;
-    }
 
     public static void SetupInitial(this Mock<IService> service, int level = 90)
     {
@@ -65,15 +57,6 @@ public static class MockLibrary
 
     #region IService Mocks
 
-    public static Mock<IJobGauges> MockJobGauges<T, TU>() where T: IGauge<TU>, new() where TU: JobGaugeBase
-    {
-        var mock = new Mock<IJobGauges>();
-        
-        mock.Setup(a => a.Get<T, TU>()).Returns(new T());
-
-        return mock;
-    }
-    
     public static Mock<IManaHelper> MockManaHelper()
     {
         var mock = new Mock<IManaHelper>();

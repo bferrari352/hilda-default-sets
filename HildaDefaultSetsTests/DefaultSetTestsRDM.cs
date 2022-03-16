@@ -1,7 +1,6 @@
 ﻿using System.Linq;
-using Dalamud.Game.ClientState.JobGauge.Types;
 using FluentAssertions;
-using Hilda;
+using Hilda.Conductors.JobDefinitions.MagicDps;
 using Hilda.Constants;
 using HildaDefaultSetsTests.Utils;
 using Xunit;
@@ -14,8 +13,9 @@ public class DefaultSetTestsRDM : DefaultSetTestBase
     public DefaultSetTestsRDM(TestBaseFixture testBaseFixture, ITestOutputHelper testOutputHelper) :
         base(testBaseFixture, testOutputHelper)
     {
-        JobDefinition = JobData.RedMage.Definition;
-        MockService = MockLibrary.MockService<RDMGaugeWrapper, RDMGauge>();
+        JobGauge = new JobGaugeRDM();
+        JobDefinition = new TestJobDefinitionRDM(new TestJobGaugeRDM((JobGaugeRDM) JobGauge));
+        
         QueueSize = 12;
 
         var sets = GetDefaultSets(JobData.RedMage)?.ToList();
@@ -47,7 +47,7 @@ public class DefaultSetTestsRDM : DefaultSetTestBase
     public void SingleTarget_BasicRotation_ReturnsExpectedValues(int level, ActionIDs[] expectedActions)
     {
         SetupSetConductor(SingleTarget!);
-        MockService!.SetupInitial(level);
+        MockService.SetupInitial(level);
 
         var priorities = SetConductor!.DeterminePriorities();
         var priorityIds = priorities!.GetActionIds();
@@ -67,12 +67,18 @@ public class DefaultSetTestsRDM : DefaultSetTestBase
     public void SingleTarget_Manafication_ShouldTriggerCombo(int level, int queueSize, ActionIDs[] expectedActions)
     {
         QueueSize = queueSize;
-        MockService!.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.Manafication)).Returns(60);
-        MockService.SetupSequence(a => a.JobGauges.Get<RDMGaugeWrapper, RDMGauge>())
-            .Returns(new RDMGaugeWrapper {BlackMana = 50, WhiteMana = 50, ManaStacks = 0});
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.Manafication)).Returns(60);
+
+        JobGauge = new JobGaugeRDM
+        {
+            BlackMana = 50,
+            WhiteMana = 50,
+            ManaStacks = 0
+        };
+        JobDefinition = new TestJobDefinitionRDM(new TestJobGaugeRDM((JobGaugeRDM) JobGauge));
 
         SetupSetConductor(SingleTarget!);
-        MockService!.SetupInitial(level);
+        MockService.SetupInitial(level);
 
         var priorities = SetConductor!.DeterminePriorities();
         var priorityIds = priorities!.GetActionIds();

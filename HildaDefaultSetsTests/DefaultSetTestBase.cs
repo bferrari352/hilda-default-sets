@@ -21,11 +21,15 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
     
     protected readonly ITestOutputHelper OutputHelper;
 
-    protected Mock<IService>? MockService;
+    protected Mock<IService> MockService;
     
     protected int QueueSize = 10;
     protected ICombatCamera<JobRequirements>? CombatCamera;
-    protected IJobDefinition<JobRequirements, JobRequirements>? JobDefinition;
+    
+    protected JobGauge JobGauge = null!;
+    protected IJobDefinition<JobRequirements, JobRequirements> JobDefinition;
+    
+    
     internal SetConductor<JobRequirements>? SetConductor;
     
     protected IPrioritySet<JobRequirements>? SingleTarget;
@@ -35,20 +39,19 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
     {
         _testBaseFixture = testBaseFixture;
         OutputHelper = testOutputHelper;
+
+        MockService = MockLibrary.MockService();
+        JobDefinition = new JobDefinition<JobRequirements, JobGauge>();
     }
 
     protected void SetupSetConductor(IPrioritySet<JobRequirements> set, ICombatCamera<JobRequirements>? combatCamera = null)
     {
-        if (MockService == null || JobDefinition == null) return;
-        
         CombatCamera = combatCamera ?? new CombatCamera<JobRequirements>(MockService.Object, JobDefinition);
         SetConductor = new SetConductor<JobRequirements>(MockService.Object, CombatCamera, set, JobDefinition, QueueSize);
     }
 
     protected IEnumerable<IPrioritySet<JobRequirements>>? GetDefaultSets(JobData job)
     {
-        if (MockService == null) return null;
-        
         var dataHelper = new DataHelper(MockService.Object);
         return dataHelper.GetDefaultPrioritySets(job);
     }
