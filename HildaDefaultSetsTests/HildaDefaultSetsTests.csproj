@@ -17,7 +17,7 @@
         <XIVLauncher>$(AppData)\XIVLauncher</XIVLauncher>
         <DalamudLibPath>$(XIVLauncher)\addon\Hooks\dev\</DalamudLibPath>
         <DefaultSetsPath>$(ProjectDir)..\HildaDefaultSets\priorities\</DefaultSetsPath>
-        <TestUtilsPath>$(ProjectDir)..\..\hilda\HildaTestUtils</TestUtilsPath>
+        <TestUtilsPath>$(ProjectDir)..\..\Hilda-Dalamud\HildaTestUtils</TestUtilsPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -64,9 +64,9 @@
     <Target Name="CopySetPriorities" AfterTargets="Build">
         <Message Text="Executing CopySetPriorities task" Importance="High" />
         <ItemGroup>
-            <DataFiles Include="$(DefaultSetsPath)\**\*.*" />
+            <DataFiles Include="$(DefaultSetsPath)**\*.*" />
         </ItemGroup>
-        <Copy SourceFiles="@(DataFiles)" DestinationFolder="$(OutDir)priorities\%(RecursiveDir)" SkipUnchangedFiles="true" />
+        <Copy SourceFiles="@(DataFiles)" DestinationFolder="$(OutDir)Priorities\%(RecursiveDir)" SkipUnchangedFiles="true" />
         <Message Text="Copied Set Priorities" Importance="High" />
     </Target>
 
