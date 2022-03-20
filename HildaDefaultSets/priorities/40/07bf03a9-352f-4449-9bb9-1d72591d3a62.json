@@ -2,7 +2,7 @@
   "id": "07bf03a9-352f-4449-9bb9-1d72591d3a62",
   "jobId": 40,
   "name": "Single Target",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -20,28 +20,81 @@
       }
     },
     {
-      "name": "Eukrasia",
+      "name": "Eukrasia (Dosis III)",
       "actionId": 24290,
       "id": "63394d9d-1cee-45f6-a8d1-819ad9854b45",
       "conditions": {
+        "player": {
+          "level": {
+            "value": 82,
+            "operator": ">="
+          }
+        },
         "target": {
           "statuses": [
             {
-              "id": 2614,
+              "id": 2616,
               "duration": {
                 "value": 5.0,
                 "operator": "<="
               }
-            },
+            }
+          ],
+          "isBoss": true
+        },
+        "job": {
+          "gauge": {
+            "eukrasia": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Eukrasia (Dosis II)",
+      "actionId": 24290,
+      "id": "63394d9d-1cee-45f6-a8d1-8154a9854b45",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 71,
+            "value2": 82,
+            "operator": "><"
+          }
+        },
+        "target": {
+          "statuses": [
             {
               "id": 2615,
               "duration": {
                 "value": 5.0,
                 "operator": "<="
               }
-            },
+            }
+          ],
+          "isBoss": true
+        },
+        "job": {
+          "gauge": {
+            "eukrasia": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Eukrasia (Dosis)",
+      "actionId": 24290,
+      "id": "63394d2a-1cee-45f6-a8d1-8154a9854b45",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 72,
+            "operator": "<"
+          }
+        },
+        "target": {
+          "statuses": [
             {
-              "id": 2616,
+              "id": 2614,
               "duration": {
                 "value": 5.0,
                 "operator": "<="

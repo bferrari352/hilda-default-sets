@@ -2,7 +2,7 @@
   "id": "5b633bad-8888-4bb3-a393-143fead17c5f",
   "jobId": 19,
   "name": "Single Target",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -137,6 +137,38 @@
     {
       "name": "Holy Spirit",
       "actionId": 7384,
+      "id": "b6e37b1b-2860-40ae-8f17-b4115bbad14a",
+      "conditions": {
+        "player": {
+          "mp": {
+            "value": 2000,
+            "operator": ">="
+          },
+          "level": {
+            "value": 80,
+            "operator": ">="
+          },
+          "statuses": [
+            {
+              "id": 1368,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "requiescat": {
+            "value": 1,
+            "operator": ">"
+          }
+        }
+      }
+    },
+    {
+      "name": "Holy Spirit",
+      "actionId": 7384,
       "id": "b6e37b1b-2860-40ae-8f17-b4115bb5884a",
       "conditions": {
         "player": {
@@ -161,7 +193,7 @@
         "job": {
           "requiescat": {
             "value": 1,
-            "operator": ">"
+            "operator": ">="
           }
         }
       }

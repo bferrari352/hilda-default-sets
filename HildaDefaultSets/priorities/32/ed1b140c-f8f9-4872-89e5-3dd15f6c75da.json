@@ -2,7 +2,7 @@
   "id": "ed1b140c-f8f9-4872-89e5-3dd15f6c75da",
   "jobId": 32,
   "name": "Single Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -15,10 +15,128 @@
           "value": 0.5,
           "operator": ">"
         },
+        "job": {
+          "gauge": {
+            "blood": {
+              "value": 50,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Edge of Shadow (Initial Only)",
+      "actionId": 16470,
+      "id": "559c247e-5b3a-4d59-8d89-61819ad48c30",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
         "player": {
           "mp": {
-            "value": 3000,
-            "operator": "<"
+            "value": 10000,
+            "operator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Edge of Darkness (Initial Only)",
+      "actionId": 16467,
+      "id": "559c247e-5b3a-ac93-8d89-61819ad48c30",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 10000,
+            "operator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Delirium",
+      "actionId": 7390,
+      "id": "6d3b9794-288d-47da-be3f-c011544b7811",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Living Shadow",
+      "actionId": 16472,
+      "id": "9a62a31f-67c3-4943-bda5-b0b53610c35e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "blood": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Salt And Darkness",
+      "actionId": 25755,
+      "id": "aa422256-b041-4554-a7c5-49f908716f6c",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Salted Earth",
+      "actionId": 3639,
+      "id": "4a5a6a64-4516-41f6-88e4-932148cab2cb",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Carve and Spit",
+      "actionId": 3643,
+      "id": "22c30cf5-c474-4dbf-a079-6de995b3e2e0",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Shadowbringer",
+      "actionId": 25757,
+      "id": "71d09961-919f-4ab6-9548-3455047ef7c8",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "darksideTimeRemaining": {
+              "value": 1,
+              "operator": ">="
+            }
           }
         }
       }
@@ -79,84 +197,20 @@
       }
     },
     {
-      "name": "Delerium",
-      "actionId": 7390,
-      "id": "6d3b9794-288d-47da-be3f-c011544b7811",
+      "name": "Bloodspiller (Delirium)",
+      "actionId": 7392,
+      "id": "3082926f-4ede-4c36-b609-054720556d8f",
       "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Living Shadow",
-      "actionId": 16472,
-      "id": "9a62a31f-67c3-4943-bda5-b0b53610c35e",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "job": {
-          "gauge": {
-            "blood": {
-              "value": 50,
-              "operator": ">="
+        "player": {
+          "statuses": [
+            {
+              "id": 1972,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
             }
-          }
-        }
-      }
-    },
-    {
-      "name": "Salted Earth",
-      "actionId": 3639,
-      "id": "4a5a6a64-4516-41f6-88e4-932148cab2cb",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Shadowbringer",
-      "actionId": 25757,
-      "id": "71d09961-919f-4ab6-9548-3455047ef7c8",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "job": {
-          "gauge": {
-            "darksideTimeRemaining": {
-              "value": 1,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Salt And Darkness",
-      "actionId": 25755,
-      "id": "aa422256-b041-4554-a7c5-49f908716f6c",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Carve and Spit",
-      "actionId": 3643,
-      "id": "22c30cf5-c474-4dbf-a079-6de995b3e2e0",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
+          ]
         }
       }
     },

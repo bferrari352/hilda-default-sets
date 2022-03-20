@@ -136,7 +136,23 @@
       "name": "Sonic Break",
       "actionId": 16153,
       "id": "d2489135-f1a8-46ac-8770-00d2f58e99e3",
-      "conditions": {}
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 1831,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "name": "Wicked Talon",

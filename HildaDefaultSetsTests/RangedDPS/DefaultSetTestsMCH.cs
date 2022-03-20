@@ -2,16 +2,16 @@
 using FluentAssertions;
 using Hilda.Conductors.JobDefinitions.RangedDps;
 using Hilda.Constants;
-using HildaDefaultSetsTests.Utils;
+using HildaTestUtils;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace HildaDefaultSetsTests;
+namespace HildaDefaultSetsTests.RangedDPS;
 
 public class DefaultSetTestsMCH : DefaultSetTestBase
 {
-    public DefaultSetTestsMCH(TestBaseFixture testBaseFixture, ITestOutputHelper testOutputHelper) :
-        base(testBaseFixture, testOutputHelper)
+    public DefaultSetTestsMCH(TestBaseFixture fixture, ITestOutputHelper output) :
+        base(fixture, output)
     {
         JobGauge = new JobGaugeMCH();
         JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH) JobGauge));
@@ -49,7 +49,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     [InlineData(70)]
     public void SingleTarget_Hypercharge_TriggersExpectedActions(int level)
     {
-        OutputHelper.WriteLine($"");
+        Output.WriteLine($"");
         QueueSize = 7;
         MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.Hypercharge)).Returns(10);
 

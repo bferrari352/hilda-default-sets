@@ -17,7 +17,13 @@
         <XIVLauncher>$(AppData)\XIVLauncher</XIVLauncher>
         <DalamudLibPath>$(XIVLauncher)\addon\Hooks\dev\</DalamudLibPath>
         <DefaultSetsPath>$(ProjectDir)..\HildaDefaultSets\priorities\</DefaultSetsPath>
+        <TestUtilsPath>$(ProjectDir)..\..\hilda\HildaTestUtils</TestUtilsPath>
     </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <NoWarn>1701;1702;CS8002;8002</NoWarn>
+    </PropertyGroup>
+
 
     <ItemGroup>
         <PackageReference Include="FluentAssertions" Version="6.5.1" />
@@ -44,11 +50,14 @@
         <Reference Include="FFXIVClientStructs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
         </Reference>
+        <Reference Include="HildaTestUtils, Culture=neutral, PublicKeyToken=5503f199c805f859">
+          <HintPath>$(TestUtilsPath)\bin\Debug\net5.0-windows\HildaTestUtils.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="Hilda, Version=0.0.0.10, Culture=neutral, PublicKeyToken=null">
-        <HintPath>C:\Users\Brandon\AppData\Roaming\XIVLauncher\devPlugins\Hilda\Hilda.dll</HintPath>
+      <Reference Include="Hilda, Culture=neutral, PublicKeyToken=null">
+        <HintPath>$(XIVLauncher)\devPlugins\Hilda\Hilda.dll</HintPath>
       </Reference>
     </ItemGroup>
 

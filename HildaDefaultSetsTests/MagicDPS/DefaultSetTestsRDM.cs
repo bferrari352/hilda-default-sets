@@ -2,16 +2,16 @@
 using FluentAssertions;
 using Hilda.Conductors.JobDefinitions.MagicDps;
 using Hilda.Constants;
-using HildaDefaultSetsTests.Utils;
+using HildaTestUtils;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace HildaDefaultSetsTests;
+namespace HildaDefaultSetsTests.MagicDPS;
 
 public class DefaultSetTestsRDM : DefaultSetTestBase
 {
-    public DefaultSetTestsRDM(TestBaseFixture testBaseFixture, ITestOutputHelper testOutputHelper) :
-        base(testBaseFixture, testOutputHelper)
+    public DefaultSetTestsRDM(TestBaseFixture fixture, ITestOutputHelper output) :
+        base(fixture, output)
     {
         JobGauge = new JobGaugeRDM();
         JobDefinition = new TestJobDefinitionRDM(new TestJobGaugeRDM((JobGaugeRDM) JobGauge));
@@ -26,34 +26,26 @@ public class DefaultSetTestsRDM : DefaultSetTestBase
     }
 
     [Theory]
-    [InlineData(90, new[] { ActionIDs.JoltII, ActionIDs.VeraeroIII, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
+    [InlineData(90, false, new[] { ActionIDs.JoltII, ActionIDs.VeraeroIII, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
         ActionIDs.Fleche, ActionIDs.EnchantedZwerchhau, ActionIDs.EnchantedRedoublement, ActionIDs.ContreSixte,
         ActionIDs.Verflare, ActionIDs.Scorch, ActionIDs.Resolution, ActionIDs.JoltII })]
-    [InlineData(80, new[] { ActionIDs.JoltII, ActionIDs.Veraero, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
+    [InlineData(80, false, new[] { ActionIDs.JoltII, ActionIDs.Veraero, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
         ActionIDs.Fleche, ActionIDs.EnchantedZwerchhau, ActionIDs.EnchantedRedoublement, ActionIDs.ContreSixte,
         ActionIDs.Verflare, ActionIDs.Scorch, ActionIDs.JoltII, ActionIDs.Veraero })]
-    [InlineData(70, new[] { ActionIDs.JoltII, ActionIDs.Veraero, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
+    [InlineData(70, false, new[] { ActionIDs.JoltII, ActionIDs.Veraero, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
         ActionIDs.Fleche, ActionIDs.EnchantedZwerchhau, ActionIDs.EnchantedRedoublement, ActionIDs.ContreSixte,
         ActionIDs.Verflare, ActionIDs.JoltII, ActionIDs.Veraero, ActionIDs.JoltII })]
-    [InlineData(60, new[] { ActionIDs.Jolt, ActionIDs.Veraero, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
+    [InlineData(60, false, new[] { ActionIDs.Jolt, ActionIDs.Veraero, ActionIDs.Manafication, ActionIDs.EnchantedRiposte,
         ActionIDs.Fleche, ActionIDs.EnchantedZwerchhau, ActionIDs.EnchantedRedoublement, ActionIDs.ContreSixte,
         ActionIDs.Jolt, ActionIDs.Verthunder, ActionIDs.Jolt, ActionIDs.Veraero })]
-    [InlineData(50, new[] { ActionIDs.Jolt, ActionIDs.Veraero, ActionIDs.Fleche, ActionIDs.Jolt, ActionIDs.Verthunder,
+    [InlineData(50, false, new[] { ActionIDs.Jolt, ActionIDs.Veraero, ActionIDs.Fleche, ActionIDs.Jolt, ActionIDs.Verthunder,
         ActionIDs.Jolt, ActionIDs.Veraero, ActionIDs.Jolt, ActionIDs.Verthunder, ActionIDs.Jolt, ActionIDs.Veraero,
         ActionIDs.Jolt})]
-    [InlineData(30, new[] { ActionIDs.Jolt, ActionIDs.Veraero, ActionIDs.Jolt, ActionIDs.Verthunder, ActionIDs.Jolt,
+    [InlineData(30, false, new[] { ActionIDs.Jolt, ActionIDs.Veraero, ActionIDs.Jolt, ActionIDs.Verthunder, ActionIDs.Jolt,
         ActionIDs.Veraero, ActionIDs.Jolt, ActionIDs.Verthunder, ActionIDs.EnchantedRiposte, ActionIDs.Jolt, ActionIDs.Veraero,
         ActionIDs.Jolt})]
-    public void SingleTarget_BasicRotation_ReturnsExpectedValues(int level, ActionIDs[] expectedActions)
-    {
-        SetupSetConductor(SingleTarget!);
-        MockService.SetupInitial(level);
-
-        var priorities = SetConductor!.DeterminePriorities();
-        var priorityIds = priorities!.GetActionIds();
-        
-        priorityIds.Should().Equal(expectedActions.GetActionIds());
-    }
+    public void RedMage_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>
+        SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
 
     [Theory]
     [InlineData(90, 8, new[] { ActionIDs.EnchantedRiposte, ActionIDs.Fleche, ActionIDs.EnchantedZwerchhau,
