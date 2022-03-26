@@ -2,36 +2,10 @@
   "id": "98c23981-5d8c-4826-817e-0b8b91396def",
   "jobId": 31,
   "name": "Single Target",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
-    {
-      "name": "Hypercharge (Wildfire)",
-      "actionId": 17209,
-      "id": "00f141df-dce7-4355-8972-670c1ca83ee6",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1946,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "heat": {
-              "value": 50,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
     {
       "name": "Automaton Queen (Max)",
       "actionId": 16501,
@@ -254,6 +228,84 @@
       }
     },
     {
+      "name": "Barrel Stabilizer",
+      "actionId": 7414,
+      "id": "53f51819-c5e1-4903-b1f3-a1db451b5095",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "heat": {
+              "value": 50,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Wildfire (Hypercharge Ready)",
+      "actionId": 2878,
+      "id": "43a269f9-e4cf-4517-a3ab-9639c487b170",
+      "conditions": {
+        "target": {
+          "isBoss": true
+        },
+        "job": {
+          "gauge": {
+            "heat": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Automaton Queen",
+      "actionId": 16501,
+      "id": "ed60faa2-e065-49f0-bcbe-c639bc4c1d29",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Rook Autoturret",
+      "actionId": 2864,
+      "id": "fd0a486c-8e79-46fa-a6f4-a106a34828c3",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Hypercharge",
+      "actionId": 17209,
+      "id": "03812cd3-8fef-47df-96a3-650c8dfec901",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "heat": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
       "name": "Gauss Round (1)",
       "actionId": 2874,
       "id": "9df8aba7-2152-4c86-9610-20cea890ee23",
@@ -359,82 +411,22 @@
       "name": "Drill",
       "actionId": 16498,
       "id": "3cde3ecb-32a1-4db3-a2af-73e8aeb07672",
-      "conditions": {}
+      "conditions": {
+        "job": {
+          "gauge": {
+            "overheatTimeRemaining": {
+              "operator": "=",
+              "value": 0
+            }
+          }
+        }
+      }
     },
     {
       "name": "Chain Saw",
       "actionId": 25788,
       "id": "dca78c31-cbb5-4239-a445-5023de509068",
       "conditions": {}
-    },
-    {
-      "name": "Barrel Stabilizer",
-      "actionId": 7414,
-      "id": "53f51819-c5e1-4903-b1f3-a1db451b5095",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "job": {
-          "gauge": {
-            "heat": {
-              "value": 50,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Wildfire (Hypercharge Ready)",
-      "actionId": 2878,
-      "id": "43a269f9-e4cf-4517-a3ab-9639c487b170",
-      "conditions": {
-        "target": {
-          "isBoss": true
-        },
-        "job": {
-          "gauge": {
-            "heat": {
-              "value": 50,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Hypercharge",
-      "actionId": 17209,
-      "id": "03812cd3-8fef-47df-96a3-650c8dfec901",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "heat": {
-              "value": 50,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Automaton Queen",
-      "actionId": 16501,
-      "id": "ed60faa2-e065-49f0-bcbe-c639bc4c1d29",
-      "conditions": {}
-    },
-    {
-      "name": "Rook Autoturret",
-      "actionId": 2864,
-      "id": "fd0a486c-8e79-46fa-a6f4-a106a34828c3",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
     },
     {
       "name": "Heated Clean Shot",

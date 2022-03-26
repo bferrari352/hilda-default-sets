@@ -2,7 +2,7 @@
   "id": "346a1e95-7dd7-4008-b12d-431516b38d03",
   "jobId": 20,
   "name": "Single Target",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-03-02 20:30:18Z",
   "priorities": [
@@ -36,6 +36,17 @@
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
@@ -58,6 +69,30 @@
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Bootshine (Post Elixir Field)",
+      "actionId": 53,
+      "id": "136edf8f-a001-4d99-9d1d-b69baad8adca",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2513,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
         }
       }
     },
@@ -372,7 +407,7 @@
       }
     },
     {
-      "name": "Twink Snakes (Post Rising Phoenix)",
+      "name": "Twin Snakes (Post Rising Phoenix)",
       "actionId": 61,
       "id": "975b1d01-26fd-47db-a6be-3cc9680f6b76",
       "conditions": {
@@ -435,7 +470,7 @@
       "conditions": {
         "job": {
           "perfectBalanceStacks": {
-            "value": 3,
+            "value": 1,
             "operator": "="
           },
           "gauge": {
@@ -467,35 +502,11 @@
       "conditions": {
         "job": {
           "perfectBalanceStacks": {
-            "value": 1,
+            "value": 3,
             "operator": "="
           },
           "gauge": {
             "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Post Elixir Field)",
-      "actionId": 53,
-      "id": "136edf8f-a001-4d99-9d1d-b69baad8adca",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2513,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
           }
         }
       }
@@ -680,24 +691,6 @@
                 "operator": ">"
               }
             },
-            {
-              "id": 107,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Rotational) (Un-Leaded)",
-      "actionId": 53,
-      "id": "b1fab637-5761-4cb8-896e-06de12b702ea",
-      "conditions": {
-        "player": {
-          "statuses": [
             {
               "id": 107,
               "duration": {

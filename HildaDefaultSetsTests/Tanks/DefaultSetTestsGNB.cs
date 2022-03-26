@@ -23,14 +23,94 @@ public class DefaultSetTestsGNB : DefaultSetTestBase
         MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
     }
     
-    // TODO: Currently failing --
     [Theory]
     [InlineData(90, true, new[]
     {
-        ActionIDs.KeenEdge, ActionIDs.NoMercy, ActionIDs.BrutalShell, ActionIDs.SolidBarrel, ActionIDs.GnashingFang, 
-        ActionIDs.JugularRip, ActionIDs.SonicBreak, ActionIDs.Bloodfest, ActionIDs.DoubleDown, ActionIDs.BlastingZone, 
-        ActionIDs.SavageClaw, ActionIDs.AbdomenTear, ActionIDs.WickedTalon, ActionIDs.EyeGouge, ActionIDs.BurstStrike,
-        ActionIDs.Hypervelocity, ActionIDs.KeenEdge, ActionIDs.BrutalShell, ActionIDs.SolidBarrel, ActionIDs.GnashingFang
+        ActionIDs.KeenEdge, ActionIDs.NoMercy,
+        ActionIDs.BrutalShell, ActionIDs.BlastingZone,
+        ActionIDs.SolidBarrel, ActionIDs.BowShock,
+        ActionIDs.GnashingFang, ActionIDs.JugularRip,
+        ActionIDs.SonicBreak, ActionIDs.Bloodfest, 
+        ActionIDs.DoubleDown,
+        ActionIDs.SavageClaw, ActionIDs.AbdomenTear,
+        ActionIDs.WickedTalon, ActionIDs.EyeGouge,
+        ActionIDs.BurstStrike, ActionIDs.Hypervelocity,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel
+    })]
+    [InlineData(80, true, new[]
+    {
+        ActionIDs.KeenEdge, ActionIDs.NoMercy,
+        ActionIDs.BrutalShell, ActionIDs.BlastingZone,
+        ActionIDs.SolidBarrel, ActionIDs.BowShock,
+        ActionIDs.GnashingFang, ActionIDs.JugularRip,
+        ActionIDs.SonicBreak, ActionIDs.Bloodfest, 
+        ActionIDs.BurstStrike,
+        ActionIDs.SavageClaw, ActionIDs.AbdomenTear,
+        ActionIDs.WickedTalon, ActionIDs.EyeGouge,
+        ActionIDs.BurstStrike,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel,
+        ActionIDs.BurstStrike
+    })]
+    [InlineData(70, true, new[]
+    {
+        ActionIDs.KeenEdge, ActionIDs.NoMercy,
+        ActionIDs.BrutalShell, ActionIDs.DangerZone,
+        ActionIDs.SolidBarrel, ActionIDs.BowShock,
+        ActionIDs.GnashingFang, ActionIDs.JugularRip,
+        ActionIDs.SonicBreak,
+        ActionIDs.SavageClaw, ActionIDs.AbdomenTear,
+        ActionIDs.WickedTalon, ActionIDs.EyeGouge,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel,
+        ActionIDs.BurstStrike,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel
+    })]
+    [InlineData(60, true, new[]
+    {
+        ActionIDs.KeenEdge, ActionIDs.NoMercy,
+        ActionIDs.BrutalShell, ActionIDs.DangerZone,
+        ActionIDs.SolidBarrel,
+        ActionIDs.GnashingFang,
+        ActionIDs.SonicBreak,
+        ActionIDs.SavageClaw,
+        ActionIDs.WickedTalon,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel,
+        ActionIDs.BurstStrike,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel,
+        ActionIDs.BurstStrike, ActionIDs.DangerZone,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell
+    })]
+    [InlineData(50, true, new[]
+    {
+        ActionIDs.KeenEdge, ActionIDs.NoMercy,
+        ActionIDs.BrutalShell, ActionIDs.DangerZone,
+        ActionIDs.SolidBarrel,
+        ActionIDs.BurstStrike,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel,
+        ActionIDs.BurstStrike,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel,
+        ActionIDs.BurstStrike,
+        ActionIDs.KeenEdge,
+        ActionIDs.BrutalShell,
+        ActionIDs.SolidBarrel, ActionIDs.DangerZone,
+        ActionIDs.BurstStrike,
+        ActionIDs.KeenEdge
     })]
     public void Gunbreaker_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);

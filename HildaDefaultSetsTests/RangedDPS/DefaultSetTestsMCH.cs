@@ -15,8 +15,6 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     {
         JobGauge = new JobGaugeMCH();
         JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH) JobGauge));
-        
-        QueueSize = 12;
 
         var sets = GetDefaultSets(JobData.Machinist)?.ToList();
         if (sets == null) return;
@@ -24,6 +22,126 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
         MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
     }
+    
+    [Theory]
+    [InlineData(90, true, new[]
+    {
+        ActionIDs.Reassemble,
+        ActionIDs.AirAnchor, ActionIDs.Reassemble, // Battery - 20
+        ActionIDs.Chainsaw, ActionIDs.GaussRound, // Battery - 20
+        ActionIDs.Drill, ActionIDs.Ricochet,
+        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound,
+        ActionIDs.HeatedSlugShot, ActionIDs.Ricochet,
+        ActionIDs.HeatedCleanShot, ActionIDs.BarrelStabilizer, // Battery - 10
+        ActionIDs.HeatedSplitShot, ActionIDs.Wildfire,
+        ActionIDs.HeatedSlugShot, ActionIDs.AutomatonQueen,
+        ActionIDs.HeatedCleanShot, ActionIDs.Hypercharge, // Battery - 10
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.Drill, ActionIDs.Ricochet,
+        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound,
+        ActionIDs.HeatedSlugShot, ActionIDs.Ricochet,
+        ActionIDs.HeatedCleanShot
+    })]
+    [InlineData(80, true, new[]
+    {
+        ActionIDs.Reassemble,
+        ActionIDs.AirAnchor, ActionIDs.GaussRound,
+        ActionIDs.Drill, ActionIDs.Ricochet,
+        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound,
+        ActionIDs.HeatedSlugShot, ActionIDs.Ricochet,
+        ActionIDs.HeatedCleanShot, ActionIDs.BarrelStabilizer,
+        ActionIDs.HeatedSplitShot, ActionIDs.Wildfire,
+        ActionIDs.HeatedSlugShot, ActionIDs.Hypercharge,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.Drill, ActionIDs.Ricochet,
+        ActionIDs.HeatedCleanShot, ActionIDs.GaussRound,
+        ActionIDs.HeatedSplitShot, ActionIDs.Ricochet,
+        ActionIDs.HeatedSlugShot,
+        ActionIDs.HeatedCleanShot
+    })]
+    [InlineData(70, true, new[]
+    {
+        ActionIDs.Reassemble,
+        ActionIDs.Drill, ActionIDs.GaussRound,
+        ActionIDs.HotShot, ActionIDs.Ricochet,
+        ActionIDs.HeatedSplitShot, ActionIDs.BarrelStabilizer,
+        ActionIDs.HeatedSlugShot, ActionIDs.Wildfire,
+        ActionIDs.HeatedCleanShot, ActionIDs.Hypercharge,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound,
+        ActionIDs.Drill, ActionIDs.Ricochet,
+        ActionIDs.HeatedSlugShot,
+        ActionIDs.HeatedCleanShot
+    })]
+    [InlineData(60, true, new[]
+    {
+        ActionIDs.Reassemble,
+        ActionIDs.Drill, ActionIDs.GaussRound,
+        ActionIDs.HotShot, ActionIDs.Ricochet,
+        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound,
+        ActionIDs.HeatedSlugShot, ActionIDs.Ricochet,
+        ActionIDs.CleanShot,
+        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSlugShot,
+        ActionIDs.CleanShot,
+        ActionIDs.Drill,
+        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSlugShot,
+        ActionIDs.CleanShot, ActionIDs.RookAutoturret,
+        ActionIDs.HeatedSplitShot, ActionIDs.Wildfire,
+        ActionIDs.HeatedSlugShot, ActionIDs.Hypercharge,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HotShot, ActionIDs.Ricochet,
+        ActionIDs.Drill,
+        ActionIDs.CleanShot, ActionIDs.GaussRound,
+        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSlugShot,
+        ActionIDs.CleanShot
+    })]
+    [InlineData(50, true, new[]
+    {
+        ActionIDs.Reassemble,
+        ActionIDs.HotShot, ActionIDs.GaussRound,
+        ActionIDs.SplitShot, ActionIDs.Ricochet,
+        ActionIDs.SlugShot, ActionIDs.GaussRound,
+        ActionIDs.CleanShot, ActionIDs.Ricochet,
+        ActionIDs.SplitShot,
+        ActionIDs.SlugShot,
+        ActionIDs.CleanShot,
+        ActionIDs.SplitShot,
+        ActionIDs.SlugShot,
+        ActionIDs.CleanShot, ActionIDs.RookAutoturret,
+        ActionIDs.SplitShot, ActionIDs.Wildfire,
+        ActionIDs.SlugShot, ActionIDs.Hypercharge,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.CleanShot, ActionIDs.Ricochet,
+        ActionIDs.SplitShot,
+        ActionIDs.HotShot,
+        ActionIDs.SlugShot,
+        ActionIDs.CleanShot, ActionIDs.GaussRound
+    })]
+    public void Machinist_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>
+        SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
 
     [Theory]
     [InlineData(90, 4, new[] { ActionIDs.Reassemble, ActionIDs.AirAnchor, ActionIDs.Reassemble, ActionIDs.Chainsaw })]
@@ -49,9 +167,9 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     [InlineData(70)]
     public void SingleTarget_Hypercharge_TriggersExpectedActions(int level)
     {
-        Output.WriteLine($"");
-        QueueSize = 7;
+        QueueSize = 10;
         MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.Hypercharge)).Returns(10);
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.BarrelStabilizer)).Returns(20);
 
         JobGauge = new JobGaugeMCH
         {
@@ -68,7 +186,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         var expected = new[]
         {
             ActionIDs.HeatBlast, ActionIDs.GaussRound, ActionIDs.HeatBlast, ActionIDs.Ricochet, ActionIDs.HeatBlast,
-            ActionIDs.GaussRound, ActionIDs.HeatBlast
+            ActionIDs.GaussRound, ActionIDs.HeatBlast, ActionIDs.Ricochet, ActionIDs.HeatBlast, ActionIDs.GaussRound
         };
         priorityIds.Should().Equal(expected.GetActionIds());
     }

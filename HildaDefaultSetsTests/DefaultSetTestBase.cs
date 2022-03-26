@@ -61,6 +61,7 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
     protected void SingleTarget_BasicRotation_ReturnsExpectedValues(int level, bool isBoss, ActionIDs[] expectedActions)
     {
         // Setup
+        QueueSize = expectedActions.Length;
         SetupSetConductor(SingleTarget!);
         MockService.SetupInitial(level);
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(isBoss);
@@ -87,7 +88,7 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
             var outputStr = $"<< Incorrect Actions (Level:{level}) (IsBossTest:{isBoss}) >>\n";
             foreach (var (index, (expected, actual)) in incorrectActions)
             {
-                outputStr += $"::: [Position: {index} -> Expected: ({(ActionIDs) expected}) - Actual: ({(ActionIDs) actual})] :::\n";
+                outputStr += $"::: [Action #{index+1} -> Expected: ({(ActionIDs) expected}) - Actual: ({(ActionIDs) actual})] :::\n";
             }
             Output.WriteLine(outputStr);
         }

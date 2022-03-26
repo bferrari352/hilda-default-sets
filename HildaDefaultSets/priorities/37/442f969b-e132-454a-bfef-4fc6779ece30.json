@@ -2,7 +2,7 @@
   "id": "442f969b-e132-454a-bfef-4fc6779ece30",
   "jobId": 37,
   "name": "Single Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -70,11 +70,15 @@
           "value": 0.5,
           "operator": ">"
         },
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        },
         "job": {
           "gauge": {
             "cartridge": {
-              "value": 1,
-              "operator": "<="
+              "value": 0,
+              "operator": "="
             }
           }
         }
@@ -123,10 +127,21 @@
             "cartridge": {
               "value": 2,
               "operator": ">="
-            },
-            "ammoComboStep": {
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Gnashing Fang",
+      "actionId": 16146,
+      "id": "6b80adcc-f724-40d1-a733-fdab04320c4e",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "cartridge": {
               "value": 1,
-              "operator": "="
+              "operator": ">="
             }
           }
         }
@@ -137,9 +152,13 @@
       "actionId": 16153,
       "id": "d2489135-f1a8-46ac-8770-00d2f58e99e3",
       "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": "="
+        "job": {
+          "gauge": {
+            "ammoComboStep": {
+              "value": 1,
+              "operator": "="
+            }
+          }
         },
         "player": {
           "statuses": [
@@ -170,6 +189,27 @@
       }
     },
     {
+      "name": "Burst Strike (Pre Double Down)",
+      "actionId": 16162,
+      "id": "f73e6e38-c715-46c4-b13d-6a4514b162d1",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 90,
+            "operator": "<"
+          }
+        },
+        "job": {
+          "gauge": {
+            "cartridge": {
+              "value": 2,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
       "name": "Savage Claw",
       "actionId": 16147,
       "id": "cf1b4fb9-a1b4-4abc-8315-21c4de1e5551",
@@ -179,21 +219,6 @@
             "ammoComboStep": {
               "value": 1,
               "operator": "="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Gnashing Fang",
-      "actionId": 16146,
-      "id": "6b80adcc-f724-40d1-a733-fdab04320c4e",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "cartridge": {
-              "value": 1,
-              "operator": ">="
             }
           }
         }

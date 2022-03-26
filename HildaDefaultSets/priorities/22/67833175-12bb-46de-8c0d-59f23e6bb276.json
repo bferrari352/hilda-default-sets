@@ -2,7 +2,7 @@
   "id": "67833175-12bb-46de-8c0d-59f23e6bb276",
   "jobId": 22,
   "name": "Single Target",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -32,61 +32,6 @@
       "name": "Geirskogul",
       "actionId": 3555,
       "id": "cd58b932-0f51-4af5-961d-12da39cc5a7a",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "High Jump",
-      "actionId": 16478,
-      "id": "b5442c66-b945-4c60-bacb-0f34c40ea011",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Jump",
-      "actionId": 92,
-      "id": "c11b65c7-073e-4058-a18a-1d3538b18049",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Dragonfire Dive",
-      "actionId": 96,
-      "id": "9cce3557-4d61-43a8-9dfe-d6e04b875ec7",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Mirage Dive",
-      "actionId": 7399,
-      "id": "ffc7647e-5f67-462a-8ea3-356b82faaf7a",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Spineshatter Dive",
-      "actionId": 95,
-      "id": "1a087982-3ad7-484c-8879-e3e32e678af0",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -152,12 +97,6 @@
       }
     },
     {
-      "name": "Raiden Thrust",
-      "actionId": 16479,
-      "id": "cfd59560-752b-4023-9401-f7c1dad63df1",
-      "conditions": {}
-    },
-    {
       "name": "Life Surge (Fang and Claw)",
       "actionId": 83,
       "id": "bc2b3b0a-ea23-4790-a1e7-44d4770ca6c6",
@@ -176,6 +115,61 @@
               }
             }
           ]
+        }
+      }
+    },
+    {
+      "name": "High Jump",
+      "actionId": 16478,
+      "id": "b5442c66-b945-4c60-bacb-0f34c40ea011",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Jump",
+      "actionId": 92,
+      "id": "c11b65c7-073e-4058-a18a-1d3538b18049",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Dragonfire Dive",
+      "actionId": 96,
+      "id": "9cce3557-4d61-43a8-9dfe-d6e04b875ec7",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Mirage Dive",
+      "actionId": 7399,
+      "id": "ffc7647e-5f67-462a-8ea3-356b82faaf7a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Spineshatter Dive",
+      "actionId": 95,
+      "id": "1a087982-3ad7-484c-8879-e3e32e678af0",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
         }
       }
     },
@@ -312,6 +306,12 @@
           ]
         }
       }
+    },
+    {
+      "name": "Raiden Thrust",
+      "actionId": 16479,
+      "id": "cfd59560-752b-4023-9401-f7c1dad63df1",
+      "conditions": {}
     },
     {
       "name": "True Thrust",

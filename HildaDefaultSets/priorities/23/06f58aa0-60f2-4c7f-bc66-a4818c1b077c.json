@@ -3,21 +3,52 @@
   "jobId": 23,
   "name": "Single Target",
   "author": "Hilda",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-03-05 14:36:30Z",
   "priorities": [
     {
-      "name": "Raging Strikes",
-      "actionId": 101,
-      "id": "98aa1ead-7cfe-4aad-822e-b6102275c464",
+      "name": "the Wanderer's Minuet",
+      "actionId": 3559,
+      "id": "a8335692-21c6-4ecb-b2b9-362f4e473c7a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Mage's Ballad",
+      "actionId": 114,
+      "id": "5f791dac-57a4-4872-9eed-ca098be441e9",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
         },
-        "target": {
-          "isBoss": true
+        "job": {
+          "gauge": {
+            "minuet": false,
+            "paeon": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Army's Paeon",
+      "actionId": 116,
+      "id": "f9e29372-3b3d-42dd-8763-55eb64c7d02e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "minuet": false,
+            "ballad": false
+          }
         }
       }
     },
@@ -39,6 +70,34 @@
             },
             {
               "id": 1201,
+              "duration": {
+                "value": 0.1,
+                "value2": 6.0,
+                "operator": "><"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iron Jaws (Pre-64)",
+      "actionId": 3560,
+      "id": "f1d27c00-dd4a-4e21-8a89-392bb9358851",
+      "conditions": {
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 129,
+              "duration": {
+                "value": 0.1,
+                "value2": 6.0,
+                "operator": "><"
+              }
+            },
+            {
+              "id": 124,
               "duration": {
                 "value": 0.1,
                 "value2": 6.0,
@@ -215,58 +274,37 @@
       }
     },
     {
-      "name": "the Wanderer's Minuet",
-      "actionId": 3559,
-      "id": "a8335692-21c6-4ecb-b2b9-362f4e473c7a",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
+      "name": "Blast Arrow",
+      "actionId": 25784,
+      "id": "765b8336-c960-485d-b2a2-d6f43889ecdd",
+      "conditions": {}
     },
     {
-      "name": "Mage's Ballad",
-      "actionId": 114,
-      "id": "5f791dac-57a4-4872-9eed-ca098be441e9",
+      "name": "Apex Arrow",
+      "actionId": 16496,
+      "id": "38d1091a-359b-44e1-bab4-55704cb1f913",
       "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
         "job": {
           "gauge": {
-            "minuet": false,
-            "paeon": false
+            "soulVoice": {
+              "value": 80,
+              "operator": ">="
+            }
           }
         }
       }
     },
     {
-      "name": "Army's Paeon",
-      "actionId": 116,
-      "id": "f9e29372-3b3d-42dd-8763-55eb64c7d02e",
+      "name": "Raging Strikes",
+      "actionId": 101,
+      "id": "98aa1ead-7cfe-4aad-822e-b6102275c464",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
         },
-        "job": {
-          "gauge": {
-            "minuet": false,
-            "ballad": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Sidewinder",
-      "actionId": 3562,
-      "id": "b11d0733-aa11-491f-aa3b-0756b9342749",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
+        "target": {
+          "isBoss": true
         }
       }
     },
@@ -284,7 +322,43 @@
     {
       "name": "Bloodletter",
       "actionId": 110,
-      "id": "ccea1270-b977-4c65-b5da-c94256995ecb",
+      "id": "ccea1270-b977-4c65-b5da-c94256995eab",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 2,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Bloodletter (Pre-84)",
+      "actionId": 110,
+      "id": "ccea1270-b977-4c65-b5da-c94256345eab",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 1,
+          "operator": ">"
+        },
+        "player": {
+          "level": {
+            "value": 84,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Radiant Finale",
+      "actionId": 25785,
+      "id": "b11d0733-bd11-491f-aa3b-0756b9342749",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -304,31 +378,13 @@
       }
     },
     {
-      "name": "Apex Arrow",
-      "actionId": 16496,
-      "id": "38d1091a-359b-44e1-bab4-55704cb1f913",
+      "name": "Sidewinder",
+      "actionId": 3562,
+      "id": "b11d0733-aa11-491f-aa3b-0756b9342749",
       "conditions": {
-        "job": {
-          "gauge": {
-            "soulVoice": {
-              "value": 100,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Blast Arrow",
-      "actionId": 25784,
-      "id": "765b8336-c960-485d-b2a2-d6f43889ecdd",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2692
-            }
-          ]
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
         }
       }
     },
@@ -340,7 +396,11 @@
         "player": {
           "statuses": [
             {
-              "id": 122
+              "id": 122,
+              "duration": {
+                "value": 0.0,
+                "operator": ">="
+              }
             }
           ]
         }
