@@ -31,9 +31,9 @@
       }
     },
     {
-      "name": "Painflare",
+      "name": "Painflare (Energy Siphon ready)",
       "actionId": 3578,
-      "id": "0a6ccaa1-083d-44f6-9cf4-b88fd7b4b30c",
+      "id": "c1e38561-69ac-43ce-acc1-e6fd64ed8a62",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -42,6 +42,11 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        },
+        "actionDependentRecast": {
+          "actionId": 16510,
+          "value": 1,
+          "operator": "<="
         }
       }
     },
@@ -94,6 +99,21 @@
       "name": "Deathflare",
       "actionId": 3582,
       "id": "93be7f0c-0c66-4b31-9240-5adb58351f13",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Painflare",
+      "actionId": 3578,
+      "id": "0a6ccaa1-083d-44f6-9cf4-b88fd7b4b30c",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,

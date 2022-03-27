@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hilda;
@@ -29,10 +29,10 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
     [Theory]
     [InlineData(90, false, new[] {
         ActionIDs.SummonCarbuncle, ActionIDs.EnergyDrainSMN,
-        ActionIDs.SummonBahamut, ActionIDs.Fester, //TODO: prioritize enkindle+deathflare over fester in default set
-        ActionIDs.AstralImpulse, ActionIDs.Fester,
-        ActionIDs.AstralImpulse, ActionIDs.EnkindleBahamut,
+        ActionIDs.SummonBahamut, ActionIDs.EnkindleBahamut,
         ActionIDs.AstralImpulse, ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
@@ -53,11 +53,11 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         ActionIDs.EmeraldRite,
         ActionIDs.EmeraldRite,
         ActionIDs.RuinIV,
-        ActionIDs.RuinIII,
+        ActionIDs.RuinIII, //this ruin does not reflect reality
         ActionIDs.RuinIII, ActionIDs.EnergyDrainSMN,
-        ActionIDs.SummonPhoenix, ActionIDs.Fester,
+        ActionIDs.SummonPhoenix, ActionIDs.EnkindlePhoenix,
         ActionIDs.FountainOfFire, ActionIDs.Fester,
-        ActionIDs.FountainOfFire, ActionIDs.EnkindlePhoenix,
+        ActionIDs.FountainOfFire, ActionIDs.Fester,
         ActionIDs.FountainOfFire,
         ActionIDs.FountainOfFire,
         ActionIDs.FountainOfFire,
@@ -73,39 +73,39 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
     [Theory]
     [InlineData(90, false, new[] {
         ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN,
-        ActionIDs.AstralImpulse, ActionIDs.Fester, //TODO: prioritize enkindle+deathflare over fester in default set
-        ActionIDs.AstralImpulse, ActionIDs.Fester,
         ActionIDs.AstralImpulse, ActionIDs.EnkindleBahamut,
         ActionIDs.AstralImpulse, ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
         ActionIDs.SummonTitanII,
     })]
     [InlineData(80, false, new[] {
         ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN,
-        ActionIDs.AstralImpulse, ActionIDs.Fester, //TODO: prioritize enkindle+deathflare over fester in default set
-        ActionIDs.AstralImpulse, ActionIDs.Fester,
-        ActionIDs.AstralImpulse, ActionIDs.EnkindleBahamut,
-        ActionIDs.AstralImpulse, ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse,  ActionIDs.EnkindleBahamut,
+        ActionIDs.AstralImpulse,  ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse,  ActionIDs.Fester,
+        ActionIDs.AstralImpulse,  ActionIDs.Fester,
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
         ActionIDs.SummonTitan,
     })]
     [InlineData(70, false, new[] {
         ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN,
-        ActionIDs.AstralImpulse, ActionIDs.Fester, //TODO: prioritize enkindle+deathflare over fester in default set
-        ActionIDs.AstralImpulse, ActionIDs.Fester,
         ActionIDs.AstralImpulse, ActionIDs.EnkindleBahamut,
         ActionIDs.AstralImpulse, ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
         ActionIDs.SummonTitan,
     })]
     [InlineData(60, false, new[] {
         ActionIDs.DreadwyrmTrance, ActionIDs.EnergyDrainSMN,
-        ActionIDs.AstralImpulse, ActionIDs.Fester, //TODO: prioritize deathflare over fester in default set
-        ActionIDs.AstralImpulse, ActionIDs.Fester,
         ActionIDs.AstralImpulse, ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
@@ -141,9 +141,9 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
 
     [Theory]
     [InlineData(90, false, new[] {
-        ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN, ActionIDs.Fester,
-        ActionIDs.AstralImpulse, ActionIDs.Fester, ActionIDs.EnkindleBahamut,
-        ActionIDs.AstralImpulse, ActionIDs.Deathflare,
+        ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN, ActionIDs.EnkindleBahamut,
+        ActionIDs.AstralImpulse, ActionIDs.Deathflare, ActionIDs.Fester,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
     })]
     public void Summoner_SingleTarget_Opener_DoubleWeave(int level, bool isBoss, ActionIDs[] expectedActions)
     {
@@ -156,8 +156,9 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
 
     [Theory]
     [InlineData(90, false, new[] {
-        ActionIDs.AstralImpulse,  ActionIDs.Fester, ActionIDs.EnkindleBahamut,
-        ActionIDs.AstralImpulse,  ActionIDs.Fester, ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse, ActionIDs.EnkindleBahamut, ActionIDs.Deathflare,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
+        ActionIDs.AstralImpulse, ActionIDs.Fester,
     })]
     public void Summoner_SingleTarget_Opener_DoubleWeave_EnergyDrainUsed(int level, bool isBoss, ActionIDs[] expectedActions)
     {

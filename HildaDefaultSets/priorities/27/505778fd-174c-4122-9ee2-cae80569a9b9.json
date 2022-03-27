@@ -31,13 +31,18 @@
       }
     },
     {
-      "name": "Fester",
+      "name": "Fester (Energy Drain ready)",
       "actionId": 181,
-      "id": "613d0c48-2b27-4c78-b877-e3a7845ea284",
+      "id": "f999459d-c8d9-4246-99f9-d4f20a29b972",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
+        },
+        "actionDependentRecast": {
+          "actionId": 16508,
+          "value": 1,
+          "operator": "<="
         }
       }
     },
@@ -128,6 +133,17 @@
       "name": "Deathflare",
       "actionId": 3582,
       "id": "2b36de64-a2bf-4fd2-b340-df5bfd4c6c13",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Fester",
+      "actionId": 181,
+      "id": "613d0c48-2b27-4c78-b877-e3a7845ea284",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
