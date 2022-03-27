@@ -106,24 +106,6 @@
       }
     },
     {
-      "name": "Ruin IV (Expiring)",
-      "actionId": 7426,
-      "id": "a120b07d-89b9-4cee-8ca7-26216eb72053",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2701,
-              "duration": {
-                "value": 8.0,
-                "operator": "<"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "Ruin IV",
       "actionId": 7426,
       "id": "1fb39d13-ee31-41f1-a5a1-60169d953a19",

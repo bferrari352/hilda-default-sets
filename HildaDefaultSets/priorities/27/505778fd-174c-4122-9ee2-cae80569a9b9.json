@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "505778fd-174c-4122-9ee2-cae80569a9b9",
   "name": "Single Target",
   "jobId": 27,
@@ -79,9 +79,10 @@
       }
     },
     {
-      "name": "Ruin IV (Expiring)",
+      "name": "Ruin IV (Before Trance)",
       "actionId": 7426,
       "id": "4c0ec567-5e78-4aa7-acb0-5a1c55c4a348",
+      "description": "When going into Trance, we want to focus on those abilities. Use Ruin IV before entering Trance if it will expire during the Trance duration.",
       "conditions": {
         "actionDependentRecast": {
           "actionId": 7427,
