@@ -217,7 +217,6 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         ActionIDs.CrimsonCyclone,
         ActionIDs.CrimsonStrike,
     })]
-    //TODO - this test needs to be fixed at the priority set level
     public void Summoner_SingleTarget_RubyPhase_Opened(int level, bool isBoss, ActionIDs[] expectedActions)
     {
         QueueSize = expectedActions.Length;
