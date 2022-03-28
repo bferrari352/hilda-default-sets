@@ -2,7 +2,7 @@
   "id": "39e1b02e-e75c-4f1f-a6c4-ba175eedf730",
   "name": "Multi Target",
   "jobId": 27,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -253,6 +253,24 @@
               "operator": "<="
             }
           }
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2725,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2724,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
@@ -322,6 +340,109 @@
       "actionId": 25815,
       "id": "4506a7bb-5b0a-403f-b6ac-575c472d5329",
       "iconOverlayColor": 4,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Summon Garuda II",
+      "actionId": 25840,
+      "id": "8a6e183b-8521-44dc-9318-b6a36cfc46be",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Garuda",
+      "actionId": 25807,
+      "id": "dfc1b2cf-4d7b-4934-97d2-f841a98086a8",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Summon Emerald",
+      "actionId": 25804,
+      "id": "7cb0b040-ecef-45f8-bf6c-ee69fe644ad9",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "attunementStacks": {
+              "value": 0,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Slipstream",
+      "actionId": 25837,
+      "id": "54ab863a-72a3-48be-a77a-128e08375973",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Emerald Catastrophe",
+      "actionId": 25834,
+      "id": "cec8daef-bee1-4f5b-8ddb-306b7bc2dfce",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Emerald Disaster",
+      "actionId": 25829,
+      "id": "2bb5e288-9793-44b1-95b7-bcc9e630711a",
+      "iconOverlayColor": 1,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Emerald Outburst",
+      "actionId": 25816,
+      "id": "894e2ed7-7c74-4973-8489-0a84b1a682c9",
+      "iconOverlayColor": 1,
       "conditions": {
         "enemyCount": {
           "value": 3,
@@ -440,109 +561,6 @@
       "actionId": 25814,
       "id": "50edc055-34fd-4247-8c6d-f323418f6a2c",
       "iconOverlayColor": 0,
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Summon Garuda II",
-      "actionId": 25840,
-      "id": "8a6e183b-8521-44dc-9318-b6a36cfc46be",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "attunementStacks": {
-              "value": 0,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Summon Garuda",
-      "actionId": 25807,
-      "id": "dfc1b2cf-4d7b-4934-97d2-f841a98086a8",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "attunementStacks": {
-              "value": 0,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Summon Emerald",
-      "actionId": 25804,
-      "id": "7cb0b040-ecef-45f8-bf6c-ee69fe644ad9",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "attunementStacks": {
-              "value": 0,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Slipstream",
-      "actionId": 25837,
-      "id": "54ab863a-72a3-48be-a77a-128e08375973",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Emerald Catastrophe",
-      "actionId": 25834,
-      "id": "cec8daef-bee1-4f5b-8ddb-306b7bc2dfce",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Emerald Disaster",
-      "actionId": 25829,
-      "id": "2bb5e288-9793-44b1-95b7-bcc9e630711a",
-      "iconOverlayColor": 1,
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Emerald Outburst",
-      "actionId": 25816,
-      "id": "894e2ed7-7c74-4973-8489-0a84b1a682c9",
-      "iconOverlayColor": 1,
       "conditions": {
         "enemyCount": {
           "value": 3,
