@@ -80,8 +80,8 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
-        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound,
-        ActionIDs.Drill, ActionIDs.Ricochet,
+        ActionIDs.Drill, ActionIDs.GaussRound,
+        ActionIDs.HeatedSplitShot, ActionIDs.Ricochet,
         ActionIDs.HeatedSlugShot,
         ActionIDs.HeatedCleanShot
     })]
@@ -135,8 +135,8 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
         ActionIDs.CleanShot, ActionIDs.Ricochet,
-        ActionIDs.SplitShot,
         ActionIDs.HotShot,
+        ActionIDs.SplitShot,
         ActionIDs.SlugShot,
         ActionIDs.CleanShot, ActionIDs.GaussRound
     })]

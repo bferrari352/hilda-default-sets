@@ -62,9 +62,9 @@ public class DefaultSetTestsNIN : DefaultSetTestBase
         ActionIDs.JinZero, ActionIDs.Meisui,
         ActionIDs.SpinningEdge, ActionIDs.Bavacakra,
         ActionIDs.GustSlash,
-        ActionIDs.AeolianEdge, ActionIDs.Bavacakra,
         ActionIDs.Ten, ActionIDs.Chi,
         ActionIDs.Raiton,
+        ActionIDs.AeolianEdge, ActionIDs.Bavacakra,
         ActionIDs.SpinningEdge
     })]
     [InlineData(70, true, new[]
@@ -123,8 +123,8 @@ public class DefaultSetTestsNIN : DefaultSetTestBase
         ActionIDs.SpinningEdge,
         ActionIDs.GustSlash,
         ActionIDs.AeolianEdge,
-        ActionIDs.Chi, ActionIDs.Ten,
-        ActionIDs.Katon,
+        ActionIDs.Ten, ActionIDs.Chi,
+        ActionIDs.Raiton,
         ActionIDs.SpinningEdge
     })]
     public void Ninja_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>

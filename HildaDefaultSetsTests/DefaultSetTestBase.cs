@@ -58,12 +58,13 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
         return dataHelper.GetDefaultPrioritySets(job);
     }
 
-    protected void SingleTarget_BasicRotation_ReturnsExpectedValues(int level, bool isBoss, ActionIDs[] expectedActions)
+    protected void SingleTarget_BasicRotation_ReturnsExpectedValues(int level, bool isBoss, ActionIDs[] expectedActions,
+        int spellSpeed = 0, int skillSpeed = 0)
     {
         // Setup
         QueueSize = expectedActions.Length;
         SetupSetConductor(SingleTarget!);
-        MockService.SetupInitial(level);
+        MockService.SetupInitial(level, spellSpeed, skillSpeed);
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(isBoss);
 
         // Get Priorities

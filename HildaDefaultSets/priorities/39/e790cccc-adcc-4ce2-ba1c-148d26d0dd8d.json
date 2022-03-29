@@ -3,10 +3,27 @@
   "name": "Single Target",
   "author": "Hilda",
   "jobId": 39,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "appVersion": "0.0.0.10",
   "lastUpdated": "2022-03-06 09:17:10Z",
   "priorities": [
+    {
+      "name": "Arcane Circle",
+      "actionId": 24405,
+      "id": "d8ece45c-54c2-5175-93ec-075b1c633f68",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "level": {
+            "value": 88,
+            "operator": ">="
+          }
+        }
+      }
+    },
     {
       "name": "Lemure's Slice",
       "actionId": 24399,
@@ -52,9 +69,9 @@
       }
     },
     {
-      "name": "Blood Stalk",
-      "actionId": 24389,
-      "id": "73e2523e-9477-45bb-b37c-c087a8a535ba",
+      "name": "Gluttony",
+      "actionId": 24393,
+      "id": "73e2523e-9477-45bb-b37c-c0876ba535ba",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -63,26 +80,13 @@
       }
     },
     {
-      "name": "Communio",
-      "actionId": 24398,
-      "id": "0c24b705-5fc9-4488-bdfb-5130c6d42442",
-      "conditions": {}
-    },
-    {
-      "name": "Gibbet",
-      "actionId": 24382,
-      "id": "d962ca07-c32c-4095-b172-9b23d775144a",
+      "name": "Blood Stalk",
+      "actionId": 24389,
+      "id": "73e2523e-9477-45bb-b37c-c087a8a535ba",
       "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2588,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
         }
       }
     },
@@ -103,6 +107,12 @@
           ]
         }
       }
+    },
+    {
+      "name": "Gibbet",
+      "actionId": 24382,
+      "id": "d962ca07-c32c-4095-b172-9b23d775144a",
+      "conditions": {}
     },
     {
       "name": "Gallows",
@@ -130,10 +140,14 @@
       }
     },
     {
-      "name": "Soul Slice",
+      "name": "Soul Slice (Initial)",
       "actionId": 24380,
-      "id": "c8085798-978f-495d-8b4d-e4b0a336851c",
+      "id": "c8085798-978f-495d-8a4d-e4b0a336851c",
       "conditions": {
+        "charges": {
+          "value": 2,
+          "operator": "="
+        },
         "job": {
           "gauge": {
             "soul": {
@@ -151,16 +165,62 @@
       "conditions": {}
     },
     {
+      "name": "Communio",
+      "actionId": 24398,
+      "id": "0c24b705-5fc9-4488-bdfb-5130c6d42442",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "enshroudTimer": {
+              "value": 0,
+              "operator": ">"
+            },
+            "lemureshroud": {
+              "value": 1,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Cross Reaping",
+      "actionId": 24396,
+      "id": "cebe45d5-4e13-4171-aa5f-c3dac1d11180",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2591,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "Void Reaping",
       "actionId": 24395,
       "id": "1c7b958d-e438-49fa-8ec8-1293a346462c",
       "conditions": {}
     },
     {
-      "name": "Cross Reaping",
-      "actionId": 24396,
-      "id": "cebe45d5-4e13-4171-aa5f-c3dac1d11180",
-      "conditions": {}
+      "name": "Soul Slice",
+      "actionId": 24380,
+      "id": "c8085798-978f-495d-8b4d-e4b0a336851c",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "soul": {
+              "value": 50,
+              "operator": "<"
+            }
+          }
+        }
+      }
     },
     {
       "name": "Infernal Slice",
