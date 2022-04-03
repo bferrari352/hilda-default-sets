@@ -39,7 +39,15 @@ public class DefaultSetTestsBRD : DefaultSetTestBase
         ActionIDs.BurstShot, ActionIDs.EmpyrealArrow,
         ActionIDs.BurstShot, ActionIDs.Bloodletter,
         ActionIDs.BurstShot,
-        ActionIDs.IronJaws
+        ActionIDs.BurstShot,
+        ActionIDs.BurstShot,
+        ActionIDs.BurstShot,
+        ActionIDs.BurstShot,
+        ActionIDs.BurstShot, ActionIDs.EmpyrealArrow,
+        ActionIDs.BurstShot,
+        ActionIDs.IronJaws, ActionIDs.Bloodletter,
+        ActionIDs.BurstShot, ActionIDs.MagesBallad,
+        ActionIDs.BurstShot
     })]
     [InlineData(80, true, new[]
     {

@@ -35,10 +35,10 @@ public class DefaultSetTestsWAR : DefaultSetTestBase
         ActionIDs.Infuriate, ActionIDs.FellCleave, ActionIDs.HeavySwing, ActionIDs.Maim})]
     [InlineData(60, true, new[] {ActionIDs.HeavySwing, ActionIDs.Infuriate, ActionIDs.Maim, ActionIDs.Berserk, ActionIDs.FellCleave,
         ActionIDs.Infuriate, ActionIDs.FellCleave, ActionIDs.StormsEye, ActionIDs.HeavySwing, ActionIDs.Maim, ActionIDs.StormsEye,
-        ActionIDs.HeavySwing, ActionIDs.Maim, ActionIDs.FellCleave})]
+        ActionIDs.HeavySwing, ActionIDs.Maim, ActionIDs.StormsEye})]
     [InlineData(50, true, new[] {ActionIDs.HeavySwing, ActionIDs.Infuriate, ActionIDs.Maim, ActionIDs.Berserk, ActionIDs.InnerBeast,
         ActionIDs.Infuriate, ActionIDs.InnerBeast, ActionIDs.StormsEye, ActionIDs.HeavySwing, ActionIDs.Maim, ActionIDs.StormsEye,
-        ActionIDs.HeavySwing, ActionIDs.Maim, ActionIDs.InnerBeast})]
+        ActionIDs.HeavySwing, ActionIDs.Maim, ActionIDs.StormsEye})]
     public void Warrior_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
 }

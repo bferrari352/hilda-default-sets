@@ -474,7 +474,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
             };
             if (statusId != null)
             {
-                MockService.SetupPlayerStatus(new StatusEffect()
+                MockService.SetupPlayerStatus(new StatusEffect
                 {
                     Id = statusId.Value,
                     IsPermanent = true,

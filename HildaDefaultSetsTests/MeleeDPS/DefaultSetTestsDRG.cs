@@ -35,10 +35,10 @@ public class DefaultSetTestsDRG : DefaultSetTestBase
         ActionIDs.FangAndClaw, ActionIDs.SpineshatterDive,
         ActionIDs.WheelingThrust, ActionIDs.SpineshatterDive,
         ActionIDs.RaidenThrust, ActionIDs.WyrmwindThrust,
-        ActionIDs.VorpalThrust,
-        ActionIDs.HeavensThrust,
-        ActionIDs.FangAndClaw,
+        ActionIDs.Disembowel,
+        ActionIDs.ChaoticSpring,
         ActionIDs.WheelingThrust,
+        ActionIDs.FangAndClaw,
         ActionIDs.RaidenThrust
     })]
     [InlineData(80, true, new[]
