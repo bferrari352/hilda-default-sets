@@ -468,8 +468,8 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         {
             int? statusId = summon switch
             {
-                SMNAttunementFlags.Ruby => (int)StatusIdsSMN.IfritsFavor,
-                SMNAttunementFlags.Emerald => (int)StatusIdsSMN.GarudasFavor,
+                SMNAttunementFlags.Ruby => StatusesSMN.IfritsFavor.Id,
+                SMNAttunementFlags.Emerald => StatusesSMN.GarudasFavor.Id,
                 _ => null
             };
             if (statusId != null)
