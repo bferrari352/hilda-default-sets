@@ -14,7 +14,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         base(fixture, output)
     {
         JobGauge = new JobGaugeMCH();
-        JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH) JobGauge));
+        JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH)JobGauge));
 
         var sets = GetDefaultSets(JobData.Machinist)?.ToList();
         if (sets == null) return;
@@ -71,19 +71,19 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     {
         ActionIDs.Reassemble,
         ActionIDs.Drill, ActionIDs.GaussRound,
-        ActionIDs.HotShot, ActionIDs.Ricochet,
-        ActionIDs.HeatedSplitShot, ActionIDs.BarrelStabilizer,
-        ActionIDs.HeatedSlugShot, ActionIDs.Wildfire,
-        ActionIDs.HeatedCleanShot, ActionIDs.Hypercharge,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
-        ActionIDs.HeatBlast, ActionIDs.Ricochet,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
-        ActionIDs.HeatBlast, ActionIDs.Ricochet,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
-        ActionIDs.Drill, ActionIDs.GaussRound,
-        ActionIDs.HeatedSplitShot, ActionIDs.Ricochet,
-        ActionIDs.HeatedSlugShot,
-        ActionIDs.HeatedCleanShot
+        ActionIDs.HotShot, ActionIDs.Ricochet, //58 (cooldown is 60 at 2 charges until 3rd charge is unlocked)
+        ActionIDs.HeatedSplitShot, ActionIDs.BarrelStabilizer, //55.5
+        ActionIDs.HeatedSlugShot, ActionIDs.Wildfire, //53
+        ActionIDs.HeatedCleanShot, ActionIDs.Hypercharge, //50.5
+        ActionIDs.HeatBlast, ActionIDs.GaussRound, //50.5-1.5-15=34
+        ActionIDs.HeatBlast, ActionIDs.Ricochet, //34-1.5-15=17.5+30=47.5
+        ActionIDs.HeatBlast, ActionIDs.GaussRound, //47.5-1.5-15=31
+        ActionIDs.HeatBlast, ActionIDs.Ricochet, //31-1.5-15=14.5+30=44.5
+        ActionIDs.HeatBlast, ActionIDs.GaussRound, //44.5-1.5-15=28
+        ActionIDs.Drill, ActionIDs.Ricochet, //25.5+30=55.5
+        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound, //53
+        ActionIDs.HeatedSlugShot, ActionIDs.Ricochet, //50.5+30=80.5
+        ActionIDs.HeatedCleanShot,
     })]
     [InlineData(60, true, new[]
     {
@@ -110,7 +110,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HotShot, ActionIDs.Ricochet,
         ActionIDs.Drill,
         ActionIDs.CleanShot, ActionIDs.GaussRound,
-        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSplitShot, ActionIDs.Ricochet,
         ActionIDs.HeatedSlugShot,
         ActionIDs.CleanShot
     })]
@@ -132,8 +132,8 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.CleanShot, ActionIDs.Ricochet,
         ActionIDs.HotShot,
         ActionIDs.SplitShot,
@@ -168,14 +168,14 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     public void SingleTarget_Hypercharge_TriggersExpectedActions(int level)
     {
         QueueSize = 10;
-        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.Hypercharge)).Returns(10);
-        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.BarrelStabilizer)).Returns(20);
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.Hypercharge)).Returns(10);
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.BarrelStabilizer)).Returns(20);
 
         JobGauge = new JobGaugeMCH
         {
             OverheatTimeRemaining = 8
         };
-        JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH) JobGauge));
+        JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH)JobGauge));
 
         SetupSetConductor(SingleTarget!);
         MockService.SetupInitial(level);
