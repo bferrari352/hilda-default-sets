@@ -18,11 +18,11 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
 
         var sets = GetDefaultSets(JobData.Machinist)?.ToList();
         if (sets == null) return;
-        
+
         SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
         MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
     }
-    
+
     [Theory]
     [InlineData(90, true, new[]
     {
@@ -40,11 +40,11 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.GaussRound, // this is a minor bug, two weaves (ricochet + gauss) are recommended in a row due to avoiding not showing heat blast when it can't actually be used
         ActionIDs.Drill, ActionIDs.Ricochet,
-        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound,
-        ActionIDs.HeatedSlugShot, ActionIDs.Ricochet,
-        ActionIDs.HeatedCleanShot
+        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSlugShot, ActionIDs.GaussRound,
+        ActionIDs.HeatedCleanShot, ActionIDs.Ricochet,
     })]
     [InlineData(80, true, new[]
     {
@@ -60,30 +60,32 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.GaussRound,
         ActionIDs.Drill, ActionIDs.Ricochet,
-        ActionIDs.HeatedCleanShot, ActionIDs.GaussRound,
-        ActionIDs.HeatedSplitShot, ActionIDs.Ricochet,
-        ActionIDs.HeatedSlugShot,
+        ActionIDs.HeatedCleanShot,
+        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSlugShot, ActionIDs.GaussRound,
         ActionIDs.HeatedCleanShot
     })]
     [InlineData(70, true, new[]
     {
         ActionIDs.Reassemble,
         ActionIDs.Drill, ActionIDs.GaussRound,
-        ActionIDs.HotShot, ActionIDs.Ricochet, //58 (cooldown is 60 at 2 charges until 3rd charge is unlocked)
-        ActionIDs.HeatedSplitShot, ActionIDs.BarrelStabilizer, //55.5
-        ActionIDs.HeatedSlugShot, ActionIDs.Wildfire, //53
-        ActionIDs.HeatedCleanShot, ActionIDs.Hypercharge, //50.5
-        ActionIDs.HeatBlast, ActionIDs.GaussRound, //50.5-1.5-15=34
-        ActionIDs.HeatBlast, ActionIDs.Ricochet, //34-1.5-15=17.5+30=47.5
-        ActionIDs.HeatBlast, ActionIDs.GaussRound, //47.5-1.5-15=31
-        ActionIDs.HeatBlast, ActionIDs.Ricochet, //31-1.5-15=14.5+30=44.5
-        ActionIDs.HeatBlast, ActionIDs.GaussRound, //44.5-1.5-15=28
-        ActionIDs.Drill, ActionIDs.Ricochet, //25.5+30=55.5
-        ActionIDs.HeatedSplitShot, ActionIDs.GaussRound, //53
-        ActionIDs.HeatedSlugShot, ActionIDs.Ricochet, //50.5+30=80.5
+        ActionIDs.HotShot, ActionIDs.Ricochet,
+        ActionIDs.HeatedSplitShot, ActionIDs.BarrelStabilizer,
+        ActionIDs.HeatedSlugShot, ActionIDs.Wildfire,
+        ActionIDs.HeatedCleanShot, ActionIDs.Hypercharge,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.HeatBlast, ActionIDs.Ricochet,
+        ActionIDs.GaussRound,
+        ActionIDs.Drill, ActionIDs.Ricochet,
+        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSlugShot,
         ActionIDs.HeatedCleanShot,
+        ActionIDs.HeatedSplitShot,
+        ActionIDs.HeatedSlugShot, ActionIDs.GaussRound
     })]
     [InlineData(60, true, new[]
     {
@@ -101,16 +103,17 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HeatedSlugShot,
         ActionIDs.CleanShot, ActionIDs.RookAutoturret,
         ActionIDs.HeatedSplitShot, ActionIDs.Wildfire,
-        ActionIDs.HeatedSlugShot, ActionIDs.Hypercharge,
+        ActionIDs.HeatedSlugShot,
+        ActionIDs.Hypercharge,
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.GaussRound,
         ActionIDs.HotShot, ActionIDs.Ricochet,
         ActionIDs.Drill,
-        ActionIDs.CleanShot, ActionIDs.GaussRound,
-        ActionIDs.HeatedSplitShot, ActionIDs.Ricochet,
+        ActionIDs.CleanShot,
+        ActionIDs.HeatedSplitShot,
         ActionIDs.HeatedSlugShot,
         ActionIDs.CleanShot
     })]
@@ -133,12 +136,12 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         ActionIDs.HeatBlast, ActionIDs.GaussRound,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
         ActionIDs.HeatBlast, ActionIDs.Ricochet,
-        ActionIDs.HeatBlast, ActionIDs.GaussRound,
+        ActionIDs.GaussRound,
         ActionIDs.CleanShot, ActionIDs.Ricochet,
         ActionIDs.HotShot,
         ActionIDs.SplitShot,
         ActionIDs.SlugShot,
-        ActionIDs.CleanShot, ActionIDs.GaussRound
+        ActionIDs.CleanShot,
     })]
     public void Machinist_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
@@ -152,13 +155,13 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     public void SingleTarget_Reassemble_TriggersBeforeExpectedAction(int level, int queueSize, ActionIDs[] expectedActions)
     {
         QueueSize = queueSize;
-        
+
         SetupSetConductor(SingleTarget!);
         MockService!.SetupInitial(level);
 
         var priorities = SetConductor!.DeterminePriorities();
         var priorityIds = priorities!.GetActionIds();
-        
+
         priorityIds.Should().Equal(expectedActions.GetActionIds());
     }
 
@@ -167,13 +170,13 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     [InlineData(70)]
     public void SingleTarget_Hypercharge_TriggersExpectedActions(int level)
     {
-        QueueSize = 10;
+        QueueSize = 11;
         MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.Hypercharge)).Returns(10);
         MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.BarrelStabilizer)).Returns(20);
 
         JobGauge = new JobGaugeMCH
         {
-            OverheatTimeRemaining = 8
+            OverheatTimeRemaining = 7.9 //8 seconds will suggest 6 heat blasts, which won't be possible in reality
         };
         JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH)JobGauge));
 
@@ -183,10 +186,12 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         var priorities = SetConductor!.DeterminePriorities();
         var priorityIds = priorities!.GetActionIds();
 
+        // 5 heat blasts here and not other rotations because the other rotations have a global cooldown for the action before hypercharge causing it to not make 5 into the overheat window
         var expected = new[]
         {
             ActionIDs.HeatBlast, ActionIDs.GaussRound, ActionIDs.HeatBlast, ActionIDs.Ricochet, ActionIDs.HeatBlast,
-            ActionIDs.GaussRound, ActionIDs.HeatBlast, ActionIDs.Ricochet, ActionIDs.HeatBlast, ActionIDs.GaussRound
+            ActionIDs.GaussRound, ActionIDs.HeatBlast, ActionIDs.Ricochet, ActionIDs.HeatBlast, ActionIDs.GaussRound,
+            ActionIDs.Reassemble, // no more overheat, normal recommendations
         };
         priorityIds.Should().Equal(expected.GetActionIds());
     }

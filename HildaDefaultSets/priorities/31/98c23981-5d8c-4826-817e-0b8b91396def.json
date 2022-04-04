@@ -291,10 +291,6 @@
       "actionId": 17209,
       "id": "03812cd3-8fef-47df-96a3-650c8dfec901",
       "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
         "job": {
           "gauge": {
             "heat": {

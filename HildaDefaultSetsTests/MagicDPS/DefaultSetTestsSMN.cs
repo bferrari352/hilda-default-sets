@@ -141,6 +141,31 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
 
     [Theory]
     [InlineData(90, false, new[] {
+        ActionIDs.AstralImpulse,
+        ActionIDs.AstralImpulse,
+        ActionIDs.SummonTitanII,
+    }, 4.5, 0)]
+    [InlineData(90, false, new[] {
+        ActionIDs.AstralImpulse,
+        ActionIDs.SummonTitanII,
+    }, 2, 0)]
+    [InlineData(90, false, new[] {
+        ActionIDs.SummonTitanII,
+    }, 2, 2.5)]
+    public void Summoner_SingleTarget_CorrectNumberOfTranceRuins(int level, bool isBoss, ActionIDs[] expectedActions, float summonTimerRemaining, float activeGcdRemaining)
+    {
+        QueueSize = expectedActions.Length;
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.EnkindleBahamut)).Returns(20);
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.Deathflare)).Returns(20);
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.Ruin)).Returns(activeGcdRemaining);
+        setupBahamutTrance(jobGauge => jobGauge.SummonTimerRemaining =summonTimerRemaining);
+        setupEnergyDrainUsed(jobGauge => jobGauge.AetherflowStacks = 0);
+
+        SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
+    }
+
+    [Theory]
+    [InlineData(90, false, new[] {
         ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN, ActionIDs.EnkindleBahamut,
         ActionIDs.AstralImpulse, ActionIDs.Deathflare, ActionIDs.Fester,
         ActionIDs.AstralImpulse, ActionIDs.Fester,
@@ -482,8 +507,8 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
             }
             jobGauge.Attunement = summon;
             jobGauge.AttunementStacks = summon == SMNAttunementFlags.Ruby ? 2 : 4;
-            jobGauge.AttunementDuration = 15000;
-            jobGauge.SummonTimerRemaining = 6500;
+            jobGauge.AttunementDuration = 15;
+            jobGauge.SummonTimerRemaining = 6.5;
             jobGauge.AttunementsReady = (SMNAttunementFlags.Ruby | SMNAttunementFlags.Topaz | SMNAttunementFlags.Emerald) & ~summon;
         });
     }
@@ -491,10 +516,11 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
     private void setupBahamutTrance(Action<JobGaugeSMN>? setup = null)
     {
         MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.SummonBahamut)).Returns(60);
+        MockService.Setup(a => a.ActionHelper.GetActionRecast((uint)ActionIDs.SummonPhoenix)).Returns(60);
         setupJobGauge(jobGauge =>
         {
             jobGauge.IsCarbuncleSummoned = true;
-            jobGauge.SummonTimerRemaining = 15000;
+            jobGauge.SummonTimerRemaining = 15;
             jobGauge.AttunementsReady = SMNAttunementFlags.All;
             setup?.Invoke(jobGauge);
         });
