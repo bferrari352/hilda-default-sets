@@ -2,7 +2,7 @@
   "id": "fceae385-7f7f-429b-9c6e-d70bbaa237cf",
   "jobId": 34,
   "name": "Single Target",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "appVersion": "0.0.1.1",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -49,32 +49,6 @@
       }
     },
     {
-      "name": "Kaiten (Midare Setsugekka ready)",
-      "actionId": 7494,
-      "id": "c243e8bc-b028-49d9-b527-362766b2469b",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1229,
-              "duration": {
-                "value": 0.0,
-                "operator": "<="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "senCount": {
-              "value": 3,
-              "operator": "="
-            }
-          }
-        }
-      }
-    },
-    {
       "name": "Midare Setsugekka",
       "actionId": 7487,
       "id": "269aca42-3937-4346-a817-108c0c137ba3",
@@ -112,56 +86,6 @@
             "kenki": {
               "value": 45,
               "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Kaiten (Higanbana - Meikyo Shisui)",
-      "actionId": 7494,
-      "id": "e16afe8c-ee1a-4c29-8392-5f5ddc44abce",
-      "conditions": {
-        "actionDependentRecast": {
-          "actionId": 16486,
-          "value": 10,
-          "operator": ">"
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 1229,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            },
-            {
-              "id": 1233,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 1228,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ],
-          "isBoss": true
-        },
-        "job": {
-          "gauge": {
-            "senCount": {
-              "value": 1,
-              "operator": "="
             }
           }
         }
@@ -227,47 +151,6 @@
       }
     },
     {
-      "name": "Kaiten (Namikiri - Meikyo Shisui)",
-      "actionId": 7494,
-      "id": "754c922d-22b5-413f-bf8d-956b16d0a6cd",
-      "conditions": {
-        "actionDependentRecast": {
-          "actionId": 16486,
-          "value": 10,
-          "operator": ">"
-        },
-        "player": {
-          "level": {
-            "value": 90,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 1229,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            },
-            {
-              "id": 2959,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            },
-            {
-              "id": 1233,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "Ogi Namikiri (Meikyo Shisui)",
       "actionId": 25781,
       "id": "f9bcf3a8-fba8-4247-8c50-a3153f66d8c2",
@@ -317,44 +200,6 @@
         "job": {
           "gauge": {
             "ka": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Kaiten (Higanbana refresh)",
-      "actionId": 7494,
-      "id": "e16afe8c-ee1a-4c29-8392-5f5ddc44edbe",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1229,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 1228,
-              "duration": {
-                "value": 5.0,
-                "operator": "<="
-              }
-            }
-          ],
-          "isBoss": true
-        },
-        "job": {
-          "gauge": {
-            "senCount": {
-              "value": 1,
-              "operator": "="
-            }
           }
         }
       }
@@ -418,35 +263,6 @@
           "gauge": {
             "setsu": false
           }
-        }
-      }
-    },
-    {
-      "name": "Kaiten (Namikiri ready)",
-      "actionId": 7494,
-      "id": "754c922d-22b5-413f-bf8d-956b16d0a6cd",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 90,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 1229,
-              "duration": {
-                "value": 1.0,
-                "operator": "<="
-              }
-            },
-            {
-              "id": 2959,
-              "duration": {
-                "value": 1.0,
-                "operator": ">="
-              }
-            }
-          ]
         }
       }
     },
