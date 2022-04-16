@@ -152,6 +152,17 @@
       }
     },
     {
+      "name": "Crimson Strike",
+      "actionId": 25885,
+      "id": "cb209ce4-e8d6-4963-a2ba-e03be298d245",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
       "name": "Summon Carbuncle",
       "actionId": 25798,
       "id": "73252899-6efe-405a-915c-4800a7311933",
@@ -232,25 +243,25 @@
               "value": 0,
               "operator": "<="
             }
-          },
-          "player": {
-            "statuses": [
-              {
-                "id": 2725,
-                "duration": {
-                  "value": 0,
-                  "operator": "="
-                }
-              },
-              {
-                "id": 2724,
-                "duration": {
-                  "value": 0,
-                  "operator": "="
-                }
-              }
-            ]
           }
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2725,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2724,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
@@ -323,6 +334,24 @@
               "operator": "<="
             }
           }
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2724,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2853,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
@@ -401,6 +430,24 @@
               "operator": "<="
             }
           }
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2725,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2853,
+              "duration": {
+                "value": 0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
@@ -439,17 +486,6 @@
       "actionId": 25823,
       "id": "69cff358-2317-4d40-a453-c5d61d7a1764",
       "conditions": {}
-    },
-    {
-      "name": "Crimson Strike",
-      "actionId": 25885,
-      "id": "cb209ce4-e8d6-4963-a2ba-e03be298d245",
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        }
-      }
     },
     {
       "name": "Crimson Cyclone",
