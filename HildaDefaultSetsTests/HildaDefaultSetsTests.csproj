@@ -17,7 +17,7 @@
         <XIVLauncher>$(AppData)\XIVLauncher</XIVLauncher>
         <DalamudLibPath>$(XIVLauncher)\addon\Hooks\dev\</DalamudLibPath>
         <DefaultSetsPath>$(ProjectDir)..\HildaDefaultSets\priorities\</DefaultSetsPath>
-        <TestUtilsPath>$(ProjectDir)..\..\hilda\HildaTestUtils</TestUtilsPath>
+        <TestUtilsPath>$(ProjectDir)..\..\Hilda-Dalamud\HildaTestUtils</TestUtilsPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
