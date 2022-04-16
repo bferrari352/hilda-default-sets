@@ -34,9 +34,9 @@ public class DefaultSetTestsDRK : DefaultSetTestBase
         ActionIDs.BloodSpiller, ActionIDs.SaltedEarth,
         ActionIDs.BloodSpiller, ActionIDs.SaltAndDarkness,
         ActionIDs.HardSlash, ActionIDs.CarveAndSplit,
-        ActionIDs.SyphonStrike, ActionIDs.Shadowbringer,
+        ActionIDs.SyphonStrike, ActionIDs.EdgeOfShadow,
         ActionIDs.Souleater, ActionIDs.Shadowbringer,
-        ActionIDs.HardSlash, ActionIDs.EdgeOfShadow
+        ActionIDs.BloodSpiller, ActionIDs.Shadowbringer
     })]
     [InlineData(80, true, new[]
     {
@@ -73,10 +73,10 @@ public class DefaultSetTestsDRK : DefaultSetTestBase
         ActionIDs.SyphonStrike, ActionIDs.EdgeOfDarkness,
         ActionIDs.Souleater, ActionIDs.EdgeOfDarkness,
         ActionIDs.HardSlash, ActionIDs.EdgeOfDarkness,
-        ActionIDs.SyphonStrike,
+        ActionIDs.SyphonStrike, ActionIDs.EdgeOfDarkness,
         ActionIDs.Souleater,
         ActionIDs.HardSlash,
-        ActionIDs.SyphonStrike, ActionIDs.EdgeOfDarkness,
+        ActionIDs.SyphonStrike,
         ActionIDs.Souleater
     })]
     [InlineData(50, true, new[]
@@ -88,10 +88,10 @@ public class DefaultSetTestsDRK : DefaultSetTestBase
         ActionIDs.SyphonStrike, ActionIDs.EdgeOfDarkness,
         ActionIDs.Souleater,
         ActionIDs.HardSlash,
-        ActionIDs.SyphonStrike,
+        ActionIDs.SyphonStrike, ActionIDs.EdgeOfDarkness,
         ActionIDs.Souleater, 
         ActionIDs.HardSlash,
-        ActionIDs.SyphonStrike, ActionIDs.EdgeOfDarkness,
+        ActionIDs.SyphonStrike,
         ActionIDs.Souleater,
         ActionIDs.HardSlash
     })]
