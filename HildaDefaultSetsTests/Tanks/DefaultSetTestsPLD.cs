@@ -66,9 +66,11 @@ public class DefaultSetTestsPLD : DefaultSetTestBase
         ActionIDs.HolySpirit, 
         ActionIDs.HolySpirit, 
         ActionIDs.HolySpirit, 
-        ActionIDs.FastBlade, 
         ActionIDs.RiotBlade,
-        ActionIDs.GoringBlade
+        ActionIDs.RoyalAuthority,
+        ActionIDs.FastBlade,
+        ActionIDs.RiotBlade,
+        ActionIDs.GoringBlade,
     })]
     [InlineData(60, true, new[]
     {
@@ -132,7 +134,6 @@ public class DefaultSetTestsPLD : DefaultSetTestBase
         ActionIDs.HolySpirit,
         ActionIDs.HolySpirit, 
         ActionIDs.HolySpirit, 
-        ActionIDs.FastBlade, 
         ActionIDs.RiotBlade,
         ActionIDs.RoyalAuthority
     })]
