@@ -100,7 +100,7 @@ Hilda requires more information on certain actions for predictive support on upc
 
 If you find a BLU spell that doesn't have good predictions, here are the steps to add support:
 
-1. Find the `BLU Action Definitions` JSON file in the BLU job folder (`priorities/36/3c0045d7-7adc-4344-9a02-1f5756954138.json`)
+1. Open the `BLU Action Definitions` JSON file in the BLU job folder (`priorities/36/actions.json`)
 2. Add an entry for the action that needs support
 3. Fill in the schema as needed. Everything other than the `id`s are optional and can be ommitted.
 
@@ -140,7 +140,7 @@ If an ability has no special properties, you can remove the in-game exclamation 
 },
 ```
 
-You can test these changes in-game locally by editing the definitions in your `%AppData%\XIVLauncher\installedPlugins\Hilda\<current Hilda version>\Priorities\36\3c0045d7-7adc-4344-9a02-1f5756954138.json` (or appropriate matching install location for XIVLauncher). Then disable and re-enable Hilda in-game to load the changes.
+You can test these changes in-game locally by editing the definitions in your `%AppData%\XIVLauncher\installedPlugins\Hilda\<current Hilda version>\Priorities\36\actions.json` (or appropriate matching install location for XIVLauncher). Then disable and re-enable Hilda in-game to load the changes.
 
 Once validated, push a new branch with your changes in this repo (and follow the steps for versioning at the top of this file).
 
