@@ -87,3 +87,61 @@ Do NOT push directly to the `gh-pages` branch!
   - NIN (1-60)
   - RPR (1-70)
   - MNK (1-60)
+
+## BLU Support
+
+By default, Hilda does not have full or well-tested predictive support of BLU actions, so we encourage the community to fill in the gaps here.
+
+A default BLU rotation is also difficult to provide given the abilities players have access and what is currently selected for the encounter, so we recommend hitting our [Discord server](https://discord.gg/JzrMWYT7ay) for sharing of BLU specific rotations.
+
+### Adding BLU actions
+
+Hilda requires more information on certain actions for predictive support on upcoming abilities and other minor features. This mostly impacts abilities that place status effects on the player or target.
+
+If you find a BLU spell that doesn't have good predictions, here are the steps to add support:
+
+1. Find the `BLU Action Definitions` JSON file in the BLU job folder (`priorities/36/3c0045d7-7adc-4344-9a02-1f5756954138.json`)
+2. Add an entry for the action that needs support
+3. Fill in the schema as needed. Everything other than the `id`s are optional and can be ommitted.
+
+```json
+{
+  "id": integer, // action id -- REQUIRED!
+  "detrimentalStatusEffects": Status, // the debuff put on the target
+  "detrimentalStatusEffects": [ Status ], // a list of debuffs; do not use both this and detrimentalStatusEffects,
+  "grantsStatusEffect": Status, // the buff put on the player
+  "grantsStatusEffects": [ Status ], // a list of buffs; do not use both this and grantsStatusEffect
+  "requiresStatusEffect": Status, // use if this action requires a specific buff to be usable
+  "removesTriggeringStatusId": boolean, // set to true if the requiresStatusEffect status gets consumed on this action's use,
+  "sharesRecastActionIds": [ integer ], // a list of other action IDs that this action shares a recast with
+  "baseCharges": integer, // the number of charges this action has when first acquired
+  "isWeavable": boolena, // set to true if Hilda does not recognize the proper weave status by default
+  "grantsManaPoints": integer // mana points this action grants when used
+}
+```
+
+A Status schema is defined as:
+
+```json
+{
+    "id": integer, // status id -- REQUIRED
+    "remainingTime": decimal, // the length of time, in seconds, the status initially lasts
+    "isPermanent": boolean, // true if this status does not have a set duration
+    "stackCount": integer, // only needed if multiple stacks of the status are granted by the action
+}
+```
+
+If an ability has no special properties, you can remove the in-game exclamation mark for the ability as being "unsupported" by adding an empty definition such as:
+
+```json
+{
+  "name": "Sonic Boom",
+  "id": 18308
+},
+```
+
+You can test these changes in-game locally by editing the definitions in your `%AppData%\XIVLauncher\installedPlugins\Hilda\<current Hilda version>\Priorities\36\3c0045d7-7adc-4344-9a02-1f5756954138.json` (or appropriate matching install location for XIVLauncher). Then disable and re-enable Hilda in-game to load the changes.
+
+Once validated, push a new branch with your changes in this repo (and follow the steps for versioning at the top of this file).
+
+> Warning! This file updates automatically as this repo is updated. If you're actively testing action definitions in this folder, keep a backup.

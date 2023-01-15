@@ -1,0 +1,55 @@
+{
+  "id": "3c0045d7-7adc-4344-9a02-1f5756954138",
+  "jobId": 36,
+  "name": "BLU Action Definitions",
+  "version": "0.0.1",
+  "appVersion": "0.0.16.0",
+  "lastUpdated": "2022-02-28 20:30:18Z",
+  "actions": [
+    {
+      "name": "Song of Torment",
+      "id": 11386,
+      "detrimentalStatusEffect": {
+        "name": "",
+        "id": "1714",
+        "remainingTime": 30
+      }
+    },
+    {
+      "name": "Final Sting",
+      "id": 11407,
+      "grantsStatusEffect": {
+        "name": "Brush With Death",
+        "id": "2127",
+        "remainingTime": 600
+      }
+    },
+    {
+      "name": "Moon Flute",
+      "id": 11415,
+      "grantsStatusEffect": {
+        "name": "Waxing Nocturne",
+        "id": "1718",
+        "remainingTime": 15
+      }
+    },
+    {
+      "name": "Sonic Boom",
+      "id": 18308
+    },
+    {
+      "name": "Whistle",
+      "id": 18309,
+      "grantsStatusEffect": {
+        "name": "Harmonized",
+        "id": "2118",
+        "remainingTime": 30
+      }
+    },
+    {
+      "name": "Surpanakha",
+      "id": 18323,
+      "baseCharges": 4
+    }
+  ]
+}
