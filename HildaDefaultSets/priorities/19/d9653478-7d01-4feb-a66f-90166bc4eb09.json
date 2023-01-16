@@ -2,9 +2,9 @@
   "id": "d9653478-7d01-4feb-a66f-90166bc4eb09",
   "jobId": 19,
   "name": "Multi Target",
-  "version": "0.0.2",
-  "appVersion": "0.0.15.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "0.0.16.0",
+  "version": "0.0.3",
+  "lastUpdated": "2023-01-16 18:31:35Z",
   "priorities": [
     {
       "name": "Fight or Flight",
@@ -126,6 +126,10 @@
       "actionId": 25748,
       "id": "142bf2ff-50bd-43e7-846f-c2aaa5ecf06a",
       "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
@@ -155,23 +159,6 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        },
-        "job": {
-          "requiescat": {
-            "value": 1,
-            "operator": "="
-          }
-        }
-      }
-    },
-    {
-      "name": "Atonement",
-      "actionId": 16460,
-      "id": "6e4c8af9-deb1-4a3c-8ac8-12d01b94ec96",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         }
       }
     },
@@ -187,7 +174,7 @@
           },
           "statuses": [
             {
-              "id": 1368,
+              "id": 2673,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
@@ -198,12 +185,17 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        },
-        "job": {
-          "requiescat": {
-            "value": 1,
-            "operator": ">"
-          }
+        }
+      }
+    },
+    {
+      "name": "Atonement",
+      "actionId": 16460,
+      "id": "6e4c8af9-deb1-4a3c-8ac8-12d01b94ec96",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
         }
       }
     },

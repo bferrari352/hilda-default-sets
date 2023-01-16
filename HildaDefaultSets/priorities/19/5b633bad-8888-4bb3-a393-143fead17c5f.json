@@ -2,9 +2,9 @@
   "id": "5b633bad-8888-4bb3-a393-143fead17c5f",
   "jobId": 19,
   "name": "Single Target",
-  "version": "0.0.4",
-  "appVersion": "0.0.15.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "0.0.16.0",
+  "version": "0.0.5",
+  "lastUpdated": "2023-01-16 18:27:44Z",
   "priorities": [
     {
       "name": "Fight or Flight",
@@ -92,7 +92,25 @@
     {
       "name": "Blade of Faith",
       "actionId": 25748,
-      "id": "e48f31dd-5d23-4555-8d62-9cf6daefaa0b"
+      "id": "e48f31dd-5d23-4555-8d62-9cf6daefaa0b",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Goring Blade",
+      "actionId": 3538,
+      "id": "0813a14e-8ca4-4bb3-8e45-af209d39ebb4",
+      "disabled": false,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
     },
     {
       "name": "Confiteor",
@@ -113,20 +131,8 @@
               }
             }
           ]
-        },
-        "job": {
-          "requiescat": {
-            "value": 1,
-            "operator": "="
-          }
         }
       }
-    },
-    {
-      "name": "Atonement",
-      "actionId": 16460,
-      "id": "f5f15c4a-1f47-4ff5-997d-293411e18f86",
-      "conditions": {}
     },
     {
       "name": "Holy Spirit",
@@ -138,83 +144,23 @@
             "value": 2000,
             "operator": ">="
           },
-          "level": {
-            "value": 80,
-            "operator": ">="
-          },
           "statuses": [
             {
-              "id": 1368,
+              "id": 2673,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
               }
             }
           ]
-        },
-        "job": {
-          "requiescat": {
-            "value": 1,
-            "operator": ">"
-          }
         }
       }
     },
     {
-      "name": "Holy Spirit",
-      "actionId": 7384,
-      "id": "b6e37b1b-2860-40ae-8f17-b4115bb5884a",
-      "conditions": {
-        "player": {
-          "mp": {
-            "value": 2000,
-            "operator": ">="
-          },
-          "level": {
-            "value": 68,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 1368,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "requiescat": {
-            "value": 1,
-            "operator": ">="
-          }
-        }
-      }
-    },
-    {
-      "name": "Goring Blade",
-      "actionId": 3538,
-      "id": "0813a14e-8ca4-4bb3-8e45-af209d39ebb4",
-      "disabled": false,
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 725,
-              "duration": {
-                "value": 3.0,
-                "operator": "<="
-              }
-            }
-          ],
-          "isBoss": true
-        }
-      }
+      "name": "Atonement",
+      "actionId": 16460,
+      "id": "f5f15c4a-1f47-4ff5-997d-293411e18f86",
+      "conditions": {}
     },
     {
       "name": "Royal Authority",
