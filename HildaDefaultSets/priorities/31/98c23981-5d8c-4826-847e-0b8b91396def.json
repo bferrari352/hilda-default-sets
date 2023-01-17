@@ -2,7 +2,7 @@
   "id": "98c23981-5d8c-4826-847e-0b8b91396def",
   "jobId": 31,
   "name": "Multi Target",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "appVersion": "0.0.16.0",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -277,6 +277,21 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2688,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          ]
         }
       }
     },
