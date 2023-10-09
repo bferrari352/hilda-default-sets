@@ -105,7 +105,8 @@ public class TestBaseFixture : IDisposable
     {
         if (LuminaDataAccess.IsCacheReady()) return;
         var mockStatusHelper = MockLibrary.MockStatusHelper();
-        LuminaDataAccess.BuildJobActionCache(mockStatusHelper.Object);
+        var mockDataHelper = MockLibrary.MockDataHelper();
+        LuminaDataAccess.BuildJobActionCache(mockStatusHelper.Object, mockDataHelper);
     }
     
     public void Dispose()

@@ -14,10 +14,9 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <XIVLauncher>$(AppData)\XIVLauncher</XIVLauncher>
-        <DalamudLibPath>$(XIVLauncher)\addon\Hooks\dev\</DalamudLibPath>
-        <DefaultSetsPath>$(ProjectDir)..\HildaDefaultSets\priorities\</DefaultSetsPath>
-        <TestUtilsPath>$(ProjectDir)..\..\Hilda-Dalamud\HildaTestUtils</TestUtilsPath>
+        <DalamudLibPath>$(DALAMUD_DEV)</DalamudLibPath>
+        <DefaultSetsPath>$(HILDA_DEFAULT_SETS)</DefaultSetsPath>
+        <TestUtilsPath>/Users/bferrari/Documents/gits/Hilda-Dalamud/HildaTestUtils</TestUtilsPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -56,13 +55,13 @@
             <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
         </Reference>
         <Reference Include="HildaTestUtils, Culture=neutral, PublicKeyToken=5503f199c805f859">
-          <HintPath>$(TestUtilsPath)\bin\Debug\net5.0-windows\HildaTestUtils.dll</HintPath>
+          <HintPath>$(TestUtilsPath)\bin\Release\net7.0-windows\HildaTestUtils.dll</HintPath>
         </Reference>
     </ItemGroup>
 
     <ItemGroup>
       <Reference Include="Hilda, Culture=neutral, PublicKeyToken=null">
-        <HintPath>$(XIVLauncher)\devPlugins\Hilda\Hilda.dll</HintPath>
+        <HintPath>$(HILDA_BUILD)\Hilda.dll</HintPath>
       </Reference>
     </ItemGroup>
 
