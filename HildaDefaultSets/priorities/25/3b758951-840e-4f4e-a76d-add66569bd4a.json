@@ -2,7 +2,7 @@
   "id": "3b758951-840e-4f4e-a76d-add66569bd4a",
   "jobId": 25,
   "name": "Multi Target",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-03-10 07:51:33Z",
   "priorities": [
@@ -282,17 +282,6 @@
             }
           ]
         },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Ley Lines",
-      "actionId": 3573,
-      "id": "fb168649-160e-4763-8dbe-8e72e9b9af71",
-      "conditions": {
         "enemyCount": {
           "value": 3,
           "operator": ">="
