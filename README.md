@@ -7,8 +7,8 @@ How to use this:
 - run `dotnet build`
 - run `dotnet run +version` (this updates the patch version)
   - if this is a minor or (GULP) major version update, provide `minor` or `major` after `+version`
-
-Do NOT push directly to the `gh-pages` branch!
+- push to main
+- merge to `gh-pages` and push
 
 ## Curated Priority Sets Philosophy
 
