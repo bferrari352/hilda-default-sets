@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0-windows</TargetFramework>
+        <TargetFramework>net8.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
@@ -16,7 +16,7 @@
     <PropertyGroup>
         <DalamudLibPath>$(DALAMUD_DEV)</DalamudLibPath>
         <DefaultSetsPath>$(HILDA_DEFAULT_SETS)</DefaultSetsPath>
-        <TestUtilsPath>/Users/bferrari/Documents/gits/Hilda-Dalamud/HildaTestUtils</TestUtilsPath>
+        <TestUtilsPath>$(HILDA_TEST_UTILS)</TestUtilsPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -68,7 +68,7 @@
     <Target Name="CopySetPriorities" AfterTargets="Build">
         <Message Text="Executing CopySetPriorities task" Importance="High" />
         <ItemGroup>
-            <DataFiles Include="$(DefaultSetsPath)**\*.*" />
+            <DataFiles Include="$(DefaultSetsPath)\**\*.*" />
         </ItemGroup>
         <Copy SourceFiles="@(DataFiles)" DestinationFolder="$(OutDir)Priorities\%(RecursiveDir)" SkipUnchangedFiles="true" />
         <Message Text="Copied Set Priorities" Importance="High" />
