@@ -2,7 +2,7 @@
   "id": "d7dd1178-ebbd-42b6-be8f-eb2652c8d3b5",
   "jobId": 37,
   "name": "Multi Target",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
@@ -16,7 +16,7 @@
           "operator": ">"
         },
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         }
       }
@@ -31,7 +31,7 @@
           "operator": ">"
         },
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         },
         "job": {
@@ -54,7 +54,7 @@
           "operator": ">"
         },
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         }
       }
@@ -69,7 +69,7 @@
           "operator": ">"
         },
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         }
       }
@@ -84,7 +84,7 @@
           "operator": ">"
         },
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         }
       }
@@ -95,7 +95,7 @@
       "id": "c9f5dcbf-0a99-401c-99cf-7aab5680a09d",
       "conditions": {
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         },
         "job": {
@@ -114,7 +114,7 @@
       "id": "f9852d66-a5ae-4d9d-96e0-c7e18dfbda16",
       "conditions": {
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         },
         "job": {
@@ -133,7 +133,7 @@
       "id": "5d4ae71e-9049-4b12-b18c-23b1611434bb",
       "conditions": {
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         },
         "job": {
@@ -152,7 +152,7 @@
       "id": "b1d524bd-2195-42a6-9191-64c5889f32d4",
       "conditions": {
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         },
         "job": {
@@ -171,7 +171,7 @@
       "id": "a8e3ec45-4163-49ea-a728-46d26fab619f",
       "conditions": {
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         },
         "job": {
@@ -190,7 +190,7 @@
       "id": "f579cc17-6bba-4288-9ef2-64d6b91ad506",
       "conditions": {
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         },
         "job": {
@@ -213,7 +213,7 @@
           "operator": ">"
         },
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         }
       }
@@ -224,7 +224,7 @@
       "id": "3bbc2ea5-8666-420f-a607-9cfcc6b98217",
       "conditions": {
         "enemyCount": {
-          "value": 3,
+          "value": 2,
           "operator": ">="
         }
       }
