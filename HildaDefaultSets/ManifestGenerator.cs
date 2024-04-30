@@ -16,41 +16,49 @@ internal static class ManifestGenerator
             Console.WriteLine("Error getting current manifest");
             throw new Exception();
         }
-
-        var sets = new Dictionary<int, List<SetManifest>>(currentManifest.Sets);
-        foreach (var (jobId, setManifests) in sets)
+        
+        var newManifest = new DefaultManifest
         {
-            for (var index = 0; index < setManifests.Count; index++)
+            Version = currentManifest.Version,
+            LastUpdated = currentManifest.LastUpdated,
+            Sets = new()
+        };
+
+        // Go through each folder in //priorities
+        var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        if (assemblyPath == null)
+        {
+            Console.WriteLine("No Assembly Path!");
+            return;
+        }
+        
+        var prioritiesDir = Path.Combine(assemblyPath, "priorities");
+        var jobDirectories = Directory.GetDirectories(prioritiesDir).OrderBy(x => x);
+        
+        foreach (var jobDirectoryPath in jobDirectories)
+        {
+            var directories = jobDirectoryPath.Split(Path.DirectorySeparatorChar).ToList();
+            var setFiles = Directory.GetFiles(jobDirectoryPath);
+            if (!int.TryParse(directories[^1], out var jobId)) continue;
+            
+            foreach (var setFile in setFiles)
             {
-                var setManifest = setManifests[index];
-                var fileString = GetPrioritySet(jobId, setManifest.Id);
-                if (fileString == null)
+                var fileString = File.ReadAllText(setFile);
+                var newSet = GetSetData(fileString);
+                if (newManifest.Sets.TryGetValue(jobId, out var value))
                 {
-                    Console.WriteLine($"SetID: '{setManifest.Id}' could not be found for JobID: {jobId}");
-                    throw new Exception();
+                    value.Add(newSet);
                 }
-
-                var md5 = GenerateMd5(fileString);
-                var (version, appVersion, lastUpdated) = GetSetData(fileString);
-
-                if (md5 != setManifest.Md5)
+                else
                 {
-                    Console.WriteLine($"Updating MD5 for JobID: {jobId} -> SetID: {setManifest.Id}");
-                    currentManifest.Sets[jobId][index] = new SetManifest
-                    {
-                        Id = setManifest.Id,
-                        LastUpdated = lastUpdated,
-                        Md5 = md5,
-                        Version = version,
-                        AppVersion = appVersion,
-                    };
+                    newManifest.Sets[jobId] = [newSet];
                 }
             }
         }
         
         if (args.Contains("+version"))
         {
-            var strings = currentManifest.Version.Split(".");
+            var strings = newManifest.Version.Split(".");
             var versioning = Array.ConvertAll(strings, int.Parse);
             if (args.Contains("major"))
             {
@@ -67,13 +75,14 @@ internal static class ManifestGenerator
             {
                 versioning[2] += 1;
             }
-
+        
             var versionString = Array.ConvertAll(versioning, s => s.ToString());
-            currentManifest.Version = string.Join(".", versionString);
+            newManifest.Version = string.Join(".", versionString);
         }
-
-        currentManifest.LastUpdated = DateTime.Now.ToString("u");
-        WriteManifest(currentManifest);
+        
+        newManifest.LastUpdated = DateTime.Now.ToString("u");
+        
+        WriteManifest(newManifest);
         Console.Write("Generated new manifest.json");
     }
         
@@ -91,45 +100,41 @@ internal static class ManifestGenerator
         return sb.ToString();
     }
 
-    private static (string, string, string) GetSetData(string fileString)
+    private static SetManifest GetSetData(string fileString)
     {
         var deserialized = JsonConvert.DeserializeObject<JObject>(fileString);
         if (deserialized == null)
         {
             throw new Exception("Error acquiring set data");
         }
-        return (deserialized["version"].ToString(), deserialized["appVersion"].ToString(), deserialized["lastUpdated"].ToString());
-    }
 
-    private static string? GetPrioritySet(int jobId, string setId)
-    {
-        try
-        {
-            var assemblyLocation = Assembly.GetExecutingAssembly().Location;
-            var dir = Path.Combine(Path.GetDirectoryName(assemblyLocation)!, "priorities", jobId.ToString());
-            var filePath = Path.Combine(dir, @$"{setId}.json");
+        var id = deserialized["id"];
+        var version = deserialized["version"];
+        var appVersion = deserialized["appVersion"];
+        var lastUpdated = deserialized["lastUpdated"];
 
-            if (File.Exists(filePath))
-            {
-                return File.ReadAllText(filePath);
-            }
-        }
-        catch
+        if (id == null || version == null || appVersion == null || lastUpdated == null)
         {
-            Console.WriteLine("Error getting priority set");
-            throw;
+            throw new Exception("Data is null");
         }
 
-        return null;
+        return new SetManifest
+        {
+            Id = id.ToString(),
+            AppVersion = appVersion.ToString(),
+            Version = version.ToString(),
+            LastUpdated = lastUpdated.ToString(),
+            Md5 = GenerateMd5(fileString)
+        };
     }
         
     private static DefaultManifest? GetCurrentManifest()
     {
         try
         {
-            var assemblyLocation = Assembly.GetExecutingAssembly().Location;
-            var filePath = Path.Combine(Path.GetDirectoryName(assemblyLocation)!,
-                @"priorities/manifest.json");
+            var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            if (assemblyPath == null) return null;
+            var filePath = Path.Combine(assemblyPath, "priorities/manifest.json");
 
             if (File.Exists(filePath))
             {
@@ -146,61 +151,41 @@ internal static class ManifestGenerator
         return null;
     }
     
-    private static bool WriteManifest(DefaultManifest manifest)
+    private static void WriteManifest(DefaultManifest manifest)
     {
         try
         {
             var dir = Path.Combine(Directory.GetCurrentDirectory(), @"priorities");
             var filePath = Path.Combine(dir, @"manifest.json");
 
-            if (Directory.Exists(dir))
-            {
-                var serializerSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore,
-                    Formatting = Formatting.Indented};
-                var jsonString = JsonConvert.SerializeObject(manifest, serializerSettings);
-                File.WriteAllText(filePath, jsonString);
-                return true;
-            }
+            if (!Directory.Exists(dir)) return;
+            
+            var serializerSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore,
+                Formatting = Formatting.Indented};
+            var jsonString = JsonConvert.SerializeObject(manifest, serializerSettings);
+            File.WriteAllText(filePath, jsonString);
         }
         catch (Exception e)
         {
             Console.WriteLine(e.Message);
             throw;
         }
-
-        return false;
     }
         
 }
 
 public class DefaultManifest
 {
-    public string Version { get; set; }
-    public string LastUpdated { get; set; }
-    public Dictionary<int, List<SetManifest>> Sets { get; set; }
-
-    public DefaultManifest()
-    {
-        Version = "";
-        LastUpdated = "";
-        Sets = new Dictionary<int, List<SetManifest>>();
-    }
+    public string Version { get; set; } = "";
+    public string LastUpdated { get; set; } = "";
+    public Dictionary<int, List<SetManifest>> Sets { get; set; } = new();
 }
 
 public class SetManifest
 {
-    public string Id { get; set; }
-    public string Md5 { get; set; }
-    public string LastUpdated { get; set; }
-    public string Version { get; set; }
-    public string AppVersion { get; set; }
-
-    public SetManifest()
-    {
-        Id = "";
-        Md5 = "";
-        LastUpdated = "";
-        Version = "";
-        AppVersion = "";
-    }
+    public string Id { get; set; } = "";
+    public string Md5 { get; set; } = "";
+    public string LastUpdated { get; set; } = "";
+    public string Version { get; set; } = "";
+    public string AppVersion { get; set; } = "";
 }

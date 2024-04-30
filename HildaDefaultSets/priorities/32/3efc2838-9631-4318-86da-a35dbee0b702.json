@@ -1,0 +1,26 @@
+{
+  "id": "3efc2838-9631-4318-86da-a35dbee0b702",
+  "jobId": 32,
+  "name": "Full",
+  "appVersion": "0.0.20.0",
+  "version": "1.0.0",
+  "lastUpdated": "2023-01-16 18:27:44Z",
+  "priorities": [
+    {
+      "name": "Multi Target",
+      "setId": "8cdf0b78-0d36-4404-a28a-c43f79c9fb6a",
+      "type": 1,
+      "id": "17a40035-f521-4b07-b55f-c97b8b10f419",
+      "disabled": false,
+      "conditions": {}
+    },
+    {
+      "name": "Single Target",
+      "setId": "ed1b140c-f8f9-4872-89e5-3dd15f6c75da",
+      "type": 1,
+      "id": "e6031dca-4857-43fd-82d6-1f9a87118445",
+      "disabled": false,
+      "conditions": {}
+    }
+  ]
+}
