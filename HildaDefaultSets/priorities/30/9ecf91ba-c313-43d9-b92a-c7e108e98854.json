@@ -264,7 +264,123 @@
       }
     },
     {
-      "name": "Huton (pre-Hurajin)",
+      "name": "Hyosho Ranyu (Kassatsu)",
+      "actionId": 16492,
+      "id": "fc586ee7-d6bb-41a0-be42-fec1f607fb9b",
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Raiton (Kassatsu)",
+      "actionId": 2267,
+      "id": "53d67671-0973-48fb-a9d5-70b36a836fdb",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ten (Kassatsu pre-Hyosho Ranyu)",
+      "actionId": 2259,
+      "id": "76aeccce-4901-401a-ab4f-a23ebdcfca6c",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 76,
+            "operator": "<"
+          },
+          "statuses": [
+            {
+              "id": 497,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chi (Kassatsu)",
+      "actionId": 2261,
+      "id": "b2082013-0a3e-48af-a03d-0d36fc27c888",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 497,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Jin (Kassatsu)",
+      "actionId": 2263,
+      "id": "983a8392-7eab-44c9-8b93-241ae98a9253",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 497,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Huton (pre-Huraijin)",
       "actionId": 2269,
       "id": "8e281676-2001-4556-9aab-c38de5b7a50e",
       "conditions": {
@@ -480,111 +596,6 @@
               "duration": {
                 "value": 0.0,
                 "operator": "="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Hyosho Ranyu (Kassatsu)",
-      "actionId": 16492,
-      "id": "fc586ee7-d6bb-41a0-be42-fec1f607fb9b",
-      "conditions": {
-        "target": {
-          "statuses": [
-            {
-              "id": 3254,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Hyoton (Kassatsu)",
-      "actionId": 2268,
-      "id": "bb5256d1-7252-4911-89be-9fcf12a7a41d",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 497,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 3254,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Chi (Kassatsu)",
-      "actionId": 2261,
-      "id": "b2082013-0a3e-48af-a03d-0d36fc27c888",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 497,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 3254,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Jin (Kassatsu)",
-      "actionId": 2263,
-      "id": "983a8392-7eab-44c9-8b93-241ae98a9253",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 497,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 3254,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
               }
             }
           ]
