@@ -828,66 +828,37 @@
       }
     },
     {
-      "name": "Raiton",
+      "name": "Raiton (overcap)",
       "actionId": 2267,
-      "id": "ad062f37-a9ce-43e0-9146-b0683577f2fc",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 497,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Fuma Shuriken",
-      "actionId": 2265,
-      "id": "aa838764-f23c-4949-be37-b10996e96844",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 35,
-            "operator": "<"
-          }
-        }
-      }
+      "description": "Expend Mudra outside of Trick Attack to not overcap on Ninjutsu charges.",
+      "id": "ad062f37-a9ce-43e0-9146-b0683577f2fc"
     },
     {
       "name": "Ten (Raiton)",
       "actionId": 2259,
+      "description": "Expend Mudra outside of Trick Attack to not overcap on Ninjutsu charges.",
       "id": "acdf0d95-7fd6-454c-ac89-e4d45955c62b",
       "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 497,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
+        "actionDependentRecast": {
+          "actionId": 2259,
+          "value": 3.0,
+          "operator": "<"
         }
       }
     },
     {
       "name": "Chi (Raiton)",
       "actionId": 2261,
+      "description": "Expend Mudra outside of Trick Attack to not overcap on Ninjutsu charges.",
       "id": "a86161d0-6689-4d0a-872c-a927d97765c8",
       "conditions": {
         "player": {
           "statuses": [
             {
-              "id": 497,
+              "id": 496,
               "duration": {
                 "value": 0.0,
-                "operator": "="
+                "operator": ">"
               }
             }
           ]
