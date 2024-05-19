@@ -674,7 +674,7 @@
       }
     },
     {
-      "name": "Phantom Kamaitachi",
+      "name": "Phantom Kamaitachi (Trick Attack + Mug)",
       "actionId": 25774,
       "id": "87b6ad7c-2bb4-4794-a623-47f5cd09c075",
       "conditions": {
@@ -689,6 +689,66 @@
               "duration": {
                 "value": 0.0,
                 "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            },
+            {
+              "id": 3183,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Phantom Kamaitachi (Trick Attack, no Bunshin)",
+      "actionId": 25774,
+      "id": "87b6ad7c-2bb4-4794-a623-47f5cd09c075",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2010,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
               }
             }
           ]
