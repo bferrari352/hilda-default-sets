@@ -300,6 +300,35 @@
       }
     },
     {
+      "name": "Bhavacakra (Meisui)",
+      "actionId": 7402,
+      "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 3189,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "Kassatsu",
       "actionId": 2264,
       "description": "Get ready to use Kassatsu-empowered ninjutsu during Trick Attack.",
@@ -579,7 +608,7 @@
       }
     },
     {
-      "name": "Dream Within a Dream",
+      "name": "Dream Within a Dream (Trick Attack)",
       "actionId": 3566,
       "id": "79c9d531-4dc7-444d-b4a6-f5faa4514174",
       "conditions": {
@@ -612,7 +641,7 @@
       }
     },
     {
-      "name": "Assassinate",
+      "name": "Assassinate (Trick Attack)",
       "actionId": 2246,
       "id": "8561e3c8-5be3-4682-97a4-f7246ffcbccc",
       "conditions": {
@@ -667,7 +696,7 @@
       }
     },
     {
-      "name": "Hyosho Ranyu",
+      "name": "Hyosho Ranyu (Trick Attack)",
       "actionId": 16492,
       "id": "fc586ee7-d6bb-41a0-be42-fec1f607fb9b"
     },
@@ -757,7 +786,7 @@
       }
     },
     {
-      "name": "Ten Chi Jin",
+      "name": "Ten Chi Jin (Trick Attack)",
       "actionId": 7403,
       "id": "c0be6180-3655-4581-8235-b44ce596a03e",
       "conditions": {
@@ -791,7 +820,7 @@
       }
     },
     {
-      "name": "Meisui",
+      "name": "Meisui (Trick Attack)",
       "actionId": 16489,
       "id": "198a7151-70be-416e-bf2e-44f6c7b6b3c6",
       "conditions": {
@@ -832,36 +861,7 @@
       }
     },
     {
-      "name": "Bhavacakra (Meisui)",
-      "actionId": 7402,
-      "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 496,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            },
-            {
-              "id": 3189,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Fleeting Raiju",
+      "name": "Fleeting Raiju (Trick Attack)",
       "actionId": 25778,
       "id": "9a14884d-d054-48a9-b209-377d0a6f649a",
       "conditions": {
