@@ -57,8 +57,8 @@
         "job": {
           "gauge": {
             "hutonTimer": {
-              "value": 0,
-              "operator": "="
+              "value": 2.5,
+              "operator": "<="
             }
           }
         }
@@ -84,14 +84,15 @@
       "conditions": {
         "player": {
           "level": {
-            "value": 60,
-            "operator": "<"
+            "value": 44,
+            "value2": 60,
+            "operator": "><"
           }
         },
         "job": {
           "gauge": {
             "hutonTimer": {
-              "value": 0,
+              "value": 2.5,
               "operator": "<="
             }
           }
@@ -105,14 +106,15 @@
       "conditions": {
         "player": {
           "level": {
-            "value": 60,
-            "operator": "<"
+            "value": 44,
+            "value2": 60,
+            "operator": "><"
           }
         },
         "job": {
           "gauge": {
             "hutonTimer": {
-              "value": 0,
+              "value": 2.5,
               "operator": "<="
             }
           }
@@ -126,14 +128,15 @@
       "conditions": {
         "player": {
           "level": {
-            "value": 60,
-            "operator": "<"
+            "value": 44,
+            "value2": 60,
+            "operator": "><"
           }
         },
         "job": {
           "gauge": {
             "hutonTimer": {
-              "value": 0,
+              "value": 2.5,
               "operator": "<="
             }
           }
