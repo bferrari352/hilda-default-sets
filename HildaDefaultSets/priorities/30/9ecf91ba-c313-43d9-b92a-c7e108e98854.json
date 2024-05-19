@@ -192,28 +192,6 @@
       }
     },
     {
-      "name": "Bavacakra",
-      "actionId": 7402,
-      "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 496,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "JinSuiton (TenChiJin)",
       "actionId": 18807,
       "id": "7b644443-1d87-469f-b1bf-fed54c02cf10",
@@ -292,6 +270,36 @@
       }
     },
     {
+      "name": "Bhavacakra (overcap)",
+      "actionId": 7402,
+      "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "ninki": {
+              "value": 100,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
       "name": "Kassatsu",
       "actionId": 2264,
       "description": "Get ready to use Kassatsu-empowered ninjutsu during Trick Attack.",
@@ -316,7 +324,7 @@
               }
             },
             {
-              "id": 507,
+              "id": 2839,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
@@ -351,7 +359,7 @@
               }
             },
             {
-              "id": 507,
+              "id": 2839,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
@@ -376,7 +384,7 @@
         "player": {
           "statuses": [
             {
-              "id": 507,
+              "id": 2839,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
@@ -387,6 +395,122 @@
               "duration": {
                 "value": 0.0,
                 "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Suiton",
+      "actionId": 2271,
+      "id": "b491d8f3-7112-43f0-9754-0781e98ff7e8"
+    },
+    {
+      "name": "Ten (Suiton)",
+      "actionId": 2259,
+      "id": "9f2fd9b5-315d-4765-b8ec-026c8255ff7b",
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 15.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2839,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chi (Suiton)",
+      "actionId": 2261,
+      "id": "b3a0916a-5246-4953-9054-ad4e55db9dfc",
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 15.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2839,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Jin (Suiton)",
+      "actionId": 2263,
+      "id": "d2d96cdb-825f-45f7-8c7e-b723da23c392",
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 15.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2839,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Meisui (falling off)",
+      "actionId": 16489,
+      "description": "Suiton is about to fall off, use Meisui while you still can.",
+      "id": "e0b43fb0-f75c-4e39-8130-4c61851f13e5",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2839,
+              "duration": {
+                "value": 3.0,
+                "operator": "<"
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
               }
             }
           ]
@@ -592,80 +716,6 @@
       }
     },
     {
-      "name": "Suiton",
-      "actionId": 2271,
-      "id": "b491d8f3-7112-43f0-9754-0781e98ff7e8"
-    },
-    {
-      "name": "Ten (Suiton)",
-      "actionId": 2259,
-      "id": "9f2fd9b5-315d-4765-b8ec-026c8255ff7b",
-      "conditions": {
-        "actionDependentRecast": {
-          "actionId": 2258,
-          "value": 15.0,
-          "operator": "<="
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 507,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Chi (Suiton)",
-      "actionId": 2261,
-      "id": "b3a0916a-5246-4953-9054-ad4e55db9dfc",
-      "conditions": {
-        "actionDependentRecast": {
-          "actionId": 2258,
-          "value": 15.0,
-          "operator": "<="
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 507,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Jin (Suiton)",
-      "actionId": 2263,
-      "id": "d2d96cdb-825f-45f7-8c7e-b723da23c392",
-      "conditions": {
-        "actionDependentRecast": {
-          "actionId": 2258,
-          "value": 15.0,
-          "operator": "<="
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 507,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "Raiton (Trick Attack)",
       "actionId": 2267,
       "id": "ad062f37-a9ce-43e0-9146-b0683577f2fc"
@@ -707,19 +757,52 @@
       }
     },
     {
-      "name": "Meisui",
-      "actionId": 16489,
-      "id": "198a7151-70be-416e-bf2e-44f6c7b6b3c6",
+      "name": "Ten Chi Jin",
+      "actionId": 7403,
+      "id": "c0be6180-3655-4581-8235-b44ce596a03e",
       "conditions": {
-        "actionDependentRecast": {
-          "actionId": 7403,
-          "value": 0.0,
+        "globalCooldown": {
+          "value": 0.5,
           "operator": ">"
         },
         "player": {
           "statuses": [
             {
-              "id": 507,
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Meisui",
+      "actionId": 16489,
+      "id": "198a7151-70be-416e-bf2e-44f6c7b6b3c6",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 2839,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
@@ -733,14 +816,30 @@
               }
             }
           ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
     {
-      "name": "Ten Chi Jin",
-      "actionId": 7403,
-      "id": "c0be6180-3655-4581-8235-b44ce596a03e",
+      "name": "Bhavacakra",
+      "actionId": 7402,
+      "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
       "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
         "player": {
           "statuses": [
             {
@@ -749,13 +848,9 @@
                 "value": 0.0,
                 "operator": "="
               }
-            }
-          ]
-        },
-        "target": {
-          "statuses": [
+            },
             {
-              "id": 3254,
+              "id": 3189,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
