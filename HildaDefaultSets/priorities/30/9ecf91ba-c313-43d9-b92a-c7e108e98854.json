@@ -272,7 +272,7 @@
     {
       "name": "Bhavacakra (overcap)",
       "actionId": 7402,
-      "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
+      "id": "5c60c3c5-c1f7-4e97-9daf-2e610bf8854e",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -717,7 +717,7 @@
     {
       "name": "Phantom Kamaitachi (Trick Attack, no Bunshin)",
       "actionId": 25774,
-      "id": "87b6ad7c-2bb4-4794-a623-47f5cd09c075",
+      "id": "faab34d7-5179-4771-aefb-db75c9a60426",
       "conditions": {
         "combo": {
           "value": 0.0,
