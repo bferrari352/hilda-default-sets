@@ -832,7 +832,7 @@
       }
     },
     {
-      "name": "Bhavacakra",
+      "name": "Bhavacakra (Meisui)",
       "actionId": 7402,
       "id": "63df79e0-ff67-4409-8637-ae8722f0f682",
       "conditions": {
@@ -861,7 +861,7 @@
       }
     },
     {
-      "name": "Fleeting Raiju (Trick Attack + Meisui)",
+      "name": "Fleeting Raiju",
       "actionId": 25778,
       "id": "9a14884d-d054-48a9-b209-377d0a6f649a",
       "conditions": {
@@ -872,13 +872,6 @@
               "duration": {
                 "value": 0.0,
                 "operator": "="
-              }
-            },
-            {
-              "id": 2689,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
               }
             }
           ]
@@ -897,7 +890,8 @@
       }
     },
     {
-      "name": "Fleeting Raiju",
+      "name": "Fleeting Raiju (overcap)",
+      "description": "Expend Raiju attacks outside of Trick Attack to not overcap on Raiju Ready stacks.",
       "actionId": 25778,
       "id": "802799dd-847d-434f-ae6f-7b90e0c6572c",
       "conditions": {
@@ -908,6 +902,13 @@
               "duration": {
                 "value": 0.0,
                 "operator": "="
+              }
+            },
+            {
+              "id": 3211,
+              "stacks": {
+                "value": 3,
+                "operator": ">="
               }
             }
           ]
