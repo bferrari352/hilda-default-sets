@@ -2,10 +2,183 @@
   "id": "543888e6-d584-454f-8bc3-bb16be87066d",
   "jobId": 30,
   "name": "Multi Target",
-  "version": "0.0.1",
+  "version": "6.5.1",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-02-28 20:30:18Z",
   "priorities": [
+    {
+      "name": "Huraijin",
+      "actionId": 25876,
+      "description": "Always keep Huton active, better to use Huraijin then spend Ninjutsu on Huton.",
+      "id": "faab34d7-5179-4771-aefb-db75c9a60426",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "healthPercent": {
+            "value": 100,
+            "operator": "<"
+          }
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "hutonTimer": {
+              "value": 3,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Huton (pre-pull)",
+      "actionId": 2269,
+      "description": "Always keep Huton active, better to cast it before a fight begins.",
+      "id": "8c02518d-b91d-4031-ae1c-b6039ddf3221"
+    },
+    {
+      "name": "Jin (Huton)",
+      "actionId": 2263,
+      "id": "cd893b74-19e1-4f1c-aa32-1baa0714dd6f",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "level": {
+            "value": 45,
+            "operator": ">="
+          }
+        },
+        "job": {
+          "gauge": {
+            "hutonTimer": {
+              "value": 3,
+              "operator": "<="
+            }
+          }
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": "0"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chi (Huton)",
+      "actionId": 2261,
+      "id": "ab3a2149-9d6f-48cd-bb6d-67b7bd3a979b",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "level": {
+            "value": 45,
+            "operator": ">="
+          }
+        },
+        "job": {
+          "gauge": {
+            "hutonTimer": {
+              "value": 3,
+              "operator": "<="
+            }
+          }
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": "0"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ten (Huton)",
+      "actionId": 2259,
+      "id": "c96d2e86-62d8-4a3a-a3f9-6bc70308a34d",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "level": {
+            "value": 45,
+            "operator": ">="
+          }
+        },
+        "job": {
+          "gauge": {
+            "hutonTimer": {
+              "value": 3,
+              "operator": "<="
+            }
+          }
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": "0"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Bunshin",
+      "actionId": 16493,
+      "id": "0de1e644-c95e-4e9a-bc45-a73313d14985",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
     {
       "name": "Hellfrog Medium",
       "actionId": 7401,
@@ -14,11 +187,58 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 3189,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
     {
-      "name": "Chi",
+      "name": "Bhavacakra (Meisui)",
+      "actionId": 7402,
+      "id": "f4e1f7f2-cb12-4001-b32d-01d990821ea8",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 3189,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ChiDoton (Ten Chi Jin)",
       "actionId": 2261,
       "id": "db618703-1cf4-49fd-8d5a-d31725cf1890",
       "overrideIcon": 2270,
@@ -36,7 +256,7 @@
       }
     },
     {
-      "name": "Ten",
+      "name": "TenKaton (Ten Chi Jin)",
       "actionId": 2259,
       "id": "974e1cdf-22a9-4ad2-9d46-b3dc47728b0d",
       "overrideIcon": 2266,
@@ -54,7 +274,7 @@
       }
     },
     {
-      "name": "Jin",
+      "name": "JinFuma (Ten Chi Jin)",
       "actionId": 2263,
       "id": "4b557ffa-8e2e-4389-9933-a95774a0c4d7",
       "overrideIcon": 2265,
@@ -83,88 +303,119 @@
       }
     },
     {
-      "name": "Huraijin",
-      "actionId": 25876,
-      "id": "54cb61f6-ad09-4786-b260-e397376889b5",
+      "name": "Phantom Kamaitachi (Trick Attack + Mug)",
+      "actionId": 25774,
+      "id": "ab7eb9c6-6e1b-4875-9fb2-82d7d154d53e",
       "conditions": {
         "enemyCount": {
           "value": 3,
           "operator": ">="
         },
-        "job": {
-          "gauge": {
-            "hutonTimer": {
-              "value": 5,
-              "operator": "<="
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
             }
-          }
-        }
-      }
-    },
-    {
-      "name": "Mug",
-      "actionId": 2248,
-      "id": "d0052662-9bde-409e-8e6f-209ab3964d2d",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Bunshin",
-      "actionId": 16493,
-      "id": "1f9894e2-a95d-49c0-9603-c9c63b4ec665",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
+          ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            },
+            {
+              "id": 3183,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
     {
       "name": "Kassatsu",
       "actionId": 2264,
-      "id": "fdd8d0a3-4270-4833-99f2-ee8b46710589",
+      "description": "Get ready to use Kassatsu-empowered ninjutsu during Trick Attack.",
+      "id": "57059a35-517e-4de7-b35b-df672fd32ae1",
       "conditions": {
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Dream Within a Dream",
-      "actionId": 3566,
-      "id": "7d5db0f7-4620-405f-96df-1feab6ff3daa",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Assassinate",
-      "actionId": 2246,
-      "id": "6e1c2e88-1251-42cb-b3d7-b85515cced75",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Goka (Kassatsu)",
-      "actionId": 16491,
-      "id": "6843618c-1c8d-4271-9a57-ceb9085ce18e",
-      "conditions": {
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 10.0,
+          "operator": "<"
+        },
         "player": {
           "statuses": [
             {
-              "id": 497,
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 507,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Mug",
+      "actionId": 2248,
+      "description": "Use Mug before Trick Attack to maximize tricks.",
+      "id": "efce3c0a-9439-47de-9318-b81f85dc62fb",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 5.0,
+          "operator": "<"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 507,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
@@ -172,40 +423,390 @@
             }
           ]
         },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
+        "target": {
+          "isBoss": true
         }
       }
     },
     {
-      "name": "Katon (Kassatsu)",
-      "actionId": 2266,
-      "id": "5ce31f81-622b-4f18-9be0-3a0827d57eb4",
+      "name": "Trick Attack",
+      "actionId": 2258,
+      "id": "78e85e78-6bf3-47e8-9cb7-e075de8ff2b2",
       "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
         "player": {
           "statuses": [
             {
-              "id": 497,
+              "id": 507,
               "duration": {
                 "value": 0.0,
                 "operator": ">"
               }
+            },
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
             }
           ]
         },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
+        "target": {
+          "isBoss": true
         }
       }
     },
     {
-      "name": "Chi (Kassatsu)",
+      "name": "Suiton",
+      "actionId": 2271,
+      "id": "cb2a8a7a-c06d-4566-8207-df768a29f10b"
+    },
+    {
+      "name": "Ten (Suiton)",
+      "actionId": 2259,
+      "id": "64118e05-1d00-4785-8cd5-b06e96a4c5fd",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 15.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 507,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true
+        }
+      }
+    },
+    {
+      "name": "Chi (Suiton)",
       "actionId": 2261,
+      "id": "baa9d59d-ef78-40a1-a772-bd3ef779b968",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 15.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 507,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true
+        }
+      }
+    },
+    {
+      "name": "Jin (Suiton)",
+      "actionId": 2263,
+      "id": "08d592dd-8f74-4f87-8428-76c912b086b9",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "actionDependentRecast": {
+          "actionId": 2258,
+          "value": 15.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 507,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true
+        }
+      }
+    },
+    {
+      "name": "Meisui (falling off)",
+      "actionId": 16489,
+      "description": "Suiton is about to fall off, use Meisui while you still can.",
+      "id": "45472db2-2b10-42ec-bde8-c783bacb68f6",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 507,
+              "duration": {
+                "value": 3.0,
+                "operator": "<"
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kassatsu (missed timing)",
+      "actionId": 2264,
+      "description": "Trick is on, activate for Kassatsu-empowered ninjutsu.",
+      "id": "afd87644-b3ec-465b-86c2-212c3036ad71",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Mug (missed timing)",
+      "actionId": 2248,
+      "description": "Trick is on, activate to maximize tricks.",
+      "id": "18c1d301-cf7b-459c-982c-4a5ae7356b91",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Dream Within a Dream (Trick Attack)",
+      "actionId": 3566,
+      "id": "b15dcee7-1c7d-433d-a549-1023e6e7f4b5",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Assassinate (Trick Attack)",
+      "actionId": 2246,
+      "id": "835f566f-ff96-4083-94b9-d99e86fe0603",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Phantom Kamaitachi (Trick Attack, no Bunshin)",
+      "actionId": 25774,
+      "id": "4d6fe9e1-e4b2-42bb-bc65-8042828f6a5a",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "id": 2010,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Goka Mekkyaku (Kassatsu)",
+      "actionId": 16491,
+      "id": "6843618c-1c8d-4271-9a57-ceb9085ce18e"
+    },
+    {
+      "name": "Jin (Goka Mekkyaku)",
+      "actionId": 2263,
       "id": "d2326869-fdca-4cd2-9f00-1bfa247861a1",
       "conditions": {
         "player": {
+          "level": {
+            "value": 76,
+            "operator": ">="
+          },
           "statuses": [
             {
               "id": 497,
@@ -223,11 +824,15 @@
       }
     },
     {
-      "name": "Ten (Kassatsu)",
+      "name": "Ten (Goka Mekkyaku)",
       "actionId": 2259,
       "id": "ad8c7e70-9b48-4633-8917-13fc91fa6808",
       "conditions": {
         "player": {
+          "level": {
+            "value": 76,
+            "operator": ">="
+          },
           "statuses": [
             {
               "id": 497,
@@ -241,28 +846,104 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Doton",
+      "actionId": 2270,
+      "id": "727b933c-8d63-4e04-ae01-4b6e1f8e36bf"
+    },
+    {
+      "name": "Jin (Doton)",
+      "actionId": 2263,
+      "id": "8abce25b-b02c-482d-a4ec-b02b4922fdc5",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 501,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ten (Doton)",
+      "actionId": 2259,
+      "id": "9aede4d0-290a-4ef7-bee0-e3af62ef2995",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 501,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chi (Doton)",
+      "actionId": 2261,
+      "id": "63bbe09a-862f-467c-909f-04fa2ec3d0f3",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 501,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
     {
       "name": "Katon",
       "actionId": 2266,
-      "id": "c6ebb5e5-0104-4754-8e01-a37770ebb7a2",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
+      "id": "c6ebb5e5-0104-4754-8e01-a37770ebb7a2"
     },
     {
-      "name": "Chi (Katon)",
-      "actionId": 2261,
+      "name": "Jin (Katon)",
+      "actionId": 2263,
       "id": "81f81f51-49ca-4fe0-93f5-e50980cadb19",
       "conditions": {
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 501,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
@@ -274,14 +955,33 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 501,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
     {
-      "name": "Meisui",
+      "name": "Meisui (Trick Attack)",
       "actionId": 16489,
-      "id": "e52cc60c-2107-493c-9594-7faa14602d16",
+      "id": "c0c16ae1-054b-4b5a-aeee-90ce3a292c86",
       "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
         "player": {
           "statuses": [
             {
@@ -290,77 +990,90 @@
                 "value": 0.0,
                 "operator": ">"
               }
+            },
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
             }
           ]
         },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
+        "target": {
+          "isBoss": true,
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
     {
-      "name": "Fleeting Raiju",
+      "name": "Fleeting Raiju (Trick Attack)",
       "actionId": 25778,
-      "id": "3174622d-0aca-4742-bf27-37edcd0034d0",
+      "id": "797f49e0-a337-4963-93f4-7c185b63c1e0",
       "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2691
-            }
-          ]
-        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3254,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
     {
-      "name": "Forked Raiju",
-      "actionId": 25777,
-      "id": "70dbcefd-734d-4cb9-9047-119d3543eeb2",
+      "name": "Fleeting Raiju (overcap)",
+      "description": "Expend Raiju attacks outside of Trick Attack to not overcap on Raiju Ready stacks.",
+      "actionId": 25778,
+      "id": "d57aff7a-80c3-46cf-be97-6e64c42f3dd0",
       "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
         "player": {
           "statuses": [
             {
-              "id": 2690
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Phantom Kamaitachi",
-      "actionId": 25774,
-      "id": "b362fb1a-6323-4205-9138-ae34c36d9fa8",
-      "conditions": {
-        "player": {
-          "statuses": [
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
             {
-              "id": 2723
+              "id": 3211,
+              "stacks": {
+                "value": 3,
+                "operator": ">="
+              }
             }
           ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Ten Chi Jin",
-      "actionId": 7403,
-      "id": "5b7aa93a-c675-4a4a-ba53-62a3f4707ce9",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         }
       }
     },
@@ -376,6 +1089,17 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
@@ -383,6 +1107,106 @@
       "name": "Death Blossom",
       "actionId": 2254,
       "id": "0bd1652c-9ca1-437a-be15-1847bdacf989",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 496,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fuma Shuriken",
+      "actionId": 2265,
+      "id": "f550614c-c593-4569-87cd-3b7811c5ca8a",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Raiton",
+      "actionId": 2267,
+      "id": "860ce34a-d5ea-43fc-80ca-06e20e89f585",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Katon",
+      "actionId": 2266,
+      "id": "9d1a202c-deed-4a1a-9c3c-b2a47116ba62",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Hyoton",
+      "actionId": 2268,
+      "id": "6526c47e-f834-4ef6-ba1a-4a91ea7cf45d",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Huton",
+      "actionId": 2269,
+      "id": "f90f8655-3e33-4ef2-82ff-0ce8d207b265",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Doton",
+      "actionId": 2270,
+      "id": "e210d372-6781-41ba-9a97-0148671fa1af",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Suiton",
+      "actionId": 2271,
+      "id": "56f6a62a-9f35-4516-8d48-22d94d690d1d",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Rabbit Medium (failed Ninjutsu)",
+      "actionId": 2272,
+      "id": "e7242071-81e9-4ca0-87bb-0fbe90665625",
+      "description": "Thumpity thump thump, thumpity thump thump...",
       "conditions": {
         "enemyCount": {
           "value": 3,
