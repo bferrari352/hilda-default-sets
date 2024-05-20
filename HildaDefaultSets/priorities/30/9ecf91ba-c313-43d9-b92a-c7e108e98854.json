@@ -192,7 +192,7 @@
       }
     },
     {
-      "name": "JinSuiton (TenChiJin)",
+      "name": "JinSuiton (Ten Chi Jin)",
       "actionId": 18807,
       "id": "7b644443-1d87-469f-b1bf-fed54c02cf10",
       "overrideIconType": 1,
@@ -218,7 +218,7 @@
       }
     },
     {
-      "name": "ChiRaiton (TenChiJin)",
+      "name": "ChiRaiton (Ten Chi Jin)",
       "actionId": 18806,
       "id": "2b1e5c20-f82e-4d68-bd0f-bc3eeaa5dc26",
       "overrideIconType": 1,
@@ -244,7 +244,7 @@
       }
     },
     {
-      "name": "TenShuriken (TenChiJin)",
+      "name": "TenFuma (Ten Chi Jin)",
       "actionId": 18805,
       "id": "dc185680-d747-47b5-80e0-de1e9abcc522",
       "overrideIconType": 1,
@@ -761,8 +761,8 @@
       "id": "fc586ee7-d6bb-41a0-be42-fec1f607fb9b"
     },
     {
-      "name": "Chi (Hyosho Ranyu)",
-      "actionId": 2261,
+      "name": "Ten (Hyosho Ranyu)",
+      "actionId": 2259,
       "id": "b2082013-0a3e-48af-a03d-0d36fc27c888",
       "conditions": {
         "player": {
