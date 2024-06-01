@@ -1014,6 +1014,23 @@
       }
     },
     {
+      "name": "Assassinate (pre-Suiton)",
+      "actionId": 2246,
+      "id": "8561e3c8-5be3-4682-97a4-f7246ffcbccc",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "level": {
+            "value": 45,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
       "name": "Armor Crush",
       "actionId": 3563,
       "id": "a4af7448-a02e-426a-88ba-7c8b509ae5e5",
