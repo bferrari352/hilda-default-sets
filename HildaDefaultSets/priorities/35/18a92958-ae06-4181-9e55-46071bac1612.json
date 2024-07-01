@@ -2,9 +2,9 @@
   "id": "18a92958-ae06-4181-9e55-46071bac1612",
   "name": "Single Target",
   "jobId": 35,
-  "version": "0.0.2",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-03-07 11:28:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-01 16:39:12Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",
@@ -20,6 +20,110 @@
             "value": 1000,
             "operator": "<"
           }
+        }
+      }
+    },
+    {
+      "name": "Grand Impact",
+      "actionId": 37006,
+      "id": "59f36a61-765d-4bcd-a600-6f817e19e3b7",
+      "type": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Acceleration",
+      "actionId": 7518,
+      "id": "e0d112af-819b-4f18-a875-61d8a7be4609",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 96,
+            "operator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Prefulgence",
+      "actionId": 37007,
+      "id": "94e1e56d-b0e9-4fce-aefb-0de33195fc2c",
+      "type": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Enchanted Redoublement (Swordplay)",
+      "actionId": 7529,
+      "id": "d1508bc0-b8fe-4349-8fa6-fa6b1277690b",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Enchanted Zwerchhau (Swordplay)",
+      "actionId": 7528,
+      "id": "dd3248be-7cb1-4fd6-9fc6-6899498c4055",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Enchanted Riposte (Swordplay)",
+      "actionId": 7527,
+      "id": "d90ba200-5bc4-4b47-b933-d191a89bacda",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Manafication (Swordplay Trigger)",
+      "actionId": 7521,
+      "id": "5be2b5ec-dc94-4bce-a9c7-e4c40ae95e2d",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
         }
       }
     },
@@ -123,6 +227,27 @@
           }
         }
       }
+    },
+    {
+      "name": "Embolden",
+      "actionId": 7520,
+      "id": "ac9ba852-e9dc-4503-9f79-d0efe5bb4ba8",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 92,
+            "operator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Vice of Thorns",
+      "actionId": 37005,
+      "id": "1959cc94-3365-4ecb-aaa4-428365ce9868",
+      "type": 0,
+      "conditions": {}
     },
     {
       "name": "Enchanted Zwerchhau (Pre-50)",
@@ -240,7 +365,10 @@
           "balance": {
             "parameterA": "BlackMana",
             "parameterB": "WhiteMana",
-            "operator": ">="
+            "operator": ">=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": ">="
           },
           "gauge": {
             "manaStacks": {
@@ -260,7 +388,10 @@
           "balance": {
             "parameterA": "BlackMana",
             "parameterB": "WhiteMana",
-            "operator": "<="
+            "operator": "<=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": "<="
           },
           "gauge": {
             "manaStacks": {
@@ -303,7 +434,10 @@
           "balance": {
             "parameterA": "WhiteMana",
             "parameterB": "BlackMana",
-            "operator": "<="
+            "operator": "<=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": "<="
           }
         }
       }
@@ -328,7 +462,10 @@
           "balance": {
             "parameterA": "BlackMana",
             "parameterB": "WhiteMana",
-            "operator": "<="
+            "operator": "<=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": "<="
           }
         }
       }
@@ -353,7 +490,10 @@
           "balance": {
             "parameterA": "WhiteMana",
             "parameterB": "BlackMana",
-            "operator": "<="
+            "operator": "<=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": "<="
           }
         }
       }
@@ -378,7 +518,10 @@
           "balance": {
             "parameterA": "BlackMana",
             "parameterB": "WhiteMana",
-            "operator": "<="
+            "operator": "<=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": "<="
           }
         }
       }
@@ -404,6 +547,13 @@
           ]
         }
       }
+    },
+    {
+      "name": "Jolt III",
+      "actionId": 37004,
+      "id": "a3391876-7f6f-4d45-9b58-c9503b7614e0",
+      "type": 0,
+      "conditions": {}
     },
     {
       "name": "Jolt II",

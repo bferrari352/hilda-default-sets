@@ -2,9 +2,9 @@
   "id": "c50af5f3-2995-4d04-ba59-10307b122f8c",
   "name": "Multi Target",
   "jobId": 35,
-  "version": "0.0.2",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-03-07 11:28:35Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-01 18:59:35Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",
@@ -20,6 +20,174 @@
             "value": 1000,
             "operator": "<"
           }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Grand Impact",
+      "actionId": 37006,
+      "id": "59f36a61-765d-4bcd-a600-6f817e19e3b7",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Acceleration",
+      "actionId": 7518,
+      "id": "e0d112af-819b-4f18-a875-61d8a7be4609",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 96,
+            "operator": ">="
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Prefulgence",
+      "actionId": 37007,
+      "id": "94e1e56d-b0e9-4fce-aefb-0de33195fc2c",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Embolden",
+      "actionId": 7520,
+      "id": "58c25edc-ff17-4d3f-8eaf-3a7fe530a88e",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 92,
+            "operator": ">="
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Vice of Thorns",
+      "actionId": 37005,
+      "id": "b2669c27-8b57-4cdd-9314-9a019f6f7d3f",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet Trois (Swordplay)",
+      "actionId": 37003,
+      "id": "d1508bc0-b8fe-4349-8fa6-fa6b1277690b",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet Deux (Swordplay)",
+      "actionId": 37002,
+      "id": "dd3248be-7cb1-4fd6-9fc6-6899498c4055",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet (Swordplay)",
+      "actionId": 7530,
+      "id": "d90ba200-5bc4-4b47-b933-d191a89bacda",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Manafication (Swordplay Trigger)",
+      "actionId": 7521,
+      "id": "5be2b5ec-dc94-4bce-a9c7-e4c40ae95e2d",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
         }
       }
     },
@@ -127,7 +295,10 @@
           "balance": {
             "parameterA": "BlackMana",
             "parameterB": "WhiteMana",
-            "operator": "<="
+            "operator": "<=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": "<="
           },
           "gauge": {
             "manaStacks": {
@@ -151,7 +322,10 @@
           "balance": {
             "parameterA": "BlackMana",
             "parameterB": "WhiteMana",
-            "operator": ">="
+            "operator": ">=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": ">="
           },
           "gauge": {
             "manaStacks": {
@@ -163,29 +337,26 @@
       }
     },
     {
-      "name": "Enchanted Moulinet - Follow Up",
-      "actionId": 7530,
-      "id": "051d46eb-66a5-417a-9a4f-5d51c36c7dc2",
+      "name": "Enchanted Moulinet Trois",
+      "actionId": 37003,
+      "id": "532b747b-bb60-46a3-ae21-65a9089688d7",
+      "type": 0,
       "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "blackMana": {
-              "value": 20,
-              "operator": ">="
-            },
-            "whiteMana": {
-              "value": 20,
-              "operator": ">="
-            },
-            "manaStacks": {
-              "value": 1,
-              "operator": ">="
-            }
-          }
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet Deux",
+      "actionId": 37002,
+      "id": "4b3a4eb2-49e4-416e-b433-9cf38d170dd6",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
         }
       }
     },
@@ -201,11 +372,11 @@
         "job": {
           "gauge": {
             "blackMana": {
-              "value": 60,
+              "value": 50,
               "operator": ">="
             },
             "whiteMana": {
-              "value": 60,
+              "value": 50,
               "operator": ">="
             }
           }
@@ -269,7 +440,10 @@
           "balance": {
             "parameterA": "WhiteMana",
             "parameterB": "BlackMana",
-            "operator": "<="
+            "operator": "<=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": "<="
           }
         }
       }
@@ -287,7 +461,10 @@
           "balance": {
             "parameterA": "WhiteMana",
             "parameterB": "BlackMana",
-            "operator": ">="
+            "operator": ">=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": ">="
           }
         }
       }
