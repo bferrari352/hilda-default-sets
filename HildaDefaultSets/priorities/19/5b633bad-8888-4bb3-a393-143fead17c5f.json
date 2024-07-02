@@ -2,9 +2,9 @@
   "id": "5b633bad-8888-4bb3-a393-143fead17c5f",
   "jobId": 19,
   "name": "Single Target",
-  "appVersion": "0.0.20.0",
-  "version": "0.0.5",
-  "lastUpdated": "2023-01-16 18:27:44Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-01 18:27:44Z",
   "priorities": [
     {
       "name": "Fight or Flight",
@@ -51,6 +51,41 @@
       }
     },
     {
+      "name": "Sepulchre",
+      "actionId": 36919,
+      "id": "f5f15c4a-1f47-4ff5-997d-293411e88f86",
+      "conditions": {}
+    },
+    {
+      "name": "Supplication",
+      "actionId": 36918,
+      "id": "f5f15c4a-1f47-4ff5-997d-293411e88f86",
+      "conditions": {}
+    },
+    {
+      "name": "Atonement",
+      "actionId": 16460,
+      "id": "f5f15c4a-1f47-4ff5-997d-293411e18f86",
+      "conditions": {}
+    },
+    {
+      "name": "Imperator",
+      "actionId": 36921,
+      "id": "e0bfe90a-3532-4f49-b85e-7e9abac07982",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 5000,
+            "operator": ">="
+          }
+        }
+      }
+    },
+    {
       "name": "Requiescat",
       "actionId": 7383,
       "id": "e0bfe90a-3532-4f49-b8ae-7e9abac07982",
@@ -64,6 +99,17 @@
             "value": 5000,
             "operator": ">="
           }
+        }
+      }
+    },
+    {
+      "name": "Blade of Honor",
+      "actionId": 36922,
+      "id": "a1ea47e6-b8eb-4501-add8-f252097a09a9",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
         }
       }
     },
@@ -155,12 +201,6 @@
           ]
         }
       }
-    },
-    {
-      "name": "Atonement",
-      "actionId": 16460,
-      "id": "f5f15c4a-1f47-4ff5-997d-293411e18f86",
-      "conditions": {}
     },
     {
       "name": "Royal Authority",

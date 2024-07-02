@@ -2,9 +2,9 @@
   "id": "d9653478-7d01-4feb-a66f-90166bc4eb09",
   "jobId": 19,
   "name": "Multi Target",
-  "appVersion": "0.0.20.0",
-  "version": "0.0.3",
-  "lastUpdated": "2023-01-16 18:31:35Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-01 18:27:44Z",
   "priorities": [
     {
       "name": "Fight or Flight",
@@ -67,6 +67,27 @@
       }
     },
     {
+      "name": "Imperator",
+      "actionId": 36921,
+      "id": "e0bfe90a-3532-4f49-b85e-7e9abac07982",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "mp": {
+            "value": 5000,
+            "operator": ">="
+          }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
       "name": "Requiescat",
       "actionId": 7383,
       "id": "3d845f76-32de-4f3d-8c4b-4f12ef3b1d02",
@@ -84,6 +105,21 @@
             "value": 72,
             "operator": ">="
           }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Blade of Honor",
+      "actionId": 36922,
+      "id": "a1ea47e6-b8eb-4501-add8-f252097a09a9",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
         },
         "enemyCount": {
           "value": 3,
