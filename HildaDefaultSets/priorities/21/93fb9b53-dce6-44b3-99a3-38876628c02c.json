@@ -2,9 +2,9 @@
   "id": "93fb9b53-dce6-44b3-99a3-38876628c02c",
   "jobId": 21,
   "name": "Single Target",
-  "version": "0.0.3",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "version": "7.0.0",
+  "appVersion": "7.0.0.0",
+  "lastUpdated": "2024-01-03 20:30:18Z",
   "priorities": [
     {
       "name": "Berserk",
@@ -41,6 +41,18 @@
           }
         }
       }
+    },
+    {
+      "name": "Primal Wrath",
+      "actionId": 36924,
+      "id": "efcb7842-3a4e-4581-9b1a-48df0eb69e3d",
+      "conditions": {}
+    },
+    {
+      "name": "Primal Ruination",
+      "actionId": 36925,
+      "id": "efcb7842-3a4e-4581-9b1a-48df0eb6933d",
+      "conditions": {}
     },
     {
       "name": "Onslaught",
@@ -100,9 +112,9 @@
       }
     },
     {
-      "name": "Upheaval",
-      "actionId": 7387,
-      "id": "efcb7842-3f4e-4581-9b1a-48df0eb69e3d",
+      "name": "Inner Release",
+      "actionId": 7389,
+      "id": "fd93acab-21b3-43da-bb72-4bf87329ec68",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -111,21 +123,13 @@
       }
     },
     {
-      "name": "Inner Release",
-      "actionId": 7389,
-      "id": "fd93acab-21b3-43da-bb72-4bf87329ec68",
+      "name": "Upheaval",
+      "actionId": 7387,
+      "id": "efcb7842-3f4e-4581-9b1a-48df0eb69e3d",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
-        },
-        "job": {
-          "gauge": {
-            "beastGauge": {
-              "value": 50,
-              "operator": ">="
-            }
-          }
         }
       }
     },
