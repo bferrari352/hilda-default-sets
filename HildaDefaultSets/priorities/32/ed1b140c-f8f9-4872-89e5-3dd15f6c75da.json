@@ -2,9 +2,9 @@
   "id": "ed1b140c-f8f9-4872-89e5-3dd15f6c75da",
   "jobId": 32,
   "name": "Single Target",
-  "version": "0.0.2",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "version": "7.0.0",
+  "appVersion": "7.0.0.0",
+  "lastUpdated": "2024-07-03 20:30:18Z",
   "priorities": [
     {
       "name": "Blood Weapon",
@@ -60,6 +60,46 @@
       }
     },
     {
+      "name": "Living Shadow",
+      "actionId": 16472,
+      "id": "9a62a31f-67c3-4943-bda5-b0b53610c35e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Torcleaver",
+      "actionId": 36930,
+      "id": "f75a47d7-b62b-4b25-b6eb-264630dd7b68",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Comeuppance",
+      "actionId": 36929,
+      "id": "f75a47d7-b62b-4b25-b6eb-264630dd7b66",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Scarlet Delirium",
+      "actionId": 36928,
+      "id": "f75a47d7-b62b-4b25-b6eb-264630dd7b66",
+      "conditions": {
+      }
+    },
+    {
       "name": "Delirium",
       "actionId": 7390,
       "id": "6d3b9794-288d-47da-be3f-c011544b7811",
@@ -71,22 +111,10 @@
       }
     },
     {
-      "name": "Living Shadow",
-      "actionId": 16472,
-      "id": "9a62a31f-67c3-4943-bda5-b0b53610c35e",
+      "name": "Disesteem",
+      "actionId": 36932,
+      "id": "f75a47d7-b62b-4b25-b6eb-264630dd7b56",
       "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "job": {
-          "gauge": {
-            "blood": {
-              "value": 50,
-              "operator": ">="
-            }
-          }
-        }
       }
     },
     {
