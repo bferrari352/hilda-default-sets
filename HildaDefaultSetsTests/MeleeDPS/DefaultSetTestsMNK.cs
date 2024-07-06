@@ -17,8 +17,8 @@ public class DefaultSetTestsMNK : DefaultSetTestBase
         var sets = GetDefaultSets(JobData.Monk)?.ToList();
         if (sets == null) return;
         
-        SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
-        MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
+        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
+        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
     
     [Theory]

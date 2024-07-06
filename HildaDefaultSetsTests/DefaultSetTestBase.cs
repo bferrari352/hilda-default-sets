@@ -6,7 +6,10 @@ using Hilda;
 using Hilda.Conductors;
 using Hilda.Conductors.JobDefinitions;
 using Hilda.Constants;
+using Hilda.Displays.Configuration;
+using Hilda.Displays.InCombat;
 using Hilda.Helpers;
+using Hilda.Managers;
 using Hilda.Models;
 using Hilda.Models.RequirementTypes;
 using HildaTestUtils;
@@ -23,16 +26,16 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
     
     protected readonly ITestOutputHelper Output;
 
-    protected Mock<IService> MockService;
+    protected readonly Mock<IService> MockService;
     
     protected int QueueSize = 10;
     protected ICombatCamera<JobRequirements>? CombatCamera;
     
     protected JobGauge JobGauge = null!;
     protected IJobDefinition<JobRequirements, JobRequirements> JobDefinition;
+    protected readonly SetConfig SetConfig;
     
-    
-    internal SetConductor<JobRequirements>? SetConductor;
+    internal SetConductor<JobRequirements> SetConductor;
     
     protected IPrioritySet<JobRequirements>? SingleTarget;
     protected IPrioritySet<JobRequirements>? MultiTarget;
@@ -44,18 +47,20 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
 
         MockService = MockLibrary.MockService();
         JobDefinition = new JobDefinition<JobRequirements, JobGauge>();
+        SetConfig = new SetConfig();
     }
 
     protected void SetupSetConductor(IPrioritySet<JobRequirements> set, ICombatCamera<JobRequirements>? combatCamera = null)
     {
         CombatCamera = combatCamera ?? new CombatCamera<JobRequirements>(MockService.Object, JobDefinition);
-        SetConductor = new SetConductor<JobRequirements>(MockService.Object, CombatCamera, set, JobDefinition, QueueSize);
+        var window = new PrioritySetWindow(MockService.Object, new Guid(), "Window");
+        SetConductor = new SetConductor<JobRequirements>(MockService.Object, window, CombatCamera, set, JobDefinition, SetConfig);
     }
 
-    protected IEnumerable<IPrioritySet<JobRequirements>>? GetDefaultSets(JobData job)
+    protected IEnumerable<Set> GetDefaultSets(JobData job)
     {
         var dataHelper = new DataHelper(MockService.Object);
-        return dataHelper.GetDefaultPrioritySets(job);
+        return dataHelper.GetAllDefaultSets().FindAll(x => x.JobId == job.Id);
     }
 
     protected void SingleTarget_BasicRotation_ReturnsExpectedValues(int level, bool isBoss, ActionIDs[] expectedActions,
@@ -68,7 +73,7 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(isBoss);
 
         // Get Priorities
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor.Update(SetConfig);
         var priorityIds = priorities!.GetActionIds().ToList();
 
         // Validate

@@ -19,8 +19,8 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         var sets = GetDefaultSets(JobData.Machinist)?.ToList();
         if (sets == null) return;
 
-        SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
-        MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
+        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
+        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
 
     [Theory]
@@ -159,7 +159,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         SetupSetConductor(SingleTarget!);
         MockService!.SetupInitial(level);
 
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
         var priorityIds = priorities!.GetActionIds();
 
         priorityIds.Should().Equal(expectedActions.GetActionIds());
@@ -183,7 +183,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         SetupSetConductor(SingleTarget!);
         MockService.SetupInitial(level);
 
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
         var priorityIds = priorities!.GetActionIds();
 
         // 5 heat blasts here and not other rotations because the other rotations have a global cooldown for the action before hypercharge causing it to not make 5 into the overheat window

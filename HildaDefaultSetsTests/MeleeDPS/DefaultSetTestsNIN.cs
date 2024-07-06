@@ -17,14 +17,13 @@ public class DefaultSetTestsNIN : DefaultSetTestBase
         var sets = GetDefaultSets(JobData.Ninja)?.ToList();
         if (sets == null) return;
         
-        SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
-        MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
+        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
+        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
     
     [Theory]
     [InlineData(90, true, new[]
     {
-        ActionIDs.Huraijin, ActionIDs.Mug, // 45
         ActionIDs.Ten, ActionIDs.Chi, ActionIDs.Jin,
         ActionIDs.Suiton, ActionIDs.Kassatsu,
         ActionIDs.SpinningEdge, ActionIDs.Bunshin, // 45+5 -> 0
@@ -47,7 +46,6 @@ public class DefaultSetTestsNIN : DefaultSetTestBase
     })]
     [InlineData(80, true, new[]
     {
-        ActionIDs.Huraijin, ActionIDs.Mug,
         ActionIDs.Ten, ActionIDs.Chi, ActionIDs.Jin,
         ActionIDs.Suiton, ActionIDs.Kassatsu,
         ActionIDs.SpinningEdge, ActionIDs.Bunshin,
@@ -69,7 +67,6 @@ public class DefaultSetTestsNIN : DefaultSetTestBase
     })]
     [InlineData(70, true, new[]
     {
-        ActionIDs.Huraijin, ActionIDs.Mug,
         ActionIDs.Ten, ActionIDs.Chi, ActionIDs.Jin,
         ActionIDs.Suiton, ActionIDs.Kassatsu,
         ActionIDs.SpinningEdge, ActionIDs.Bavacakra,
@@ -92,7 +89,6 @@ public class DefaultSetTestsNIN : DefaultSetTestBase
     })]
     [InlineData(60, true, new[]
     {
-        ActionIDs.Huraijin, ActionIDs.Mug,
         ActionIDs.Ten, ActionIDs.Chi, ActionIDs.Jin,
         ActionIDs.Suiton, ActionIDs.Kassatsu,
         ActionIDs.SpinningEdge,

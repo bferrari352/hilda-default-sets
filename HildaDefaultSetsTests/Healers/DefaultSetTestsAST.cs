@@ -19,8 +19,8 @@ public class DefaultSetTestsAST : DefaultSetTestBase
         var sets = GetDefaultSets(JobData.Astrologian)?.ToList();
         if (sets == null) return;
         
-        SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
-        MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
+        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
+        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
     
     [Theory]

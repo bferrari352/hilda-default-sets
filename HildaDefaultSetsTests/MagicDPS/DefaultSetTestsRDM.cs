@@ -21,8 +21,8 @@ public class DefaultSetTestsRDM : DefaultSetTestBase
         var sets = GetDefaultSets(JobData.RedMage)?.ToList();
         if (sets == null) return;
         
-        SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
-        MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
+        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
+        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
 
     [Theory]
@@ -72,7 +72,7 @@ public class DefaultSetTestsRDM : DefaultSetTestBase
         SetupSetConductor(SingleTarget!);
         MockService.SetupInitial(level);
 
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
         var priorityIds = priorities!.GetActionIds();
         
         priorityIds.Should().Equal(expectedActions.GetActionIds());

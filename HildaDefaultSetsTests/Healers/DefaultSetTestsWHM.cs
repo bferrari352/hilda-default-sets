@@ -20,8 +20,8 @@ public class DefaultSetTestsWHM : DefaultSetTestBase
         var sets = GetDefaultSets(JobData.WhiteMage)?.ToList();
         if (sets == null) return;
         
-        SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
-        MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
+        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
+        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
 
     [Theory]
@@ -55,7 +55,7 @@ public class DefaultSetTestsWHM : DefaultSetTestBase
         MockService.SetupInitial();
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(true);
         
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
         var priorityIds = priorities!.GetActionIds();
         
         priorityIds.Should().Equal(expectedActions.GetActionIds());

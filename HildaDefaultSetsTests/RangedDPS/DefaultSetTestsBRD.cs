@@ -20,8 +20,8 @@ public class DefaultSetTestsBRD : DefaultSetTestBase
         var sets = GetDefaultSets(JobData.Bard)?.ToList();
         if (sets == null) return;
         
-        SingleTarget = sets.FirstOrDefault(s => s.Name!.Equals("Single Target"));
-        MultiTarget = sets.FirstOrDefault(s => s.Name!.Equals("Multi Target"));
+        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
+        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
     
     [Theory]
@@ -116,7 +116,7 @@ public class DefaultSetTestsBRD : DefaultSetTestBase
         MockService.SetupInitial();
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(false);
 
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
         
         Assert.Equal(priorities![1].ActionId, (int) ActionIDs.PitchPerfect);
     }
@@ -136,7 +136,7 @@ public class DefaultSetTestsBRD : DefaultSetTestBase
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(false);
         MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.TheWanderersMinuet)).Returns(60);
 
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
         
         Assert.Equal(priorities![1].ActionId, (int) ActionIDs.MagesBallad);
     }
@@ -158,7 +158,7 @@ public class DefaultSetTestsBRD : DefaultSetTestBase
         MockService.Setup(a => a.ActionHelper.GetActionRecast((uint) ActionIDs.MagesBallad)).Returns(12);
 
         
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
 
         Assert.Equal(priorities![1].ActionId, (int) ActionIDs.ArmysPaeon);
     }
@@ -181,7 +181,7 @@ public class DefaultSetTestsBRD : DefaultSetTestBase
         MockService.SetupInitial(level);
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(false);
         
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
 
         Assert.True(priorities![0].ActionId == (int) ActionIDs.ApexArrow == shouldApex);
         Assert.True(priorities[2].ActionId == (int) ActionIDs.BlastArrow == shouldBlast);
@@ -241,7 +241,7 @@ public class DefaultSetTestsBRD : DefaultSetTestBase
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(true);
         MockService.Setup(a => a.TargetHelper.GetCurrentStatuses()).Returns(statuses);
         
-        var priorities = SetConductor!.DeterminePriorities();
+        var priorities = SetConductor!.Update(SetConfig);
 
         var initialActionId = priorities![0].ActionId;
         var secondaryAction = priorities[2].ActionId;
