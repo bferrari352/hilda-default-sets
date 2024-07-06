@@ -2,9 +2,9 @@
   "id": "442f969b-e132-454a-bfef-4fc6779ece30",
   "jobId": 37,
   "name": "Single Target",
-  "version": "0.0.2",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "version": "7.0.0",
+  "appVersion": "7.0.0.0",
+  "lastUpdated": "2024-07-06 20:30:18Z",
   "priorities": [
     {
       "name": "No Mercy",
@@ -51,6 +51,35 @@
       }
     },
     {
+      "name": "Lionheart",
+      "actionId": 36939,
+      "id": "6fbc213d-ce96-4535-9b46-f57dca6b1a21",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Noble Blood",
+      "actionId": 36938,
+      "id": "6fbc213d-ce96-4535-9b46-f57aca6b8a21",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Reign of Beasts",
+      "actionId": 36937,
+      "id": "6fbc213d-ce96-4535-9b46-f57dca4b8a21",
+      "conditions": {
+      }
+    },
+    {
       "name": "Jugular Rip",
       "actionId": 16156,
       "id": "6fbc213d-ce96-4535-9b46-f57dca6b8a21",
@@ -69,10 +98,6 @@
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
-        },
-        "combo": {
-          "value": 0.0,
-          "operator": "="
         },
         "job": {
           "gauge": {
@@ -104,6 +129,13 @@
           "value": 0.5,
           "operator": ">"
         }
+      }
+    },
+    {
+      "name": "Sonic Break",
+      "actionId": 16153,
+      "id": "d2489135-f1a8-46ac-8770-00d2f58e99e3",
+      "conditions": {
       }
     },
     {
@@ -144,32 +176,6 @@
               "operator": ">="
             }
           }
-        }
-      }
-    },
-    {
-      "name": "Sonic Break",
-      "actionId": 16153,
-      "id": "d2489135-f1a8-46ac-8770-00d2f58e99e3",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "ammoComboStep": {
-              "value": 1,
-              "operator": "="
-            }
-          }
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 1831,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
         }
       }
     },
