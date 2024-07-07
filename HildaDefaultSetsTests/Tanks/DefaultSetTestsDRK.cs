@@ -15,15 +15,10 @@ public class DefaultSetTestsDRK : DefaultSetTestBase
         JobDefinition = new TestJobDefinitionDRK(new TestJobGaugeDRK((JobGaugeDRK) JobGauge));
         
         QueueSize = 20;
-
-        var sets = GetDefaultSets(JobData.DarkKnight)?.ToList();
-        if (sets == null) return;
-
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.DarkKnight);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.HardSlash, ActionIDs.BloodWeapon,

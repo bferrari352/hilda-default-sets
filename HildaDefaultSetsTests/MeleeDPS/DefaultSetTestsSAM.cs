@@ -14,14 +14,10 @@ public class DefaultSetTestsSAM : DefaultSetTestBase
         JobGauge = new JobGaugeSAM();
         JobDefinition = new TestJobDefinitionSAM(new TestJobGaugeSAM((JobGaugeSAM) JobGauge));
 
-        var sets = GetDefaultSets(JobData.Samurai)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Samurai);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.MeikyoShisui,

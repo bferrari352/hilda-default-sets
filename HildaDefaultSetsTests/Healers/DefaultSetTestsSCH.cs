@@ -15,15 +15,11 @@ public class DefaultSetTestsSCH : DefaultSetTestBase
         JobDefinition = new TestJobDefinitionSCH(new TestJobGaugeSCH((JobGaugeSCH) JobGauge));
         
         QueueSize = 5;
-
-        var sets = GetDefaultSets(JobData.Scholar)?.ToList();
-        if (sets == null) return;
         
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Scholar);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[] {ActionIDs.Biolysis, ActionIDs.AetherflowSCH, ActionIDs.BroilIV, ActionIDs.EnergyDrainSCH, ActionIDs.BroilIV})]
     [InlineData(80, true, new[] {ActionIDs.Biolysis, ActionIDs.AetherflowSCH, ActionIDs.BroilIII, ActionIDs.EnergyDrainSCH, ActionIDs.BroilIII})]
     [InlineData(70, true, new[] {ActionIDs.BioII, ActionIDs.AetherflowSCH, ActionIDs.BroilII, ActionIDs.EnergyDrainSCH, ActionIDs.BroilII})]

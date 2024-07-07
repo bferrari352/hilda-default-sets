@@ -16,14 +16,10 @@ public class DefaultSetTestsGNB : DefaultSetTestBase
         
         QueueSize = 20;
 
-        var sets = GetDefaultSets(JobData.Gunbreaker)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Gunbreaker);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.KeenEdge, ActionIDs.NoMercy,

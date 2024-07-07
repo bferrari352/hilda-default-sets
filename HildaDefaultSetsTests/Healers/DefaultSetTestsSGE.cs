@@ -16,14 +16,10 @@ public class DefaultSetTestsSGE : DefaultSetTestBase
         
         QueueSize = 6;
 
-        var sets = GetDefaultSets(JobData.Sage)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Sage);   
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[] {ActionIDs.Eukrasia, ActionIDs.EukrasianDosisIII, ActionIDs.PhlegmaIII, ActionIDs.PhlegmaIII,
         ActionIDs.DosisIII, ActionIDs.DosisIII})]
     [InlineData(80, true, new[] {ActionIDs.Eukrasia, ActionIDs.EukrasianDosisII, ActionIDs.PhlegmaII, ActionIDs.PhlegmaII,

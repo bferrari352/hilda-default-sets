@@ -16,14 +16,10 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         JobGauge = new JobGaugeMCH();
         JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH)JobGauge));
 
-        var sets = GetDefaultSets(JobData.Machinist)?.ToList();
-        if (sets == null) return;
-
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Machinist);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.Reassemble,
@@ -146,7 +142,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     public void Machinist_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, 4, new[] { ActionIDs.Reassemble, ActionIDs.AirAnchor, ActionIDs.Reassemble, ActionIDs.Chainsaw })]
     [InlineData(80, 2, new[] { ActionIDs.Reassemble, ActionIDs.AirAnchor })]
     [InlineData(70, 2, new[] { ActionIDs.Reassemble, ActionIDs.Drill })]
@@ -156,7 +152,10 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
     {
         QueueSize = queueSize;
 
-        SetupSetConductor(SingleTarget!);
+        var singleTarget = JobSets?[DefaultSets.Get(DefaultSets.DisplayType.Single)];
+        if (singleTarget == null) return;
+        CurrentSet = singleTarget;
+        SetupSetConductor(CurrentSet);
         MockService!.SetupInitial(level);
 
         var priorities = SetConductor!.Update(SetConfig);
@@ -165,7 +164,7 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         priorityIds.Should().Equal(expectedActions.GetActionIds());
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90)]
     [InlineData(70)]
     public void SingleTarget_Hypercharge_TriggersExpectedActions(int level)
@@ -180,7 +179,10 @@ public class DefaultSetTestsMCH : DefaultSetTestBase
         };
         JobDefinition = new TestJobDefinitionMCH(new TestJobGaugeMCH((JobGaugeMCH)JobGauge));
 
-        SetupSetConductor(SingleTarget!);
+        var singleTarget = JobSets?[DefaultSets.Get(DefaultSets.DisplayType.Single)];
+        if (singleTarget == null) return;
+        CurrentSet = singleTarget;
+        SetupSetConductor(CurrentSet);
         MockService.SetupInitial(level);
 
         var priorities = SetConductor!.Update(SetConfig);

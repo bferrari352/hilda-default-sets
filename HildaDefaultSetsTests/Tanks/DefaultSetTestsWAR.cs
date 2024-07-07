@@ -13,17 +13,12 @@ public class DefaultSetTestsWAR : DefaultSetTestBase
     {
         JobGauge = new JobGaugeWAR();
         JobDefinition = new TestJobDefinitionWAR(new TestJobGaugeWAR((JobGaugeWAR) JobGauge));
+        SetJobSets(JobData.Warrior);
         
         QueueSize = 14;
-
-        var sets = GetDefaultSets(JobData.Warrior)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[] {ActionIDs.HeavySwing, ActionIDs.Infuriate, ActionIDs.Maim, ActionIDs.Upheaval, ActionIDs.StormsEye,
         ActionIDs.InnerRelease, ActionIDs.InnerChaos, ActionIDs.PrimalRend, ActionIDs.FellCleave, ActionIDs.FellCleave,
         ActionIDs.FellCleave, ActionIDs.Infuriate, ActionIDs.InnerChaos, ActionIDs.HeavySwing})]

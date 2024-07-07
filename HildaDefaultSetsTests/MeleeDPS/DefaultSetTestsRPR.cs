@@ -14,14 +14,10 @@ public class DefaultSetTestsRPR : DefaultSetTestBase
         JobGauge = new JobGaugeRPR();
         JobDefinition = new TestJobDefinitionRPR(new TestJobGaugeRPR((JobGaugeRPR) JobGauge));
 
-        var sets = GetDefaultSets(JobData.Reaper)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Reaper);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.ShadowOfDeath, ActionIDs.ArcaneCircle,

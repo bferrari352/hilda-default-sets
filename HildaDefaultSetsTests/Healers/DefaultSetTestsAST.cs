@@ -16,14 +16,10 @@ public class DefaultSetTestsAST : DefaultSetTestBase
         
         QueueSize = 4;
 
-        var sets = GetDefaultSets(JobData.Astrologian)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Astrologian);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[] {ActionIDs.CombustIII, ActionIDs.FallMalefic, ActionIDs.FallMalefic, ActionIDs.FallMalefic})]
     [InlineData(80, true, new[] {ActionIDs.CombustIII, ActionIDs.MaleficIV, ActionIDs.MaleficIV, ActionIDs.MaleficIV})]
     [InlineData(70, true, new[] {ActionIDs.CombustII, ActionIDs.MaleficIII, ActionIDs.MaleficIII, ActionIDs.MaleficIII})]

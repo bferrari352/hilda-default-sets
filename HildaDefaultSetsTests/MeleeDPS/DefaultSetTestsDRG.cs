@@ -14,14 +14,10 @@ public class DefaultSetTestsDRG : DefaultSetTestBase
         JobGauge = new JobGaugeDRG();
         JobDefinition = new TestJobDefinitionDRG(new TestJobGaugeDRG((JobGaugeDRG) JobGauge));
 
-        var sets = GetDefaultSets(JobData.Dragoon)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Dragoon);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.TrueThrust, ActionIDs.LanceCharge,

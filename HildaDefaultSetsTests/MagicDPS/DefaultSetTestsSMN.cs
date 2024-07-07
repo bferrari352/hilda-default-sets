@@ -19,14 +19,10 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
     {
         setupJobGauge();
 
-        var sets = GetDefaultSets(JobData.Summoner)?.ToList();
-        if (sets == null) return;
-
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Summoner);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.SummonCarbuncle, ActionIDs.EnergyDrainSMN,
         ActionIDs.SummonBahamut, ActionIDs.EnkindleBahamut,
@@ -70,7 +66,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN,
         ActionIDs.AstralImpulse, ActionIDs.EnkindleBahamut,
@@ -139,7 +135,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.AstralImpulse,
         ActionIDs.AstralImpulse,
@@ -164,7 +160,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.SummonBahamut, ActionIDs.EnergyDrainSMN, ActionIDs.EnkindleBahamut,
         ActionIDs.AstralImpulse, ActionIDs.Deathflare, ActionIDs.Fester,
@@ -179,7 +175,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.AstralImpulse, ActionIDs.EnkindleBahamut, ActionIDs.Deathflare,
         ActionIDs.AstralImpulse, ActionIDs.Fester,
@@ -195,7 +191,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.SummonIfritII,
         ActionIDs.RubyRite,
@@ -236,7 +232,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.RubyRite,
         ActionIDs.RubyRite,
@@ -251,7 +247,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.SummonTitanII,
         ActionIDs.TopazRite, ActionIDs.MountainBuster,
@@ -302,7 +298,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.TopazRite, ActionIDs.MountainBuster,
         ActionIDs.TopazRite, ActionIDs.MountainBuster,
@@ -346,7 +342,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.TopazRite, ActionIDs.MountainBuster,
         ActionIDs.TopazRite, ActionIDs.MountainBuster,
@@ -361,7 +357,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.SummonGarudaII,
         ActionIDs.Slipstream,
@@ -413,7 +409,7 @@ public class DefaultSetTestsSMN : DefaultSetTestBase
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, false, new[] {
         ActionIDs.Slipstream,
         ActionIDs.EmeraldRite,

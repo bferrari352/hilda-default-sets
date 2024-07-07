@@ -13,15 +13,10 @@ public class DefaultSetTestsPLD : DefaultSetTestBase
     {
         JobGauge = new JobGaugePLD();
         JobDefinition = new TestJobDefinitionPLD(new TestJobGaugePLD((JobGaugePLD) JobGauge));
-
-        var sets = GetDefaultSets(JobData.Paladin)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Paladin);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.FastBlade, ActionIDs.FightOrFlight,

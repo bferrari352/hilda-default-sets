@@ -7,6 +7,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <UseAppHost>false</UseAppHost>
+        <Configurations>Debug;Release;Local</Configurations>
+        <Platforms>x64;AnyCPU</Platforms>
     </PropertyGroup>
 
     <ItemGroup>

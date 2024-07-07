@@ -11,12 +11,17 @@
         <SignAssembly>true</SignAssembly>
 
         <AssemblyOriginatorKeyFile>InternalAssemblies.snk</AssemblyOriginatorKeyFile>
+
+        <Configurations>Debug;Release</Configurations>
+
+        <Platforms>x64</Platforms>
     </PropertyGroup>
 
     <PropertyGroup>
         <DalamudLibPath>$(DALAMUD_DEV)</DalamudLibPath>
         <DefaultSetsPath>$(HILDA_DEFAULT_SETS)</DefaultSetsPath>
-        <TestUtilsPath>$(HILDA_TEST_UTILS)</TestUtilsPath>
+        <TestUtilsPath>$(HILDA_BUILD_LOCAL)/HildaTestUtils/</TestUtilsPath>
+        <HildaPath>$(HILDA_BUILD_LOCAL)</HildaPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -27,8 +32,7 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <PlatformTarget>x64</PlatformTarget>
     </PropertyGroup>
-
-
+    
     <ItemGroup>
         <PackageReference Include="FluentAssertions" Version="6.12.0" />
         <PackageReference Include="Lumina" Version="4.1.0" />
@@ -51,18 +55,15 @@
         <Reference Include="Dalamud, Culture=neutral, PublicKeyToken=null">
             <HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
         </Reference>
-        <Reference Include="FFXIVClientStructs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Reference Include="FFXIVClientStructs, Culture=neutral, PublicKeyToken=null">
             <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
         </Reference>
         <Reference Include="HildaTestUtils, Culture=neutral, PublicKeyToken=5503f199c805f859">
           <HintPath>$(TestUtilsPath)\HildaTestUtils.dll</HintPath>
         </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Reference Include="Hilda, Culture=neutral, PublicKeyToken=null">
-        <HintPath>$(HILDA_BUILD)\Hilda.dll</HintPath>
-      </Reference>
+        <Reference Include="Hilda, Culture=neutral, PublicKeyToken=null">
+            <HintPath>$(HILDA_BUILD_LOCAL)\Hilda.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
     <Target Name="CopySetPriorities" AfterTargets="Build">

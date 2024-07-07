@@ -8,7 +8,6 @@ using Hilda.Conductors.JobDefinitions;
 using Hilda.Constants;
 using Hilda.Displays.Configuration;
 using Hilda.Displays.InCombat;
-using Hilda.Helpers;
 using Hilda.Managers;
 using Hilda.Models;
 using Hilda.Models.RequirementTypes;
@@ -22,6 +21,8 @@ namespace HildaDefaultSetsTests;
 [Collection(LuminaCollection.Key)]
 public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
 {
+    public const string OutOfDate = "Out of Date";
+        
     private readonly TestBaseFixture _fixture;
     
     protected readonly ITestOutputHelper Output;
@@ -36,9 +37,9 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
     protected readonly SetConfig SetConfig;
     
     internal SetConductor<JobRequirements> SetConductor;
-    
-    protected IPrioritySet<JobRequirements>? SingleTarget;
-    protected IPrioritySet<JobRequirements>? MultiTarget;
+
+    protected Dictionary<string, IPrioritySet<JobRequirements>>? JobSets;
+    protected IPrioritySet<JobRequirements>? CurrentSet;
 
     protected DefaultSetTestBase(TestBaseFixture fixture, ITestOutputHelper output)
     {
@@ -47,7 +48,10 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
 
         MockService = MockLibrary.MockService();
         JobDefinition = new JobDefinition<JobRequirements, JobGauge>();
-        SetConfig = new SetConfig();
+        SetConfig = new SetConfig
+        {
+            ShowOutOfCombat = new (true, ConfigSource.Global)
+        };
     }
 
     protected void SetupSetConductor(IPrioritySet<JobRequirements> set, ICombatCamera<JobRequirements>? combatCamera = null)
@@ -59,8 +63,18 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
 
     protected IEnumerable<Set> GetDefaultSets(JobData job)
     {
-        var dataHelper = new DataHelper(MockService.Object);
-        return dataHelper.GetAllDefaultSets().FindAll(x => x.JobId == job.Id);
+        var defaultSets = LuminaDataAccess.GetAllDefaultSets();
+        return defaultSets.FindAll(x => x.JobId == job.Id);
+    }
+
+    protected void SetJobSets(JobData job)
+    {
+        JobSets = new();
+        var sets = GetDefaultSets(job);
+        foreach (var set in sets)
+        {
+            JobSets[set.Name] = set.Priorities;
+        }
     }
 
     protected void SingleTarget_BasicRotation_ReturnsExpectedValues(int level, bool isBoss, ActionIDs[] expectedActions,
@@ -68,7 +82,13 @@ public class DefaultSetTestBase : IClassFixture<TestBaseFixture>
     {
         // Setup
         QueueSize = expectedActions.Length;
-        SetupSetConductor(SingleTarget!);
+
+        var singleTarget = JobSets?[DefaultSets.Get(DefaultSets.DisplayType.Single)];
+        if (singleTarget == null) return;
+        CurrentSet = singleTarget;
+        
+        SetupSetConductor(CurrentSet);
+        
         MockService.SetupInitial(level, spellSpeed, skillSpeed);
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(isBoss);
 

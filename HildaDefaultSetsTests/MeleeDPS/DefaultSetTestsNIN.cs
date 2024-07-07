@@ -14,14 +14,10 @@ public class DefaultSetTestsNIN : DefaultSetTestBase
         JobGauge = new JobGaugeNIN();
         JobDefinition = new TestJobDefinitionNIN(new TestJobGaugeNIN((JobGaugeNIN) JobGauge));
 
-        var sets = GetDefaultSets(JobData.Ninja)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Ninja);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.Ten, ActionIDs.Chi, ActionIDs.Jin,

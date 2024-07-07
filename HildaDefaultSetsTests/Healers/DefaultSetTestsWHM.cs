@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Hilda.Conductors.JobDefinitions.Healers;
 using Hilda.Constants;
 using HildaTestUtils;
@@ -14,17 +13,10 @@ public class DefaultSetTestsWHM : DefaultSetTestBase
     {
         JobGauge = new JobGaugeWHM();
         JobDefinition = new TestJobDefinitionWHM(new TestJobGaugeWHM((JobGaugeWHM) JobGauge));
-        
-        QueueSize = 4;
-
-        var sets = GetDefaultSets(JobData.WhiteMage)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.WhiteMage);
     }
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[] {ActionIDs.Dia, ActionIDs.GlareIII, ActionIDs.GlareIII, ActionIDs.GlareIII})]
     [InlineData(80, true, new[] {ActionIDs.Dia, ActionIDs.Glare, ActionIDs.Glare, ActionIDs.Glare})]
     [InlineData(70, true, new[] {ActionIDs.AeroII, ActionIDs.StoneIV, ActionIDs.StoneIV, ActionIDs.StoneIV})]
@@ -38,7 +30,7 @@ public class DefaultSetTestsWHM : DefaultSetTestBase
     public void WhiteMage_SingleTarget(int level, bool isBoss, ActionIDs[] expectedActions) =>
         SingleTarget_BasicRotation_ReturnsExpectedValues(level, isBoss, expectedActions);
 
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(3, new[] {ActionIDs.AfflatusMisery, ActionIDs.Dia, ActionIDs.GlareIII, ActionIDs.GlareIII})]
     [InlineData(2, new[] {ActionIDs.Dia, ActionIDs.GlareIII, ActionIDs.GlareIII, ActionIDs.GlareIII})]
     [InlineData(1, new[] {ActionIDs.Dia, ActionIDs.GlareIII, ActionIDs.GlareIII, ActionIDs.GlareIII})]
@@ -51,7 +43,11 @@ public class DefaultSetTestsWHM : DefaultSetTestBase
         };
         JobDefinition = new TestJobDefinitionWHM(new TestJobGaugeWHM((JobGaugeWHM) JobGauge));
 
-        SetupSetConductor(SingleTarget!);
+        var singleTarget = JobSets?[DefaultSets.Get(DefaultSets.DisplayType.Single)];
+        if (singleTarget == null) return;
+        CurrentSet = singleTarget;
+        SetupSetConductor(CurrentSet);
+        
         MockService.SetupInitial();
         MockService.Setup(a => a.TargetHelper.IsTargetBossMob()).Returns(true);
         

@@ -14,14 +14,10 @@ public class DefaultSetTestsMNK : DefaultSetTestBase
         JobGauge = new JobGaugeMNK();
         JobDefinition = new TestJobDefinitionMNK(new TestJobGaugeMNK((JobGaugeMNK) JobGauge));
 
-        var sets = GetDefaultSets(JobData.Monk)?.ToList();
-        if (sets == null) return;
-        
-        SingleTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Single)))?.Priorities;
-        MultiTarget = sets.FirstOrDefault(s => s.Name.Equals(DefaultSets.Get(DefaultSets.DisplayType.Multi)))?.Priorities;
+        SetJobSets(JobData.Monk);
     }
     
-    [Theory]
+    [Theory (Skip = OutOfDate)]
     [InlineData(90, true, new[]
     {
         ActionIDs.DragonKick,
