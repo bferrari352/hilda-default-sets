@@ -6,6 +6,7 @@
         <RootNamespace>hilda_default_sets</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <UseAppHost>false</UseAppHost>
     </PropertyGroup>
 
     <ItemGroup>

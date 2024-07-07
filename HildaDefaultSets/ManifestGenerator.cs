@@ -109,11 +109,12 @@ internal static class ManifestGenerator
         }
 
         var id = deserialized["id"];
+        var name = deserialized["name"];
         var version = deserialized["version"];
         var appVersion = deserialized["appVersion"];
         var lastUpdated = deserialized["lastUpdated"];
 
-        if (id == null || version == null || appVersion == null || lastUpdated == null)
+        if (id == null || name == null || version == null || appVersion == null || lastUpdated == null)
         {
             throw new Exception("Data is null");
         }
@@ -121,6 +122,7 @@ internal static class ManifestGenerator
         return new SetManifest
         {
             Id = id.ToString(),
+            Name = name.ToString(),
             AppVersion = appVersion.ToString(),
             Version = version.ToString(),
             LastUpdated = lastUpdated.ToString(),
@@ -184,6 +186,7 @@ public class DefaultManifest
 public class SetManifest
 {
     public string Id { get; set; } = "";
+    public string Name { get; set; } = "";
     public string Md5 { get; set; } = "";
     public string LastUpdated { get; set; } = "";
     public string Version { get; set; } = "";
