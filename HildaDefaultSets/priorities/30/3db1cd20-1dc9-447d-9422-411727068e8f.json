@@ -1,0 +1,51 @@
+{
+    "id": "3db1cd20-1dc9-447d-9422-411727068e8f",
+    "jobId": 30,
+    "name": "Ninjutsu",
+    "version": "7.0.0",
+    "appVersion": "0.0.20.0",
+    "lastUpdated": "2024-07-07 10:07:00Z",
+    "priorities": [
+        {
+          "name": "Fuma Shuriken",
+          "actionId": 2265,
+          "id": "f73e81b8-48c5-4c4e-a52b-5d6eb9ce0f55"
+        },
+        {
+          "name": "Raiton",
+          "actionId": 2267,
+          "id": "67920b54-9c0a-4e8e-8608-7d4629931310"
+        },
+        {
+          "name": "Katon",
+          "actionId": 2266,
+          "id": "39bcb0dc-9d44-4f23-b714-44b54c7201e7"
+        },
+        {
+          "name": "Hyoton",
+          "actionId": 2268,
+          "id": "f11d0c8a-3491-479d-af70-0e87cf43bae8"
+        },
+        {
+          "name": "Huton",
+          "actionId": 2269,
+          "id": "b3f69f57-32ec-42a6-ae80-dcf2ebe0a7f7"
+        },
+        {
+          "name": "Doton",
+          "actionId": 2270,
+          "id": "cdcd0674-75ba-4daf-8b35-68f1c8cf233a"
+        },
+        {
+          "name": "Suiton",
+          "actionId": 2271,
+          "id": "501b13fd-ac41-48b6-bbba-2cc808f63958"
+        },
+        {
+          "name": "Rabbit Medium (failed Ninjutsu)",
+          "actionId": 2272,
+          "id": "f5dc2c72-a144-43b2-9b13-9f29819a0a32",
+          "description": "Thumpity thump thump, thumpity thump thump..."
+        }
+    ]
+}

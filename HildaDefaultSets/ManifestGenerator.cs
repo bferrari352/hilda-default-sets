@@ -113,16 +113,26 @@ internal static class ManifestGenerator
         var version = deserialized["version"];
         var appVersion = deserialized["appVersion"];
         var lastUpdated = deserialized["lastUpdated"];
+        var priorities = deserialized["priorities"];
+        var actions = deserialized["actions"];
 
         if (id == null || name == null || version == null || appVersion == null || lastUpdated == null)
         {
             throw new Exception("Data is null");
         }
 
+        var type = SetType.Unknown;
+        if (priorities != null) {
+            type = SetType.Priorities;
+        } else if (actions != null) {
+            type = SetType.Actions;
+        }
+
         return new SetManifest
         {
             Id = id.ToString(),
             Name = name.ToString(),
+            Type = type.ToString(),
             AppVersion = appVersion.ToString(),
             Version = version.ToString(),
             LastUpdated = lastUpdated.ToString(),
@@ -187,8 +197,15 @@ public class SetManifest
 {
     public string Id { get; set; } = "";
     public string Name { get; set; } = "";
+    public string Type { get; set; } = SetType.Unknown.ToString();
     public string Md5 { get; set; } = "";
     public string LastUpdated { get; set; } = "";
     public string Version { get; set; } = "";
     public string AppVersion { get; set; } = "";
+}
+
+public enum SetType {
+    Priorities,
+    Actions,
+    Unknown
 }
