@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.42",
-  "LastUpdated": "2024-07-08 16:51:34Z",
+  "Version": "0.0.43",
+  "LastUpdated": "2024-07-08 18:55:22Z",
   "Sets": {
     "19": [
       {
@@ -373,28 +373,19 @@
         "Id": "05c0fcdf-6c6e-46ed-a17b-26bb68c056ed",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "A3E5FAD6B86A3F4DAE1214E71D68C39D",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.1",
-        "AppVersion": "0.0.20.0"
+        "Md5": "CFC3F843166673EE2898A00B0A6B10DC",
+        "LastUpdated": "2024-07-08 18:52:34Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.0"
       },
       {
         "Id": "627483dc-d12d-49af-ab45-2100d02f9757",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "53687A607700A9F544D83AA13DE738FB",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.2",
-        "AppVersion": "0.0.20.0"
-      },
-      {
-        "Id": "5e883334-dbe5-4ffa-8217-b13455a91082",
-        "Name": "Arcanum",
-        "Type": "Priorities",
-        "Md5": "AC152EF1B8B9CE9158A1C6871BEF2411",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.1",
-        "AppVersion": "0.0.20.0"
+        "Md5": "48AF71CC525D4173649A2143F1422A44",
+        "LastUpdated": "2024-07-08 18:51:07Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.0"
       }
     ],
     "34": [

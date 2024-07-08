@@ -2,9 +2,9 @@
   "id": "05c0fcdf-6c6e-46ed-a17b-26bb68c056ed",
   "jobId": 33,
   "name": "Multi Target",
-  "version": "0.0.1",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-08 18:52:34Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",
@@ -16,6 +16,34 @@
             "value": 1000,
             "operator": "<"
           }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Oracle",
+      "actionId": 37029,
+      "id": "09300a89-d913-481e-b883-d6595d94fbdb",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Divination",
+      "actionId": 16552,
+      "id": "207730bf-e397-45fa-8308-7725a372d562",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
         }
       }
     },
