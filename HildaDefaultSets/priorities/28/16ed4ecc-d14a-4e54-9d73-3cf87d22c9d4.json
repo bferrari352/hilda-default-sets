@@ -2,9 +2,9 @@
   "id": "16ed4ecc-d14a-4e54-9d73-3cf87d22c9d4",
   "jobId": 28,
   "name": "Single Target",
-  "version": "0.0.2",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-08 16:45:26Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",
@@ -16,6 +16,32 @@
             "value": 1000,
             "operator": "<"
           }
+        }
+      }
+    },
+    {
+      "name": "Chain Stratagem",
+      "actionId": 7436,
+      "id": "24333709-95e6-4333-be63-73063601fba9",
+      "type": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Baneful Impaction",
+      "actionId": 37012,
+      "id": "d502f9bf-6db8-4815-a1d4-65a4ab11c4ee",
+      "type": 0,
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 3883,
+              "duration": {
+                "value": 1.0,
+                "operator": "<="
+              }
+            }
+          ]
         }
       }
     },
@@ -47,16 +73,16 @@
       "id": "de61b422-9026-4711-bbdd-4d6b231d15b2",
       "conditions": {
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 1895,
               "duration": {
-                "value": 5.0,
+                "value": 3.0,
                 "operator": "<="
               }
             }
-          ],
-          "isBoss": true
+          ]
         }
       }
     },
@@ -66,16 +92,16 @@
       "id": "e1a54a97-4a6a-42e2-94fe-a58fe81f35db",
       "conditions": {
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 189,
               "duration": {
-                "value": 5.0,
+                "value": 3.0,
                 "operator": "<="
               }
             }
-          ],
-          "isBoss": true
+          ]
         }
       }
     },
@@ -85,16 +111,16 @@
       "id": "3adde9f8-b418-4335-b29b-7693950c914b",
       "conditions": {
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 179,
               "duration": {
-                "value": 5.0,
+                "value": 3.0,
                 "operator": "<="
               }
             }
-          ],
-          "isBoss": true
+          ]
         }
       }
     },

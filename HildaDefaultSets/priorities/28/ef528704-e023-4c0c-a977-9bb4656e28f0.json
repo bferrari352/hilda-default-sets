@@ -2,9 +2,9 @@
   "id": "ef528704-e023-4c0c-a977-9bb4656e28f0",
   "jobId": 28,
   "name": "Main",
-  "appVersion": "0.0.20.0",
-  "version": "1.0.0",
-  "lastUpdated": "2023-01-16 18:27:44Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-08 16:47:48Z",
   "priorities": [
     {
       "name": "Multi Target",

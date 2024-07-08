@@ -2,9 +2,9 @@
   "id": "8d717211-4467-4bdc-8390-f9ee6f107a4f",
   "jobId": 28,
   "name": "Multi Target",
-  "version": "0.0.1",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-08 16:47:48Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",
@@ -16,6 +16,45 @@
             "value": 1000,
             "operator": "<"
           }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Chain Stratagem",
+      "actionId": 7436,
+      "id": "06cf58bd-a611-4dfd-af6f-62e0a18be53b",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Baneful Impaction",
+      "actionId": 37012,
+      "id": "caf2b36f-2df0-4e71-a9d0-974c614c588b",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3883,
+              "duration": {
+                "value": 1.0,
+                "operator": "<"
+              }
+            }
+          ]
         }
       }
     },
