@@ -2,13 +2,13 @@
   "id": "fc6ef347-87a2-4e8a-86b1-5e72d1940735",
   "jobId": 24,
   "name": "Main",
-  "appVersion": "0.0.20.0",
-  "version": "1.0.0",
-  "lastUpdated": "2023-01-16 18:27:44Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-08 18:27:44Z",
   "priorities": [
     {
       "name": "Multi Target",
-      "setId": "cc444d97-5fc9-41e2-b208-790fc9ca3f87",
+      "setId": "ab87006c-0b32-4fd2-b435-1c66476d5049",
       "type": 1,
       "id": "17a40035-f521-4b07-b55f-c97b8b10f419",
       "disabled": false,
@@ -16,7 +16,7 @@
     },
     {
       "name": "Single Target",
-      "setId": "06f58aa0-60f2-4c7f-bc66-a4818c1b077c",
+      "setId": "bd5becba-7dcc-4727-b842-9e49e21a6448",
       "type": 1,
       "id": "e6031dca-4857-43fd-82d6-1f9a87118445",
       "disabled": false,
