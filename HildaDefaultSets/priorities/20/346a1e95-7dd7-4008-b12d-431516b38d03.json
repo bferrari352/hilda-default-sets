@@ -2,10 +2,34 @@
   "id": "346a1e95-7dd7-4008-b12d-431516b38d03",
   "jobId": 20,
   "name": "Single Target",
-  "version": "0.0.5",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-03-02 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-09 15:18:04Z",
   "priorities": [
+    {
+      "name": "Fire's Reply",
+      "actionId": 36950,
+      "id": "bbf5d794-c81e-44e9-b997-1408528f87df",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "name": "Wind's Reply",
+      "actionId": 36949,
+      "id": "1499cd3c-32fb-44fc-b2ba-26b8c043b29c",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        }
+      }
+    },
     {
       "name": "Riddle of Fire",
       "actionId": 7395,
@@ -15,16 +39,11 @@
           "value": 0.5,
           "operator": ">"
         },
-        "player": {
-          "statuses": [
-            {
-              "id": 3001,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
         }
       }
     },
@@ -51,6 +70,22 @@
       }
     },
     {
+      "name": "Six-sided Star",
+      "actionId": 16476,
+      "id": "2243a0fd-3ab1-47db-b3ed-a4fdab18ce8a",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "chakra": {
+              "value": 5,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
       "name": "the Forbidden Chakra",
       "actionId": 3547,
       "id": "c7c8b7b5-e37c-40a4-adbf-2c3297062a69",
@@ -73,38 +108,22 @@
       }
     },
     {
-      "name": "Bootshine (Post Elixir Field)",
-      "actionId": 53,
-      "id": "136edf8f-a001-4d99-9d1d-b69baad8adca",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2513,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
       "name": "Phantom Rush",
       "actionId": 25769,
       "id": "22a4d7d2-07af-4c6e-ae61-636f25fce4d8",
       "conditions": {
         "job": {
           "gauge": {
+            "coeurlChakra": {
+              "value": 1,
+              "operator": "<"
+            },
+            "raptorChakra": {
+              "value": 1,
+              "operator": ">="
+            },
             "opoOpoChakra": {
-              "value": 3,
+              "value": 1,
               "operator": ">="
             },
             "nadiLunar": true,
@@ -118,17 +137,147 @@
       "actionId": 3543,
       "id": "ecf2c57c-f27e-45a2-9386-1acfb847578c",
       "conditions": {
-        "player": {
-          "level": {
-            "value": 90,
-            "operator": "<"
+        "player": {},
+        "job": {
+          "gauge": {
+            "coeurlChakra": {
+              "value": 1,
+              "operator": ">="
+            },
+            "raptorChakra": {
+              "value": 1,
+              "operator": ">="
+            },
+            "opoOpoChakra": {
+              "value": 1,
+              "operator": ">="
+            },
+            "nadiLunar": true,
+            "nadiSolar": true
           }
+        }
+      }
+    },
+    {
+      "name": "Snap Punch (Nadi Open)",
+      "actionId": 56,
+      "id": "c6977792-34c3-4984-873d-13e4e0634d80",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          ]
         },
         "job": {
           "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "True Strike (Nadi Open)",
+      "actionId": 54,
+      "id": "826e13e0-666c-4c66-a066-30243365cc57",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Bootshine (Nadi Open)",
+      "actionId": 53,
+      "id": "6521b286-f80c-4bac-b319-e3390ea43d57",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Perfect Balance (Nadi Open)",
+      "actionId": 69,
+      "id": "4cfb7dbd-09e4-4bbf-8895-43991e8b9dd5",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "coeurlChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "raptorChakra": {
+              "value": 0,
+              "operator": "="
+            },
             "opoOpoChakra": {
-              "value": 3,
-              "operator": ">="
+              "value": 0,
+              "operator": "="
             },
             "nadiLunar": true,
             "nadiSolar": true
@@ -154,7 +303,8 @@
             "opoOpoChakra": {
               "value": 1,
               "operator": ">="
-            }
+            },
+            "nadiLunar": true
           }
         }
       }
@@ -164,12 +314,6 @@
       "actionId": 25882,
       "id": "a00463ea-6ea6-4e1c-8c33-58d1041c345d",
       "conditions": {
-        "player": {
-          "level": {
-            "value": 86,
-            "operator": "<"
-          }
-        },
         "job": {
           "gauge": {
             "coeurlChakra": {
@@ -183,6 +327,150 @@
             "opoOpoChakra": {
               "value": 1,
               "operator": ">="
+            },
+            "nadiLunar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Snap Punch (Solar Nadi)",
+      "actionId": 56,
+      "id": "c6977792-34c3-4984-873d-03e4e0634d80",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "True Strike (Solar Nadi)",
+      "actionId": 54,
+      "id": "826e13e0-666c-4c66-a066-30203365cc57",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Bootshine (Solar Nadi)",
+      "actionId": 53,
+      "id": "6521b286-f80c-4bac-b319-e3390eb43d57",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Perfect Balance (Solar Nadi)",
+      "actionId": 69,
+      "id": "c2b674f6-8c60-405d-9424-138f30a3d59e",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "coeurlChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "raptorChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "opoOpoChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Elixir Burst",
+      "actionId": 36948,
+      "id": "248f4005-9a0a-4004-a4bd-ed13434f3b22",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "raptorChakra": {
+              "value": 3,
+              "operator": ">="
             }
           }
         }
@@ -195,7 +483,7 @@
       "conditions": {
         "job": {
           "gauge": {
-            "opoOpoChakra": {
+            "raptorChakra": {
               "value": 3,
               "operator": ">="
             }
@@ -204,110 +492,22 @@
       }
     },
     {
-      "name": "Perfect Balance (pre-60)",
-      "actionId": 69,
-      "id": "5c2d6478-c97b-4874-924d-1f5f156b889e",
+      "name": "Rising Raptor (Lunar Nadi)",
+      "actionId": 36946,
+      "id": "041ab835-7a39-4041-a882-c99760b9155e",
+      "type": 0,
       "conditions": {
         "player": {
-          "level": {
-            "value": 60,
-            "operator": "<"
-          },
           "statuses": [
             {
               "id": 110,
               "duration": {
                 "value": 0.0,
-                "operator": "="
-              }
-            },
-            {
-              "id": 3001,
-              "duration": {
-                "value": 8.0,
-                "operator": ">="
-              }
-            },
-            {
-              "id": 107,
-              "duration": {
-                "value": 0.0,
                 "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Dragon Kick (Perfect Balance{3} pre-60)",
-      "actionId": 74,
-      "id": "ae4142ef-802e-43ce-bd53-72435d12d9eb",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": "<"
-          }
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          }
-        }
-      }
-    },
-    {
-      "name": "Snap Punch (Perfect Balance{2} pre-60)",
-      "actionId": 56,
-      "id": "1a3d0728-fac4-4277-ac3b-f4fd2aa84e5b",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": "<"
-          }
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Perfect Balance{1} pre-60)",
-      "actionId": 53,
-      "id": "7165ed28-58e2-4808-b662-3a71d8ad4f97",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": "<"
-          }
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Post Phantom Rush)",
-      "actionId": 53,
-      "id": "7b9dbd5f-0e9c-4eb6-a7e5-7f86572ff364",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2513,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
+              },
+              "stacks": {
+                "value": 2,
+                "operator": "<="
               }
             }
           ]
@@ -321,198 +521,64 @@
       }
     },
     {
-      "name": "Perfect Balance (Tornado Kick / Phantom Rush)",
-      "actionId": 69,
-      "id": "4c6c3f77-3c78-4b6f-bc11-ee70717cd68a",
+      "name": "True Strike (Lunar Nadi)",
+      "actionId": 54,
+      "id": "256a610c-5170-49f9-bbaa-55c90ab0dd23",
+      "type": 0,
       "conditions": {
         "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
           "statuses": [
             {
               "id": 110,
               "duration": {
                 "value": 0.0,
-                "operator": "="
-              }
-            },
-            {
-              "id": 108,
-              "duration": {
-                "value": 0.0,
                 "operator": ">"
+              },
+              "stacks": {
+                "value": 2,
+                "operator": "<="
               }
             }
           ]
         },
         "job": {
           "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
+            "nadiLunar": false,
+            "nadiSolar": false
           }
         }
       }
     },
     {
-      "name": "Dragon Kick (Perfect Balance{3} - Phantom Rush)",
-      "actionId": 74,
-      "id": "bf56ddae-0a43-4f05-a9d0-1824facf93cf",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Perfect Balance{2} - Phantom Rush)",
-      "actionId": 53,
-      "id": "cd7b215f-a49e-4078-8961-6f1715ce31d1",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Dragon Kick (Perfect Balance{1} - Phantom Rush)",
-      "actionId": 74,
-      "id": "7428499e-7a70-4593-95f4-4d68a2af7965",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Twin Snakes (Post Rising Phoenix)",
-      "actionId": 61,
-      "id": "975b1d01-26fd-47db-a6be-3cc9680f6b76",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2513,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Perfect Balance (Rising Phoenix / Flint Strike)",
-      "actionId": 69,
-      "id": "fd573228-77fd-484b-8d09-6b5a825e55e9",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            },
-            {
-              "id": 108,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Demolish (Perfect Balance{3} - Rising Phoenix)",
-      "actionId": 66,
-      "id": "a348a98d-4f36-4955-8c64-8d56bfbea387",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Dragon Kick (Perfect Balance{2} - Rising Phoenix)",
-      "actionId": 74,
-      "id": "e612a99d-5863-4190-884c-2bf95acee228",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Twin Snakes (Perfect Balance{1} - Rising Phoenix)",
+      "name": "Twin Snakes (Lunar Nadi)",
       "actionId": 61,
       "id": "8a88adb3-2b54-4be9-a954-5a4a58cee884",
       "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
         "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
           "gauge": {
-            "nadiLunar": true
+            "nadiLunar": false,
+            "nadiSolar": false
           }
         }
       }
     },
     {
-      "name": "Perfect Balance (Elixir Field)",
+      "name": "Perfect Balance (Lunar Nadi)",
       "actionId": 69,
       "id": "c8ab3349-32ba-450a-840e-e5366e9357fa",
       "conditions": {
@@ -528,216 +594,185 @@
                 "value": 0.0,
                 "operator": "="
               }
-            },
-            {
-              "id": 108,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            },
-            {
-              "id": 3001,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Dragon Kick (Perfect Balance{3} - Elixir Field)",
-      "actionId": 74,
-      "id": "f9de5526-4d0b-4f3e-b2aa-86cf643c4443",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Perfect Balance{2} - Elixir Field)",
-      "actionId": 53,
-      "id": "b8f651b9-5cbd-4bfa-b36c-1810c40eaf53",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Dragon Kick (Perfect Balance{1} - Elixir Field)",
-      "actionId": 74,
-      "id": "4f1a736b-0bfe-48a1-b6a4-0238e39944f5",
-      "conditions": {
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Demolish (Rotational)",
-      "actionId": 66,
-      "id": "81284265-b239-4439-8937-e2356e8c2829",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 109,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
             }
           ]
         },
-        "target": {
-          "statuses": [
-            {
-              "id": 246,
-              "duration": {
-                "value": 6.0,
-                "operator": "<="
-              }
-            }
-          ],
-          "isBoss": true
-        }
-      }
-    },
-    {
-      "name": "Snap Punch (Rotational)",
-      "actionId": 56,
-      "id": "cf5fb4c3-59ae-420d-87c2-cc9a493be758",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 109,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Twin Snakes (Rotational)",
-      "actionId": 61,
-      "id": "97f17782-f3f1-40bb-b9c5-571ee72a6885",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 3001,
-              "duration": {
-                "value": 6.0,
-                "operator": "<="
-              }
+        "job": {
+          "gauge": {
+            "coeurlChakra": {
+              "value": 0,
+              "operator": "="
             },
-            {
-              "id": 108,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "True Strike (Rotational)",
-      "actionId": 54,
-      "id": "cc606bcd-e05c-4542-83b0-8096ee29c27c",
-      "conditions": {}
-    },
-    {
-      "name": "Bootshine (Rotational)",
-      "actionId": 53,
-      "id": "1dee86ef-a835-4ab0-b3b6-2f4c567f5383",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1861,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
+            "raptorChakra": {
+              "value": 0,
+              "operator": "="
             },
-            {
-              "id": 107,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Dragon Kick (Rotational)",
-      "actionId": 74,
-      "id": "48d64da4-2178-433f-8afd-9ba34fc31775",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 107,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Dragon Kick (Opener)",
-      "actionId": 74,
-      "id": "d9aab37d-71ca-43c1-97b5-949727904e26",
-      "conditions": {}
-    },
-    {
-      "name": "Bootshine (Opener) (Pre-50)",
-      "actionId": 53,
-      "id": "aa575661-6ebd-4b31-9f2c-c39a1e0a2ac0",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 50,
-            "operator": "<"
+            "opoOpoChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "nadiLunar": false,
+            "nadiSolar": false
           }
         }
       }
+    },
+    {
+      "name": "Leaping Opo",
+      "actionId": 36945,
+      "id": "5f051cd8-73ea-452c-b706-b3ba256983fb",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "opoOpoForm": true,
+          "gauge": {
+            "opoOpoFury": {
+              "value": 0,
+              "operator": ">"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Bootshine",
+      "actionId": 53,
+      "id": "c06e87a2-d1b2-4c1a-9320-3b65eb82e0b3",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "opoOpoForm": true,
+          "gauge": {
+            "opoOpoFury": {
+              "value": 0,
+              "operator": ">"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Pouncing Coeurl",
+      "actionId": 36947,
+      "id": "5284a2a3-5502-4f7e-b102-e0c74c447a3a",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "coeurlForm": true,
+          "gauge": {
+            "coeurlFury": {
+              "value": 0,
+              "operator": ">"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Snap Punch",
+      "actionId": 56,
+      "id": "49d8982f-fbcf-46d3-aacb-f0d749274d1b",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "coeurlForm": true,
+          "gauge": {
+            "coeurlFury": {
+              "value": 0,
+              "operator": ">"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Rising Raptor",
+      "actionId": 36946,
+      "id": "6d3595b2-8390-42e0-afb6-d3b3252127b9",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "raptorForm": true,
+          "gauge": {
+            "raptorFury": {
+              "value": 0,
+              "operator": ">"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "True Strike",
+      "actionId": 54,
+      "id": "7c4330f0-7c76-4489-9596-837cdac9fe37",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "raptorForm": true,
+          "gauge": {
+            "raptorFury": {
+              "value": 0,
+              "operator": ">"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Demolish",
+      "actionId": 66,
+      "id": "b33db0cc-35a3-4816-bf47-1e34b5e80e3b",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "coeurlFury": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Twin Snakes",
+      "actionId": 61,
+      "id": "63ad3be3-6951-44e0-ac84-a734502de0b3",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "raptorFury": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Dragon Kick",
+      "actionId": 74,
+      "id": "35347d82-772d-4ea2-baae-0f1b5b714288",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "opoOpoFury": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Dragon Kick",
+      "actionId": 74,
+      "id": "f7245e4f-5444-4a03-a61f-db9e314e4e49",
+      "type": 0,
+      "conditions": {}
     }
   ]
 }

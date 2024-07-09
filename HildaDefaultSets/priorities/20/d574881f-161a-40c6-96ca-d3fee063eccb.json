@@ -2,9 +2,9 @@
   "id": "d574881f-161a-40c6-96ca-d3fee063eccb",
   "jobId": 20,
   "name": "Multi Target",
-  "version": "0.0.1",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-09 15:41:14Z",
   "priorities": [
     {
       "name": "Enlightenment",
@@ -47,8 +47,16 @@
         },
         "job": {
           "gauge": {
+            "coeurlChakra": {
+              "value": 1,
+              "operator": ">="
+            },
+            "raptorChakra": {
+              "value": 1,
+              "operator": ">="
+            },
             "opoOpoChakra": {
-              "value": 3,
+              "value": 1,
               "operator": ">="
             },
             "nadiLunar": true,
@@ -68,10 +76,178 @@
         },
         "job": {
           "gauge": {
-            "opoOpoChakra": {
-              "value": 3,
+            "coeurlChakra": {
+              "value": 1,
               "operator": ">="
             },
+            "raptorChakra": {
+              "value": 1,
+              "operator": ">="
+            },
+            "opoOpoChakra": {
+              "value": 1,
+              "operator": ">="
+            },
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Rockbreaker (Nadi Open)",
+      "actionId": 70,
+      "id": "73b8f02a-7cd7-4dfb-27f3-8b496f6e05ae",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Four-point Fury (Nadi Open)",
+      "actionId": 16473,
+      "id": "6025fa73-a5c6-49c8-ba45-06faa0b87015",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Shadow of the Destroyer (Nadi Open)",
+      "actionId": 25767,
+      "id": "c6b08d64-a336-466c-8543-19ce0122c3f1",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Arm of the Destroyer (Nadi OPen)",
+      "actionId": 62,
+      "id": "40bcae89-092f-4a77-ade6-36100eae95d6",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Perfect Balance (Nadi Open)",
+      "actionId": 69,
+      "id": "d8f42ed6-e234-4159-b363-24ec13e9d45c",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
             "nadiLunar": true,
             "nadiSolar": true
           }
@@ -133,6 +309,166 @@
       }
     },
     {
+      "name": "Rockbreaker (Solar Nadi)",
+      "actionId": 70,
+      "id": "73b8f02a-7cd7-4dfb-b7f3-8b496f6e05ae",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Four-point Fury (Solar Nadi)",
+      "actionId": 16473,
+      "id": "6025fa73-a5c6-49c8-bc45-06faa0b87015",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Shadow of the Destroyer (Solar Nadi)",
+      "actionId": 25767,
+      "id": "c6b08d64-a636-466c-8543-19ce0122c3f1",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Arm of the Destroyer (Solar Nadi)",
+      "actionId": 62,
+      "id": "40bcae89-092f-4a77-ade6-36100eee95d6",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Perfect Balance (Solar Nadi)",
+      "actionId": 69,
+      "id": "d8fa2ed6-e234-4159-b363-24ec13e9d45c",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "nadiLunar": true,
+            "nadiSolar": false
+          }
+        }
+      }
+    },
+    {
       "name": "Elixir Field",
       "actionId": 3545,
       "id": "9f68f8c7-bf5d-4eef-8c9d-1260725437fe",
@@ -152,21 +488,21 @@
       }
     },
     {
-      "name": "Perfect Balance",
-      "actionId": 69,
-      "id": "de832825-4e1a-4e9f-826f-d14e77f4eac5",
+      "name": "Lunar Builder",
+      "actionId": 62,
+      "id": "afccc3e9-c2b9-4caa-89bd-88b64777b20d",
       "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
         "player": {
           "statuses": [
             {
               "id": 110,
               "duration": {
                 "value": 0.0,
-                "operator": "<="
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": ">="
               }
             }
           ]
@@ -174,229 +510,8 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Phantom Rush - Perfect Balance 3",
-      "actionId": 25767,
-      "id": "ab48235b-972a-4abc-944c-93d9b8af1b19",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         },
         "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Phantom Rush - Perfect Balance 2",
-      "actionId": 25767,
-      "id": "20f38f89-c419-4e54-af8d-4634acfdb444",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Phantom Rush - Perfect Balance 1",
-      "actionId": 25767,
-      "id": "a63ab39f-d82c-46a3-aa9a-16119facf960",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Phantom Rush - Perfect Balance 3",
-      "actionId": 62,
-      "id": "3cf931b5-ab77-4f2c-992b-28d8de0d196a",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Phantom Rush - Perfect Balance 2",
-      "actionId": 62,
-      "id": "e7529607-d60f-4041-8a64-cb054cad958d",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Phantom Rush - Perfect Balance 1",
-      "actionId": 62,
-      "id": "28011202-b81e-4f48-9fba-f668a12c8a23",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Phoenix - Perfect Balance 3",
-      "actionId": 70,
-      "id": "b25d12d6-0f08-483a-b3be-0e025e835ebc",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Phoenix - Perfect Balance 2",
-      "actionId": 16473,
-      "id": "0386105b-e120-448d-870d-27db68a1b545",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Phoenix - Perfect Balance 1",
-      "actionId": 25767,
-      "id": "4ebe6019-3766-4c75-bf63-bab798490459",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Phoenix - Perfect Balance 1",
-      "actionId": 62,
-      "id": "3ce249db-ccbf-4083-8c3d-86d05c7e0e48",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Field - Perfect Balance 3",
-      "actionId": 25767,
-      "id": "d2469fdb-8d88-4861-bd2b-9bf9e1d34765",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
           "gauge": {
             "nadiLunar": false,
             "nadiSolar": false
@@ -405,103 +520,30 @@
       }
     },
     {
-      "name": "Elixir Field - Perfect Balance 2",
-      "actionId": 25767,
-      "id": "fd1e9ec6-ca4b-4862-9b19-e91ba60c1fe8",
+      "name": "Perfect Balance (Lunar Nadi)",
+      "actionId": 69,
+      "id": "de832825-4e1a-4e9f-826f-d14e77f4eac5",
       "conditions": {
+        "player": {
+          "level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "statuses": [
+            {
+              "id": 110,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
         },
         "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Field - Perfect Balance 1",
-      "actionId": 25767,
-      "id": "a9cc62c0-a4fb-45b8-a985-dd7b3df76781",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Field - Perfect Balance 3",
-      "actionId": 62,
-      "id": "501f1b52-99dd-485b-834d-fe44c1c83ed9",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 3,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Field - Perfect Balance 2",
-      "actionId": 62,
-      "id": "432c22ca-7b6b-4e68-af6d-514ccd293bb0",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 2,
-            "operator": "="
-          },
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Field - Perfect Balance 1",
-      "actionId": 62,
-      "id": "afccc3e9-c2b9-4caa-89bd-88b64777b20d",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "perfectBalanceStacks": {
-            "value": 1,
-            "operator": "="
-          },
           "gauge": {
             "nadiLunar": false,
             "nadiSolar": false
@@ -514,10 +556,6 @@
       "actionId": 70,
       "id": "64019f4e-7b12-4bac-89b6-3685bf53aabd",
       "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
@@ -529,10 +567,6 @@
       "actionId": 16473,
       "id": "bcfc8f41-3b35-4841-ac7b-0fa4127e3f69",
       "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
