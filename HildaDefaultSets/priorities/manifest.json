@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.43",
-  "LastUpdated": "2024-07-08 18:55:22Z",
+  "Version": "0.0.44",
+  "LastUpdated": "2024-07-08 20:40:13Z",
   "Sets": {
     "19": [
       {
@@ -364,10 +364,10 @@
         "Id": "bbb3b624-360a-48ab-b8d8-fcd301cf3e85",
         "Name": "Main",
         "Type": "Priorities",
-        "Md5": "71F08A3C0AB9A9168D6DA1D9A060FFA2",
-        "LastUpdated": "2023-01-16 18:27:44Z",
-        "Version": "1.0.0",
-        "AppVersion": "0.0.20.0"
+        "Md5": "149D64031312AD15EF04919EDAF76A57",
+        "LastUpdated": "2024-07-08 18:52:34Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.0"
       },
       {
         "Id": "05c0fcdf-6c6e-46ed-a17b-26bb68c056ed",
@@ -549,28 +549,28 @@
         "Id": "670392b4-3d4e-4b59-b91e-3cc2fdc6d7e6",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "75791BD2B3E0C76A59F2410F8E6F02B9",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.1",
-        "AppVersion": "0.0.20.0"
+        "Md5": "67E0D5AD481B99B2B6775CDBD80290BD",
+        "LastUpdated": "2024-07-08 19:15:04Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.0"
       },
       {
         "Id": "448805a6-81b1-4d92-a534-c55e7df2550d",
         "Name": "Main",
         "Type": "Priorities",
-        "Md5": "A0CD8A625590C0FEB50F311CB25446D1",
-        "LastUpdated": "2023-01-16 18:27:44Z",
-        "Version": "1.0.0",
-        "AppVersion": "0.0.20.0"
+        "Md5": "E416B7B0BD3E86EC923E381346D4DDB8",
+        "LastUpdated": "2024-07-08 19:06:44Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.0"
       },
       {
         "Id": "07bf03a9-352f-4449-9bb9-1d72591d3a62",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "ECA1C2660DD541DFEDED22FB03131BA3",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.3",
-        "AppVersion": "0.0.20.0"
+        "Md5": "30AC5BED69CAE18137126488A9BCD563",
+        "LastUpdated": "2024-07-08 19:06:44Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.0"
       }
     ],
     "42": [

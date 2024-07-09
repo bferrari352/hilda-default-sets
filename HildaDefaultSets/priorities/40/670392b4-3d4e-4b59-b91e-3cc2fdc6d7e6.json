@@ -2,9 +2,9 @@
   "id": "670392b4-3d4e-4b59-b91e-3cc2fdc6d7e6",
   "jobId": 40,
   "name": "Multi Target",
-  "version": "0.0.1",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-08 19:15:04Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",
@@ -16,6 +16,56 @@
             "value": 1000,
             "operator": "<"
           }
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Eukrasian Dyskrasia",
+      "actionId": 37032,
+      "id": "2ea9dc39-1c37-4bdd-be0b-86414ec6a889",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3897,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Eukrasia",
+      "actionId": 24290,
+      "id": "280612bf-636b-42e7-a990-d1dbed5836ba",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "target": {
+          "statuses": [
+            {
+              "id": 3897,
+              "duration": {
+                "value": 3.0,
+                "operator": "<="
+              }
+            }
+          ]
         }
       }
     },
@@ -45,6 +95,30 @@
       "name": "Phlegma",
       "actionId": 24289,
       "id": "d256be38-239f-4d36-b76b-6f5d732e24f0",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Toxikon II",
+      "actionId": 24316,
+      "id": "11e544c2-b1bf-4935-ac6f-9f3748676845",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Toxikon",
+      "actionId": 24304,
+      "id": "c0eac44f-45a5-423c-93e3-d986edad2ada",
+      "type": 0,
       "conditions": {
         "enemyCount": {
           "value": 3,
