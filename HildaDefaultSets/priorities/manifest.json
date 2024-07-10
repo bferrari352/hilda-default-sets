@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.49",
-  "LastUpdated": "2024-07-10 14:59:28Z",
+  "Version": "0.0.50",
+  "LastUpdated": "2024-07-10 17:32:04Z",
   "Sets": {
     "19": [
       {
@@ -578,9 +578,9 @@
         "Id": "bcbe903b-b067-4f54-8693-1724b9b60a44",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "93EADC08353A2C797B78BC5EA33B6280",
-        "LastUpdated": "2024-07-08 09:17:28Z",
-        "Version": "1.0.0",
+        "Md5": "C7259FC195934ECE0A0AF92CC85FA2EC",
+        "LastUpdated": "2024-07-10 17:30:43Z",
+        "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
       },
       {

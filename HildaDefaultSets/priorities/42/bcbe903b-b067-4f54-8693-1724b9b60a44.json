@@ -3,7 +3,299 @@
   "jobId": 42,
   "name": "Multi Target",
   "appVersion": "7.0.0.0",
-  "version": "1.0.0",
-  "lastUpdated": "2024-07-08 09:17:28Z",
-  "priorities": []
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-10 17:30:43Z",
+  "priorities": [
+    {
+      "name": "Mog of the Ages",
+      "actionId": 34676,
+      "id": "e450b1bd-8c50-4f3c-b375-e7b58a37e491",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Comet in Black",
+      "actionId": 34663,
+      "id": "fa13f4c9-bbd0-41d9-b5e1-0bbabbe3c137",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Holy in White",
+      "actionId": 34662,
+      "id": "33231c10-ec76-4c67-8f72-02f90d0e344d",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Striking Muse",
+      "actionId": 34674,
+      "id": "88c8c555-c157-44b8-80c2-9e46a05bd377",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Pom Muse",
+      "actionId": 34670,
+      "id": "4e31617a-5c76-4b7e-b77f-42bacae2b88a",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Winged Muse",
+      "actionId": 34671,
+      "id": "250a5438-1d57-484e-a69b-8604a5399721",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Starry Muse",
+      "actionId": 34675,
+      "id": "7ccdaa00-3a4b-40b3-850c-02ac87fbab7b",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Hammer Motif",
+      "actionId": 34668,
+      "id": "b1550689-3d87-4242-aba2-1745d063c154",
+      "type": 0,
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 34674,
+          "value": 0.0,
+          "operator": "<="
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3680,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Pom Motif",
+      "actionId": 34664,
+      "id": "20b9c8a2-10ce-49d8-ac90-ce3a864795b4",
+      "type": 0,
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 34670,
+          "value": 83.0,
+          "operator": "<"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Wing Motif",
+      "actionId": 34665,
+      "id": "c222998e-68b3-4393-b45b-ef1c66d6dda7",
+      "type": 0,
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 34671,
+          "value": 83.0,
+          "operator": "<"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Starry Sky Motif",
+      "actionId": 34669,
+      "id": "4c6f44f2-988d-4c18-b682-50f4b8588d77",
+      "type": 0,
+      "conditions": {
+        "actionDependentRecast": {
+          "actionId": 35349,
+          "value": 3.0,
+          "operator": "<"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Polishing Hammer",
+      "actionId": 34680,
+      "id": "6ee4729f-8047-46be-b4c9-7522060d2c40",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Hammer Brush",
+      "actionId": 34679,
+      "id": "251e916a-bc92-4dae-b9f8-90da51f17463",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Hammer Stamp",
+      "actionId": 34678,
+      "id": "48691d79-8438-4c62-965d-bea53b139227",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Thunder II in Magenta",
+      "actionId": 34661,
+      "id": "9ac0a8a2-dbee-4bd1-a059-21979138a9f9",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Stone II in Yellow",
+      "actionId": 34660,
+      "id": "e1988301-6c52-404d-a19c-649eb48b2bae",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Blizzard II in Cyan",
+      "actionId": 34659,
+      "id": "da598bf1-69c1-405d-b7d7-a220b9a749c9",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Subtractive Palette",
+      "actionId": 34683,
+      "id": "12175b4a-d349-488d-80e6-f6441ef74e18",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Water II in Blue",
+      "actionId": 34658,
+      "id": "c954727a-a3b1-47bb-bbea-cc346b0e5666",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Aero II in Green",
+      "actionId": 34657,
+      "id": "dc97dc8c-ccfe-4bc8-9426-58a6930af1b3",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Fire II in Red",
+      "actionId": 34656,
+      "id": "3e206bbc-37f2-41c9-b1ab-ffad2f641603",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    }
+  ]
 }
