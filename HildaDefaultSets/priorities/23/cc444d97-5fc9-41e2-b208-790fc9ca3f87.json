@@ -2,10 +2,10 @@
   "id": "cc444d97-5fc9-41e2-b208-790fc9ca3f87",
   "jobId": 23,
   "name": "Multi Target",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
   "author": "Hilda",
-  "version": "0.0.2",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-03-05 14:42:11Z",
+  "lastUpdated": "2024-07-10 14:31:48Z",
   "priorities": [
     {
       "name": "Raging Strikes",
@@ -80,6 +80,22 @@
       }
     },
     {
+      "name": "Barrage",
+      "actionId": 107,
+      "id": "27c4d88d-13dc-45de-ad29-66f224553201",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
       "name": "Rain of Death",
       "actionId": 117,
       "id": "e8f2d508-2216-4c7c-942e-cb1cb1724187",
@@ -148,6 +164,18 @@
       }
     },
     {
+      "name": "Resonant Arrow",
+      "actionId": 36976,
+      "id": "f92c9cc3-9411-4011-9f76-2245652cc7ac",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
       "name": "Apex Arrow",
       "actionId": 16496,
       "id": "8e979b74-3805-447b-96af-7789ddbbb33b",
@@ -159,7 +187,7 @@
         "job": {
           "gauge": {
             "soulVoice": {
-              "value": 100,
+              "value": 80,
               "operator": ">="
             }
           }
@@ -171,13 +199,6 @@
       "actionId": 25784,
       "id": "97528713-38fc-40f5-8bfd-7dd7f455a67d",
       "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 2692
-            }
-          ]
-        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
@@ -189,13 +210,17 @@
       "actionId": 16494,
       "id": "1002527d-ebe0-48fe-be5a-e2f003c3c3d8",
       "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 3002
-            }
-          ]
-        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Wide Volley",
+      "actionId": 36974,
+      "id": "f08824a5-aa8d-4bf5-9d41-80851917578f",
+      "conditions": {
         "enemyCount": {
           "value": 3,
           "operator": ">="

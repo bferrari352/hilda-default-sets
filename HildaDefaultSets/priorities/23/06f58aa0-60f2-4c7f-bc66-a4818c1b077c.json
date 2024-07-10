@@ -2,11 +2,27 @@
   "id": "06f58aa0-60f2-4c7f-bc66-a4818c1b077c",
   "jobId": 23,
   "name": "Single Target",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
   "author": "Hilda",
-  "version": "0.0.4",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-03-05 14:36:30Z",
+  "lastUpdated": "2024-07-10 14:26:03Z",
   "priorities": [
+    {
+      "name": "Radiant Encore",
+      "actionId": 36977,
+      "id": "25350a1f-bf21-4015-8a8c-667750969698",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "coda": {
+              "value": 3,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
     {
       "name": "the Wanderer's Minuet",
       "actionId": 3559,
@@ -63,16 +79,16 @@
             {
               "id": 1200,
               "duration": {
-                "value": 0.1,
-                "value2": 6.0,
+                "value": 1.0,
+                "value2": 8.0,
                 "operator": "><"
               }
             },
             {
               "id": 1201,
               "duration": {
-                "value": 0.1,
-                "value2": 6.0,
+                "value": 1.0,
+                "value2": 8.0,
                 "operator": "><"
               }
             }
@@ -91,16 +107,16 @@
             {
               "id": 129,
               "duration": {
-                "value": 0.1,
-                "value2": 6.0,
+                "value": 1.0,
+                "value2": 8.0,
                 "operator": "><"
               }
             },
             {
               "id": 124,
               "duration": {
-                "value": 0.1,
-                "value2": 6.0,
+                "value": 1.0,
+                "value2": 8.0,
                 "operator": "><"
               }
             }
@@ -274,6 +290,13 @@
       }
     },
     {
+      "name": "Resonant Arrow",
+      "actionId": 36976,
+      "id": "b7bba0fc-ce79-4b11-8e52-cb1767b175a1",
+      "type": 0,
+      "conditions": {}
+    },
+    {
       "name": "Blast Arrow",
       "actionId": 25784,
       "id": "765b8336-c960-485d-b2a2-d6f43889ecdd",
@@ -293,6 +316,12 @@
           }
         }
       }
+    },
+    {
+      "name": "Straight Shot",
+      "actionId": 98,
+      "id": "808db026-f799-49ba-ba4f-a7dc13fdfa64",
+      "conditions": {}
     },
     {
       "name": "Raging Strikes",
@@ -315,6 +344,21 @@
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Heartbreak Shot",
+      "actionId": 36975,
+      "id": "0ebb61da-2182-46ed-8ee7-0ce4fb9763f5",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 2,
           "operator": ">"
         }
       }
@@ -392,37 +436,7 @@
       "name": "Refulgent Arrow",
       "actionId": 7409,
       "id": "a17a29de-7b67-45bb-836a-785b8b9d8e52",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 122,
-              "duration": {
-                "value": 0.0,
-                "operator": ">="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Straight Shot",
-      "actionId": 98,
-      "id": "808db026-f799-49ba-ba4f-a7dc13fdfa64",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 122,
-              "duration": {
-                "value": 0.0,
-                "operator": ">="
-              }
-            }
-          ]
-        }
-      }
+      "conditions": {}
     },
     {
       "name": "Burst Shot",
