@@ -2,9 +2,9 @@
   "id": "98c23981-5d8c-4826-817e-0b8b91396def",
   "jobId": 31,
   "name": "Single Target",
-  "version": "0.0.5",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-10 14:47:55Z",
   "priorities": [
     {
       "name": "Automaton Queen (Max)",
@@ -76,8 +76,8 @@
         "job": {
           "gauge": {
             "overheatTimeRemaining": {
-              "operator": "=",
-              "value": 0
+              "value": 0,
+              "operator": "="
             }
           }
         }
@@ -100,8 +100,8 @@
         "job": {
           "gauge": {
             "overheatTimeRemaining": {
-              "operator": "=",
-              "value": 0
+              "value": 0,
+              "operator": "="
             }
           }
         }
@@ -130,8 +130,8 @@
         "job": {
           "gauge": {
             "overheatTimeRemaining": {
-              "operator": "=",
-              "value": 0
+              "value": 0,
+              "operator": "="
             }
           }
         }
@@ -160,10 +160,25 @@
         "job": {
           "gauge": {
             "overheatTimeRemaining": {
-              "operator": "=",
-              "value": 0
+              "value": 0,
+              "operator": "="
             }
           }
+        }
+      }
+    },
+    {
+      "name": "Double Check (3)",
+      "actionId": 36979,
+      "id": "4e3b0638-5a32-4a2c-b780-a46ea6716566",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 3,
+          "operator": "="
         }
       }
     },
@@ -171,6 +186,21 @@
       "name": "Gauss Round (3)",
       "actionId": 2874,
       "id": "9302ade5-d23f-4b05-b689-0cccfc542b25",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 3,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "name": "Checkmate (3)",
+      "actionId": 36980,
+      "id": "7dd583a9-3c9a-43bf-9360-0d36457989a6",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -198,9 +228,39 @@
       }
     },
     {
+      "name": "Double Check (2)",
+      "actionId": 36979,
+      "id": "43bda1ab-009b-4c98-9f31-59c3e1c4ccd1",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 2,
+          "operator": "="
+        }
+      }
+    },
+    {
       "name": "Gauss Round (2)",
       "actionId": 2874,
       "id": "d9d8073d-69fc-4304-a032-45abde00da1e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 2,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "name": "Checkmate (2)",
+      "actionId": 36980,
+      "id": "2cc65596-1914-4b2a-a35a-3e1fa9c5838f",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -302,6 +362,21 @@
       }
     },
     {
+      "name": "Double Check (1)",
+      "actionId": 36979,
+      "id": "fc7e6f4e-9555-481f-9d42-4f1254e3c978",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 1,
+          "operator": "="
+        }
+      }
+    },
+    {
       "name": "Gauss Round (1)",
       "actionId": 2874,
       "id": "9df8aba7-2152-4c86-9610-20cea890ee23",
@@ -317,8 +392,8 @@
       }
     },
     {
-      "name": "Ricochet (1)",
-      "actionId": 2890,
+      "name": "Checkmate (1)",
+      "actionId": 36980,
       "id": "02110c48-83c6-4ec3-baab-053d1927e0e5",
       "conditions": {
         "globalCooldown": {
@@ -328,6 +403,57 @@
         "charges": {
           "value": 1,
           "operator": "="
+        }
+      }
+    },
+    {
+      "name": "Ricochet (1)",
+      "actionId": 2890,
+      "id": "fcf32236-a0b5-40e0-8b2c-fccdb8a19b62",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "charges": {
+          "value": 1,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "name": "Excavator",
+      "actionId": 36981,
+      "id": "51452a6d-acfb-4ff6-af77-9343f6715d9a",
+      "type": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Full Metal Field",
+      "actionId": 36982,
+      "id": "e5faa495-d20f-42c3-999f-cd37f730666b",
+      "type": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Blazing Shot",
+      "actionId": 36978,
+      "id": "a2ffa2b6-045f-40a4-825d-7b518d8223dc",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2688,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          ]
         }
       }
     },
@@ -427,8 +553,8 @@
         "job": {
           "gauge": {
             "overheatTimeRemaining": {
-              "operator": "=",
-              "value": 0
+              "value": 0,
+              "operator": "="
             }
           }
         }
