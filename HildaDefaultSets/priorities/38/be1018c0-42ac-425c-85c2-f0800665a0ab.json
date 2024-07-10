@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-02-28 20:30:18Z",
-  "priorities": [
+  "priorities": [],
+  "prioritiesOLD": [
     {
       "name": "Starfall Dance",
       "actionId": 25792,

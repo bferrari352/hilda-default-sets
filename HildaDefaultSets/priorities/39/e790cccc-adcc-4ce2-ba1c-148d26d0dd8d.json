@@ -6,7 +6,8 @@
   "version": "0.0.4",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-03-06 09:17:10Z",
-  "priorities": [
+  "priorities": [],
+  "prioritiesOLD": [
     {
       "name": "Arcane Circle",
       "actionId": 24405,

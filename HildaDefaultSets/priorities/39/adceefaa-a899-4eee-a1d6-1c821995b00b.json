@@ -6,7 +6,8 @@
   "version": "0.0.1",
   "author": "Hilda",
   "lastUpdated": "2022-03-05 17:10:26Z",
-  "priorities": [
+  "priorities": [],
+  "prioritiesOLD": [
     {
       "name": "Gluttony",
       "actionId": 24393,

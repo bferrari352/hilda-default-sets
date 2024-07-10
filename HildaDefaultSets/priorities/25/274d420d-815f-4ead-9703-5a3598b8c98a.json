@@ -5,7 +5,8 @@
   "version": "0.0.3",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-03-10 08:17:14Z",
-  "priorities": [
+  "priorities": [],
+  "prioritiesOLD": [
     {
       "name": "Manafont (emergency)",
       "actionId": 158,
