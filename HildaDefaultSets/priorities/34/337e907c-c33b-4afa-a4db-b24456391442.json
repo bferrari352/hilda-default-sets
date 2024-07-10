@@ -2,10 +2,49 @@
   "id": "337e907c-c33b-4afa-a4db-b24456391442",
   "jobId": 34,
   "name": "Multi Target",
-  "version": "0.0.2",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-10 11:23:46Z",
   "priorities": [
+    {
+      "name": "Tendo Kaeshi Goken",
+      "actionId": 36967,
+      "id": "13017c3d-4846-48c4-875e-69d5decd1f99",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Kaeshi: Goken",
+      "actionId": 16485,
+      "id": "526589f9-ae31-465f-a52d-4a0bbfa38e14",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Kaeshi: Namikiri",
+      "actionId": 25782,
+      "id": "7e587256-1eb1-4c44-9133-d08bb0c5d228",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "namikiri": true
+          }
+        }
+      }
+    },
     {
       "name": "Ikishoten",
       "actionId": 16482,
@@ -20,55 +59,6 @@
             "kenki": {
               "value": 40,
               "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Shoha II",
-      "actionId": 25779,
-      "id": "dd0ce448-369c-4715-9601-b66180c238c7",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Hissatsu: Guren",
-      "actionId": 7496,
-      "id": "77bcfc67-a9c8-456b-92b6-7d0c79e335ea",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "kenki": {
-              "value": 35,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Hissatsu: Kyuten",
-      "actionId": 7491,
-      "id": "890ee75d-11a2-4aa3-8168-8b84e34d9b10",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "kenki": {
-              "value": 35,
-              "operator": ">="
             }
           }
         }
@@ -110,6 +100,56 @@
             "setsu": false,
             "getsu": false,
             "ka": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Hissatsu: Guren",
+      "actionId": 7496,
+      "id": "77bcfc67-a9c8-456b-92b6-7d0c79e335ea",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "kenki": {
+              "value": 35,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Zanshin",
+      "actionId": 36964,
+      "id": "1ccda531-11dd-47e1-9895-24d3136f7a45",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Hissatsu: Kyuten",
+      "actionId": 7491,
+      "id": "890ee75d-11a2-4aa3-8168-8b84e34d9b10",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        },
+        "job": {
+          "gauge": {
+            "kenki": {
+              "value": 35,
+              "operator": ">="
+            }
           }
         }
       }
@@ -169,22 +209,6 @@
       }
     },
     {
-      "name": "Kaeshi: Namikiri",
-      "actionId": 25782,
-      "id": "7e587256-1eb1-4c44-9133-d08bb0c5d228",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "namikiri": true
-          }
-        }
-      }
-    },
-    {
       "name": "Ogi Namikiri",
       "actionId": 25781,
       "id": "a0796785-72d9-441f-9b0b-03220a8e0ade",
@@ -207,18 +231,14 @@
       }
     },
     {
-      "name": "Kaeshi: Goken",
-      "actionId": 16485,
-      "id": "526589f9-ae31-465f-a52d-4a0bbfa38e14",
+      "name": "Tendo Goken",
+      "actionId": 36965,
+      "id": "da92abff-8b5d-4f71-8ac8-2fdb586c98c9",
+      "type": 0,
       "conditions": {
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "goken": true
-          }
         }
       }
     },
@@ -230,14 +250,6 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "senCount": {
-              "value": 2,
-              "operator": "="
-            }
-          }
         }
       }
     },

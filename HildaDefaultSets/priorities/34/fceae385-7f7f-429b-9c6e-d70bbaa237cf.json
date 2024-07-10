@@ -2,10 +2,17 @@
   "id": "fceae385-7f7f-429b-9c6e-d70bbaa237cf",
   "jobId": 34,
   "name": "Single Target",
-  "version": "0.0.4",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-10 11:23:57Z",
   "priorities": [
+    {
+      "name": "Tendo Kaeshi Setsugekka",
+      "actionId": 36968,
+      "id": "981daafa-3584-46ec-9e66-f9246b3b70b5",
+      "type": 0,
+      "conditions": {}
+    },
     {
       "name": "Kaeshi: Namikiri",
       "actionId": 25782,
@@ -17,6 +24,17 @@
       "actionId": 16486,
       "id": "14a856fa-7a91-42b4-b787-3d224cd4dc49",
       "conditions": {}
+    },
+    {
+      "name": "Shoha",
+      "actionId": 16487,
+      "id": "9cd1d5eb-99a3-43cc-abf1-831b1d3a2cb5",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
     },
     {
       "name": "Ikishoten",
@@ -38,21 +56,19 @@
       }
     },
     {
-      "name": "Shoha",
-      "actionId": 16487,
-      "id": "9cd1d5eb-99a3-43cc-abf1-831b1d3a2cb5",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
+      "name": "Tendo Setsugekka",
+      "actionId": 36966,
+      "id": "7ab78a6e-899a-485c-b645-ac268677ef2f",
+      "type": 0,
+      "conditions": {}
     },
     {
       "name": "Midare Setsugekka",
       "actionId": 7487,
       "id": "269aca42-3937-4346-a817-108c0c137ba3",
-      "conditions": {}
+      "conditions": {
+        "player": {}
+      }
     },
     {
       "name": "Meikyo Shisui",
@@ -92,15 +108,22 @@
       }
     },
     {
+      "name": "Zanshin",
+      "actionId": 36964,
+      "id": "bfb90caa-6aab-4387-b71e-e994e032662e",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
       "name": "Higanbana (Meikyo Shisui)",
       "actionId": 7489,
       "id": "a4cb4563-6114-4b28-9a0c-b68cf9625c83",
       "conditions": {
-        "actionDependentRecast": {
-          "actionId": 16486,
-          "value": 10,
-          "operator": ">"
-        },
         "player": {
           "statuses": [
             {
@@ -109,10 +132,18 @@
                 "value": 0.0,
                 "operator": ">"
               }
+            },
+            {
+              "id": 3855,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
             }
           ]
         },
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 1228,
@@ -121,8 +152,39 @@
                 "operator": "="
               }
             }
-          ],
-          "isBoss": true
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ogi Namikiri (Meikyo Shisui)",
+      "actionId": 25781,
+      "id": "f9bcf3a8-fba8-4247-8c50-a3153f66d8c2",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 2959,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            },
+            {
+              "id": 1233,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            },
+            {
+              "id": 3855,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
         }
       }
     },
@@ -147,36 +209,6 @@
           "gauge": {
             "getsu": false
           }
-        }
-      }
-    },
-    {
-      "name": "Ogi Namikiri (Meikyo Shisui)",
-      "actionId": 25781,
-      "id": "f9bcf3a8-fba8-4247-8c50-a3153f66d8c2",
-      "conditions": {
-        "actionDependentRecast": {
-          "actionId": 16486,
-          "value": 10,
-          "operator": ">"
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 2959,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            },
-            {
-              "id": 1233,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
         }
       }
     },
@@ -210,6 +242,7 @@
       "id": "a4cb4563-6114-4b28-9a0c-b68cf9625c83",
       "conditions": {
         "target": {
+          "isBoss": true,
           "statuses": [
             {
               "id": 1228,
@@ -218,8 +251,7 @@
                 "operator": "<="
               }
             }
-          ],
-          "isBoss": true
+          ]
         }
       }
     },
@@ -392,6 +424,13 @@
           }
         }
       }
+    },
+    {
+      "name": "Gyofu",
+      "actionId": 36963,
+      "id": "898a47a1-8ef0-40bc-91b4-6b22d9d512ac",
+      "type": 0,
+      "conditions": {}
     },
     {
       "name": "Hakaze",
