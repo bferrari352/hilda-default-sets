@@ -2,11 +2,10 @@
   "id": "be1018c0-42ac-425c-85c2-f0800665a0ab",
   "name": "Multi Target",
   "jobId": 38,
-  "version": "0.0.1",
-  "appVersion": "0.0.20.0",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
   "lastUpdated": "2022-02-28 20:30:18Z",
-  "priorities": [],
-  "prioritiesOLD": [
+  "priorities": [
     {
       "name": "Starfall Dance",
       "actionId": 25792,
