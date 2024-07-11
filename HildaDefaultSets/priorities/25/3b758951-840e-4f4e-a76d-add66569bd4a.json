@@ -2,11 +2,10 @@
   "id": "3b758951-840e-4f4e-a76d-add66569bd4a",
   "jobId": 25,
   "name": "Multi Target",
-  "version": "0.0.4",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-03-10 07:51:33Z",
-  "priorities": [],
-  "prioritiesOLD": [
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-11 13:10:00Z",
+  "priorities": [
     {
       "name": "Manafont (emergency)",
       "actionId": 158,
@@ -91,53 +90,10 @@
       }
     },
     {
-      "name": "Thunder IV (Thundercloud)",
-      "actionId": 7420,
-      "id": "41865092-0589-4cfe-bf06-753b45a852a4",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 164,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Thunder II (Thundercloud)",
-      "actionId": 7447,
-      "id": "7ce21855-93fa-4fc2-8ce8-3a95b0b5fab4",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 164,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Sharpcast (Thunder IV)",
-      "actionId": 3574,
-      "id": "4fd85037-18d5-420c-9a8c-162c5a911692",
+      "name": "High Thunder II",
+      "actionId": 36987,
+      "id": "e742717a-dd80-4567-865e-6926e53212fa",
+      "type": 0,
       "conditions": {
         "enemyCount": {
           "value": 3,
@@ -146,36 +102,10 @@
         "target": {
           "statuses": [
             {
-              "id": 1210,
+              "id": 3872,
               "duration": {
                 "value": 3.0,
-                "operator": "<="
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Sharpcast (Thunder II)",
-      "actionId": 3574,
-      "id": "62b4911f-b1d2-4ad4-9348-cc19b30d2a35",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.0,
-          "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "target": {
-          "statuses": [
-            {
-              "id": 162,
-              "duration": {
-                "value": 3.0,
-                "operator": "<="
+                "operator": "<"
               }
             }
           ]
@@ -227,6 +157,18 @@
               }
             }
           ]
+        }
+      }
+    },
+    {
+      "name": "Flare Star",
+      "actionId": 36989,
+      "id": "516d48c7-f635-4bf4-84c7-644b0ca7b72f",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
         }
       }
     },
@@ -363,17 +305,15 @@
       "actionId": 25794,
       "id": "5c9a1d76-ef93-44f2-a515-d46d9d5ff5b7",
       "conditions": {
+        "player": {
+          "mp": {
+            "value": 3800,
+            "operator": ">="
+          }
+        },
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "astralFireStacks": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
         }
       }
     },
@@ -391,14 +331,6 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "astralFireStacks": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
         }
       }
     },
@@ -416,14 +348,6 @@
         "enemyCount": {
           "value": 3,
           "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "astralFireStacks": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
         }
       }
     },
