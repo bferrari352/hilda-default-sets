@@ -3,11 +3,22 @@
   "name": "Single Target",
   "author": "Hilda",
   "jobId": 39,
-  "version": "0.0.4",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-03-06 09:17:10Z",
-  "priorities": [],
-  "prioritiesOLD": [
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-11 14:04:10Z",
+  "priorities": [
+    {
+      "name": "Sacrificium",
+      "actionId": 36969,
+      "id": "c5403855-26c5-4988-9ef2-246248f3427f",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
     {
       "name": "Arcane Circle",
       "actionId": 24405,
@@ -66,7 +77,8 @@
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
-        }
+        },
+        "player": {}
       }
     },
     {
@@ -90,6 +102,62 @@
           "operator": ">"
         }
       }
+    },
+    {
+      "name": "Perfectio",
+      "actionId": 36973,
+      "id": "bbbb5f1a-f8ae-4791-95bc-7c4dd76e4041",
+      "type": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Communio",
+      "actionId": 24398,
+      "id": "a0c7dac2-f80d-4129-a29a-35db3e817790",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3859,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Executioner's Gallows",
+      "actionId": 36971,
+      "id": "8c06754d-08e0-474b-8771-e7cdfe6b89ac",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3858,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "stacks": {
+                "value": 1,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Executioner's Gibbet",
+      "actionId": 36970,
+      "id": "60cfec21-14eb-4f55-a42e-91d4e72dada2",
+      "type": 0,
+      "conditions": {}
     },
     {
       "name": "Gallows (Enhanced)",
@@ -119,6 +187,12 @@
       "name": "Gallows",
       "actionId": 24383,
       "id": "16c2dbab-a927-41f8-89ec-40268dfd9e06",
+      "conditions": {}
+    },
+    {
+      "name": "Plentiful Harvest",
+      "actionId": 24385,
+      "id": "51075ae5-f841-45e0-9efc-c5151460c068",
       "conditions": {}
     },
     {
@@ -160,12 +234,6 @@
       }
     },
     {
-      "name": "Plentiful Harvest",
-      "actionId": 24385,
-      "id": "51075ae5-f841-45e0-9efc-c5151460c068",
-      "conditions": {}
-    },
-    {
       "name": "Communio",
       "actionId": 24398,
       "id": "0c24b705-5fc9-4488-bdfb-5130c6d42442",
@@ -176,7 +244,7 @@
               "value": 0,
               "operator": ">"
             },
-            "lemureshroud": {
+            "lemureShroud": {
               "value": 1,
               "operator": "="
             }

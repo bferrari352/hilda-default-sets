@@ -2,12 +2,77 @@
   "id": "adceefaa-a899-4eee-a1d6-1c821995b00b",
   "jobId": 39,
   "name": "Multi Target",
-  "appVersion": "0.0.20.0",
-  "version": "0.0.1",
+  "appVersion": "7.0.0.0",
+  "version": "7.0.0",
   "author": "Hilda",
-  "lastUpdated": "2022-03-05 17:10:26Z",
-  "priorities": [],
-  "prioritiesOLD": [
+  "lastUpdated": "2024-07-11 14:20:55Z",
+  "priorities": [
+    {
+      "name": "Sacrificium",
+      "actionId": 36969,
+      "id": "c5403855-26c5-4928-9ef2-246248f3427f",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Enshroud",
+      "actionId": 24394,
+      "id": "354e5963-1677-4df9-a4a8-6d46a86b5f28",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Perfectio",
+      "actionId": 36973,
+      "id": "bbbb5f1a-f8ae-4791-95bc-7c4dd76a4042",
+      "type": 0,
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Communio",
+      "actionId": 24398,
+      "id": "a0c75ac2-f80d-4129-a29a-35db3e817790",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3859,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
     {
       "name": "Gluttony",
       "actionId": 24393,
@@ -16,6 +81,10 @@
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
         },
         "job": {
           "gauge": {
@@ -47,6 +116,17 @@
               "operator": ">="
             }
           }
+        }
+      }
+    },
+    {
+      "name": "Plentiful Harvest",
+      "actionId": 24385,
+      "id": "51075ae5-f841-45e2-9efc-c5151460c068",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
         }
       }
     },
