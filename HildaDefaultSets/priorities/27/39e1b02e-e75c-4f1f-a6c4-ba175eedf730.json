@@ -2,9 +2,9 @@
   "id": "39e1b02e-e75c-4f1f-a6c4-ba175eedf730",
   "name": "Multi Target",
   "jobId": 27,
-  "version": "0.0.3",
-  "appVersion": "0.0.20.0",
-  "lastUpdated": "2022-02-28 20:30:18Z",
+  "version": "7.0.0",
+  "appVersion": "7.0.0.2",
+  "lastUpdated": "2024-07-13 11:45:00Z",
   "priorities": [
     {
       "name": "Lucid Dreaming",

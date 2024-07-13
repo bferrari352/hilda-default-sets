@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.56",
-  "LastUpdated": "2024-07-11 14:32:56Z",
+  "Version": "0.0.57",
+  "LastUpdated": "2024-07-13 11:46:40Z",
   "Sets": {
     "19": [
       {
@@ -152,7 +152,7 @@
         "Id": "bd5becba-7dcc-4727-b842-9e49e21a6448",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "1340614C9A8657C622B2662144D8B94F",
+        "Md5": "6F24B8A5AB7E5DD8ABF6D008E8E5CB1D",
         "LastUpdated": "2024-07-08 20:30:18Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -161,7 +161,7 @@
         "Id": "ab87006c-0b32-4fd2-b435-1c66476d5049",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "B3205B45867836834794A1721CDA3D7A",
+        "Md5": "A15B428B2C854AC399F0A3C4A6162728",
         "LastUpdated": "2024-07-08 16:31:26Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -210,10 +210,10 @@
         "Id": "505778fd-174c-4122-9ee2-cae80569a9b9",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "EACF7E0D1D7260389934328494084C25",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.2",
-        "AppVersion": "0.0.20.0"
+        "Md5": "BE27DEAD1679896B7523028B70320BD5",
+        "LastUpdated": "2024-07-13 11:45:00Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "b2dcd60b-56a1-47f3-8f75-b30fe2a7a654",
@@ -228,10 +228,10 @@
         "Id": "39e1b02e-e75c-4f1f-a6c4-ba175eedf730",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "A9DDA694C3258792A7142CDEDB51CE54",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "0.0.3",
-        "AppVersion": "0.0.20.0"
+        "Md5": "131A4597F73321CA63574701A0224EEC",
+        "LastUpdated": "2024-07-13 11:45:00Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
       }
     ],
     "28": [
@@ -239,7 +239,7 @@
         "Id": "8d717211-4467-4bdc-8390-f9ee6f107a4f",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "32B5AF358B751C5F09B079A8987E970B",
+        "Md5": "92FCF5EDB68A181488E592BB148EB542",
         "LastUpdated": "2024-07-08 16:47:48Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -248,7 +248,7 @@
         "Id": "16ed4ecc-d14a-4e54-9d73-3cf87d22c9d4",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "93AE6C2D8495BC1CC279857F622959CA",
+        "Md5": "B7C5D755BDB260CBA166B1749313AE27",
         "LastUpdated": "2024-07-08 16:45:26Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -373,7 +373,7 @@
         "Id": "05c0fcdf-6c6e-46ed-a17b-26bb68c056ed",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "CFC3F843166673EE2898A00B0A6B10DC",
+        "Md5": "E27335FD7352FE3E58C000043E1DEA7E",
         "LastUpdated": "2024-07-08 18:52:34Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -382,7 +382,7 @@
         "Id": "627483dc-d12d-49af-ab45-2100d02f9757",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "48AF71CC525D4173649A2143F1422A44",
+        "Md5": "A8711C92B2492C4FFB1BEB105B496710",
         "LastUpdated": "2024-07-08 18:51:07Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -422,7 +422,7 @@
         "Id": "18a92958-ae06-4181-9e55-46071bac1612",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "E5BD0E91D41ED88CAD9D4BBFECAB5E0E",
+        "Md5": "68747F083C21E8EE80DCF1090A1D2DE9",
         "LastUpdated": "2024-07-01 16:39:12Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -440,7 +440,7 @@
         "Id": "c50af5f3-2995-4d04-ba59-10307b122f8c",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "2FABC1D5946F67733BB8F4DDA8F9A720",
+        "Md5": "CD9D6270102C513EF52ACC3B88E83853",
         "LastUpdated": "2024-07-01 18:59:35Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
@@ -567,7 +567,7 @@
         "Id": "07bf03a9-352f-4449-9bb9-1d72591d3a62",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "30AC5BED69CAE18137126488A9BCD563",
+        "Md5": "01F1D5E80E8A4AB23101429ADD2B1E88",
         "LastUpdated": "2024-07-08 19:06:44Z",
         "Version": "7.0.0",
         "AppVersion": "7.0.0.0"
