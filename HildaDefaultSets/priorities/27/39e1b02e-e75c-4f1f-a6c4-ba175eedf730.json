@@ -5,8 +5,7 @@
   "version": "0.0.3",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-02-28 20:30:18Z",
-  "priorities": [],
-  "prioritiesOLD": [
+  "priorities": [
     {
       "name": "Lucid Dreaming",
       "actionId": 7562,
@@ -67,6 +66,21 @@
       }
     },
     {
+      "name": "Enkindle Solar Bahamut",
+      "actionId": 36998,
+      "id": "2190b3ec-21fd-4482-a849-eab762781bd2",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
       "name": "Enkindle Phoenix",
       "actionId": 16516,
       "id": "f1245234-54e8-4d81-ac1a-edec4208600b",
@@ -97,9 +111,69 @@
       }
     },
     {
+      "name": "Sunflare",
+      "actionId": 36996,
+      "id": "da23a598-27f5-4326-ac98-8782fbb476d0",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
       "name": "Deathflare",
       "actionId": 3582,
       "id": "93be7f0c-0c66-4b31-9240-5adb58351f13",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Lux Solaris",
+      "actionId": 36997,
+      "id": "e6a68e89-3de5-4de1-a0ff-54a66f51cd4e",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Rekindle",
+      "actionId": 25830,
+      "id": "f83920ee-fd69-4faf-b3fa-1cda5e8ac901",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Searing Flash",
+      "actionId": 36991,
+      "id": "e569648f-6453-4c71-904a-6654ebb4a71f",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -172,6 +246,17 @@
       }
     },
     {
+      "name": "Summon Solar Bahamut",
+      "actionId": 36992,
+      "id": "5fbd73dd-3741-419f-bd4f-bc1e5565e6bd",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
       "name": "Summon Phoenix",
       "actionId": 25831,
       "id": "bbb8fcf2-a1cd-4ddd-8967-f57f7559ef50",
@@ -208,6 +293,17 @@
       "name": "Aethercharge",
       "actionId": 25800,
       "id": "e4b588b1-61be-448b-aac2-3a627d075f21",
+      "conditions": {
+        "enemyCount": {
+          "value": 3,
+          "operator": ">="
+        }
+      }
+    },
+    {
+      "name": "Umbral Flare",
+      "actionId": 36995,
+      "id": "20d45ff7-a922-47d9-a2d1-2dfda020c84e",
       "conditions": {
         "enemyCount": {
           "value": 3,

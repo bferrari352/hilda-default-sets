@@ -5,8 +5,7 @@
   "version": "0.0.2",
   "appVersion": "0.0.20.0",
   "lastUpdated": "2022-02-28 20:30:18Z",
-  "priorities": [],
-  "prioritiesOLD": [
+  "priorities": [
     {
       "name": "Lucid Dreaming",
       "actionId": 7562,
@@ -109,6 +108,17 @@
       }
     },
     {
+      "name": "Enkindle Solar Bahamut",
+      "actionId": 36998,
+      "id": "d220f20a-7c4d-49c4-9740-f0d254735a27",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
       "name": "Enkindle Phoenix",
       "actionId": 16516,
       "id": "412233de-259f-4669-9561-08deae77779b",
@@ -131,9 +141,64 @@
       }
     },
     {
+      "name": "Sunflare",
+      "actionId": 36996,
+      "id": "59708497-6c7c-4556-9244-5b64d100ca77",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
       "name": "Deathflare",
       "actionId": 3582,
       "id": "2b36de64-a2bf-4fd2-b340-df5bfd4c6c13",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Lux Solaris",
+      "actionId": 36997,
+      "id": "28c9c0e2-b952-4dcf-9acd-c3afc784ba09",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Rekindle",
+      "actionId": 25830,
+      "id": "937b5da2-6944-41e9-b15f-732fc47823ae",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Searing Flash",
+      "actionId": 36991,
+      "id": "b1c26164-de18-43ed-a11f-8322ae84f96a",
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Necrotize",
+      "actionId": 36990,
+      "id": "e045b8de-0a99-45e4-ac00-d336120195f4",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -174,6 +239,12 @@
       }
     },
     {
+      "name": "Summon Solar Bahamut",
+      "actionId": 36992,
+      "id": "4399e6b2-3c95-4547-9040-4b5c35365c85",
+      "conditions": {}
+    },
+    {
       "name": "Summon Phoenix",
       "actionId": 25831,
       "id": "559bb102-175c-4c5d-9949-74f78c70b363",
@@ -195,6 +266,12 @@
       "name": "Aethercharge",
       "actionId": 25800,
       "id": "080f0f14-364f-4d34-8854-59f8fe15eda0",
+      "conditions": {}
+    },
+    {
+      "name": "Umbral Impulse",
+      "actionId": 36994,
+      "id": "3fe97f48-5c28-4ce7-9a5b-e84e15c016e0",
       "conditions": {}
     },
     {
