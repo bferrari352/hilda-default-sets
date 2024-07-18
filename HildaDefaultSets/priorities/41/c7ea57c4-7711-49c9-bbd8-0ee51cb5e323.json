@@ -2,8 +2,218 @@
   "id": "c7ea57c4-7711-49c9-bbd8-0ee51cb5e323",
   "jobId": 41,
   "name": "Single Target",
-  "appVersion": "7.0.0.0",
-  "version": "1.0.0",
-  "lastUpdated": "2024-07-08 09:17:28Z",
-  "priorities": []
+  "appVersion": "7.0.0.2",
+  "version": "7.0.0",
+  "lastUpdated": "2024-07-17 14:09:36Z",
+  "conditions": {},
+  "priorities": [
+    {
+      "name": "Uncoiled Twinfang",
+      "actionId": 34644,
+      "id": "5bc90ae3-90e3-4f1a-93b2-259fc5fadabf",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Uncoiled Twinblood",
+      "actionId": 34645,
+      "id": "dcf2d130-658d-4443-95cc-6bd02b091eee",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Death Rattle",
+      "actionId": 34634,
+      "id": "0ce17e6a-07b9-4f9d-b727-5250b9322575",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Twinblood Bite",
+      "actionId": 34637,
+      "id": "291772b3-9ad9-4d3f-8fd8-c3ef186aa4fa",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3658,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Twinfang Bite",
+      "actionId": 34636,
+      "id": "c4502333-2deb-4c54-93f9-da4ff6640296",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3657,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Serpent's Ire",
+      "actionId": 34647,
+      "id": "ea4e6aac-f8e9-4abe-b9ab-d51d7297e5ee",
+      "disabled": false,
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "target": {
+          "isBoss": true
+        }
+      }
+    },
+    {
+      "name": "Reawaken Combo L96+",
+      "id": "a7d86506-f949-46e8-87dd-0c8615756d2f",
+      "setId": "538d0a84-a84f-4031-8082-78f03466c5cc",
+      "type": 1,
+      "conditions": {}
+    },
+    {
+      "name": "Reawaken Combo L90",
+      "id": "169fcaad-ab9b-461e-8d24-0a38faf73182",
+      "setId": "8c91e4fc-c180-4180-96f1-441a141d6d43",
+      "type": 1,
+      "conditions": {}
+    },
+    {
+      "name": "Reawaken",
+      "actionId": 34626,
+      "id": "696b0a56-e8f6-4df0-8c48-bacc41629e4c",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3668,
+              "duration": {
+                "value": 20.0,
+                "operator": ">="
+              }
+            },
+            {
+              "id": 3669,
+              "duration": {
+                "value": 20.0,
+                "operator": ">="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Swiftskin's Coil",
+      "actionId": 34622,
+      "id": "017e88a3-97f0-4796-a504-2fc7395c8c16",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "dreadCombo": {
+              "value": 2,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Hunter's Coil",
+      "actionId": 34621,
+      "id": "6cd6a594-a2fb-4d35-9bae-3d844e2c16fa",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "dreadCombo": {
+              "value": 1,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Dreadwinder",
+      "actionId": 34620,
+      "id": "78af2a52-691c-4271-ab8a-0edccc07a33c",
+      "type": 0,
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 3667,
+              "duration": {
+                "value": 15.0,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Uncoiled Fury",
+      "actionId": 34633,
+      "id": "1045df63-417f-4682-b94e-717f6245c020",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "name": "ST Basic Combo",
+      "id": "6b838cd7-570c-4f34-b37b-6aa043444ab5",
+      "setId": "8ba179a4-eb65-426f-9760-8315e88b3860",
+      "type": 1,
+      "conditions": {}
+    }
+  ]
 }

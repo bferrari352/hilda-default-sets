@@ -1,0 +1,172 @@
+{
+  "id": "538d0a84-a84f-4031-8082-78f03466c5cc",
+  "jobId": 41,
+  "name": "Reawaken Combo L96+",
+  "subSet": true,
+  "appVersion": "7.0.0.2",
+  "version": "1.0.0",
+  "lastUpdated": "2024-07-16 16:33:47Z",
+  "conditions": {
+    "player": {
+      "level": {
+        "value": 96,
+        "operator": ">="
+      },
+      "statuses": [
+        {
+          "id": 3670,
+          "duration": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      ]
+    }
+  },
+  "priorities": [
+    {
+      "name": "Fourth Legacy",
+      "actionId": 34643,
+      "id": "e8341e2e-7be3-4900-aca3-7ae0b96c5894",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 1,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Third Legacy",
+      "actionId": 34642,
+      "id": "1f0e158f-c8a6-4cc5-a805-db17c062cdb9",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 2,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Second Legacy",
+      "actionId": 34641,
+      "id": "ddca0d5f-13de-4a2c-9508-7ab9cf83c94c",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 3,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "First Legacy",
+      "actionId": 34640,
+      "id": "b2eb1435-ee13-4df8-a3eb-9f35acc7db3c",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 4,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Ouroboros",
+      "actionId": 34631,
+      "id": "2d93ec38-d087-4b6b-a087-32400c5002ea",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 1,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Fourth Generation",
+      "actionId": 34630,
+      "id": "55070f22-17ac-4429-a4df-c81f69355edf",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 2,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Third Generation",
+      "actionId": 34629,
+      "id": "d2e684a9-8ac7-4fb8-b711-1ceaf53dd639",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 3,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Second Generation",
+      "actionId": 34628,
+      "id": "08f00db7-d6d7-4d50-86a7-5e53243d93dd",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 4,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "First Generation",
+      "actionId": 34627,
+      "id": "8653fa9e-2898-4c9b-8c2e-9b5d1218c8ea",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "anguineTribute": {
+              "value": 5,
+              "operator": "="
+            }
+          }
+        }
+      }
+    }
+  ]
+}

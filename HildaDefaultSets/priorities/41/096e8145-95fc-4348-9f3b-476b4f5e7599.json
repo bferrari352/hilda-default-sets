@@ -1,0 +1,158 @@
+{
+  "id": "096e8145-95fc-4348-9f3b-476b4f5e7599",
+  "jobId": 41,
+  "name": "MT Basic Combo",
+  "subSet": true,
+  "appVersion": "7.0.0.2",
+  "version": "1.0.0",
+  "lastUpdated": "2024-07-17 10:04:13Z",
+  "conditions": {},
+  "priorities": [
+    {
+      "name": "Dread Maw",
+      "actionId": 34615,
+      "id": "da95df19-0380-45f6-a5ac-c28829bbcf26",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3650,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Jagged Maw",
+      "actionId": 34618,
+      "id": "3f046814-7320-42a1-b62d-303ec9acac66",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3649,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Swiftskin's Bite (Swiftscaled Refresher)",
+      "actionId": 34617,
+      "id": "90cdb300-718f-4513-ba5e-4b6efe8b2db0",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3669,
+              "duration": {
+                "value": 7.5,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hunter's Bite (Hunter's Instinct Refresher)",
+      "actionId": 34616,
+      "id": "ae570d7e-fd1c-45f6-8fbd-c860f3f7558d",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3668,
+              "duration": {
+                "value": 7.5,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Dread Maw",
+      "actionId": 34615,
+      "id": "198bb736-d8c9-4705-bd59-dcde3f1475d2",
+      "type": 0,
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 3667,
+              "duration": {
+                "value": 7.5,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Bloodied Maw",
+      "actionId": 34619,
+      "id": "359b5cb0-6976-4bef-87a5-536a233938c1",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Jagged Maw",
+      "actionId": 34618,
+      "id": "2069a829-54ee-457f-a026-4796c4f6176a",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Hunter's Bite",
+      "actionId": 34616,
+      "id": "5ca8a656-2d17-4a8d-a83f-a3494f8b9b38",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Steel Maw",
+      "actionId": 34614,
+      "id": "b3e3fc30-8984-4012-980a-4f4b08ff5198",
+      "type": 0,
+      "conditions": {}
+    }
+  ]
+}

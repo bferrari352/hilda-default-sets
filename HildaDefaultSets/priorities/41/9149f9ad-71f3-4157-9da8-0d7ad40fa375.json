@@ -2,8 +2,222 @@
   "id": "9149f9ad-71f3-4157-9da8-0d7ad40fa375",
   "jobId": 41,
   "name": "Multi Target",
-  "appVersion": "7.0.0.0",
+  "appVersion": "7.0.0.2",
   "version": "7.0.0",
-  "lastUpdated": "2024-07-10 17:30:43Z",
-  "priorities": []
+  "lastUpdated": "2024-07-17 11:57:49Z",
+  "conditions": {
+    "enemyCount": {
+      "value": 3,
+      "operator": ">="
+    }
+  },
+  "priorities": [
+    {
+      "name": "Uncoiled Twinfang",
+      "actionId": 34644,
+      "id": "34c91528-f187-41b2-b816-4a834ddce5f3",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Uncoiled Twinblood",
+      "actionId": 34645,
+      "id": "fd99ba50-6aaf-447b-b8d1-a98ec23e8bf9",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Last Lash",
+      "actionId": 34635,
+      "id": "fe936672-7d3b-4acb-905c-e30997b405c6",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Twinblood Thresh",
+      "actionId": 34639,
+      "id": "9e409001-0b1e-4725-8023-d7f379ff3083",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3660,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Twinfang Thresh",
+      "actionId": 34638,
+      "id": "42191c32-3634-4aba-9733-2723e17ebe9b",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3659,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Serpent's Ire",
+      "actionId": 34647,
+      "id": "61b1138c-d30f-4701-96e9-0c0126aa8c57",
+      "type": 0,
+      "conditions": {
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "target": {
+          "isBoss": true
+        }
+      }
+    },
+    {
+      "name": "Reawaken Combo L96+",
+      "id": "beb1eb63-6946-49f0-a09e-4c43bd80be5e",
+      "setId": "538d0a84-a84f-4031-8082-78f03466c5cc",
+      "type": 1,
+      "conditions": {}
+    },
+    {
+      "name": "Reawaken Combo L90",
+      "id": "fd3b5c1c-0b64-4feb-9397-38dd24cc0da5",
+      "setId": "8c91e4fc-c180-4180-96f1-441a141d6d43",
+      "type": 1,
+      "conditions": {}
+    },
+    {
+      "name": "Reawaken",
+      "actionId": 34626,
+      "id": "89001901-baae-4f57-86fa-50a5b3ce5496",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3668,
+              "duration": {
+                "value": 20.0,
+                "operator": ">="
+              }
+            },
+            {
+              "id": 3669,
+              "duration": {
+                "value": 20.0,
+                "operator": ">="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Swiftskin's Den",
+      "actionId": 34625,
+      "id": "85676108-d10b-478e-a615-ec029ea67a73",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "dreadCombo": {
+              "value": 5,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Hunter's Den",
+      "actionId": 34624,
+      "id": "82842a59-3454-4529-907a-14d63df82998",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "dreadCombo": {
+              "value": 4,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Pit of Dread",
+      "actionId": 34623,
+      "id": "32b9ad7d-81da-4bfc-ad4a-846a09852bdd",
+      "type": 0,
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 3667,
+              "duration": {
+                "value": 15.0,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Uncoiled Fury",
+      "actionId": 34633,
+      "id": "a02d710d-97fb-4c80-8e36-0ed97ea30433",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "name": "MT Basic Combo",
+      "id": "bf7dfa8b-9e25-4f90-a682-68d2835ac26d",
+      "setId": "096e8145-95fc-4348-9f3b-476b4f5e7599",
+      "type": 1,
+      "conditions": {}
+    }
+  ]
 }

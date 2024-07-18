@@ -1,0 +1,304 @@
+{
+  "id": "8ba179a4-eb65-426f-9760-8315e88b3860",
+  "jobId": 41,
+  "name": "ST Basic Combo",
+  "subSet": true,
+  "appVersion": "7.0.0.2",
+  "version": "1.0.0",
+  "lastUpdated": "2024-07-17 09:53:35Z",
+  "conditions": {},
+  "priorities": [
+    {
+      "name": "Flanksting Strike",
+      "actionId": 34610,
+      "id": "71bc691f-3c60-4e2b-b148-91230a08ec05",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3645,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hindsbane Fang",
+      "actionId": 34613,
+      "id": "e201bb67-83ba-44c0-afd5-e0c45ef57857",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3648,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Flanksbane Fang",
+      "actionId": 34611,
+      "id": "e325d4f8-6703-44cc-87fb-ec1df16e8382",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3646,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hindsting Strike",
+      "actionId": 34612,
+      "id": "eff90892-746d-4b76-b86f-9ed6a8fa6c64",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3647,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hindsting Strike",
+      "actionId": 34612,
+      "id": "5bd93630-1f50-44ac-b5e3-1334e59cb4f1",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Swiftskin's Sting (Swiftscaled Refresh)",
+      "actionId": 34609,
+      "id": "90cdb300-718f-4513-ba5e-4b6efe8b2db0",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3669,
+              "duration": {
+                "value": 7.5,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hunter's Sting (Hunter's Instinct Refresh)",
+      "actionId": 34608,
+      "id": "ae570d7e-fd1c-45f6-8fbd-c860f3f7558d",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3668,
+              "duration": {
+                "value": 7.5,
+                "operator": "<"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hunter's Sting (Flanksbane)",
+      "actionId": 34608,
+      "id": "9f5800d9-bd5e-4687-af8e-7442efd1950f",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3646,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hunter's Sting (Flankstung)",
+      "actionId": 34608,
+      "id": "917f992a-76a0-41b5-b9f2-0e3ed2f80952",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3645,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Swiftskin's Sting (Hindstung)",
+      "actionId": 34609,
+      "id": "0ebcbd70-21bd-4937-9547-8f9f3052e1bd",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3647,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Swiftskin's Sting (Hindsbane)",
+      "actionId": 34609,
+      "id": "0eeea40d-6890-4623-a114-6d005f384bf2",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "statuses": [
+            {
+              "id": 3648,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Dread Fangs",
+      "actionId": 34607,
+      "id": "198bb736-d8c9-4705-bd59-dcde3f1475d2",
+      "type": 0,
+      "conditions": {
+        "target": {
+          "statuses": [
+            {
+              "id": 3667,
+              "duration": {
+                "value": 7.5,
+                "operator": "<="
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Flanksting Strike",
+      "actionId": 34610,
+      "id": "2069a829-54ee-457f-a026-4796c4f6176a",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Hunter's Sting",
+      "actionId": 34608,
+      "id": "5ca8a656-2d17-4a8d-a83f-a3494f8b9b38",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Steel Fangs",
+      "actionId": 34606,
+      "id": "b3e3fc30-8984-4012-980a-4f4b08ff5198",
+      "type": 0,
+      "conditions": {}
+    }
+  ]
+}

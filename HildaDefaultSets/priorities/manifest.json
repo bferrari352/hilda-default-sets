@@ -1,6 +1,6 @@
 {
   "Version": "0.0.57",
-  "LastUpdated": "2024-07-13 11:46:40Z",
+  "LastUpdated": "2024-07-17 14:28:08Z",
   "Sets": {
     "19": [
       {
@@ -575,31 +575,67 @@
     ],
     "41": [
       {
+        "Id": "8ba179a4-eb65-426f-9760-8315e88b3860",
+        "Name": "ST Basic Combo",
+        "Type": "Priorities",
+        "Md5": "AE7D8B679836BCC9BE8CB431831617D3",
+        "LastUpdated": "2024-07-17 09:53:35Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
         "Id": "9149f9ad-71f3-4157-9da8-0d7ad40fa375",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "63755851369E3979A07634929139FEA7",
-        "LastUpdated": "2024-07-10 17:30:43Z",
+        "Md5": "193518D57D2B4B00D5E11725ADA1FA33",
+        "LastUpdated": "2024-07-17 11:57:49Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "8c91e4fc-c180-4180-96f1-441a141d6d43",
+        "Name": "Reawaken Combo L90",
+        "Type": "Priorities",
+        "Md5": "384BD3197A06F1FC41A779BE78518DDB",
+        "LastUpdated": "2024-07-16 16:34:35Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "538d0a84-a84f-4031-8082-78f03466c5cc",
+        "Name": "Reawaken Combo L96+",
+        "Type": "Priorities",
+        "Md5": "4E77DEBEED7660F465896DEDF013FE9A",
+        "LastUpdated": "2024-07-16 16:33:47Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "096e8145-95fc-4348-9f3b-476b4f5e7599",
+        "Name": "MT Basic Combo",
+        "Type": "Priorities",
+        "Md5": "1C53BDDB678C75AEA9A04D521AB36671",
+        "LastUpdated": "2024-07-17 10:04:13Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "c7ea57c4-7711-49c9-bbd8-0ee51cb5e323",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "F005ABB14C6916723981E5989CB17EFB",
-        "LastUpdated": "2024-07-08 09:17:28Z",
-        "Version": "1.0.0",
-        "AppVersion": "7.0.0.0"
+        "Md5": "3398833BC3D9B9BF8538479ADED46A1A",
+        "LastUpdated": "2024-07-17 14:09:36Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "55cd085f-85e8-4e49-834f-544fb55c74e5",
         "Name": "Main",
         "Type": "Priorities",
-        "Md5": "AA398D54A56852AA4149F992C8FDCE28",
+        "Md5": "6461A99A66DD7658D1898F19EF90B62C",
         "LastUpdated": "2024-07-08 18:27:44Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "AppVersion": "7.0.0.2"
       }
     ],
     "42": [
