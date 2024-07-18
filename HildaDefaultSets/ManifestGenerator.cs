@@ -113,6 +113,7 @@ internal static class ManifestGenerator
         var version = deserialized["version"] ?? deserialized["Version"];
         var appVersion = deserialized["appVersion"] ?? deserialized["AppVersion"];
         var lastUpdated = deserialized["lastUpdated"] ?? deserialized["LastUpdated"];
+        var subSet = deserialized["subSet"] ?? deserialized["SubSet"];
         var priorities = deserialized["priorities"] ?? deserialized["Priorities"];
         var actions = deserialized["actions"] ?? deserialized["Actions"];
 
@@ -128,7 +129,7 @@ internal static class ManifestGenerator
             type = SetType.Actions;
         }
 
-        return new SetManifest
+        var manifest = new SetManifest
         {
             Id = id.ToString(),
             Name = name.ToString(),
@@ -138,6 +139,13 @@ internal static class ManifestGenerator
             LastUpdated = lastUpdated.ToString(),
             Md5 = GenerateMd5(fileString)
         };
+        
+        if (subSet != null && subSet.Value<bool>())
+        {
+            manifest.SubSet = true;
+        }
+        
+        return manifest;
     }
         
     private static DefaultManifest? GetCurrentManifest()
@@ -202,6 +210,7 @@ public class SetManifest
     public string LastUpdated { get; set; } = "";
     public string Version { get; set; } = "";
     public string AppVersion { get; set; } = "";
+    public bool? SubSet { get; set; }
 }
 
 public enum SetType {

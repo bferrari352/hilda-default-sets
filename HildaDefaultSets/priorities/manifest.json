@@ -1,6 +1,6 @@
 {
   "Version": "0.0.61",
-  "LastUpdated": "2024-07-18 08:57:49Z",
+  "LastUpdated": "2024-07-18 09:22:08Z",
   "Sets": {
     "19": [
       {
@@ -271,7 +271,8 @@
         "Md5": "634BE73A68AC494FECC43BD74F39B42B",
         "LastUpdated": "2024-07-15 21:09:19Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "490d4924-8c5a-4809-a246-0828dcd92129",
@@ -280,7 +281,8 @@
         "Md5": "A45F22EC3A4513EA00FA1765ADFEAA9D",
         "LastUpdated": "2024-07-15 20:37:57Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "4958802c-f1e3-4357-8fee-1883918fd176",
@@ -289,7 +291,8 @@
         "Md5": "C29828CD7F2A66506CD8352C815A7BA8",
         "LastUpdated": "2024-07-15 20:44:21Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "963e5f17-b12e-49b0-8d37-76a6c5875d3e",
@@ -298,7 +301,8 @@
         "Md5": "5E6DAC7B2A2A794AEF991242FD41B88D",
         "LastUpdated": "2024-07-16 20:44:21Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "45673d01-657a-440b-a731-36fa4df68714",
@@ -307,7 +311,8 @@
         "Md5": "B732CD26C270EC36A49A58A57A7CEC06",
         "LastUpdated": "2024-07-15 20:59:07Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "2383ccce-1ba2-4963-b14a-3b5f2d8d86f7",
@@ -316,7 +321,8 @@
         "Md5": "8CB2D5C2028C8A00FCFF8AB50B7D9D5B",
         "LastUpdated": "2024-07-16 19:43:06Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "81d856ee-38ad-4f78-a238-b94cff4d9688",
@@ -325,7 +331,8 @@
         "Md5": "749F1D8237E6FBCF01AF60E6CA6FAC8A",
         "LastUpdated": "2024-07-15 21:04:33Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "c7117e8f-2a5a-4b47-9a22-753f8151dc2b",
@@ -334,7 +341,8 @@
         "Md5": "32909A9A8B3A6F1842A76249FDB4A803",
         "LastUpdated": "2024-07-15 20:44:06Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "a1dbcc28-a4c6-4d44-97ca-43781fe84c61",
@@ -343,7 +351,8 @@
         "Md5": "ED0AC9DCCA0B3BC6767DF83B7F782E2B",
         "LastUpdated": "2024-07-17 19:52:43Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "70408119-0d08-4f01-85b0-4d32230caff5",
@@ -352,7 +361,8 @@
         "Md5": "F8673654EEE934D60413BFD0CAC76770",
         "LastUpdated": "2024-07-15 21:14:41Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "f7478797-4b5b-4c03-b98b-bb222d888173",
@@ -361,7 +371,8 @@
         "Md5": "1D6B4C635C043795972F235129F045A2",
         "LastUpdated": "2024-07-16 20:44:47Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "7e5f1b1a-adb0-484c-a42b-fa1cf7bf0d34",
@@ -370,7 +381,8 @@
         "Md5": "2BFB1B395CE43F5DD8976E4029B2120B",
         "LastUpdated": "2024-07-15 20:59:07Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "3db1cd20-1dc9-447d-9422-411727068e8f",
@@ -379,7 +391,8 @@
         "Md5": "71439DADA9063F37434290B9DF8A14DE",
         "LastUpdated": "2024-07-07 10:07:00Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.2"
+        "AppVersion": "7.0.2",
+        "SubSet": true
       },
       {
         "Id": "da762b0b-b820-428a-a3cd-4a5f1a34b00c",
@@ -388,7 +401,8 @@
         "Md5": "F37453AD4D1A29846D81B14843BA2CC1",
         "LastUpdated": "2024-07-16 20:23:22Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "900bbc99-7c7a-4e09-bd94-bc04ec9a35aa",
@@ -397,7 +411,8 @@
         "Md5": "9921DDDFB369A8742F4EB004EE5C5244",
         "LastUpdated": "2024-07-17 19:44:50Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "a3a12e32-e83e-4e06-8eb4-a22ae0bc547c",
@@ -406,7 +421,8 @@
         "Md5": "523900B90B2000E7DAA035EB13C29EA7",
         "LastUpdated": "2024-07-15 20:35:30Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "5672b104-3f4a-4bb7-97a7-1279e4613742",
@@ -415,7 +431,8 @@
         "Md5": "B7423D8E979BFB8C709A57BE9A40DCE7",
         "LastUpdated": "2024-07-17 19:56:40Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "685dd692-81e5-4a56-9180-05e2d3406eed",
@@ -424,7 +441,8 @@
         "Md5": "011E0D7690273C9B08A53AA446243605",
         "LastUpdated": "2024-07-15 21:14:41Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "515308a6-787f-44e8-b990-b2ad57024e66",
@@ -433,7 +451,8 @@
         "Md5": "7DE769A6DC8E06486EBDF306C51C8E9D",
         "LastUpdated": "2024-07-15 20:44:42Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "36149cd7-cff5-4c51-8d98-12e43ddff0e3",
@@ -442,7 +461,8 @@
         "Md5": "B690064057F9C6741EC4E78C41AEB3E5",
         "LastUpdated": "2024-07-15 21:01:21Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "4f7f120e-83bc-4e12-8477-3b9ae120fdaf",
@@ -451,7 +471,8 @@
         "Md5": "B73EC55E93EDB6F2A1C4CCE40A2BDB4C",
         "LastUpdated": "2024-07-17 19:53:48Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "9ecf91ba-c313-43d9-b92a-c7e108e98854",
@@ -478,7 +499,8 @@
         "Md5": "AFFA8AD59F81EE15A84A8B1588A33E8B",
         "LastUpdated": "2024-07-15 20:37:12Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "543888e6-d584-454f-8bc3-bb16be87066d",
@@ -496,7 +518,8 @@
         "Md5": "F68487A02DEEF217117E27318142F635",
         "LastUpdated": "2024-07-16 19:53:18Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "07a551d6-6cc2-4f4e-811e-756d517a3f61",
@@ -505,7 +528,8 @@
         "Md5": "64BD41EC26E0DF4C35B2D9D228B59D4A",
         "LastUpdated": "2024-07-15 20:35:30Z",
         "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       }
     ],
     "31": [
@@ -632,7 +656,8 @@
         "Md5": "9F4D65414BFCA7535C3345FD58AFB570",
         "LastUpdated": "2024-07-15 10:47:05Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "18a92958-ae06-4181-9e55-46071bac1612",
@@ -659,7 +684,8 @@
         "Md5": "86DB7203430016DC9B40784B0BDB4986",
         "LastUpdated": "2024-07-15 11:01:45Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "db4ea0e5-7720-43b2-aef4-e1bcb1e00b30",
@@ -668,7 +694,8 @@
         "Md5": "ED9F089C2BF13E169082C1C12FF8D06A",
         "LastUpdated": "2024-07-15 10:46:50Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "fd1d62a4-4162-4395-9664-aa2a4bfeda32",
@@ -677,7 +704,8 @@
         "Md5": "CE1358123C10D55C15D746975A26B2B1",
         "LastUpdated": "2024-07-15 10:45:54Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "c50af5f3-2995-4d04-ba59-10307b122f8c",
@@ -824,7 +852,8 @@
         "Md5": "EFA07BF4F1A5EA4D5E3CC54314A8D755",
         "LastUpdated": "2024-07-17 09:53:35Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "9149f9ad-71f3-4157-9da8-0d7ad40fa375",
@@ -842,7 +871,8 @@
         "Md5": "384BD3197A06F1FC41A779BE78518DDB",
         "LastUpdated": "2024-07-16 16:34:35Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "538d0a84-a84f-4031-8082-78f03466c5cc",
@@ -851,7 +881,8 @@
         "Md5": "4E77DEBEED7660F465896DEDF013FE9A",
         "LastUpdated": "2024-07-16 16:33:47Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "096e8145-95fc-4348-9f3b-476b4f5e7599",
@@ -860,7 +891,8 @@
         "Md5": "44D50FDFA01D912C4191562DA4C3F48F",
         "LastUpdated": "2024-07-17 10:04:13Z",
         "Version": "1.0.0",
-        "AppVersion": "7.0.0.2"
+        "AppVersion": "7.0.0.2",
+        "SubSet": true
       },
       {
         "Id": "c7ea57c4-7711-49c9-bbd8-0ee51cb5e323",
