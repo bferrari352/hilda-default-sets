@@ -1,0 +1,70 @@
+{
+    "Id": "45673d01-657a-440b-a731-36fa4df68714",
+    "JobId": 30,
+    "Name": "Ten Chi Jin Active (multi)",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "Description": "Activate Ten, Chi, and Jin during Ten Chi Jin for instant ninjutsu.",
+    "LastUpdated": "2024-07-15 20:59:07Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 1186,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "TenHuton",
+        "ActionId": 18805,
+        "Id": "5d6d2fe0-9ef6-45c2-84a4-42ee8c10db1a",
+        "OverrideIconType": 1,
+        "OverrideIcon": 2269,
+        "Conditions": {
+          "Job": {
+            "TenChiJin": {
+              "value": 11,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
+        "Name": "ChiRaiton",
+        "ActionId": 18806,
+        "Id": "a7af4009-d43f-4b39-994c-c0e4c60dae55",
+        "OverrideIconType": 1,
+        "OverrideIcon": 2267,
+        "Conditions": {
+          "Job": {
+            "TenChiJin": {
+              "value": 3,
+              "operator": "="
+            }
+          }
+        }
+      },
+      {
+        "Name": "JinFuma",
+        "ActionId": 18807,
+        "Id": "95c1ef2e-9190-4b4d-bd09-54259545df11",
+        "OverrideIconType": 1,
+        "OverrideIcon": 2265,
+        "Conditions": {
+          "Job": {
+            "TenChiJin": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    ]
+  }

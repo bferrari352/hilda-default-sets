@@ -1,0 +1,92 @@
+{
+    "Id": "a3a12e32-e83e-4e06-8eb4-a22ae0bc547c",
+    "JobId": 30,
+    "Name": "Ninjutsu - Raiton (overcap)",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "Description": "Ten > Chi > Raiton. \nExpend Mudra outside of Trick Attack to not overcap on Ninjutsu charges.",
+    "LastUpdated": "2024-07-15 20:35:30Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Fleeting Raiju (overcap)",
+        "ActionId": 25778,
+        "Id": "597b4c10-f7f7-4e3c-8cc3-6a9590b0210f",
+        "Description": "Expend Raiju attacks outside of Trick Attack to not overcap on Raiju Ready stacks.",
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              },
+              {
+                "Id": 3211,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                },
+                "Stacks": {
+                  "value": 3,
+                  "operator": ">="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Raiton",
+        "ActionId": 2267,
+        "Id": "377fdbfc-397f-4908-a49c-485529f7bed1",
+        "Type": 0,
+        "Conditions": {}
+      },
+      {
+        "Name": "Ten",
+        "ActionId": 2259,
+        "Id": "327dcfa7-638e-4a5a-9296-592889507e10",
+        "Conditions": {
+          "ActionDependentRecast": {
+            "ActionId": 2259,
+            "value": 3.0,
+            "operator": "<"
+          },
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Chi",
+        "ActionId": 2261,
+        "Id": "0cca2f71-ad38-4801-80b0-898f502c9f8f",
+        "Type": 0,
+        "Conditions": {}
+      }
+    ]
+  }

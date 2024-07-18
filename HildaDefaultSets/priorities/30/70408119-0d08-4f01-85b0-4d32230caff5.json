@@ -1,0 +1,78 @@
+{
+    "Id": "70408119-0d08-4f01-85b0-4d32230caff5",
+    "JobId": 30,
+    "Name": "Missed Tricks Window (multi)",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "Description": "Fallback to handle any lingering buffs still active outside of tricks.",
+    "LastUpdated": "2024-07-15 21:14:41Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Deathfrog Medium (missed timing)",
+        "ActionId": 36959,
+        "Id": "6a1891f5-7afb-42f8-b710-d4143695ff5b",
+        "Type": 0,
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Tenri Jindo (missed timing)",
+        "ActionId": 36961,
+        "Id": "6372799a-8396-4958-a7d7-3d72b0aedf3c",
+        "Type": 0,
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Hellfrog Medium (missed timing)",
+        "ActionId": 7401,
+        "Id": "1cca187a-df92-45c0-9a01-74408f3c1636",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              },
+              {
+                "Id": 2689,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }

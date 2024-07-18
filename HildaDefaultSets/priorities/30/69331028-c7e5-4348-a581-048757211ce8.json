@@ -1,0 +1,62 @@
+{
+    "Id": "69331028-c7e5-4348-a581-048757211ce8",
+    "JobId": 30,
+    "Name": "Ninjutsu - Katon",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "Description": "Chi > Ten > Katon",
+    "LastUpdated": "2024-07-15 21:09:19Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          }
+        ]
+      },
+      "EnemyCount": {
+        "value": 2,
+        "operator": ">="
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Katon",
+        "ActionId": 2266,
+        "Id": "377fdbfc-397f-4908-a49c-485529f7bed1",
+        "Type": 0,
+        "Conditions": {}
+      },
+      {
+        "Name": "Chi",
+        "ActionId": 2261,
+        "Id": "3ca0b63a-adf2-4f36-8102-06f26da5fbf7",
+        "Type": 0,
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Ten",
+        "ActionId": 2259,
+        "Id": "0cca2f71-ad38-4801-80b0-898f502c9f8f",
+        "Type": 0,
+        "Conditions": {}
+      }
+    ]
+  }

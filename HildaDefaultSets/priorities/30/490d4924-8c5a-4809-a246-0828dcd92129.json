@@ -1,0 +1,71 @@
+{
+    "Id": "490d4924-8c5a-4809-a246-0828dcd92129",
+    "JobId": 30,
+    "Name": "Ninjutsu - Huton",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "Description": "Jin > Chi > Ten > Huton",
+    "LastUpdated": "2024-07-15 20:37:57Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 3848,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          },
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Huton",
+        "ActionId": 2269,
+        "Id": "6d1c88d5-c531-4cf0-8e27-3d1c43732ec8",
+        "Conditions": {}
+      },
+      {
+        "Name": "Jin",
+        "ActionId": 2263,
+        "Id": "3ca0b63a-adf2-4f36-8102-06f26da5fbf7",
+        "Type": 0,
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Chi",
+        "ActionId": 2261,
+        "Id": "0cca2f71-ad38-4801-80b0-898f502c9f8f",
+        "Type": 0,
+        "Conditions": {}
+      },
+      {
+        "Name": "Ten",
+        "ActionId": 2259,
+        "Id": "6b1101e5-c9ad-44a0-a8bc-ed23d3fd35cd",
+        "Type": 0,
+        "Conditions": {}
+      }
+    ]
+  }

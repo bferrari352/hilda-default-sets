@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.57",
-  "LastUpdated": "2024-07-17 14:28:08Z",
+  "Version": "0.0.59",
+  "LastUpdated": "2024-07-17 20:49:40Z",
   "Sets": {
     "19": [
       {
@@ -265,22 +265,202 @@
     ],
     "30": [
       {
+        "Id": "69331028-c7e5-4348-a581-048757211ce8",
+        "Name": "Ninjutsu - Katon",
+        "Type": "Priorities",
+        "Md5": "634BE73A68AC494FECC43BD74F39B42B",
+        "LastUpdated": "2024-07-15 21:09:19Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "490d4924-8c5a-4809-a246-0828dcd92129",
+        "Name": "Ninjutsu - Huton",
+        "Type": "Priorities",
+        "Md5": "A45F22EC3A4513EA00FA1765ADFEAA9D",
+        "LastUpdated": "2024-07-15 20:37:57Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "4958802c-f1e3-4357-8fee-1883918fd176",
+        "Name": "Trick Attack Ready (single)",
+        "Type": "Priorities",
+        "Md5": "C29828CD7F2A66506CD8352C815A7BA8",
+        "LastUpdated": "2024-07-15 20:44:21Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "963e5f17-b12e-49b0-8d37-76a6c5875d3e",
+        "Name": "Ninjutsu - Hyosho Ranryu",
+        "Type": "Priorities",
+        "Md5": "5E6DAC7B2A2A794AEF991242FD41B88D",
+        "LastUpdated": "2024-07-16 20:44:21Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "45673d01-657a-440b-a731-36fa4df68714",
+        "Name": "Ten Chi Jin Active (multi)",
+        "Type": "Priorities",
+        "Md5": "B732CD26C270EC36A49A58A57A7CEC06",
+        "LastUpdated": "2024-07-15 20:59:07Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "2383ccce-1ba2-4963-b14a-3b5f2d8d86f7",
+        "Name": "Ninjutsu - Doton (overcap)",
+        "Type": "Priorities",
+        "Md5": "8CB2D5C2028C8A00FCFF8AB50B7D9D5B",
+        "LastUpdated": "2024-07-16 19:43:06Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "81d856ee-38ad-4f78-a238-b94cff4d9688",
+        "Name": "Hakke Mujinsatsu Combo",
+        "Type": "Priorities",
+        "Md5": "749F1D8237E6FBCF01AF60E6CA6FAC8A",
+        "LastUpdated": "2024-07-15 21:04:33Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "c7117e8f-2a5a-4b47-9a22-753f8151dc2b",
+        "Name": "Trick Attack Active (single)",
+        "Type": "Priorities",
+        "Md5": "32909A9A8B3A6F1842A76249FDB4A803",
+        "LastUpdated": "2024-07-15 20:44:06Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "a1dbcc28-a4c6-4d44-97ca-43781fe84c61",
+        "Name": "Kunai's Bane Active (single)",
+        "Type": "Priorities",
+        "Md5": "ED0AC9DCCA0B3BC6767DF83B7F782E2B",
+        "LastUpdated": "2024-07-17 19:52:43Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "70408119-0d08-4f01-85b0-4d32230caff5",
+        "Name": "Missed Tricks Window (multi)",
+        "Type": "Priorities",
+        "Md5": "F8673654EEE934D60413BFD0CAC76770",
+        "LastUpdated": "2024-07-15 21:14:41Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "f7478797-4b5b-4c03-b98b-bb222d888173",
+        "Name": "Ninjutsu - Goka Mekkyaku",
+        "Type": "Priorities",
+        "Md5": "1D6B4C635C043795972F235129F045A2",
+        "LastUpdated": "2024-07-16 20:44:47Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "7e5f1b1a-adb0-484c-a42b-fa1cf7bf0d34",
+        "Name": "Ten Chi Jin Active (single)",
+        "Type": "Priorities",
+        "Md5": "2BFB1B395CE43F5DD8976E4029B2120B",
+        "LastUpdated": "2024-07-15 20:59:07Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
         "Id": "3db1cd20-1dc9-447d-9422-411727068e8f",
         "Name": "Ninjutsu",
         "Type": "Priorities",
-        "Md5": "E5F86BF89B70E45A13AC4D13086DDC80",
+        "Md5": "71439DADA9063F37434290B9DF8A14DE",
         "LastUpdated": "2024-07-07 10:07:00Z",
         "Version": "7.0.0",
-        "AppVersion": "0.0.20.0"
+        "AppVersion": "7.0.2"
+      },
+      {
+        "Id": "da762b0b-b820-428a-a3cd-4a5f1a34b00c",
+        "Name": "Trick Attack Ready (multi)",
+        "Type": "Priorities",
+        "Md5": "F37453AD4D1A29846D81B14843BA2CC1",
+        "LastUpdated": "2024-07-16 20:23:22Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "900bbc99-7c7a-4e09-bd94-bc04ec9a35aa",
+        "Name": "Kunai's Bane Ready (multi)",
+        "Type": "Priorities",
+        "Md5": "9921DDDFB369A8742F4EB004EE5C5244",
+        "LastUpdated": "2024-07-17 19:44:50Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "a3a12e32-e83e-4e06-8eb4-a22ae0bc547c",
+        "Name": "Ninjutsu - Raiton (overcap)",
+        "Type": "Priorities",
+        "Md5": "523900B90B2000E7DAA035EB13C29EA7",
+        "LastUpdated": "2024-07-15 20:35:30Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "5672b104-3f4a-4bb7-97a7-1279e4613742",
+        "Name": "Kunai's Bane Active (multi)",
+        "Type": "Priorities",
+        "Md5": "B7423D8E979BFB8C709A57BE9A40DCE7",
+        "LastUpdated": "2024-07-17 19:56:40Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "685dd692-81e5-4a56-9180-05e2d3406eed",
+        "Name": "Missed Tricks Window (single)",
+        "Type": "Priorities",
+        "Md5": "011E0D7690273C9B08A53AA446243605",
+        "LastUpdated": "2024-07-15 21:14:41Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "515308a6-787f-44e8-b990-b2ad57024e66",
+        "Name": "Kunai's Bane Ready (single)",
+        "Type": "Priorities",
+        "Md5": "7DE769A6DC8E06486EBDF306C51C8E9D",
+        "LastUpdated": "2024-07-15 20:44:42Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "36149cd7-cff5-4c51-8d98-12e43ddff0e3",
+        "Name": "Kazematoi Combo",
+        "Type": "Priorities",
+        "Md5": "B690064057F9C6741EC4E78C41AEB3E5",
+        "LastUpdated": "2024-07-15 21:01:21Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "4f7f120e-83bc-4e12-8477-3b9ae120fdaf",
+        "Name": "Trick Attack Active (multi)",
+        "Type": "Priorities",
+        "Md5": "B73EC55E93EDB6F2A1C4CCE40A2BDB4C",
+        "LastUpdated": "2024-07-17 19:53:48Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "9ecf91ba-c313-43d9-b92a-c7e108e98854",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "F9967777EA1BF629CB0EC91EBD305AC5",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "6.5.1",
-        "AppVersion": "0.0.20.0"
+        "Md5": "46594FFD68548B72117E5DE7615484ED",
+        "LastUpdated": "2024-07-15 21:10:11Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "68933877-4884-4281-bd07-7cef35f40300",
@@ -292,13 +472,40 @@
         "AppVersion": "7.0.0.0"
       },
       {
+        "Id": "14e05a2d-f88d-4547-ba3a-ab467d4e3e7d",
+        "Name": "Ninjutsu - Suiton",
+        "Type": "Priorities",
+        "Md5": "AFFA8AD59F81EE15A84A8B1588A33E8B",
+        "LastUpdated": "2024-07-15 20:37:12Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
         "Id": "543888e6-d584-454f-8bc3-bb16be87066d",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "F472820FFD65D5C88927532A2C6383FD",
-        "LastUpdated": "2022-02-28 20:30:18Z",
-        "Version": "6.5.1",
-        "AppVersion": "0.0.20.0"
+        "Md5": "9012A23E17D6F1A69520794CD8746453",
+        "LastUpdated": "2024-07-17 19:57:32Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "e4da3511-49e6-4676-bc86-10917d84f3e8",
+        "Name": "Ninjutsu - Doton",
+        "Type": "Priorities",
+        "Md5": "F68487A02DEEF217117E27318142F635",
+        "LastUpdated": "2024-07-16 19:53:18Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "07a551d6-6cc2-4f4e-811e-756d517a3f61",
+        "Name": "Ninjutsu - Raiton",
+        "Type": "Priorities",
+        "Md5": "64BD41EC26E0DF4C35B2D9D228B59D4A",
+        "LastUpdated": "2024-07-15 20:35:30Z",
+        "Version": "7.0.0",
+        "AppVersion": "7.0.0.2"
       }
     ],
     "31": [
@@ -578,7 +785,7 @@
         "Id": "8ba179a4-eb65-426f-9760-8315e88b3860",
         "Name": "ST Basic Combo",
         "Type": "Priorities",
-        "Md5": "AE7D8B679836BCC9BE8CB431831617D3",
+        "Md5": "EFA07BF4F1A5EA4D5E3CC54314A8D755",
         "LastUpdated": "2024-07-17 09:53:35Z",
         "Version": "1.0.0",
         "AppVersion": "7.0.0.2"
@@ -614,7 +821,7 @@
         "Id": "096e8145-95fc-4348-9f3b-476b4f5e7599",
         "Name": "MT Basic Combo",
         "Type": "Priorities",
-        "Md5": "1C53BDDB678C75AEA9A04D521AB36671",
+        "Md5": "44D50FDFA01D912C4191562DA4C3F48F",
         "LastUpdated": "2024-07-17 10:04:13Z",
         "Version": "1.0.0",
         "AppVersion": "7.0.0.2"

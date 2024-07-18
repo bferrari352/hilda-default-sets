@@ -1,0 +1,68 @@
+{
+    "Id": "f7478797-4b5b-4c03-b98b-bb222d888173",
+    "JobId": 30,
+    "Name": "Ninjutsu - Goka Mekkyaku",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "Description": "Chi > Ten > Goka Mekkyaku",
+    "LastUpdated": "2024-07-16 20:44:47Z",
+    "Conditions": {
+      "Player": {
+        "Level": {
+          "value": 76,
+          "operator": ">="
+        },
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          },
+          {
+            "Id": 497,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Goka Mekkyaku",
+        "ActionId": 16491,
+        "Id": "7714be75-397d-498c-b8fc-9c9730ecb769",
+        "Type": 0,
+        "Conditions": {}
+      },
+      {
+        "Name": "Chi",
+        "ActionId": 2261,
+        "Id": "07052dd5-a071-48f0-83a3-cfd335052c9d",
+        "Type": 0,
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Ten",
+        "ActionId": 2259,
+        "Id": "3af0f22f-3ba4-4d1a-ba6f-3a84cb6bc8c3",
+        "Conditions": {}
+      }
+    ]
+  }

@@ -1,0 +1,85 @@
+{
+  "Id": "900bbc99-7c7a-4e09-bd94-bc04ec9a35aa",
+  "JobId": 30,
+  "Name": "Kunai's Bane Ready (multi)",
+  "SubSet": true,
+  "AppVersion": "7.0.0.2",
+  "Version": "7.0.0",
+  "LastUpdated": "2024-07-17 19:44:50Z",
+  "Conditions": {
+    "ActionDependentRecast": {
+      "ActionId": 36958,
+      "value": 10.0,
+      "operator": "<"
+    },
+    "Player": {
+      "Level": {
+        "value": 92,
+        "operator": ">="
+      },
+      "Statuses": [
+        {
+          "Id": 3848,
+          "Duration": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        },
+        {
+          "Id": 496,
+          "Duration": {
+            "value": 0.0,
+            "operator": "="
+          }
+        }
+      ]
+    }
+  },
+  "Priorities": [
+    {
+      "Name": "Kassatsu",
+      "ActionId": 2264,
+      "Id": "75a58f2f-3a91-479a-8915-d6f15f57da21",
+      "Description": "Get ready to use Kassatsu-empowered ninjutsu during Trick Attack.",
+      "Conditions": {
+        "GlobalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "Name": "Dokumori",
+      "ActionId": 36957,
+      "Id": "f33f2d27-6ef7-4902-a04d-bb068fdeffa2",
+      "Description": "Use Dokumori before Trick Attack to maximize tricks.",
+      "Conditions": {
+        "GlobalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "Target": {
+          "IsBoss": true
+        }
+      }
+    },
+    {
+      "Name": "Kunai's Bane",
+      "ActionId": 36958,
+      "Id": "d2521f4b-34cc-4f0b-9312-2fefdd15f253",
+      "Conditions": {
+        "GlobalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "Name": "Ninjutsu - Huton",
+      "Id": "18aed2a2-11da-40c8-b676-5c7ec751769f",
+      "SetId": "490d4924-8c5a-4809-a246-0828dcd92129",
+      "Type": 1,
+      "Conditions": {}
+    }
+  ]
+}

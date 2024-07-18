@@ -1,0 +1,85 @@
+{
+    "Id": "515308a6-787f-44e8-b990-b2ad57024e66",
+    "JobId": 30,
+    "Name": "Kunai's Bane Ready (single)",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "LastUpdated": "2024-07-15 20:44:42Z",
+    "Conditions": {
+      "ActionDependentRecast": {
+        "ActionId": 36958,
+        "value": 10.0,
+        "operator": "<"
+      },
+      "Player": {
+        "Level": {
+          "value": 92,
+          "operator": ">="
+        },
+        "Statuses": [
+          {
+            "Id": 3848,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          },
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Kassatsu",
+        "ActionId": 2264,
+        "Id": "75a58f2f-3a91-479a-8915-d6f15f57da21",
+        "Description": "Get ready to use Kassatsu-empowered ninjutsu during Trick Attack.",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Dokumori",
+        "ActionId": 36957,
+        "Id": "f33f2d27-6ef7-4902-a04d-bb068fdeffa2",
+        "Description": "Use Dokumori before Trick Attack to maximize tricks.",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Target": {
+            "IsBoss": true
+          }
+        }
+      },
+      {
+        "Name": "Kunai's Bane",
+        "ActionId": 36958,
+        "Id": "d2521f4b-34cc-4f0b-9312-2fefdd15f253",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Ninjutsu - Suiton",
+        "Id": "cb334fc7-4f04-49fc-abdb-7e9bb7906023",
+        "SetId": "14e05a2d-f88d-4547-ba3a-ab467d4e3e7d",
+        "Type": 1,
+        "Conditions": {}
+      }
+    ]
+  }

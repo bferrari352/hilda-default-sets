@@ -1,0 +1,77 @@
+{
+    "Id": "07a551d6-6cc2-4f4e-811e-756d517a3f61",
+    "JobId": 30,
+    "Name": "Ninjutsu - Raiton",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "Description": "Ten > Chi > Raiton",
+    "LastUpdated": "2024-07-15 20:35:30Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Fleeting Raiju",
+        "ActionId": 25778,
+        "Id": "676add1b-030d-4fbe-8e55-44c0019ed446",
+        "Type": 0,
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Raiton",
+        "ActionId": 2267,
+        "Id": "377fdbfc-397f-4908-a49c-485529f7bed1",
+        "Type": 0,
+        "Conditions": {}
+      },
+      {
+        "Name": "Ten",
+        "ActionId": 2259,
+        "Id": "3ca0b63a-adf2-4f36-8102-06f26da5fbf7",
+        "Type": 0,
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Chi",
+        "ActionId": 2261,
+        "Id": "0cca2f71-ad38-4801-80b0-898f502c9f8f",
+        "Type": 0,
+        "Conditions": {}
+      }
+    ]
+  }

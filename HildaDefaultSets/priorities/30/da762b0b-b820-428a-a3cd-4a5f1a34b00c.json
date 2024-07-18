@@ -1,0 +1,111 @@
+{
+    "Id": "da762b0b-b820-428a-a3cd-4a5f1a34b00c",
+    "JobId": 30,
+    "Name": "Trick Attack Ready (multi)",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "LastUpdated": "2024-07-16 20:23:22Z",
+    "Conditions": {
+      "ActionDependentRecast": {
+        "ActionId": 2258,
+        "value": 10.0,
+        "operator": "<"
+      },
+      "Player": {
+        "Level": {
+          "value": 92,
+          "operator": "<"
+        },
+        "Statuses": [
+          {
+            "Id": 3848,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          },
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          }
+        ]
+      },
+      "Target": {
+        "Statuses": [
+          {
+            "Id": 3254,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Kassatsu",
+        "ActionId": 2264,
+        "Id": "75a58f2f-3a91-479a-8915-d6f15f57da21",
+        "Description": "Get ready to use Kassatsu-empowered ninjutsu during Trick Attack.",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Dokumori",
+        "ActionId": 36957,
+        "Id": "f33f2d27-6ef7-4902-a04d-bb068fdeffa2",
+        "Description": "Use Dokumori before Trick Attack to maximize tricks.",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Target": {
+            "IsBoss": true
+          }
+        }
+      },
+      {
+        "Name": "Mug",
+        "ActionId": 2248,
+        "Id": "0c34a2e8-a401-4e79-a7a5-21c815c6c2e5",
+        "Description": "Use Mug before Trick Attack to maximize tricks.",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Target": {
+            "IsBoss": true
+          }
+        }
+      },
+      {
+        "Name": "Trick Attack",
+        "ActionId": 2258,
+        "Id": "d2521f4b-34cc-4f0b-9312-2fefdd15f253",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Ninjutsu - Huton",
+        "Id": "bc92af10-f77b-45c7-b06f-b2c6c904eef3",
+        "SetId": "490d4924-8c5a-4809-a246-0828dcd92129",
+        "Type": 1,
+        "Conditions": {}
+      }
+    ]
+  }

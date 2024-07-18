@@ -1,0 +1,99 @@
+{
+    "Id": "81d856ee-38ad-4f78-a238-b94cff4d9688",
+    "JobId": 30,
+    "Name": "Hakke Mujinsatsu Combo",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "LastUpdated": "2024-07-15 21:04:33Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          }
+        ]
+      },
+      "EnemyCount": {
+        "value": 4,
+        "operator": ">="
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Hakke Mujinsatsu (Doton)",
+        "ActionId": 16488,
+        "Id": "db2da27e-658a-48bb-9e3d-16d98d2b2953",
+        "Description": "If Doton is active, this combo is more effective.",
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 501,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "EnemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "Name": "Death Blossom (Doton)",
+        "ActionId": 2254,
+        "Id": "5c62a2db-31a0-4988-a92f-756a2b87aed9",
+        "Description": "If Doton is active, this combo is more effective.",
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 501,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "EnemyCount": {
+            "value": 3,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "Name": "Hakke Mujinsatsu",
+        "ActionId": 16488,
+        "Id": "1227b661-dcbb-45e4-b3f0-8400b86443a8",
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Death Blossom",
+        "ActionId": 2254,
+        "Id": "dca4f7df-ab9c-4813-856d-1db40c369494",
+        "Conditions": {}
+      }
+    ]
+  }

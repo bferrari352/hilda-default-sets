@@ -1,0 +1,83 @@
+{
+    "Id": "36149cd7-cff5-4c51-8d98-12e43ddff0e3",
+    "JobId": 30,
+    "Name": "Kazematoi Combo",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "LastUpdated": "2024-07-15 21:01:21Z",
+    "Conditions": {
+      "Player": {
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Aeolian Edge",
+        "ActionId": 2255,
+        "Id": "71964f43-f63c-4d5d-9863-90964a208fe7",
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "Job": {
+            "Gauge": {
+              "Kazematoi": {
+                "value": 4,
+                "operator": ">="
+              }
+            }
+          }
+        }
+      },
+      {
+        "Name": "Armor Crush",
+        "ActionId": 3563,
+        "Id": "6c82e470-fd3e-48f8-849e-b1d9c75b3dd7",
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Aeolian Edge (pre-Armor Crush)",
+        "ActionId": 2255,
+        "Id": "386a2bb4-e31d-4949-8b5b-45ce9d1ac4bc",
+        "Type": 0,
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Gust Slash",
+        "ActionId": 2242,
+        "Id": "1227b661-dcbb-45e4-b3f0-8400b86443a8",
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Spinning Edge",
+        "ActionId": 2240,
+        "Id": "dca4f7df-ab9c-4813-856d-1db40c369494",
+        "Conditions": {}
+      }
+    ]
+  }

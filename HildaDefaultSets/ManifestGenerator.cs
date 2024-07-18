@@ -105,20 +105,20 @@ internal static class ManifestGenerator
         var deserialized = JsonConvert.DeserializeObject<JObject>(fileString);
         if (deserialized == null)
         {
-            throw new Exception("Error acquiring set data");
+            throw new Exception($"Error acquiring set data in {fileString}");
         }
 
-        var id = deserialized["id"];
-        var name = deserialized["name"];
-        var version = deserialized["version"];
-        var appVersion = deserialized["appVersion"];
-        var lastUpdated = deserialized["lastUpdated"];
-        var priorities = deserialized["priorities"];
-        var actions = deserialized["actions"];
+        var id = deserialized["id"] ?? deserialized["Id"];
+        var name = deserialized["name"] ?? deserialized["Name"];
+        var version = deserialized["version"] ?? deserialized["Version"];
+        var appVersion = deserialized["appVersion"] ?? deserialized["AppVersion"];
+        var lastUpdated = deserialized["lastUpdated"] ?? deserialized["LastUpdated"];
+        var priorities = deserialized["priorities"] ?? deserialized["Priorities"];
+        var actions = deserialized["actions"] ?? deserialized["Actions"];
 
         if (id == null || name == null || version == null || appVersion == null || lastUpdated == null)
         {
-            throw new Exception("Data is null");
+            throw new Exception($"Data is null in {deserialized}");
         }
 
         var type = SetType.Unknown;

@@ -2,8 +2,9 @@
     "id": "3db1cd20-1dc9-447d-9422-411727068e8f",
     "jobId": 30,
     "name": "Ninjutsu",
+    "SubSet": true,
     "version": "7.0.0",
-    "appVersion": "0.0.20.0",
+    "appVersion": "7.0.2",
     "lastUpdated": "2024-07-07 10:07:00Z",
     "priorities": [
         {

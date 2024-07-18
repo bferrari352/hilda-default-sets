@@ -1,0 +1,208 @@
+{
+    "Id": "a1dbcc28-a4c6-4d44-97ca-43781fe84c61",
+    "JobId": 30,
+    "Name": "Kunai's Bane Active (single)",
+    "SubSet": true,
+    "AppVersion": "7.0.0.2",
+    "Version": "7.0.0",
+    "LastUpdated": "2024-07-17 19:52:43Z",
+    "Conditions": {
+      "Player": {
+        "Level": {
+          "value": 92,
+          "operator": ">="
+        },
+        "Statuses": [
+          {
+            "Id": 496,
+            "Duration": {
+              "value": 0.0,
+              "operator": "="
+            }
+          }
+        ]
+      },
+      "Target": {
+        "Statuses": [
+          {
+            "Id": 3906,
+            "Duration": {
+              "value": 0.0,
+              "operator": ">"
+            }
+          }
+        ]
+      }
+    },
+    "Priorities": [
+      {
+        "Name": "Kassatsu (missed timing)",
+        "ActionId": 2264,
+        "Id": "f3d34f28-ce6a-4ae2-9cf7-f4597313c4ca",
+        "Description": "Trick is on, activate for Kassatsu-empowered ninjutsu.",
+        "Conditions": {}
+      },
+      {
+        "Name": "Dokumori (missed timing)",
+        "ActionId": 36957,
+        "Id": "8a05c377-9310-4e92-8868-d9ae4fb2246d",
+        "Description": "Trick is on, activate to maximize tricks.",
+        "Conditions": {
+          "Target": {
+            "IsBoss": true
+          }
+        }
+      },
+      {
+        "Name": "Dream Within a Dream",
+        "ActionId": 3566,
+        "Id": "f53cd1a1-31da-4bfe-b8b1-4b8acefd5a03",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Ten Chi Jin",
+        "ActionId": 7403,
+        "Id": "31b12ef3-ed58-4cba-adf3-6ad3c034e926",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Target": {
+            "IsBoss": true
+          }
+        }
+      },
+      {
+        "Name": "Meisui",
+        "ActionId": 16489,
+        "Id": "1dc8c6ba-5fa5-4c35-9ef5-fae7b9273caf",
+        "Description": "Ten Chi Jin should end with Suiton to grant Shadow Walker.",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Player": {},
+          "Target": {
+            "IsBoss": true
+          }
+        }
+      },
+      {
+        "Name": "Zesho Meppo (Meisui)",
+        "ActionId": 36960,
+        "Id": "d994472b-5c4b-4d7a-b1f9-782da0b90795",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 2689,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Tenri Jindo",
+        "ActionId": 36961,
+        "Id": "d9ad7094-e277-4805-98f2-5f9068262c57",
+        "Type": 0,
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          }
+        }
+      },
+      {
+        "Name": "Bhavacakra (Meisui)",
+        "ActionId": 7402,
+        "Id": "d3b5975a-afa7-4f15-9006-3b4aa09831fc",
+        "Conditions": {
+          "GlobalCooldown": {
+            "value": 0.5,
+            "operator": ">"
+          },
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 2689,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Name": "Ninjutsu - Hyosho Ranryu",
+        "Id": "1f78f63e-6d16-4da8-92db-810319376c5c",
+        "SetId": "963e5f17-b12e-49b0-8d37-76a6c5875d3e",
+        "Type": 1,
+        "Conditions": {}
+      },
+      {
+        "Name": "Ninjutsu - Raiton",
+        "Id": "22aba81e-a818-4d9c-b41b-049b0569d439",
+        "SetId": "07a551d6-6cc2-4f4e-811e-756d517a3f61",
+        "Type": 1,
+        "Conditions": {}
+      },
+      {
+        "Name": "Phantom Kamaitachi",
+        "ActionId": 25774,
+        "Id": "ff592e11-3d5e-45d1-988a-8dfdc0842de7",
+        "Description": "Only use Phantom Kamaitachi during tricks when Bunshin is not active.\nOtherwise, Bunshin makes weaponskills more powerful and a better choice.",
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 2010,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              }
+            ]
+          },
+          "Target": {}
+        }
+      },
+      {
+        "Name": "Aeolian Edge",
+        "ActionId": 2255,
+        "Id": "91fbe20b-68d2-40c7-911e-819177fb2fd4",
+        "Type": 0,
+        "Conditions": {
+          "Combo": {
+            "value": 0.0,
+            "operator": ">"
+          },
+          "Job": {
+            "Gauge": {
+              "Kazematoi": {
+                "value": 0,
+                "operator": ">"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
