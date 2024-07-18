@@ -2,14 +2,15 @@
   "id": "18a92958-ae06-4181-9e55-46071bac1612",
   "name": "Single Target",
   "jobId": 35,
-  "appVersion": "7.0.0.0",
-  "version": "7.0.0",
-  "lastUpdated": "2024-07-01 16:39:12Z",
+  "appVersion": "7.0.0.2",
+  "version": "7.0.2",
+  "lastUpdated": "2024-07-15 19:49:20Z",
+  "conditions": {},
   "priorities": [
     {
       "name": "Lucid Dreaming",
       "actionId": 7562,
-      "id": "09649079-172d-4b12-bca7-dbccee118b0c",
+      "id": "14153a74-b11e-48a7-be8a-90c011359cdf",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
@@ -52,137 +53,12 @@
       "conditions": {}
     },
     {
-      "name": "Enchanted Redoublement (Swordplay)",
-      "actionId": 7529,
-      "id": "d1508bc0-b8fe-4349-8fa6-fa6b1277690b",
-      "type": 0,
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 3875,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Enchanted Zwerchhau (Swordplay)",
-      "actionId": 7528,
-      "id": "dd3248be-7cb1-4fd6-9fc6-6899498c4055",
-      "type": 0,
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 3875,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Enchanted Riposte (Swordplay)",
-      "actionId": 7527,
-      "id": "d90ba200-5bc4-4b47-b933-d191a89bacda",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 3875,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Manafication (Swordplay Trigger)",
-      "actionId": 7521,
-      "id": "5be2b5ec-dc94-4bce-a9c7-e4c40ae95e2d",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Manafication",
-      "actionId": 7521,
-      "id": "9d9cd5d0-0f8c-47ea-87fe-eacad5637dea",
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": "="
-        },
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "job": {
-          "gauge": {
-            "blackMana": {
-              "value": 35,
-              "operator": "<="
-            },
-            "whiteMana": {
-              "value": 35,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Enchanted Redoublement",
-      "actionId": 7529,
-      "id": "d41accda-1898-4bec-bdb2-18a266011b60",
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        }
-      }
-    },
-    {
       "name": "Fleche",
       "actionId": 7517,
       "id": "e16c1630-2b85-41e6-9dd5-43f9ace4c52f",
       "conditions": {
         "globalCooldown": {
           "value": 0.5,
-          "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Enchanted Zwerchhau",
-      "actionId": 7528,
-      "id": "02b21a01-b397-4f34-8b39-8d5a074ca941",
-      "conditions": {
-        "combo": {
-          "value": 0.0,
           "operator": ">"
         }
       }
@@ -195,36 +71,6 @@
         "globalCooldown": {
           "value": 0.5,
           "operator": ">"
-        }
-      }
-    },
-    {
-      "name": "Enchanted Riposte",
-      "actionId": 7527,
-      "id": "34a1bd29-4aa4-46cf-88f8-afc4b36f9df8",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "blackMana": {
-              "value": 50,
-              "operator": ">="
-            },
-            "whiteMana": {
-              "value": 50,
-              "operator": ">="
-            }
-          }
         }
       }
     },
@@ -250,89 +96,11 @@
       "conditions": {}
     },
     {
-      "name": "Enchanted Zwerchhau (Pre-50)",
-      "actionId": 7528,
-      "id": "b340503e-d6c1-4798-8cd4-c7b2b35565ee",
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        },
-        "player": {
-          "level": {
-            "value": 50,
-            "operator": "<"
-          }
-        }
-      }
-    },
-    {
-      "name": "Enchanted Riposte (Pre-50)",
-      "actionId": 7527,
-      "id": "1431a524-6614-43a2-81fd-b8f123f9c1d5",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 50,
-            "operator": "<"
-          },
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "blackMana": {
-              "value": 35,
-              "operator": ">="
-            },
-            "whiteMana": {
-              "value": 35,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Enchanted Riposte (Pre-Combo)",
-      "actionId": 7527,
-      "id": "1e8b19a9-8e82-4b95-8631-245d06313275",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 35,
-            "operator": "<"
-          },
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "blackMana": {
-              "value": 20,
-              "operator": ">="
-            },
-            "whiteMana": {
-              "value": 20,
-              "operator": ">="
-            }
-          }
-        }
-      }
+      "name": "ST Enchanted Combo",
+      "id": "c03f97e9-8004-471b-8fd9-a4004e0ac0a4",
+      "setId": "45480b09-40e1-4529-901e-af1444cada29",
+      "type": 1,
+      "conditions": {}
     },
     {
       "name": "Resolution",
@@ -403,175 +171,10 @@
       }
     },
     {
-      "name": "Verstone",
-      "actionId": 7511,
-      "id": "7518fa07-93f6-4a67-b36e-1377a683258c",
-      "conditions": {}
-    },
-    {
-      "name": "Verfire",
-      "actionId": 7510,
-      "id": "4118f799-e0fe-4435-99d7-424b5eb8b78d",
-      "conditions": {}
-    },
-    {
-      "name": "Veraero III",
-      "actionId": 25856,
-      "id": "402c9e29-4444-4ab9-9f80-ea90d63c6caf",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "balance": {
-            "parameterA": "WhiteMana",
-            "parameterB": "BlackMana",
-            "operator": "<=",
-            "rawParameterA": "WhiteMana",
-            "rawParameterB": "BlackMana",
-            "rawOperator": "<="
-          }
-        }
-      }
-    },
-    {
-      "name": "Verthunder III",
-      "actionId": 25855,
-      "id": "9d6fe505-5388-45ec-a7a2-d5acd6428411",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "balance": {
-            "parameterA": "BlackMana",
-            "parameterB": "WhiteMana",
-            "operator": "<=",
-            "rawParameterA": "BlackMana",
-            "rawParameterB": "WhiteMana",
-            "rawOperator": "<="
-          }
-        }
-      }
-    },
-    {
-      "name": "Veraero",
-      "actionId": 7507,
-      "id": "8958e041-c164-4001-b5a5-b948c22cfc30",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "balance": {
-            "parameterA": "WhiteMana",
-            "parameterB": "BlackMana",
-            "operator": "<=",
-            "rawParameterA": "WhiteMana",
-            "rawParameterB": "BlackMana",
-            "rawOperator": "<="
-          }
-        }
-      }
-    },
-    {
-      "name": "Verthunder",
-      "actionId": 7505,
-      "id": "c86cb78f-2457-4df4-b9ce-55243368f8cb",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        },
-        "job": {
-          "balance": {
-            "parameterA": "BlackMana",
-            "parameterB": "WhiteMana",
-            "operator": "<=",
-            "rawParameterA": "BlackMana",
-            "rawParameterB": "WhiteMana",
-            "rawOperator": "<="
-          }
-        }
-      }
-    },
-    {
-      "name": "Verthunder (Pre-Veraero)",
-      "actionId": 7505,
-      "id": "abfb31d3-2157-4edf-b5fa-db4af6b6450a",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 10,
-            "operator": "<"
-          },
-          "statuses": [
-            {
-              "id": 1249,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Jolt III",
-      "actionId": 37004,
-      "id": "a3391876-7f6f-4d45-9b58-c9503b7614e0",
-      "type": 0,
-      "conditions": {}
-    },
-    {
-      "name": "Jolt II",
-      "actionId": 7524,
-      "id": "75844443-ae7c-45d6-b5d1-ba9fc565679d",
-      "conditions": {}
-    },
-    {
-      "name": "Jolt",
-      "actionId": 7503,
-      "id": "2b38a56a-80bd-44a0-b178-401cd22a0d5c",
-      "conditions": {}
-    },
-    {
-      "name": "Riposte (lol)",
-      "actionId": 7504,
-      "id": "890830b1-1ba1-43fe-8faa-64b38c201246",
-      "disabled": false,
+      "name": "ST Mana Builder",
+      "id": "1403ef66-6f6c-4c3b-9805-27491916acd0",
+      "setId": "6a84b41b-e185-4355-8845-fdc85db11f9d",
+      "type": 1,
       "conditions": {}
     }
   ]

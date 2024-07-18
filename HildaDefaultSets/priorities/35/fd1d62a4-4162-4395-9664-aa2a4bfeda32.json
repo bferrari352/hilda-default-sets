@@ -1,0 +1,108 @@
+{
+  "id": "fd1d62a4-4162-4395-9664-aa2a4bfeda32",
+  "jobId": 35,
+  "name": "MT Mana Builder",
+  "subSet": true,
+  "appVersion": "7.0.0.2",
+  "version": "1.0.0",
+  "lastUpdated": "2024-07-15 10:45:54Z",
+  "conditions": {},
+  "priorities": [
+    {
+      "name": "Impact",
+      "actionId": 16526,
+      "id": "9f1813b8-7482-43bf-ba34-e6962a875bef",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Scatter",
+      "actionId": 7509,
+      "id": "eaf0acb5-d8f9-4d71-976e-643f4194a686",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Veraero II",
+      "actionId": 16525,
+      "id": "339d2a9e-9387-4b8f-b1a3-f0afab88c2d4",
+      "conditions": {
+        "job": {
+          "balance": {
+            "parameterA": "WhiteMana",
+            "parameterB": "BlackMana",
+            "operator": "<=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": "<="
+          }
+        }
+      }
+    },
+    {
+      "name": "Verthunder II",
+      "actionId": 16524,
+      "id": "7fbd6752-e51c-41a0-84b9-dfebabdc89f5",
+      "conditions": {
+        "job": {
+          "balance": {
+            "parameterA": "WhiteMana",
+            "parameterB": "BlackMana",
+            "operator": ">=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": ">="
+          }
+        }
+      }
+    },
+    {
+      "name": "Verthunder II (Pre-Veraero II)",
+      "actionId": 16524,
+      "id": "ec2ea6ee-99cc-4e21-9e7c-6a0dbd600dbe",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 22,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Scatter",
+      "actionId": 7509,
+      "id": "e15fd48a-a6b4-4efd-bab2-4ddfade6f7e1",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 18,
+            "operator": "<"
+          }
+        }
+      }
+    }
+  ]
+}

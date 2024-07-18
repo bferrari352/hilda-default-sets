@@ -1,0 +1,184 @@
+{
+  "id": "6a84b41b-e185-4355-8845-fdc85db11f9d",
+  "jobId": 35,
+  "name": "ST Mana Builder",
+  "subSet": true,
+  "appVersion": "7.0.0.2",
+  "version": "1.0.0",
+  "lastUpdated": "2024-07-15 10:47:05Z",
+  "conditions": {},
+  "priorities": [
+    {
+      "name": "Verstone",
+      "actionId": 7511,
+      "id": "7518fa07-93f6-4a67-b36e-1377a683258c",
+      "conditions": {}
+    },
+    {
+      "name": "Verfire",
+      "actionId": 7510,
+      "id": "4118f799-e0fe-4435-99d7-424b5eb8b78d",
+      "conditions": {}
+    },
+    {
+      "name": "Veraero III",
+      "actionId": 25856,
+      "id": "402c9e29-4444-4ab9-9f80-ea90d63c6caf",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "balance": {
+            "parameterA": "WhiteMana",
+            "parameterB": "BlackMana",
+            "operator": "<=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": "<="
+          }
+        }
+      }
+    },
+    {
+      "name": "Verthunder III",
+      "actionId": 25855,
+      "id": "9d6fe505-5388-45ec-a7a2-d5acd6428411",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "balance": {
+            "parameterA": "BlackMana",
+            "parameterB": "WhiteMana",
+            "operator": "<=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": "<="
+          }
+        }
+      }
+    },
+    {
+      "name": "Veraero",
+      "actionId": 7507,
+      "id": "8958e041-c164-4001-b5a5-b948c22cfc30",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "balance": {
+            "parameterA": "WhiteMana",
+            "parameterB": "BlackMana",
+            "operator": "<=",
+            "rawParameterA": "WhiteMana",
+            "rawParameterB": "BlackMana",
+            "rawOperator": "<="
+          }
+        }
+      }
+    },
+    {
+      "name": "Verthunder",
+      "actionId": 7505,
+      "id": "c86cb78f-2457-4df4-b9ce-55243368f8cb",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        },
+        "job": {
+          "balance": {
+            "parameterA": "BlackMana",
+            "parameterB": "WhiteMana",
+            "operator": "<=",
+            "rawParameterA": "BlackMana",
+            "rawParameterB": "WhiteMana",
+            "rawOperator": "<="
+          }
+        }
+      }
+    },
+    {
+      "name": "Verthunder (Pre-Veraero)",
+      "actionId": 7505,
+      "id": "abfb31d3-2157-4edf-b5fa-db4af6b6450a",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 10,
+            "operator": "<"
+          },
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Jolt III",
+      "actionId": 37004,
+      "id": "a3391876-7f6f-4d45-9b58-c9503b7614e0",
+      "type": 0,
+      "conditions": {}
+    },
+    {
+      "name": "Jolt II",
+      "actionId": 7524,
+      "id": "75844443-ae7c-45d6-b5d1-ba9fc565679d",
+      "conditions": {}
+    },
+    {
+      "name": "Jolt",
+      "actionId": 7503,
+      "id": "2b38a56a-80bd-44a0-b178-401cd22a0d5c",
+      "conditions": {}
+    },
+    {
+      "name": "Riposte (lol)",
+      "actionId": 7504,
+      "id": "890830b1-1ba1-43fe-8faa-64b38c201246",
+      "disabled": false,
+      "conditions": {}
+    }
+  ]
+}

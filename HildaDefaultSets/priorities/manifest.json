@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.59",
-  "LastUpdated": "2024-07-17 20:49:40Z",
+  "Version": "0.0.61",
+  "LastUpdated": "2024-07-18 08:57:49Z",
   "Sets": {
     "19": [
       {
@@ -466,10 +466,10 @@
         "Id": "68933877-4884-4281-bd07-7cef35f40300",
         "Name": "Main",
         "Type": "Priorities",
-        "Md5": "6407DB021BBC19E88DA0DDA865890A61",
+        "Md5": "74532D26EAD644A15C5707B1409C1EE3",
         "LastUpdated": "2023-01-16 18:27:44Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "14e05a2d-f88d-4547-ba3a-ab467d4e3e7d",
@@ -626,31 +626,67 @@
     ],
     "35": [
       {
+        "Id": "6a84b41b-e185-4355-8845-fdc85db11f9d",
+        "Name": "ST Mana Builder",
+        "Type": "Priorities",
+        "Md5": "9F4D65414BFCA7535C3345FD58AFB570",
+        "LastUpdated": "2024-07-15 10:47:05Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
         "Id": "18a92958-ae06-4181-9e55-46071bac1612",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "68747F083C21E8EE80DCF1090A1D2DE9",
-        "LastUpdated": "2024-07-01 16:39:12Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "Md5": "F0F4805DC829F80F70F1CE49C59FE269",
+        "LastUpdated": "2024-07-15 19:49:20Z",
+        "Version": "7.0.2",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "5129f0e5-8e06-4376-b2e4-5bdfd78c6906",
         "Name": "Main",
         "Type": "Priorities",
-        "Md5": "B686942AEEB378397DBE4EE9EDD4687D",
+        "Md5": "E3B84E71B11CC8D6465A97B61D579AD4",
         "LastUpdated": "2023-01-16 18:27:44Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "45480b09-40e1-4529-901e-af1444cada29",
+        "Name": "ST Enchanted Combo",
+        "Type": "Priorities",
+        "Md5": "86DB7203430016DC9B40784B0BDB4986",
+        "LastUpdated": "2024-07-15 11:01:45Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "db4ea0e5-7720-43b2-aef4-e1bcb1e00b30",
+        "Name": "MT Enchanted Combo",
+        "Type": "Priorities",
+        "Md5": "ED9F089C2BF13E169082C1C12FF8D06A",
+        "LastUpdated": "2024-07-15 10:46:50Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
+      },
+      {
+        "Id": "fd1d62a4-4162-4395-9664-aa2a4bfeda32",
+        "Name": "MT Mana Builder",
+        "Type": "Priorities",
+        "Md5": "CE1358123C10D55C15D746975A26B2B1",
+        "LastUpdated": "2024-07-15 10:45:54Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.2"
       },
       {
         "Id": "c50af5f3-2995-4d04-ba59-10307b122f8c",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "CD9D6270102C513EF52ACC3B88E83853",
-        "LastUpdated": "2024-07-01 18:59:35Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "Md5": "04B0B9718F6A0615C1DD148432EF2142",
+        "LastUpdated": "2024-07-13 13:58:07Z",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.2"
       }
     ],
     "36": [

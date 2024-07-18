@@ -1,0 +1,200 @@
+{
+  "id": "45480b09-40e1-4529-901e-af1444cada29",
+  "jobId": 35,
+  "name": "ST Enchanted Combo",
+  "subSet": true,
+  "appVersion": "7.0.0.2",
+  "version": "1.0.0",
+  "lastUpdated": "2024-07-15 11:01:45Z",
+  "conditions": {
+    "player": {
+      "statuses": [
+        {
+          "id": 1249,
+          "duration": {
+            "value": 0.0,
+            "operator": "="
+          }
+        }
+      ]
+    }
+  },
+  "priorities": [
+    {
+      "name": "Manafication",
+      "actionId": 7521,
+      "id": "17feffe8-fb9a-4d27-8b08-dc7dec9b0e50",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "blackMana": {
+              "value": 50,
+              "operator": "<"
+            },
+            "whiteMana": {
+              "value": 50,
+              "operator": "<"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Enchanted Zwerchhau",
+      "actionId": 7528,
+      "id": "1267d6d5-3ab5-4e29-8362-93bbe2f073a4",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Enchanted Redoublement",
+      "actionId": 7529,
+      "id": "3515d5fc-ba48-4eb2-9b84-58ce92a0e415",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Enchanted Riposte",
+      "actionId": 7527,
+      "id": "892a620a-199a-4c2a-b0eb-aa08db31a82f",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "blackMana": {
+              "value": 50,
+              "operator": ">="
+            },
+            "whiteMana": {
+              "value": 50,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Enchanted Riposte (Swordplay)",
+      "actionId": 7527,
+      "id": "11a8e5a6-a1aa-4f81-b8ba-83aa1db7cbd7",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Enchanted Zwerchhau (Pre-50)",
+      "actionId": 7528,
+      "id": "6079aa1b-1af8-4cd3-bf98-e0d6bc624e80",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        },
+        "player": {
+          "level": {
+            "value": 50,
+            "operator": "<"
+          }
+        }
+      }
+    },
+    {
+      "name": "Enchanted Riposte (Pre-50)",
+      "actionId": 7527,
+      "id": "a4ebedf2-f5fe-4bf6-8524-dff4b882dacb",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 50,
+            "operator": "<"
+          },
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "blackMana": {
+              "value": 35,
+              "operator": ">="
+            },
+            "whiteMana": {
+              "value": 35,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Enchanted Riposte (Pre-Combo)",
+      "actionId": 7527,
+      "id": "7bea20c8-92e0-4130-959e-c6f4e41ac2c6",
+      "conditions": {
+        "player": {
+          "level": {
+            "value": 35,
+            "operator": "<"
+          },
+          "statuses": [
+            {
+              "id": 1249,
+              "duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "job": {
+          "gauge": {
+            "blackMana": {
+              "value": 20,
+              "operator": ">="
+            },
+            "whiteMana": {
+              "value": 20,
+              "operator": ">="
+            }
+          }
+        }
+      }
+    }
+  ]
+}

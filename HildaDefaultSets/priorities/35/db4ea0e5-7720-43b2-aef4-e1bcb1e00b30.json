@@ -1,0 +1,118 @@
+{
+  "id": "db4ea0e5-7720-43b2-aef4-e1bcb1e00b30",
+  "jobId": 35,
+  "name": "MT Enchanted Combo",
+  "subSet": true,
+  "appVersion": "7.0.0.2",
+  "version": "1.0.0",
+  "lastUpdated": "2024-07-15 10:46:50Z",
+  "conditions": {
+    "player": {
+      "level": {
+        "value": 52,
+        "operator": ">="
+      },
+      "statuses": [
+        {
+          "id": 1249,
+          "duration": {
+            "value": 0.0,
+            "operator": "="
+          }
+        }
+      ]
+    }
+  },
+  "priorities": [
+    {
+      "name": "Manafication",
+      "actionId": 7521,
+      "id": "11400522-cd13-4049-99e7-1b6d1b62774d",
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": "="
+        },
+        "globalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        },
+        "job": {
+          "gauge": {
+            "blackMana": {
+              "value": 50,
+              "operator": "<"
+            },
+            "whiteMana": {
+              "value": 50,
+              "operator": "<"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet Trois",
+      "actionId": 37003,
+      "id": "d1508bc0-b8fe-4349-8fa6-fa6b1277690b",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet Deux",
+      "actionId": 37002,
+      "id": "dd3248be-7cb1-4fd6-9fc6-6899498c4055",
+      "type": 0,
+      "conditions": {
+        "combo": {
+          "value": 0.0,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet (Swordplay)",
+      "actionId": 7530,
+      "id": "d90ba200-5bc4-4b47-b933-d191a89bacda",
+      "type": 0,
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 3875,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Enchanted Moulinet",
+      "actionId": 7530,
+      "id": "95113151-8b83-4f59-8580-aefa78c766aa",
+      "type": 0,
+      "conditions": {
+        "job": {
+          "gauge": {
+            "blackMana": {
+              "value": 50,
+              "operator": ">="
+            },
+            "whiteMana": {
+              "value": 50,
+              "operator": ">"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
