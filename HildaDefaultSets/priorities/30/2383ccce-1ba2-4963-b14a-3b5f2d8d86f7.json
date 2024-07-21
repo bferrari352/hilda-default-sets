@@ -45,8 +45,8 @@
         "Conditions": {}
       },
       {
-        "Name": "Ten",
-        "ActionId": 2259,
+        "Name": "Jin",
+        "ActionId": 2263,
         "Id": "3ca0b63a-adf2-4f36-8102-06f26da5fbf7",
         "Type": 0,
         "Conditions": {
@@ -69,8 +69,8 @@
         }
       },
       {
-        "Name": "Jin",
-        "ActionId": 2263,
+        "Name": "Ten",
+        "ActionId": 2259,
         "Id": "d050dac1-783a-41bd-9b99-7c6040ed0cd9",
         "Type": 0,
         "Conditions": {}
