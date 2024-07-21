@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.61",
-  "LastUpdated": "2024-07-18 09:22:08Z",
+  "Version": "0.0.62",
+  "LastUpdated": "2024-07-21 11:29:28Z",
   "Sets": {
     "19": [
       {
@@ -268,20 +268,20 @@
         "Id": "69331028-c7e5-4348-a581-048757211ce8",
         "Name": "Ninjutsu - Katon",
         "Type": "Priorities",
-        "Md5": "634BE73A68AC494FECC43BD74F39B42B",
+        "Md5": "2684C423214DDA5675FE5537BCAD2BBA",
         "LastUpdated": "2024-07-15 21:09:19Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.3",
         "SubSet": true
       },
       {
         "Id": "490d4924-8c5a-4809-a246-0828dcd92129",
         "Name": "Ninjutsu - Huton",
         "Type": "Priorities",
-        "Md5": "A45F22EC3A4513EA00FA1765ADFEAA9D",
+        "Md5": "26DA028515EFA722179E16E5F03C673A",
         "LastUpdated": "2024-07-15 20:37:57Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.3",
         "SubSet": true
       },
       {
@@ -318,10 +318,10 @@
         "Id": "2383ccce-1ba2-4963-b14a-3b5f2d8d86f7",
         "Name": "Ninjutsu - Doton (overcap)",
         "Type": "Priorities",
-        "Md5": "8CB2D5C2028C8A00FCFF8AB50B7D9D5B",
+        "Md5": "52470C7E7EE17AF6D7BE2E3959EC5D7E",
         "LastUpdated": "2024-07-16 19:43:06Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.3",
         "SubSet": true
       },
       {
@@ -368,10 +368,10 @@
         "Id": "f7478797-4b5b-4c03-b98b-bb222d888173",
         "Name": "Ninjutsu - Goka Mekkyaku",
         "Type": "Priorities",
-        "Md5": "1D6B4C635C043795972F235129F045A2",
+        "Md5": "12A7E01C73DA1641716439546A74EAB6",
         "LastUpdated": "2024-07-16 20:44:47Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.3",
         "SubSet": true
       },
       {
@@ -515,10 +515,10 @@
         "Id": "e4da3511-49e6-4676-bc86-10917d84f3e8",
         "Name": "Ninjutsu - Doton",
         "Type": "Priorities",
-        "Md5": "F68487A02DEEF217117E27318142F635",
+        "Md5": "AA85E43CB2DC2D332866D8C4FEFE4E8A",
         "LastUpdated": "2024-07-16 19:53:18Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.3",
         "SubSet": true
       },
       {

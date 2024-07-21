@@ -3,8 +3,8 @@
     "JobId": 30,
     "Name": "Ninjutsu - Doton (overcap)",
     "SubSet": true,
-    "AppVersion": "7.0.0.2",
-    "Version": "7.0.0",
+    "AppVersion": "7.0.0.3",
+    "Version": "7.0.1",
     "Description": "Ten > Jin > Chi > Doton",
     "LastUpdated": "2024-07-16 19:43:06Z",
     "Conditions": {
@@ -26,8 +26,13 @@
           }
         ]
       },
-      "EnemyCount": {
+      "EnemyDependentCount": {
+        "ActionId": 2270,
         "value": 2,
+        "operator": ">="
+      },
+      "EnemyCount": {
+        "value": 0,
         "operator": ">="
       }
     },

@@ -3,8 +3,8 @@
     "JobId": 30,
     "Name": "Ninjutsu - Katon",
     "SubSet": true,
-    "AppVersion": "7.0.0.2",
-    "Version": "7.0.0",
+    "AppVersion": "7.0.0.3",
+    "Version": "7.0.1",
     "Description": "Chi > Ten > Katon",
     "LastUpdated": "2024-07-15 21:09:19Z",
     "Conditions": {
@@ -19,8 +19,13 @@
           }
         ]
       },
-      "EnemyCount": {
+      "EnemyDependentCount": {
+        "ActionId": 2266,
         "value": 2,
+        "operator": ">="
+      },
+      "EnemyCount": {
+        "value": 0,
         "operator": ">="
       }
     },

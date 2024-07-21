@@ -3,8 +3,8 @@
     "JobId": 30,
     "Name": "Ninjutsu - Huton",
     "SubSet": true,
-    "AppVersion": "7.0.0.2",
-    "Version": "7.0.0",
+    "AppVersion": "7.0.0.3",
+    "Version": "7.0.1",
     "Description": "Jin > Chi > Ten > Huton",
     "LastUpdated": "2024-07-15 20:37:57Z",
     "Conditions": {
@@ -25,6 +25,15 @@
             }
           }
         ]
+      },
+      "EnemyDependentCount": {
+        "ActionId": 2269,
+        "value": 3,
+        "operator": ">="
+      },
+      "EnemyCount": {
+        "value": 0,
+        "operator": ">="
       }
     },
     "Priorities": [

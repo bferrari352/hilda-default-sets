@@ -3,8 +3,8 @@
     "JobId": 30,
     "Name": "Ninjutsu - Goka Mekkyaku",
     "SubSet": true,
-    "AppVersion": "7.0.0.2",
-    "Version": "7.0.0",
+    "AppVersion": "7.0.0.3",
+    "Version": "7.0.1",
     "Description": "Chi > Ten > Goka Mekkyaku",
     "LastUpdated": "2024-07-16 20:44:47Z",
     "Conditions": {
@@ -29,6 +29,15 @@
             }
           }
         ]
+      },
+      "EnemyDependentCount": {
+        "ActionId": 16491,
+        "value": 3,
+        "operator": ">="
+      },
+      "EnemyCount": {
+        "value": 0,
+        "operator": ">="
       }
     },
     "Priorities": [
