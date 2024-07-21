@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.62",
-  "LastUpdated": "2024-07-21 11:29:28Z",
+  "Version": "0.0.63",
+  "LastUpdated": "2024-07-21 12:07:56Z",
   "Sets": {
     "19": [
       {
@@ -318,7 +318,7 @@
         "Id": "2383ccce-1ba2-4963-b14a-3b5f2d8d86f7",
         "Name": "Ninjutsu - Doton (overcap)",
         "Type": "Priorities",
-        "Md5": "52470C7E7EE17AF6D7BE2E3959EC5D7E",
+        "Md5": "455B630FADA6DD0196783C5C1C47B313",
         "LastUpdated": "2024-07-16 19:43:06Z",
         "Version": "7.0.1",
         "AppVersion": "7.0.0.3",
