@@ -135,13 +135,6 @@
       "Conditions": {}
     },
     {
-      "Name": "Ninjutsu - Doton",
-      "Id": "e3dcf328-128d-42a2-9f57-c4f0f81727f0",
-      "SetId": "e4da3511-49e6-4676-bc86-10917d84f3e8",
-      "Type": 1,
-      "Conditions": {}
-    },
-    {
       "Name": "Ninjutsu - Katon",
       "Id": "37d629c4-4e26-4600-a640-c849c8e714f6",
       "SetId": "69331028-c7e5-4348-a581-048757211ce8",

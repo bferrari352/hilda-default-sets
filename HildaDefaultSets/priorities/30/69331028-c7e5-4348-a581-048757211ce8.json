@@ -5,7 +5,7 @@
     "SubSet": true,
     "AppVersion": "7.0.0.3",
     "Version": "7.0.1",
-    "Description": "Chi > Ten > Katon",
+    "Description": "Jin > Ten > Katon",
     "LastUpdated": "2024-07-15 21:09:19Z",
     "Conditions": {
       "Player": {
@@ -21,7 +21,7 @@
       },
       "EnemyDependentCount": {
         "ActionId": 2266,
-        "value": 2,
+        "value": 3,
         "operator": ">="
       },
       "EnemyCount": {
@@ -38,8 +38,39 @@
         "Conditions": {}
       },
       {
-        "Name": "Chi",
-        "ActionId": 2261,
+        "Name": "Jin (Doton)",
+        "ActionId": 2263,
+        "Id": "1b148ebe-2821-4388-82b4-c6d78521690b",
+        "Type": 0,
+        "Conditions": {
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              },
+              {
+                "Id": 501,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "EnemyDependentCount": {
+            "ActionId": 2266,
+            "value": 2,
+            "operator": ">="
+          }
+        }
+      },
+      {
+        "Name": "Jin",
+        "ActionId": 2263,
         "Id": "3ca0b63a-adf2-4f36-8102-06f26da5fbf7",
         "Type": 0,
         "Conditions": {

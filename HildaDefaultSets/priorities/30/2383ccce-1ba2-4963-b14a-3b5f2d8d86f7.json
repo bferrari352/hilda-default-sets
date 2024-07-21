@@ -1,11 +1,11 @@
 {
     "Id": "2383ccce-1ba2-4963-b14a-3b5f2d8d86f7",
     "JobId": 30,
-    "Name": "Ninjutsu - Doton (overcap)",
+    "Name": "Ninjutsu - Katon (overcap)",
     "SubSet": true,
     "AppVersion": "7.0.0.3",
     "Version": "7.0.1",
-    "Description": "Ten > Jin > Chi > Doton",
+    "Description": "Chi > Ten > Katon. \nExpend Mudra outside of Trick Attack to not overcap on Ninjutsu charges.",
     "LastUpdated": "2024-07-16 19:43:06Z",
     "Conditions": {
       "Player": {
@@ -16,19 +16,12 @@
               "value": 0.0,
               "operator": ">"
             }
-          },
-          {
-            "Id": 501,
-            "Duration": {
-              "value": 0.0,
-              "operator": "="
-            }
           }
         ]
       },
       "EnemyDependentCount": {
-        "ActionId": 2270,
-        "value": 2,
+        "ActionId": 2266,
+        "value": 3,
         "operator": ">="
       },
       "EnemyCount": {
@@ -38,11 +31,47 @@
     },
     "Priorities": [
       {
-        "Name": "Doton",
-        "ActionId": 2270,
+        "Name": "Katon",
+        "ActionId": 2266,
         "Id": "377fdbfc-397f-4908-a49c-485529f7bed1",
         "Type": 0,
         "Conditions": {}
+      },
+      {
+        "Name": "Jin (Doton)",
+        "ActionId": 2263,
+        "Id": "b819bd72-944f-40c6-b5d7-bd2c51e8fb91",
+        "Type": 0,
+        "Conditions": {
+          "ActionDependentRecast": {
+            "ActionId": 2259,
+            "value": 10.0,
+            "operator": "<"
+          },
+          "Player": {
+            "Statuses": [
+              {
+                "Id": 496,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": "="
+                }
+              },
+              {
+                "Id": 501,
+                "Duration": {
+                  "value": 0.0,
+                  "operator": ">"
+                }
+              }
+            ]
+          },
+          "EnemyDependentCount": {
+            "ActionId": 2266,
+            "value": 2,
+            "operator": ">="
+          }
+        }
       },
       {
         "Name": "Jin",
@@ -72,13 +101,6 @@
         "Name": "Ten",
         "ActionId": 2259,
         "Id": "d050dac1-783a-41bd-9b99-7c6040ed0cd9",
-        "Type": 0,
-        "Conditions": {}
-      },
-      {
-        "Name": "Chi",
-        "ActionId": 2261,
-        "Id": "0cca2f71-ad38-4801-80b0-898f502c9f8f",
         "Type": 0,
         "Conditions": {}
       }
