@@ -1,0 +1,350 @@
+{
+  "Id": "7672740c-810e-4747-8e20-f10d0a5c03e7",
+  "JobId": 20,
+  "Name": "Single PB Solar Nadi",
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-23 14:23:19Z",
+  "Conditions": {},
+  "Priorities": [
+    {
+      "Name": "Leaping Opo",
+      "ActionId": 36945,
+      "Id": "4a9f67c8-ee75-4e98-88aa-a1986a6d2070",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Bootshine",
+      "ActionId": 53,
+      "Id": "d28ae88c-2bd8-4e25-8f7a-4e5d68abb361",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Dragon Kick",
+      "ActionId": 74,
+      "Id": "05071c15-dea1-4b52-a5a5-dc0ae78b8e65",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Rising Raptor",
+      "ActionId": 36946,
+      "Id": "a8c2fa17-49f4-48ea-9d53-473fec4c86e7",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "RaptorFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "True Strike",
+      "ActionId": 54,
+      "Id": "fc0dcf1f-2cae-4a1d-9bc3-f48d4da5abbb",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "RaptorFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Twin Snakes",
+      "ActionId": 61,
+      "Id": "e61d64c1-5f81-44ff-a900-80da95885edd",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 2,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "RaptorFury": {
+              "value": 0,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Pouncing Coeurl",
+      "ActionId": 36947,
+      "Id": "bd68a9e4-68cf-4f0b-8631-8c6c3111307b",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "CoeurlFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Snap Punch",
+      "ActionId": 56,
+      "Id": "537ae5d0-06c1-41f7-8e99-fdbe51561e4c",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "CoeurlFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Demolish",
+      "ActionId": 66,
+      "Id": "2e8e69ae-17cc-4d4a-b113-ed70b7f1587d",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 1,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "CoeurlFury": {
+              "value": 0,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Perfect Balance (Solar)",
+      "ActionId": 69,
+      "Id": "7c444b81-4301-408d-8def-e7b7a44fd602",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "CoeurlChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "RaptorChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "OpoOpoChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "Id": "5628927c-923a-45e9-ab5a-2d5a304074e1",
+  "JobId": 20,
+  "Name": "Multi PB Lunar Nadi",
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-23 14:29:45Z",
+  "Conditions": {},
+  "Priorities": [
+    {
+      "Name": "Shadow of the Destroyer (Lunar)",
+      "ActionId": 25767,
+      "Id": "4a9f67c8-ee75-4e98-88aa-a1986a6d2070",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "NadiLunar": false,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Arm of the Destroyer (Lunar)",
+      "ActionId": 62,
+      "Id": "cc96dfb6-e355-4b06-b87c-c60028e8c082",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 1,
+                "operator": ">="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "NadiLunar": false,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Perfect Balance (Lunar)",
+      "ActionId": 69,
+      "Id": "7c444b81-4301-408d-8def-e7b7a44fd602",
+      "Type": 0,
+      "Conditions": {
+        "EnemyDependentCount": {
+          "ActionId": 3545,
+          "value": 4,
+          "operator": ">="
+        },
+        "Player": {
+          "Level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "EnemyCount": {
+          "value": 0,
+          "operator": ">="
+        },
+        "Job": {
+          "Gauge": {
+            "NadiLunar": false,
+            "NadiSolar": false
+          }
+        }
+      }
+    }
+  ]
+}

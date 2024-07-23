@@ -1,0 +1,179 @@
+{
+  "Id": "480ba084-b3ab-4a24-b3af-b1bf729c0a1a",
+  "JobId": 20,
+  "Name": "Single Base Rotation",
+  "Disabled": false,
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-18 19:33:35Z",
+  "Conditions": {},
+  "Priorities": [
+    {
+      "Name": "Leaping Opo",
+      "ActionId": 36945,
+      "Id": "3a8ed48f-7670-4aa1-8ee0-4700fa811043",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "OpoOpoForm": true,
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Bootshine",
+      "ActionId": 53,
+      "Id": "12b88375-4eeb-48bb-8207-1fd529d51864",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "OpoOpoForm": true,
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Pouncing Coeurl",
+      "ActionId": 36947,
+      "Id": "7ffff494-1a40-420f-9221-fe7bc68c143c",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "CoeurlForm": true,
+          "Gauge": {
+            "CoeurlFury": {
+              "value": 0,
+              "operator": "!="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Snap Punch",
+      "ActionId": 56,
+      "Id": "d0199f74-bf71-4f8a-b173-a1dc1ebbd029",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "CoeurlForm": true,
+          "Gauge": {
+            "CoeurlFury": {
+              "value": 0,
+              "operator": "!="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Rising Raptor",
+      "ActionId": 36946,
+      "Id": "8058f84e-6600-4d31-9147-e00eeca264d7",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "RaptorForm": true,
+          "Gauge": {
+            "RaptorFury": {
+              "value": 0,
+              "operator": "!="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "True Strike",
+      "ActionId": 54,
+      "Id": "31de02b9-418d-4bf9-a7a7-c71a9186c828",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "RaptorForm": true,
+          "Gauge": {
+            "RaptorFury": {
+              "value": 0,
+              "operator": "!="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Dragon Kick",
+      "ActionId": 74,
+      "Id": "39609d41-d196-4c47-aa61-e1abbc904387",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "OpoOpoForm": true,
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Twin Snakes",
+      "ActionId": 61,
+      "Id": "e2621469-7691-48d5-8e89-f3b538898db3",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "RaptorForm": true,
+          "Gauge": {
+            "RaptorFury": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Demolish",
+      "ActionId": 66,
+      "Id": "ec1e6b1c-f932-48d9-bdc1-3989056e62ba",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "CoeurlForm": true,
+          "Gauge": {
+            "CoeurlFury": {
+              "value": 0,
+              "operator": "="
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Dragon Kick",
+      "ActionId": 74,
+      "Id": "f7fc4b5a-15ed-4fd4-9dfd-02bea8367212",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {}
+    }
+  ]
+}

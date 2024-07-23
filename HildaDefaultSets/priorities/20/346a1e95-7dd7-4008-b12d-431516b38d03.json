@@ -2,731 +2,112 @@
   "id": "346a1e95-7dd7-4008-b12d-431516b38d03",
   "jobId": 20,
   "name": "Single Target",
-  "appVersion": "7.0.0.0",
-  "version": "7.0.1",
-  "lastUpdated": "2024-07-11 12:18:04Z",
-  "priorities": [
+  "Author": "Syhril Lahnia",
+  "AppVersion": "7.0.0.3",
+  "Version": "7.0.2",
+  "LastUpdated": "2024-07-23 14:31:50Z",
+  "Conditions": {},
+  "Priorities": [
     {
-      "name": "Fire's Reply",
-      "actionId": 36950,
-      "id": "bbf5d794-c81e-44e9-b997-1408528f87df",
-      "type": 0,
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": "="
-        }
-      }
-    },
-    {
-      "name": "Wind's Reply",
-      "actionId": 36949,
-      "id": "1499cd3c-32fb-44fc-b2ba-26b8c043b29c",
-      "type": 0,
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": "="
-        }
-      }
-    },
-    {
-      "name": "Riddle of Fire",
-      "actionId": 7395,
-      "id": "a316e65e-5b89-4a38-b62a-f46ef8962c0e",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Riddle of Wind",
-      "actionId": 25766,
-      "id": "acc28f6f-caa9-4732-8048-8db715259212",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Six-sided Star",
-      "actionId": 16476,
-      "id": "2243a0fd-3ab1-47db-b3ed-a4fdab18ce8a",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "gauge": {
-            "chakra": {
-              "value": 5,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "the Forbidden Chakra",
-      "actionId": 3547,
-      "id": "c7c8b7b5-e37c-40a4-adbf-2c3297062a69",
-      "conditions": {
-        "globalCooldown": {
+      "Name": "Riddle of Fire",
+      "ActionId": 7395,
+      "Id": "a316e65e-5b89-4a38-b62a-f46ef8962c0e",
+      "Disabled": false,
+      "Conditions": {
+        "GlobalCooldown": {
           "value": 0.5,
           "operator": ">"
         }
       }
     },
     {
-      "name": "Steel Peak",
-      "actionId": 25761,
-      "id": "061a9e90-0661-4218-a906-03555aed7002",
-      "conditions": {
-        "globalCooldown": {
+      "Name": "Riddle of Wind",
+      "ActionId": 25766,
+      "Id": "acc28f6f-caa9-4732-8048-8db715259212",
+      "Disabled": false,
+      "Conditions": {
+        "GlobalCooldown": {
           "value": 0.5,
           "operator": ">"
         }
       }
     },
     {
-      "name": "Phantom Rush",
-      "actionId": 25769,
-      "id": "22a4d7d2-07af-4c6e-ae61-636f25fce4d8",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
+      "Name": "the Forbidden Chakra",
+      "ActionId": 3547,
+      "Id": "c7c8b7b5-e37c-40a4-adbf-2c3297062a69",
+      "Conditions": {
+        "GlobalCooldown": {
+          "value": 0.5,
+          "operator": ">"
         }
       }
     },
     {
-      "name": "Tornado Kick",
-      "actionId": 3543,
-      "id": "ecf2c57c-f27e-45a2-9386-1acfb847578c",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
+      "Name": "Steel Peak",
+      "ActionId": 25761,
+      "Id": "061a9e90-0661-4218-a906-03555aed7002",
+      "Conditions": {
+        "GlobalCooldown": {
+          "value": 0.5,
+          "operator": ">"
         }
       }
     },
     {
-      "name": "Snap Punch (Nadi Open)",
-      "actionId": 56,
-      "id": "c6977792-34c3-4984-873d-13e4e0634d80",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
+      "Name": "Finishers",
+      "Id": "d57a5713-d9b7-43cd-99b0-54e8ddda1f3c",
+      "SetId": "73929105-6b82-43aa-b991-9edd97e92381",
+      "Type": 1,
+      "Conditions": {}
+    },
+    {
+      "Name": "Leaping Opo (Failsafe for Formless Fist)",
+      "ActionId": 36945,
+      "Id": "e8068d73-babf-4077-9cf7-66d08e79da21",
+      "Conditions": {
+        "Player": {
+          "Statuses": [
             {
-              "id": 110,
-              "duration": {
+              "Id": 2513,
+              "Duration": {
                 "value": 0.0,
                 "operator": ">"
-              },
-              "stacks": {
-                "value": 1,
-                "operator": "="
               }
             }
           ]
         },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
+        "Job": {
+          "OpoOpoForm": true,
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            }
           }
         }
       }
     },
     {
-      "name": "True Strike (Nadi Open)",
-      "actionId": 54,
-      "id": "826e13e0-666c-4c66-a066-30243365cc57",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
+      "Name": "Dragon Kick (Failsafe for Formless Fist)",
+      "ActionId": 74,
+      "Id": "a00463ea-6ea6-4e1c-8c33-58d1041c345d",
+      "Conditions": {
+        "Player": {
+          "Statuses": [
             {
-              "id": 110,
-              "duration": {
+              "Id": 2513,
+              "Duration": {
                 "value": 0.0,
                 "operator": ">"
-              },
-              "stacks": {
-                "value": 2,
-                "operator": "="
               }
             }
           ]
         },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Nadi Open)",
-      "actionId": 53,
-      "id": "6521b286-f80c-4bac-b319-e3390ea43d57",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 3,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Perfect Balance (Nadi Open)",
-      "actionId": 69,
-      "id": "4cfb7dbd-09e4-4bbf-8895-43991e8b9dd5",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "raptorChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "opoOpoChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Phoenix",
-      "actionId": 25768,
-      "id": "e63b6e80-6d0e-42ee-b10d-16bffa7de626",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Flint Strike",
-      "actionId": 25882,
-      "id": "a00463ea-6ea6-4e1c-8c33-58d1041c345d",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "nadiLunar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Snap Punch (Solar Nadi)",
-      "actionId": 56,
-      "id": "c6977792-34c3-4984-873d-03e4e0634d80",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 1,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "True Strike (Solar Nadi)",
-      "actionId": 54,
-      "id": "826e13e0-666c-4c66-a066-30203365cc57",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 2,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine (Solar Nadi)",
-      "actionId": 53,
-      "id": "6521b286-f80c-4bac-b319-e3390eb43d57",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 3,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Perfect Balance (Solar Nadi)",
-      "actionId": 69,
-      "id": "c2b674f6-8c60-405d-9424-138f30a3d59e",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "raptorChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "opoOpoChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Burst",
-      "actionId": 36948,
-      "id": "248f4005-9a0a-4004-a4bd-ed13434f3b22",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "gauge": {
-            "raptorChakra": {
-              "value": 3,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Field",
-      "actionId": 3545,
-      "id": "6ef462f3-b8ef-4beb-9ccb-7736ba4b1067",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "raptorChakra": {
-              "value": 3,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Raptor (Lunar Nadi)",
-      "actionId": 36946,
-      "id": "041ab835-7a39-4041-a882-c99760b9155e",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 2,
-                "operator": "<="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "True Strike (Lunar Nadi)",
-      "actionId": 54,
-      "id": "256a610c-5170-49f9-bbaa-55c90ab0dd23",
-      "type": 0,
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 2,
-                "operator": "<="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Twin Snakes (Lunar Nadi)",
-      "actionId": 61,
-      "id": "8a88adb3-2b54-4be9-a954-5a4a58cee884",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 3,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Perfect Balance (Lunar Nadi)",
-      "actionId": 69,
-      "id": "c8ab3349-32ba-450a-840e-e5366e9357fa",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "raptorChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "opoOpoChakra": {
-              "value": 0,
-              "operator": "="
-            },
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Leaping Opo",
-      "actionId": 36945,
-      "id": "5f051cd8-73ea-452c-b706-b3ba256983fb",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "opoOpoForm": true,
-          "gauge": {
-            "opoOpoFury": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Bootshine",
-      "actionId": 53,
-      "id": "c06e87a2-d1b2-4c1a-9320-3b65eb82e0b3",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "opoOpoForm": true,
-          "gauge": {
-            "opoOpoFury": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Pouncing Coeurl",
-      "actionId": 36947,
-      "id": "5284a2a3-5502-4f7e-b102-e0c74c447a3a",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "coeurlForm": true,
-          "gauge": {
-            "coeurlFury": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Snap Punch",
-      "actionId": 56,
-      "id": "49d8982f-fbcf-46d3-aacb-f0d749274d1b",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "coeurlForm": true,
-          "gauge": {
-            "coeurlFury": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Raptor",
-      "actionId": 36946,
-      "id": "6d3595b2-8390-42e0-afb6-d3b3252127b9",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "raptorForm": true,
-          "gauge": {
-            "raptorFury": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "True Strike",
-      "actionId": 54,
-      "id": "7c4330f0-7c76-4489-9596-837cdac9fe37",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "raptorForm": true,
-          "gauge": {
-            "raptorFury": {
-              "value": 0,
-              "operator": ">"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Demolish",
-      "actionId": 66,
-      "id": "b33db0cc-35a3-4816-bf47-1e34b5e80e3b",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "gauge": {
-            "coeurlFury": {
+        "Job": {
+          "OpoOpoForm": true,
+          "Gauge": {
+            "OpoOpoFury": {
               "value": 0,
               "operator": "="
             }
@@ -735,43 +116,32 @@
       }
     },
     {
-      "name": "Twin Snakes",
-      "actionId": 61,
-      "id": "63ad3be3-6951-44e0-ac84-a734502de0b3",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "gauge": {
-            "raptorFury": {
-              "value": 0,
-              "operator": "="
-            }
-          }
-        }
-      }
+      "Name": "Single PB Nadi Open",
+      "Id": "3b52e77e-4da9-4aa9-9989-e7e030a777b5",
+      "SetId": "cd19ca00-b389-4a52-8c94-10fa75289725",
+      "Type": 1,
+      "Conditions": {}
     },
     {
-      "name": "Dragon Kick",
-      "actionId": 74,
-      "id": "35347d82-772d-4ea2-baae-0f1b5b714288",
-      "type": 0,
-      "conditions": {
-        "job": {
-          "gauge": {
-            "opoOpoFury": {
-              "value": 0,
-              "operator": "="
-            }
-          }
-        }
-      }
+      "Name": "Single PB Lunar Nadi",
+      "Id": "3744506d-7f1d-4388-a76c-d248a0fbd3fe",
+      "SetId": "6d2107d8-1f64-4485-b73e-51718a81242c",
+      "Type": 1,
+      "Conditions": {}
     },
     {
-      "name": "Dragon Kick",
-      "actionId": 74,
-      "id": "f7245e4f-5444-4a03-a61f-db9e314e4e49",
-      "type": 0,
-      "conditions": {}
+      "Name": "Single PB Solar Nadi",
+      "Id": "532bb1bf-7cdf-40d8-b7d9-e5777233c573",
+      "SetId": "7672740c-810e-4747-8e20-f10d0a5c03e7",
+      "Type": 1,
+      "Conditions": {}
+    },
+    {
+      "Name": "Single Base Rotation",
+      "Id": "cb7f2133-268c-4695-8c10-332441a6959d",
+      "SetId": "480ba084-b3ab-4a24-b3af-b1bf729c0a1a",
+      "Type": 1,
+      "Conditions": {}
     }
   ]
 }

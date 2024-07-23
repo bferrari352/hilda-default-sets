@@ -2,598 +2,127 @@
   "id": "d574881f-161a-40c6-96ca-d3fee063eccb",
   "jobId": 20,
   "name": "Multi Target",
-  "appVersion": "7.0.0.0",
-  "version": "7.0.0",
-  "lastUpdated": "2024-07-09 15:41:14Z",
-  "priorities": [
+  "Author": "Syhril Lahnia",
+  "AppVersion": "7.0.0.3",
+  "Version": "7.0.1",
+  "LastUpdated": "2024-07-23 14:46:51Z",
+  "Conditions": {
+    "EnemyCount": {
+      "value": 4,
+      "operator": ">="
+    }
+  },
+  "Priorities": [
     {
-      "name": "Enlightenment",
-      "actionId": 16474,
-      "id": "c81e415a-1381-4510-a50b-638f8060c84f",
-      "conditions": {
-        "globalCooldown": {
+      "Name": "Enlightenment",
+      "ActionId": 16474,
+      "Id": "c81e415a-1381-4510-a50b-638f8060c84f",
+      "Conditions": {
+        "GlobalCooldown": {
           "value": 0.5,
           "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         }
       }
     },
     {
-      "name": "Howling Fist",
-      "actionId": 25763,
-      "id": "53ef3896-adca-4015-88e1-67d04eae88fa",
-      "conditions": {
-        "globalCooldown": {
+      "Name": "Howling Fist",
+      "ActionId": 25763,
+      "Id": "53ef3896-adca-4015-88e1-67d04eae88fa",
+      "Conditions": {
+        "GlobalCooldown": {
           "value": 0.5,
           "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         }
       }
     },
     {
-      "name": "Phantom Rush",
-      "actionId": 25769,
-      "id": "c475f7c8-7e97-439d-aaff-2945504e0532",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
+      "Name": "Finishers",
+      "Id": "2883dc76-ff62-403c-9b68-beb576f600c7",
+      "SetId": "73929105-6b82-43aa-b991-9edd97e92381",
+      "Type": 1,
+      "Conditions": {}
     },
     {
-      "name": "Tornado Kick",
-      "actionId": 3543,
-      "id": "69680daa-9a0e-4ae6-b989-4e979952100a",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
+      "Name": "Multi PB Nadi Open",
+      "Id": "8990a504-2474-485e-86d7-d5727ee2df4e",
+      "SetId": "24de54da-d6e3-4120-bb5d-1f9b434a9d10",
+      "Type": 1,
+      "Conditions": {}
     },
     {
-      "name": "Rockbreaker (Nadi Open)",
-      "actionId": 70,
-      "id": "73b8f02a-7cd7-4dfb-27f3-8b496f6e05ae",
-      "conditions": {
-        "player": {
-          "statuses": [
+      "Name": "Shadow of the Destroyer (Formless Fallback)",
+      "ActionId": 25767,
+      "Id": "89ac7e34-0b36-4b69-a697-5eac7fda25a2",
+      "Conditions": {
+        "Player": {
+          "Statuses": [
             {
-              "id": 110,
-              "duration": {
+              "Id": 2513,
+              "Duration": {
                 "value": 0.0,
                 "operator": ">"
-              },
-              "stacks": {
-                "value": 1,
-                "operator": "="
               }
             }
           ]
         },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
+        "Job": {
+          "OpoOpoForm": true,
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "="
+            }
           }
         }
       }
     },
     {
-      "name": "Four-point Fury (Nadi Open)",
-      "actionId": 16473,
-      "id": "6025fa73-a5c6-49c8-ba45-06faa0b87015",
-      "conditions": {
-        "player": {
-          "statuses": [
+      "Name": "Arm of the Destroyer (Formless Fallback)",
+      "ActionId": 62,
+      "Id": "2257c1ad-dea9-4adc-975f-145e03be4ed7",
+      "Conditions": {
+        "Player": {
+          "Statuses": [
             {
-              "id": 110,
-              "duration": {
+              "Id": 2513,
+              "Duration": {
                 "value": 0.0,
                 "operator": ">"
-              },
-              "stacks": {
-                "value": 2,
-                "operator": "="
               }
             }
           ]
         },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Shadow of the Destroyer (Nadi Open)",
-      "actionId": 25767,
-      "id": "c6b08d64-a336-466c-8543-19ce0122c3f1",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 3,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Arm of the Destroyer (Nadi OPen)",
-      "actionId": 62,
-      "id": "40bcae89-092f-4a77-ade6-36100eae95d6",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 3,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Perfect Balance (Nadi Open)",
-      "actionId": 69,
-      "id": "d8f42ed6-e234-4159-b363-24ec13e9d45c",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Rising Phoenix",
-      "actionId": 25768,
-      "id": "67d03f71-1722-43eb-81b8-c06ca189edcb",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
+        "Job": {
+          "OpoOpoForm": true,
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "="
             }
           }
         }
       }
     },
     {
-      "name": "Flint Strike",
-      "actionId": 25882,
-      "id": "ecfed778-94e5-458d-baf5-8dbf557975a6",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "coeurlChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "raptorChakra": {
-              "value": 1,
-              "operator": ">="
-            },
-            "opoOpoChakra": {
-              "value": 1,
-              "operator": ">="
-            }
-          }
-        }
-      }
+      "Name": "Multi PB Lunar Nadi",
+      "Id": "f2bc2d2c-e347-4a0b-baf2-4f5c25249d64",
+      "SetId": "5628927c-923a-45e9-ab5a-2d5a304074e1",
+      "Type": 1,
+      "Conditions": {}
     },
     {
-      "name": "Rockbreaker (Solar Nadi)",
-      "actionId": 70,
-      "id": "73b8f02a-7cd7-4dfb-b7f3-8b496f6e05ae",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 1,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
+      "Name": "Multi PB Solar Nadi",
+      "Id": "a5e20724-7747-41bf-a09d-032a75dd835e",
+      "SetId": "2ff8b6e8-ee4f-48a8-bcde-71e49a5a93f8",
+      "Type": 1,
+      "Conditions": {}
     },
     {
-      "name": "Four-point Fury (Solar Nadi)",
-      "actionId": 16473,
-      "id": "6025fa73-a5c6-49c8-bc45-06faa0b87015",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 2,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Shadow of the Destroyer (Solar Nadi)",
-      "actionId": 25767,
-      "id": "c6b08d64-a636-466c-8543-19ce0122c3f1",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 3,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Arm of the Destroyer (Solar Nadi)",
-      "actionId": 62,
-      "id": "40bcae89-092f-4a77-ade6-36100eee95d6",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 3,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Perfect Balance (Solar Nadi)",
-      "actionId": 69,
-      "id": "d8fa2ed6-e234-4159-b363-24ec13e9d45c",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": true,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Elixir Field",
-      "actionId": 3545,
-      "id": "9f68f8c7-bf5d-4eef-8c9d-1260725437fe",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "opoOpoChakra": {
-              "value": 3,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Lunar Builder",
-      "actionId": 62,
-      "id": "afccc3e9-c2b9-4caa-89bd-88b64777b20d",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 1,
-                "operator": ">="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Perfect Balance (Lunar Nadi)",
-      "actionId": 69,
-      "id": "de832825-4e1a-4e9f-826f-d14e77f4eac5",
-      "conditions": {
-        "player": {
-          "level": {
-            "value": 60,
-            "operator": ">="
-          },
-          "statuses": [
-            {
-              "id": 110,
-              "duration": {
-                "value": 0.0,
-                "operator": "="
-              }
-            }
-          ]
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "nadiLunar": false,
-            "nadiSolar": false
-          }
-        }
-      }
-    },
-    {
-      "name": "Rockbreaker",
-      "actionId": 70,
-      "id": "64019f4e-7b12-4bac-89b6-3685bf53aabd",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Four-point Fury",
-      "actionId": 16473,
-      "id": "bcfc8f41-3b35-4841-ac7b-0fa4127e3f69",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Shadow of the Destroyer",
-      "actionId": 25767,
-      "id": "d6752243-8632-474f-8b15-6254ab9b5df2",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Arm of the Destroyer",
-      "actionId": 62,
-      "id": "5f9695e3-3794-4afe-a557-f539e25c3cac",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
+      "Name": "Multi Base Rotation",
+      "Id": "86ca910e-84eb-434f-a812-2a72a9bdc38f",
+      "SetId": "8a642314-684a-40c3-be8e-124d4d99bb6c",
+      "Type": 1,
+      "Conditions": {}
     }
   ]
 }

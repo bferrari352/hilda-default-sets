@@ -1,0 +1,69 @@
+{
+  "Id": "49693b1c-1cd9-4220-aad2-e70eddedbfe3",
+  "JobId": 20,
+  "Name": "At Range",
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-23 14:12:52Z",
+  "Conditions": {
+    "Target": {
+      "Distance": {
+        "value": 8,
+        "operator": ">="
+      }
+    }
+  },
+  "Priorities": [
+    {
+      "Name": "Forbidden Meditation",
+      "ActionId": 36942,
+      "Id": "a63b529f-e048-428f-989f-39edd5d3b817",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "Chakra": {
+              "value": 5,
+              "operator": "<"
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Form Shift",
+      "ActionId": 4262,
+      "Id": "71a0d4e0-5130-4cbb-b1ff-dac6bbab1c85",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 2513,
+              "Duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "OpoOpoForm": false,
+          "RaptorForm": false,
+          "CoeurlForm": false,
+          "Gauge": {}
+        }
+      }
+    }
+  ]
+}

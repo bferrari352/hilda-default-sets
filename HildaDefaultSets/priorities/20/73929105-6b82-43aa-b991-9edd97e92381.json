@@ -1,0 +1,136 @@
+{
+  "Id": "73929105-6b82-43aa-b991-9edd97e92381",
+  "JobId": 20,
+  "Name": "Finishers",
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-23 14:23:55Z",
+  "Conditions": {},
+  "Priorities": [
+    {
+      "Name": "Phantom Rush",
+      "ActionId": 25769,
+      "Id": "d41bad49-b245-4bb2-bfd1-181bb4e98c18",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "OpoOpoChakra": {
+              "value": 3,
+              "operator": ">="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Tornado Kick",
+      "ActionId": 3543,
+      "Id": "bd4224e1-f436-432d-91a6-5f2d0f1ea834",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "OpoOpoChakra": {
+              "value": 3,
+              "operator": ">="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Elixir Burst",
+      "ActionId": 36948,
+      "Id": "64aeffc7-3e3f-451c-991d-c4202a2693a1",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "OpoOpoChakra": {
+              "value": 3,
+              "operator": ">="
+            },
+            "NadiLunar": false,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Elixir Field",
+      "ActionId": 3545,
+      "Id": "c2584597-92b1-418a-bf98-0d4ab0fa6082",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "OpoOpoChakra": {
+              "value": 3,
+              "operator": ">="
+            },
+            "NadiLunar": false,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Rising Phoenix",
+      "ActionId": 25768,
+      "Id": "4bdcba45-1bb3-42e5-89ef-00359c6ce053",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "CoeurlChakra": {
+              "value": 1,
+              "operator": "="
+            },
+            "RaptorChakra": {
+              "value": 1,
+              "operator": "="
+            },
+            "OpoOpoChakra": {
+              "value": 1,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    },
+    {
+      "Name": "Flint Strike",
+      "ActionId": 25882,
+      "Id": "f2f57bab-7744-4ee3-8977-e2d9a57f6750",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "CoeurlChakra": {
+              "value": 1,
+              "operator": "="
+            },
+            "RaptorChakra": {
+              "value": 1,
+              "operator": "="
+            },
+            "OpoOpoChakra": {
+              "value": 1,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": false
+          }
+        }
+      }
+    }
+  ]
+}

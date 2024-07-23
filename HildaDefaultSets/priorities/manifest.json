@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.64",
-  "LastUpdated": "2024-07-21 12:52:45Z",
+  "Version": "0.0.65",
+  "LastUpdated": "2024-07-23 15:05:39Z",
   "Sets": {
     "19": [
       {
@@ -33,31 +33,141 @@
     ],
     "20": [
       {
+        "Id": "cd19ca00-b389-4a52-8c94-10fa75289725",
+        "Name": "Single PB Nadi Open",
+        "Type": "Priorities",
+        "Md5": "68C4D2FFCAD93E95DD09A9657DD59BD1",
+        "LastUpdated": "2024-07-18 19:33:27Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "8a642314-684a-40c3-be8e-124d4d99bb6c",
+        "Name": "Multi Base Rotation",
+        "Type": "Priorities",
+        "Md5": "33B54C7D11B28B2FB08D0F9CEE3FDE16",
+        "LastUpdated": "2024-07-23 14:41:35Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "6d2107d8-1f64-4485-b73e-51718a81242c",
+        "Name": "Single PB Lunar Nadi",
+        "Type": "Priorities",
+        "Md5": "DFDDB28B8582B90F97F70FEE69801517",
+        "LastUpdated": "2024-07-18 19:33:42Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
         "Id": "346a1e95-7dd7-4008-b12d-431516b38d03",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "52846836CEC9B35877ED45788A7C8123",
-        "LastUpdated": "2024-07-11 12:18:04Z",
-        "Version": "7.0.1",
-        "AppVersion": "7.0.0.0"
+        "Md5": "D20864EF07C8E4AAAE852DDF65FD3658",
+        "LastUpdated": "2024-07-23 14:31:50Z",
+        "Version": "7.0.2",
+        "AppVersion": "7.0.0.3"
+      },
+      {
+        "Id": "49693b1c-1cd9-4220-aad2-e70eddedbfe3",
+        "Name": "At Range",
+        "Type": "Priorities",
+        "Md5": "AA1F5F664FA8E88911C8D54EFEF440E2",
+        "LastUpdated": "2024-07-23 14:12:52Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "7672740c-810e-4747-8e20-f10d0a5c03e7",
+        "Name": "Single PB Solar Nadi",
+        "Type": "Priorities",
+        "Md5": "DE0C9088300E47B239D2AE2A866DF636",
+        "LastUpdated": "2024-07-23 14:23:19Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "7dd2f13b-e7b1-4498-bf1d-73cc6f9a47ce",
+        "Name": "Out of Combat",
+        "Type": "Priorities",
+        "Md5": "E24FEE779DD23F99DC0E08A04CFB62B3",
+        "LastUpdated": "2024-07-23 14:12:57Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "24de54da-d6e3-4120-bb5d-1f9b434a9d10",
+        "Name": "Multi PB Nadi Open",
+        "Type": "Priorities",
+        "Md5": "0D001E187F311A429513A58BFB8D2A8F",
+        "LastUpdated": "2024-07-23 14:29:33Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "73929105-6b82-43aa-b991-9edd97e92381",
+        "Name": "Finishers",
+        "Type": "Priorities",
+        "Md5": "054859E7B805DEB1F24E2A07F80A7B16",
+        "LastUpdated": "2024-07-23 14:23:55Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
       },
       {
         "Id": "d574881f-161a-40c6-96ca-d3fee063eccb",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "881536440A32A9C162BD4C01F9CEF6A8",
-        "LastUpdated": "2024-07-09 15:41:14Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "Md5": "5C78F51CE0F53E023BFF86D83F536F5C",
+        "LastUpdated": "2024-07-23 14:46:51Z",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.3"
       },
       {
         "Id": "239a1fd7-4c65-47e1-8d11-010d5cc20c8c",
         "Name": "Main",
         "Type": "Priorities",
-        "Md5": "D1468CAC14BD7FF347294D94DF23B45A",
-        "LastUpdated": "2023-01-16 18:27:44Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.0"
+        "Md5": "A64393339B8CB6127504C7DEE2DA1F14",
+        "LastUpdated": "2024-07-23 14:31:25Z",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.0.3"
+      },
+      {
+        "Id": "480ba084-b3ab-4a24-b3af-b1bf729c0a1a",
+        "Name": "Single Base Rotation",
+        "Type": "Priorities",
+        "Md5": "7BB34B3CBE646C1FFC189A3B5E5865D9",
+        "LastUpdated": "2024-07-18 19:33:35Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "2ff8b6e8-ee4f-48a8-bcde-71e49a5a93f8",
+        "Name": "Multi PB Solar Nadi",
+        "Type": "Priorities",
+        "Md5": "E5D0B3D8AD92541C2E9339CBBAA5A98C",
+        "LastUpdated": "2024-07-23 14:29:22Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
+      },
+      {
+        "Id": "5628927c-923a-45e9-ab5a-2d5a304074e1",
+        "Name": "Multi PB Lunar Nadi",
+        "Type": "Priorities",
+        "Md5": "C871A1D96DC17E466DABBDB58ECD2070",
+        "LastUpdated": "2024-07-23 14:29:45Z",
+        "Version": "1.0.0",
+        "AppVersion": "7.0.0.3",
+        "SubSet": true
       }
     ],
     "21": [

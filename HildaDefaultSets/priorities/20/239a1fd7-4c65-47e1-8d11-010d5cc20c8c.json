@@ -2,25 +2,61 @@
   "id": "239a1fd7-4c65-47e1-8d11-010d5cc20c8c",
   "jobId": 20,
   "name": "Main",
-  "appVersion": "7.0.0.0",
-  "version": "7.0.0",
-  "lastUpdated": "2023-01-16 18:27:44Z",
-  "priorities": [
+  "Author": "Syhril Lahnia",
+  "appVersion": "7.0.0.3",
+  "version": "7.0.1",
+  "LastUpdated": "2024-07-23 14:31:25Z",
+  "Conditions": {},
+  "Priorities": [
     {
-      "name": "Multi Target",
-      "setId": "d574881f-161a-40c6-96ca-d3fee063eccb",
-      "type": 1,
-      "id": "17a40035-f521-4b07-b55f-c97b8b10f419",
-      "disabled": false,
-      "conditions": {}
+      "Name": "Out of Combat",
+      "Id": "c83a5a6b-f6f0-49d5-8023-2d97dc50871a",
+      "SetId": "7dd2f13b-e7b1-4498-bf1d-73cc6f9a47ce",
+      "Type": 1,
+      "Conditions": {}
     },
     {
-      "name": "Single Target",
-      "setId": "346a1e95-7dd7-4008-b12d-431516b38d03",
-      "type": 1,
-      "id": "e6031dca-4857-43fd-82d6-1f9a87118445",
-      "disabled": false,
-      "conditions": {}
+      "Name": "At Range",
+      "Id": "007fd1c8-e8a5-4193-be21-e1052fa05c5d",
+      "SetId": "49693b1c-1cd9-4220-aad2-e70eddedbfe3",
+      "Type": 1,
+      "Conditions": {}
+    },
+    {
+      "Name": "Wind's Reply",
+      "ActionId": 36949,
+      "Id": "4cbf6c9e-ed1c-4e2f-9c4d-2e97989ad3d8",
+      "Conditions": {
+        "Combo": {
+          "value": 0.0,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "Name": "Fire's Reply",
+      "ActionId": 36950,
+      "Id": "849ee30c-ea05-4e2e-af9a-b28b19f82e78",
+      "Conditions": {
+        "Combo": {
+          "value": 0.0,
+          "operator": "="
+        }
+      }
+    },
+    {
+      "Name": "Multi Target",
+      "SetId": "d574881f-161a-40c6-96ca-d3fee063eccb",
+      "Type": 1,
+      "Id": "17a40035-f521-4b07-b55f-c97b8b10f419",
+      "Conditions": {}
+    },
+    {
+      "Name": "Single Target",
+      "SetId": "346a1e95-7dd7-4008-b12d-431516b38d03",
+      "Type": 1,
+      "Id": "e6031dca-4857-43fd-82d6-1f9a87118445",
+      "Conditions": {}
     }
   ]
 }

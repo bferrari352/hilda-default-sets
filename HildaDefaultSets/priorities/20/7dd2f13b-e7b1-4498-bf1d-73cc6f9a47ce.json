@@ -1,0 +1,64 @@
+{
+  "Id": "7dd2f13b-e7b1-4498-bf1d-73cc6f9a47ce",
+  "JobId": 20,
+  "Name": "Out of Combat",
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-23 14:12:57Z",
+  "Conditions": {
+    "InCombat": false
+  },
+  "Priorities": [
+    {
+      "Name": "Forbidden Meditation (Out of Combat)",
+      "ActionId": 36942,
+      "Id": "ea5142fd-fc87-44e3-a4a2-2d6727fa0f6e",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "Chakra": {
+              "value": 5,
+              "operator": "<"
+            }
+          }
+        }
+      }
+    },
+    {
+      "Name": "Form Shift (Out of Combat)",
+      "ActionId": 4262,
+      "Id": "28e930d5-4e4d-4a63-925e-163ee3746eeb",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 2513,
+              "Duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            },
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "OpoOpoForm": false,
+          "RaptorForm": false,
+          "CoeurlForm": false,
+          "Gauge": {}
+        }
+      }
+    }
+  ]
+}

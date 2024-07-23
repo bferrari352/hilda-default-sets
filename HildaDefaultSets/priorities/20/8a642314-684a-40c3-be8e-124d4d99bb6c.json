@@ -1,0 +1,72 @@
+{
+  "Id": "8a642314-684a-40c3-be8e-124d4d99bb6c",
+  "JobId": 20,
+  "Name": "Multi Base Rotation",
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-23 14:41:35Z",
+  "Conditions": {},
+  "Priorities": [
+    {
+      "Name": "Shadow of the Destroyer",
+      "ActionId": 25767,
+      "Id": "0ad6b9fc-d4bf-4815-8b43-f4e2d7d1bf7e",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "OpoOpoForm": true
+        }
+      }
+    },
+    {
+      "Name": "Arm of the Destroyer",
+      "ActionId": 62,
+      "Id": "93c39a62-35a8-46ff-b1c4-0353a3ca2c64",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "OpoOpoForm": true
+        }
+      }
+    },
+    {
+      "Name": "Rockbreaker",
+      "ActionId": 70,
+      "Id": "77d2309b-8fa5-40ac-a984-9197e7085fd0",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "CoeurlForm": true
+        }
+      }
+    },
+    {
+      "Name": "Four-point Fury",
+      "ActionId": 16473,
+      "Id": "aec8276e-60ed-4dad-a57a-8e8f14980928",
+      "Type": 0,
+      "Conditions": {
+        "Job": {
+          "RaptorForm": true
+        }
+      }
+    },
+    {
+      "Name": "Shadow of the Destroyer (Fallback)",
+      "ActionId": 25767,
+      "Id": "9f8eb79a-a2db-4463-8751-17e5e502eb20",
+      "Disabled": false,
+      "Type": 0,
+      "Conditions": {}
+    },
+    {
+      "Name": "Arm of the Destroyer (Fallback)",
+      "ActionId": 62,
+      "Id": "bb695958-5cf4-4be4-b1df-b59079ce3667",
+      "Type": 0,
+      "Conditions": {}
+    }
+  ]
+}

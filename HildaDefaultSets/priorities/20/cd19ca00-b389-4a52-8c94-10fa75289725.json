@@ -1,0 +1,252 @@
+{
+  "Id": "cd19ca00-b389-4a52-8c94-10fa75289725",
+  "JobId": 20,
+  "Name": "Single PB Nadi Open",
+  "Disabled": false,
+  "SubSet": true,
+  "AppVersion": "7.0.0.3",
+  "Version": "1.0.0",
+  "LastUpdated": "2024-07-18 19:33:27Z",
+  "Conditions": {},
+  "Priorities": [
+    {
+      "Name": "Leaping Opo",
+      "ActionId": 36945,
+      "Id": "4a9f67c8-ee75-4e98-88aa-a1986a6d2070",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Bootshine",
+      "ActionId": 53,
+      "Id": "d28ae88c-2bd8-4e25-8f7a-4e5d68abb361",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Dragon Kick",
+      "ActionId": 74,
+      "Id": "05071c15-dea1-4b52-a5a5-dc0ae78b8e65",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 3,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Leaping Opo",
+      "ActionId": 36945,
+      "Id": "90ea98bb-1449-43af-b854-c9ba69a34486",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 2,
+                "operator": "<="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Bootshine",
+      "ActionId": 53,
+      "Id": "8fbef365-6ebf-4abe-aaa0-b43a4cc8f703",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 2,
+                "operator": "<="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "!="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Dragon Kick",
+      "ActionId": 74,
+      "Id": "86229710-910d-4218-b72f-a88b3ed6c0fa",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": ">"
+              },
+              "Stacks": {
+                "value": 2,
+                "operator": "<="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "OpoOpoFury": {
+              "value": 0,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    },
+    {
+      "Name": "Perfect Balance",
+      "ActionId": 69,
+      "Id": "7c444b81-4301-408d-8def-e7b7a44fd602",
+      "Type": 0,
+      "Conditions": {
+        "Player": {
+          "Level": {
+            "value": 60,
+            "operator": ">="
+          },
+          "Statuses": [
+            {
+              "Id": 110,
+              "Duration": {
+                "value": 0.0,
+                "operator": "="
+              }
+            }
+          ]
+        },
+        "Job": {
+          "Gauge": {
+            "CoeurlChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "RaptorChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "OpoOpoChakra": {
+              "value": 0,
+              "operator": "="
+            },
+            "NadiLunar": true,
+            "NadiSolar": true
+          }
+        }
+      }
+    }
+  ]
+}
