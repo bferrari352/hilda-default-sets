@@ -2,9 +2,9 @@
   "id": "274d420d-815f-4ead-9703-5a3598b8c98a",
   "jobId": 25,
   "name": "Single Target",
-  "appVersion": "7.0.0.0",
-  "version": "7.0.0",
-  "lastUpdated": "2024-07-11 12:53:34Z",
+  "appVersion": "7.0.5.0",
+  "version": "7.0.1",
+  "lastUpdated": "2024-08-18 13:00:00Z",
   "priorities": [
     {
       "name": "Manafont (emergency)",
@@ -257,24 +257,6 @@
       "conditions": {}
     },
     {
-      "name": "Despair (TODO)",
-      "actionId": 16505,
-      "id": "bacda7aa-b454-4fe1-a1f5-d04d1cffa005",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 1211,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "Fire IV (Triplecast)",
       "actionId": 3577,
       "id": "1820361b-7602-4f96-9305-2648b092d3ca",
@@ -327,15 +309,68 @@
       }
     },
     {
-      "name": "Paradox",
+      "name": "Paradox (Astral up)",
+      "actionId": 25797,
+      "id": "cf0ee57d-13e8-47ec-8568-4ed5075f33a0",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "astralFireStacks": {
+              "value": 3,
+              "operator": "<"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Paradox (Umbral up)",
       "actionId": 25797,
       "id": "a2bfd733-4c6a-479d-963a-45188bf25232",
       "conditions": {
         "job": {
           "gauge": {
             "umbralIceStacks": {
+              "value": 3,
+              "operator": "<"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Paradox (Astral going down)",
+      "actionId": 25797,
+      "id": "e2ef8e64-4e02-4330-bc00-d19669102ade",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "astralFireStacks": {
               "value": 0,
               "operator": ">"
+            },
+            "elementTimeRemaining": {
+              "value": 6,
+              "operator": "<="
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Paradox (Umbral going down)",
+      "actionId": 25797,
+      "id": "fee94d58-30cf-4e1d-8d5e-38d30c2b1197",
+      "conditions": {
+        "job": {
+          "gauge": {
+            "umbralIceStacks": {
+              "value": 0,
+              "operator": ">"
+            },
+            "elementTimeRemaining": {
+              "value": 6,
+              "operator": "<="
             }
           }
         }
@@ -416,6 +451,11 @@
       "actionId": 3577,
       "id": "f74dbc15-cfa3-4ec3-adfc-d87a6e2f684f",
       "conditions": {}
+    },
+    {
+      "name": "Despair",
+      "actionId": 16505,
+      "id": "bacda7aa-b454-4fe1-a1f5-d04d1cffa005"
     },
     {
       "name": "Fire",
