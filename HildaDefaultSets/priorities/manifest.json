@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.67",
-  "LastUpdated": "2024-08-18 08:26:53Z",
+  "Version": "0.0.68",
+  "LastUpdated": "2024-08-18 11:10:39Z",
   "Sets": {
     "19": [
       {
@@ -959,20 +959,20 @@
         "Id": "8ba179a4-eb65-426f-9760-8315e88b3860",
         "Name": "ST Basic Combo",
         "Type": "Priorities",
-        "Md5": "EFA07BF4F1A5EA4D5E3CC54314A8D755",
+        "Md5": "5924E71A28549378869269A8152765E5",
         "LastUpdated": "2024-07-17 09:53:35Z",
-        "Version": "1.0.0",
-        "AppVersion": "7.0.0.2",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.5.0",
         "SubSet": true
       },
       {
         "Id": "9149f9ad-71f3-4157-9da8-0d7ad40fa375",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "193518D57D2B4B00D5E11725ADA1FA33",
+        "Md5": "4C9C062D13BABE295AF0B085652E4E80",
         "LastUpdated": "2024-07-17 11:57:49Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "Version": "7.0.1",
+        "AppVersion": "7.0.5.0"
       },
       {
         "Id": "8c91e4fc-c180-4180-96f1-441a141d6d43",
@@ -998,20 +998,20 @@
         "Id": "096e8145-95fc-4348-9f3b-476b4f5e7599",
         "Name": "MT Basic Combo",
         "Type": "Priorities",
-        "Md5": "44D50FDFA01D912C4191562DA4C3F48F",
+        "Md5": "317533171797340D412B73D73F154F4E",
         "LastUpdated": "2024-07-17 10:04:13Z",
-        "Version": "1.0.0",
-        "AppVersion": "7.0.0.2",
+        "Version": "7.0.1",
+        "AppVersion": "7.0.5.0",
         "SubSet": true
       },
       {
         "Id": "c7ea57c4-7711-49c9-bbd8-0ee51cb5e323",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "3398833BC3D9B9BF8538479ADED46A1A",
+        "Md5": "D918AFE94F75E41BAE4BD3CC97EF661D",
         "LastUpdated": "2024-07-17 14:09:36Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "Version": "7.0.1",
+        "AppVersion": "7.0.5.0"
       },
       {
         "Id": "55cd085f-85e8-4e49-834f-544fb55c74e5",
