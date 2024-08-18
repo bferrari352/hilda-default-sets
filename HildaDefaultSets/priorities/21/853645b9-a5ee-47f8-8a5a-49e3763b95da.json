@@ -1,72 +1,58 @@
 ﻿{
-  "id": "853645b9-a5ee-47f8-8a5a-49e3763b95da",
-  "jobId": 21,
-  "name": "Multi Target",
-  "version": "7.0.1",
-  "appVersion": "7.0.0.0",
-  "lastUpdated": "2024-01-03 20:30:18Z",
-  "priorities": [
+  "Id": "853645b9-a5ee-47f8-8a5a-49e3763b95da",
+  "JobId": 21,
+  "Name": "Multi Target",
+  "AppVersion": "7.0.0.3",
+  "Version": "7.0.2",
+  "LastUpdated": "2024-08-05 19:55:36Z",
+  "Conditions": {
+    "EnemyDependentCount": {
+      "ActionId": 41,
+      "value": 3,
+      "operator": ">="
+    }
+  },
+  "Priorities": [
     {
-      "name": "Berserk",
-      "actionId": 38,
-      "id": "469d5a35-d916-48b2-9033-b2da5f2ec63d",
-      "conditions": {
-        "globalCooldown": {
+      "Name": "Berserk",
+      "ActionId": 38,
+      "Id": "469d5a35-d916-48b2-9033-b2da5f2ec63d",
+      "Conditions": {
+        "GlobalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "Name": "Primal Wrath",
+      "ActionId": 36924,
+      "Id": "efcb7842-3a4e-4581-9b11-48df0eb69e3d",
+      "Conditions": {
+        "GlobalCooldown": {
+          "value": 0.5,
+          "operator": ">"
+        }
+      }
+    },
+    {
+      "Name": "Primal Ruination",
+      "ActionId": 36925,
+      "Id": "efcb7842-3a4e-4581-9e1a-48df0eb6933d",
+      "Conditions": {}
+    },
+    {
+      "Name": "Infuriate",
+      "ActionId": 52,
+      "Id": "63e52fe4-54c8-4cc4-8b2a-5f34499f9404",
+      "Conditions": {
+        "GlobalCooldown": {
           "value": 0.5,
           "operator": ">"
         },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "beastGauge": {
-              "value": 50,
-              "operator": ">="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Primal Wrath",
-      "actionId": 36924,
-      "id": "efcb7842-3a4e-4581-9b11-48df0eb69e3d",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Primal Ruination",
-      "actionId": 36925,
-      "id": "efcb7842-3a4e-4581-9e1a-48df0eb6933d",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
-    },
-    {
-      "name": "Infuriate",
-      "actionId": 52,
-      "id": "63e52fe4-54c8-4cc4-8b2a-5f34499f9404",
-      "conditions": {
-        "globalCooldown": {
-          "value": 0.5,
-          "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "beastGauge": {
+        "Job": {
+          "Gauge": {
+            "BeastGauge": {
               "value": 50,
               "operator": "<"
             }
@@ -75,71 +61,49 @@
       }
     },
     {
-      "name": "Inner Release",
-      "actionId": 7389,
-      "id": "fd93acab-21b3-43da-bb72-4bf87329ac68",
-      "conditions": {
-        "globalCooldown": {
+      "Name": "Inner Release",
+      "ActionId": 7389,
+      "Id": "fd93acab-21b3-43da-bb72-4bf87329ac68",
+      "Conditions": {
+        "GlobalCooldown": {
           "value": 0.5,
           "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         }
       }
     },
     {
-      "name": "Orogeny",
-      "actionId": 25752,
-      "id": "0d29d01f-37f6-4da7-a49c-62fe4ef63abe",
-      "conditions": {
-        "globalCooldown": {
+      "Name": "Orogeny",
+      "ActionId": 25752,
+      "Id": "0d29d01f-37f6-4da7-a49c-62fe4ef63abe",
+      "Conditions": {
+        "GlobalCooldown": {
           "value": 0.5,
           "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         }
       }
     },
     {
-      "name": "Chaotic Cyclone",
-      "actionId": 16463,
-      "id": "9e7fe33b-3876-453f-9602-d56468dcad2a",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
+      "Name": "Chaotic Cyclone",
+      "ActionId": 16463,
+      "Id": "9e7fe33b-3876-453f-9602-d56468dcad2a",
+      "Conditions": {}
     },
     {
-      "name": "Primal Rend",
-      "actionId": 25753,
-      "id": "77b8e0ac-f7bb-442d-8bf4-ba83e37cebc3",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
+      "Name": "Primal Rend",
+      "ActionId": 25753,
+      "Id": "77b8e0ac-f7bb-442d-8bf4-ba83e37cebc3",
+      "Conditions": {}
     },
     {
-      "name": "Decimate (Inner Release)",
-      "actionId": 3550,
-      "id": "c2288246-0b0a-48a6-4578-4fd9e5d59e31",
-      "conditions": {
-        "player": {
-          "enemyCount": {
-            "value": 3,
-            "operator": ">="
-          },
-          "statuses": [
+      "Name": "Decimate (Inner Release)",
+      "ActionId": 3550,
+      "Id": "c2288246-0b0a-48a6-4578-4fd9e5d59e31",
+      "Conditions": {
+        "Player": {
+          "Statuses": [
             {
-              "id": 1177,
-              "duration": {
+              "Id": 1177,
+              "Duration": {
                 "value": 0.0,
                 "operator": ">"
               }
@@ -149,17 +113,13 @@
       }
     },
     {
-      "name": "Decimate",
-      "actionId": 3550,
-      "id": "f8e3b13b-ddf6-48eb-a8ff-102deac82186",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "beastGauge": {
+      "Name": "Decimate",
+      "ActionId": 3550,
+      "Id": "f8e3b13b-ddf6-48eb-a8ff-102deac82186",
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "BeastGauge": {
               "value": 50,
               "operator": ">="
             }
@@ -168,17 +128,13 @@
       }
     },
     {
-      "name": "Steel Cyclone",
-      "actionId": 51,
-      "id": "6a940a88-4bb7-4e97-abaa-63b9e02776a9",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "beastGauge": {
+      "Name": "Steel Cyclone",
+      "ActionId": 51,
+      "Id": "6a940a88-4bb7-4e97-abaa-63b9e02776a9",
+      "Conditions": {
+        "Job": {
+          "Gauge": {
+            "BeastGauge": {
               "value": 50,
               "operator": ">="
             }
@@ -187,30 +143,21 @@
       }
     },
     {
-      "name": "Mythril Tempest",
-      "actionId": 16462,
-      "id": "896cd61c-9e70-4f91-ba08-120ee12868f1",
-      "conditions": {
-        "combo": {
+      "Name": "Mythril Tempest",
+      "ActionId": 16462,
+      "Id": "896cd61c-9e70-4f91-ba08-120ee12868f1",
+      "Conditions": {
+        "Combo": {
           "value": 0.0,
           "operator": ">"
-        },
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
         }
       }
     },
     {
-      "name": "Overpower",
-      "actionId": 41,
-      "id": "1ae6be47-074a-4a3f-bd43-5c4d43bb3f9e",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        }
-      }
+      "Name": "Overpower",
+      "ActionId": 41,
+      "Id": "1ae6be47-074a-4a3f-bd43-5c4d43bb3f9e",
+      "Conditions": {}
     }
   ]
 }
