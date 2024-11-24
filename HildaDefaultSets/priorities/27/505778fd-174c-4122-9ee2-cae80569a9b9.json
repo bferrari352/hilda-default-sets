@@ -2,8 +2,8 @@
   "id": "505778fd-174c-4122-9ee2-cae80569a9b9",
   "name": "Single Target",
   "jobId": 27,
-  "version": "7.0.0",
-  "appVersion": "7.0.0.2",
+  "version": "7.1.0",
+  "appVersion": "7.1.0.0",
   "lastUpdated": "2024-07-13 11:45:00Z",
   "priorities": [
     {
@@ -220,13 +220,7 @@
     {
       "name": "Crimson Strike",
       "actionId": 25885,
-      "id": "cb209ce4-e8d6-4963-a2ba-e03be298d245",
-      "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        }
-      }
+      "id": "cb209ce4-e8d6-4963-a2ba-e03be298d245"
     },
     {
       "name": "Summon Carbuncle",

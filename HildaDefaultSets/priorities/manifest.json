@@ -1,6 +1,6 @@
 {
-  "Version": "0.0.69",
-  "LastUpdated": "2024-08-18 11:25:21Z",
+  "Version": "0.0.71",
+  "LastUpdated": "2024-11-24 11:54:45Z",
   "Sets": {
     "19": [
       {
@@ -320,10 +320,10 @@
         "Id": "505778fd-174c-4122-9ee2-cae80569a9b9",
         "Name": "Single Target",
         "Type": "Priorities",
-        "Md5": "BE27DEAD1679896B7523028B70320BD5",
+        "Md5": "A0CCE4992A7450711A440A8327D58F52",
         "LastUpdated": "2024-07-13 11:45:00Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "Version": "7.1.0",
+        "AppVersion": "7.1.0.0"
       },
       {
         "Id": "b2dcd60b-56a1-47f3-8f75-b30fe2a7a654",
@@ -338,10 +338,10 @@
         "Id": "39e1b02e-e75c-4f1f-a6c4-ba175eedf730",
         "Name": "Multi Target",
         "Type": "Priorities",
-        "Md5": "131A4597F73321CA63574701A0224EEC",
+        "Md5": "8520FAEF78CABA777D1382AAB43CBC41",
         "LastUpdated": "2024-07-13 11:45:00Z",
-        "Version": "7.0.0",
-        "AppVersion": "7.0.0.2"
+        "Version": "7.1.0",
+        "AppVersion": "7.1.0.0"
       }
     ],
     "28": [

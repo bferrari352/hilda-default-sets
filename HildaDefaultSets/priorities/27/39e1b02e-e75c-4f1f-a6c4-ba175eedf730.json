@@ -2,8 +2,8 @@
   "id": "39e1b02e-e75c-4f1f-a6c4-ba175eedf730",
   "name": "Multi Target",
   "jobId": 27,
-  "version": "7.0.0",
-  "appVersion": "7.0.0.2",
+  "version": "7.1.0",
+  "appVersion": "7.1.0.0",
   "lastUpdated": "2024-07-13 11:45:00Z",
   "priorities": [
     {
@@ -221,10 +221,6 @@
       "actionId": 25885,
       "id": "ee38ce39-8317-43c7-9d31-46fa6155f920",
       "conditions": {
-        "combo": {
-          "value": 0.0,
-          "operator": ">"
-        },
         "enemyCount": {
           "value": 3,
           "operator": ">="

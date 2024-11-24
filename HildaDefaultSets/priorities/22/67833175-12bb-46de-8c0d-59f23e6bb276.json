@@ -2,8 +2,8 @@
   "id": "67833175-12bb-46de-8c0d-59f23e6bb276",
   "jobId": 22,
   "name": "Single Target",
-  "appVersion": "7.0.0.0",
-  "version": "7.0.0",
+  "appVersion": "7.1.0.0",
+  "version": "7.1.0",
   "lastUpdated": "2024-07-10 08:52:03Z",
   "priorities": [
     {
@@ -245,6 +245,24 @@
         "combo": {
           "value": 0.0,
           "operator": ">"
+        }
+      }
+    },
+    {
+      "name": "Piercing Talon",
+      "actionId": 90,
+      "id": "e712eaec-3f8b-4939-8fde-10aa2265e505",
+      "conditions": {
+        "player": {
+          "statuses": [
+            {
+              "id": 1870,
+              "duration": {
+                "value": 0.0,
+                "operator": ">"
+              }
+            }
+          ]
         }
       }
     },
