@@ -2,8 +2,8 @@
   "id": "3b758951-840e-4f4e-a76d-add66569bd4a",
   "jobId": 25,
   "name": "Multi Target",
-  "appVersion": "7.0.5.0",
-  "version": "7.0.1",
+  "appVersion": "7.2.0.0",
+  "version": "7.2.0",
   "lastUpdated": "2024-08-18 13:00:00Z",
   "priorities": [
     {
@@ -264,52 +264,6 @@
             "umbralIceStacks": {
               "value": 3,
               "operator": "<"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Paradox (Astral going down)",
-      "actionId": 25797,
-      "id": "28fbec6b-1691-4d2a-8bbf-56c4f84c6d57",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "astralFireStacks": {
-              "value": 0,
-              "operator": ">"
-            },
-            "elementTimeRemaining": {
-              "value": 6,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Paradox (Umbral going down)",
-      "actionId": 25797,
-      "id": "b3e34b1f-6cc3-424c-a367-c89aa76d6093",
-      "conditions": {
-        "enemyCount": {
-          "value": 3,
-          "operator": ">="
-        },
-        "job": {
-          "gauge": {
-            "umbralIceStacks": {
-              "value": 0,
-              "operator": ">"
-            },
-            "elementTimeRemaining": {
-              "value": 6,
-              "operator": "<="
             }
           }
         }

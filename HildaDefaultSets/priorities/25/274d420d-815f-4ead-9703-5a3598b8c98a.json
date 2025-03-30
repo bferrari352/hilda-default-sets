@@ -2,8 +2,8 @@
   "id": "274d420d-815f-4ead-9703-5a3598b8c98a",
   "jobId": 25,
   "name": "Single Target",
-  "appVersion": "7.0.5.0",
-  "version": "7.0.1",
+  "appVersion": "7.2.0.0",
+  "version": "7.2.0",
   "lastUpdated": "2024-08-18 13:00:00Z",
   "priorities": [
     {
@@ -61,36 +61,6 @@
       }
     },
     {
-      "name": "Firestarter (Astral falling off)",
-      "actionId": 152,
-      "id": "6e6454f3-39ab-4e96-bcae-7aa806bb0ce8",
-      "conditions": {
-        "player": {
-          "statuses": [
-            {
-              "id": 165,
-              "duration": {
-                "value": 0.0,
-                "operator": ">"
-              },
-              "stacks": {
-                "value": 1,
-                "operator": ">="
-              }
-            }
-          ]
-        },
-        "job": {
-          "gauge": {
-            "elementTimeRemaining": {
-              "value": 6,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
       "name": "Retrace",
       "actionId": 36988,
       "id": "63e37785-afe3-4249-bf3f-89eb1358df7f",
@@ -139,25 +109,6 @@
               }
             }
           ]
-        }
-      }
-    },
-    {
-      "name": "Fire (Astral Fire falling off)",
-      "actionId": 141,
-      "id": "c75bd41a-0803-4486-9863-b37472140d4c",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "elementTimeRemaining": {
-              "value": 6,
-              "operator": "<="
-            },
-            "astralFireStacks": {
-              "value": 3,
-              "operator": ">="
-            }
-          }
         }
       }
     },
@@ -339,44 +290,6 @@
       }
     },
     {
-      "name": "Paradox (Astral going down)",
-      "actionId": 25797,
-      "id": "e2ef8e64-4e02-4330-bc00-d19669102ade",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "astralFireStacks": {
-              "value": 0,
-              "operator": ">"
-            },
-            "elementTimeRemaining": {
-              "value": 6,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Paradox (Umbral going down)",
-      "actionId": 25797,
-      "id": "fee94d58-30cf-4e1d-8d5e-38d30c2b1197",
-      "conditions": {
-        "job": {
-          "gauge": {
-            "umbralIceStacks": {
-              "value": 0,
-              "operator": ">"
-            },
-            "elementTimeRemaining": {
-              "value": 6,
-              "operator": "<="
-            }
-          }
-        }
-      }
-    },
-    {
       "name": "Firestarter",
       "actionId": 152,
       "id": "9907515b-230b-47a2-ab54-249bebe529bb",
@@ -500,10 +413,6 @@
         },
         "job": {
           "gauge": {
-            "enochianTimer": {
-              "value": 0,
-              "operator": ">"
-            },
             "umbralIceStacks": {
               "value": 0,
               "operator": ">"
