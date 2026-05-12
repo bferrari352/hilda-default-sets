@@ -1,0 +1,126 @@
+name: Auto-bump priority sets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'HildaDefaultSets/priorities/**/*.json'
+
+jobs:
+  bump:
+    if: github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[skip-bump]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Read pinned Hilda version
+        id: hilda
+        run: |
+          set -euo pipefail
+          APP_VERSION=$(grep -oE '<HildaTestBundleVersion>[^<]+' \
+            HildaDefaultSetsTests/HildaDefaultSetsTests.csproj \
+            | sed 's|<HildaTestBundleVersion>||')
+          if [ -z "$APP_VERSION" ]; then
+            echo "Could not read HildaTestBundleVersion from HildaDefaultSetsTests.csproj" >&2
+            exit 1
+          fi
+          echo "appVersion=$APP_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Using appVersion=$APP_VERSION"
+
+      - name: Auto-bump modified priority files
+        id: bump
+        env:
+          HILDA_APP_VERSION: ${{ steps.hilda.outputs.appVersion }}
+          PUSH_BEFORE: ${{ github.event.before }}
+          PUSH_AFTER: ${{ github.event.after }}
+        run: |
+          set -euo pipefail
+
+          # First push to a branch reports an all-zero `before` SHA. Fall back to HEAD~1.
+          if ! git rev-parse --verify "${PUSH_BEFORE}^{commit}" >/dev/null 2>&1; then
+            PUSH_BEFORE=$(git rev-parse HEAD~1)
+          fi
+
+          MODIFIED=$(git diff --name-status "$PUSH_BEFORE" "$PUSH_AFTER" \
+            -- 'HildaDefaultSets/priorities/*/*.json' \
+            | awk '$1 == "M" { print $2 }' \
+            | grep -v '/manifest\.json$' || true)
+
+          if [ -z "$MODIFIED" ]; then
+            echo "No modified priority files (only adds, removes, or manifest)."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Modified files:"
+          printf '  %s\n' $MODIFIED
+
+          NOW=$(date -u '+%Y-%m-%d %H:%M:%SZ')
+
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+
+            OLD_VERSION=$(git show "$PUSH_BEFORE:$file" 2>/dev/null \
+              | jq -r '.version // .Version // empty' || echo "")
+            NEW_VERSION=$(jq -r '.version // .Version // empty' "$file")
+
+            if [ -z "$NEW_VERSION" ]; then
+              echo "  $file: no version field, skipping"
+              continue
+            fi
+
+            if [ -n "$OLD_VERSION" ] && [ "$OLD_VERSION" != "$NEW_VERSION" ]; then
+              echo "  $file: maintainer bumped version ($OLD_VERSION -> $NEW_VERSION), keeping"
+            else
+              BUMPED=$(echo "$NEW_VERSION" | awk -F. '{$NF=$NF+1; OFS="."; print}')
+              echo "  $file: version $NEW_VERSION -> $BUMPED"
+              BUMPED="$BUMPED" perl -i -pe 's/("[Vv]ersion"\s*:\s*")[^"]+(")/$1.$ENV{BUMPED}.$2/e' "$file"
+            fi
+
+            # Pin appVersion to current Hilda bundle version.
+            perl -i -pe 's/("[Aa]ppVersion"\s*:\s*")[^"]+(")/$1.$ENV{HILDA_APP_VERSION}.$2/e' "$file"
+            # Refresh lastUpdated.
+            NOW_TS="$NOW" perl -i -pe 's/("[Ll]astUpdated"\s*:\s*")[^"]+(")/$1.$ENV{NOW_TS}.$2/e' "$file"
+          done <<< "$MODIFIED"
+
+          if git diff --quiet HildaDefaultSets/priorities/; then
+            echo "No effective changes after rewrite"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Regenerate manifest
+        if: steps.bump.outputs.changed == 'true'
+        working-directory: HildaDefaultSets
+        run: dotnet run -c Release
+
+      - name: Schema tests
+        if: steps.bump.outputs.changed == 'true'
+        run: dotnet test HildaDefaultSetsSchemaTests/HildaDefaultSetsSchemaTests.csproj -c Release --nologo
+
+      - name: Commit and push
+        if: steps.bump.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add HildaDefaultSets/priorities/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "Auto-bump priority set versions"
+          git push origin main

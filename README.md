@@ -1,14 +1,71 @@
 This is a console application for updating default priority sets for the Hilda plugin.
 
-How to use this:
+## Updating a priority set
 
-- Update the json file(s) requiring updates
-  - This includes updating the VERSION and APPVERSION (If applicable) on a per set basis
-- run `dotnet build`
-- run `dotnet run +version` (this updates the patch version)
-  - if this is a minor or (GULP) major version update, provide `minor` or `major` after `+version`
-- push to main
-- merge to `gh-pages` and push
+1. Edit the JSON file(s) in `HildaDefaultSets/priorities/<jobId>/`.
+2. Regenerate the manifest from inside `HildaDefaultSets/`:
+   ```sh
+   dotnet run
+   ```
+   This rewrites `priorities/manifest.json` with fresh MD5 hashes. No version bump.
+3. Open a PR to `main`. The `Validate priority sets` workflow runs the schema tests on the PR. They must pass before merge.
+
+### On merge: automatic version bumping
+
+When a PR merges to `main`, the `Auto-bump priority sets` workflow rewrites each modified priority file:
+
+- **`version`** — patch component is incremented by 1. If you already bumped it in the PR, the workflow leaves it alone.
+- **`appVersion`** — overwritten to the `<HildaTestBundleVersion>` pinned in `HildaDefaultSetsTests/HildaDefaultSetsTests.csproj` (i.e., the Hilda release these sets are validated against).
+- **`lastUpdated`** — refreshed to the merge timestamp.
+
+The workflow then re-runs the manifest generator and the schema tests, and commits the result back to `main` as `github-actions[bot]`.
+
+To opt out for a specific merge (e.g., a comment-only change), include `[skip-bump]` in the squash/merge commit message.
+
+## Releasing
+
+Manual release is handled by a GitHub Actions workflow — no local `gh-pages` merge needed.
+
+1. Make sure your changes are merged into `main`.
+2. Go to **Actions → Release default sets → Run workflow**.
+3. Pick the bump level (`patch` / `minor` / `major`) and click **Run workflow**.
+
+The workflow runs the schema tests, bumps the manifest version, commits to `main`, then merges `main` into `gh-pages` and pushes both. Hilda's plugin update flow picks up the new manifest from `gh-pages` automatically.
+
+## Running tests
+
+Two test projects exist:
+
+### Schema tests (fast, no dependencies)
+
+```sh
+dotnet test HildaDefaultSetsSchemaTests
+```
+
+Runs on any platform with .NET 8. Validates:
+
+- Every priority JSON file is listed in `manifest.json` (and vice versa).
+- Each manifest entry's MD5 matches the actual file on disk.
+- `name`, `version`, `appVersion`, `lastUpdated`, `jobId`, `id` on each manifest entry match what's inside the file.
+- No duplicate set IDs across jobs.
+- Versions are well-formed (`N.N.N` for set/manifest versions; 2-4 part dotted for `appVersion`).
+- Every priority directory's name matches the `jobId` inside its JSON files.
+
+These are what the PR validation and release workflows gate on. If you're contributing priority changes, run these locally before pushing.
+
+### Deep simulation tests
+
+```sh
+dotnet test HildaDefaultSetsTests
+```
+
+Drives Hilda's `SetConductor` against real FFXIV game data through every priority set. **Requires:**
+
+- Windows or WSL (the test project targets `net8.0-windows`).
+- An FFXIV install with `sqpack` available — point `XIV_DATA` at the directory that contains `game/sqpack`.
+- Dalamud reference assemblies — point `DALAMUD_DEV` at your Dalamud install dir.
+
+The Hilda plugin assemblies (`Hilda.dll`, `HildaTestUtils.dll`, `InternalAssemblies.snk`) are not redistributed in this repo. On first build, `HildaDefaultSetsTests.csproj` downloads them from the matching GitHub Release on this repo (`hilda-bin-<version>`) and caches under `tools/hilda-bin/<version>/`. The bundle version is pinned in `HildaDefaultSetsTests.csproj` as `<HildaTestBundleVersion>` and is bumped manually whenever a new Hilda release ships.
 
 ## Curated Priority Sets Philosophy
 

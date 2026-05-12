@@ -1,0 +1,75 @@
+name: Release default sets
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Version component to bump
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: patch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Schema tests
+        run: dotnet test HildaDefaultSetsSchemaTests/HildaDefaultSetsSchemaTests.csproj -c Release --nologo
+
+      - name: Bump version and regenerate manifest
+        working-directory: HildaDefaultSets
+        run: |
+          case "${{ inputs.bump }}" in
+            patch) ARG="" ;;
+            minor) ARG="minor" ;;
+            major) ARG="major" ;;
+            *) echo "Unknown bump '${{ inputs.bump }}'"; exit 1 ;;
+          esac
+          dotnet run -c Release -- +version $ARG
+
+      - name: Commit manifest bump on main
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add HildaDefaultSets/priorities/manifest.json
+          if git diff --cached --quiet; then
+            echo "No manifest changes to commit"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          NEW_VERSION=$(grep -m1 '"Version"' HildaDefaultSets/priorities/manifest.json | sed -E 's/.*"Version": *"([^"]+)".*/\1/')
+          git commit -m "Release $NEW_VERSION"
+          git push origin main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+          echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Sync gh-pages with main
+        if: steps.commit.outputs.committed == 'true'
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git merge --no-edit main
+          git push origin gh-pages
+
+      - name: Release summary
+        if: steps.commit.outputs.committed == 'true'
+        run: |
+          echo "Released default sets version **${{ steps.commit.outputs.version }}**" >> "$GITHUB_STEP_SUMMARY"

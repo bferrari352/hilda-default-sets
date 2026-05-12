@@ -1,0 +1,18 @@
+name: Validate priority sets
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  schema-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Schema tests
+        run: dotnet test HildaDefaultSetsSchemaTests/HildaDefaultSetsSchemaTests.csproj -c Release --nologo

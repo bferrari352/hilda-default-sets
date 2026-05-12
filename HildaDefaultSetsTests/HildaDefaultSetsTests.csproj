@@ -10,18 +10,29 @@
 
         <SignAssembly>true</SignAssembly>
 
-        <AssemblyOriginatorKeyFile>InternalAssemblies.snk</AssemblyOriginatorKeyFile>
-
         <Configurations>Debug;Release</Configurations>
 
         <Platforms>x64</Platforms>
     </PropertyGroup>
 
+    <!--
+      Hilda binaries are not redistributed with this repo. The PackTestBundle target in the
+      closed-source Hilda repo uploads `hilda-test-bundle-<version>.zip` to a GitHub Release
+      on this repo; the FetchHildaTestBundle target below downloads + caches it on first build.
+
+      Bumping HildaTestBundleVersion is a manual edit when a new Hilda release ships.
+    -->
+    <PropertyGroup>
+        <HildaTestBundleVersion>7.5.0.1</HildaTestBundleVersion>
+        <HildaTestBundleRepo>bferrari352/hilda-default-sets</HildaTestBundleRepo>
+        <HildaTestBundleRoot>$(MSBuildThisFileDirectory)..\tools\hilda-bin\$(HildaTestBundleVersion)</HildaTestBundleRoot>
+        <HildaTestBundleUrl>https://github.com/$(HildaTestBundleRepo)/releases/download/hilda-bin-$(HildaTestBundleVersion)/hilda-test-bundle-$(HildaTestBundleVersion).zip</HildaTestBundleUrl>
+        <AssemblyOriginatorKeyFile>$(HildaTestBundleRoot)\InternalAssemblies.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+
     <PropertyGroup>
         <DalamudLibPath>$(DALAMUD_DEV)</DalamudLibPath>
         <DefaultSetsPath>$(HILDA_DEFAULT_SETS)</DefaultSetsPath>
-        <TestUtilsPath>$(HILDA_BUILD_LOCAL)/HildaTestUtils/</TestUtilsPath>
-        <HildaPath>$(HILDA_BUILD_LOCAL)</HildaPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -32,7 +43,7 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <PlatformTarget>x64</PlatformTarget>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <PackageReference Include="FluentAssertions" Version="6.12.0" />
         <PackageReference Include="Lumina" Version="4.1.0" />
@@ -59,12 +70,29 @@
             <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
         </Reference>
         <Reference Include="HildaTestUtils, Culture=neutral, PublicKeyToken=5503f199c805f859">
-          <HintPath>$(TestUtilsPath)\HildaTestUtils.dll</HintPath>
+            <HintPath>$(HildaTestBundleRoot)\HildaTestUtils.dll</HintPath>
+            <Private>true</Private>
         </Reference>
         <Reference Include="Hilda, Culture=neutral, PublicKeyToken=null">
-            <HintPath>$(HILDA_BUILD_LOCAL)\Hilda.dll</HintPath>
+            <HintPath>$(HildaTestBundleRoot)\Hilda.dll</HintPath>
+            <Private>true</Private>
         </Reference>
     </ItemGroup>
+
+    <Target Name="FetchHildaTestBundle"
+            BeforeTargets="ResolveAssemblyReferences;CoreCompile"
+            Condition="!Exists('$(HildaTestBundleRoot)\Hilda.dll')">
+        <Message Text="Downloading Hilda test bundle $(HildaTestBundleVersion) from $(HildaTestBundleUrl)" Importance="High" />
+        <MakeDir Directories="$(HildaTestBundleRoot)" />
+        <DownloadFile SourceUrl="$(HildaTestBundleUrl)"
+                      DestinationFolder="$(HildaTestBundleRoot)"
+                      DestinationFileName="hilda-test-bundle.zip"
+                      Retries="2" />
+        <Unzip SourceFiles="$(HildaTestBundleRoot)\hilda-test-bundle.zip"
+               DestinationFolder="$(HildaTestBundleRoot)"
+               OverwriteReadOnlyFiles="true" />
+        <Delete Files="$(HildaTestBundleRoot)\hilda-test-bundle.zip" />
+    </Target>
 
     <Target Name="CopySetPriorities" AfterTargets="Build">
         <Message Text="Executing CopySetPriorities task" Importance="High" />
