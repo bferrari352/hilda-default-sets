@@ -2,9 +2,9 @@
   "id": "a8ef23cf-577d-453f-9116-a90d85021364",
   "name": "Single Target",
   "jobId": 38,
-  "appVersion": "7.0.0.0",
-  "version": "7.0.0",
-  "lastUpdated": "2024-07-11 11:01:22Z",
+  "appVersion": "7.5.0.1",
+  "version": "7.5.0",
+  "lastUpdated": "2026-05-12 11:26:39Z",
   "priorities": [
     {
       "name": "Quadruple Standard Finish",
@@ -64,7 +64,7 @@
       "id": "497b62a2-27c0-4119-8d23-1c3a967d2944",
       "description": "This is a placeholder priority for dancing predictions since we can't predict which steps will be triggered.",
       "overrideIconType": 0,
-      "overrideIcon": 64069,
+      "overrideIcon": 3455,
       "conditions": {
         "player": {
           "statuses": [
